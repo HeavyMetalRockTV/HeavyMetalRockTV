@@ -4,39 +4,37 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<!-- Actualizado para la Organización HeavyMetalRockTV -->
 
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/</loc>
-  <lastmod>2024-08-02T02:17:53+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/index.html</loc>
-  <lastmod>2024-08-02T02:17:53+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/index.html</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/TIENDA.html</loc>
-  <lastmod>2024-08-02T02:17:54+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/TIENDA.html</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/youtube.html</loc>
-  <lastmod>2024-08-02T02:17:53+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/youtube.html</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/Emisora.html</loc>
-  <lastmod>2024-08-02T02:17:53+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/Emisora.html</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://sirdurand1708.github.io/HeavyMetalRockTV/VENTA%20BOLETOS.html</loc>
-  <lastmod>2024-08-02T02:17:54+00:00</lastmod>
+  <loc>https://heavymetalrocktv.github.io/HeavyMetalRockTV/VENTA%20BOLETOS.html</loc>
+  <lastmod>2026-08-19T18:30:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
