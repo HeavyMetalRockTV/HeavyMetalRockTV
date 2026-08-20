@@ -4,7 +4,7 @@ var backgrounds = [
     'url("img/estetica/deathleprosy.jpg") center/cover fixed',
     'url("img/estetica/judaspriest.jpg") center/cover fixed',
     'url("img/estetica/ironmaidenwallpaper.jpg") center/cover fixed'
-    'url("img/estetica/manowar.jpg") center/cover fixed'
+    'url("img/estetica/dio.jpg") center/cover fixed'
 ];
 
 // Inicializar el índice actual
