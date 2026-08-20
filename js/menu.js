@@ -3,10 +3,8 @@ var backgrounds = [
     'url("img/estetica/uniontodasbandas.jpg") center/cover fixed',
     'url("img/estetica/deathleprosy.jpg") center/cover fixed',
     'url("img/estetica/judaspriest.jpg") center/cover fixed',
-    'url("img/estetica/ozzy.jpg") center/cover fixed',
     'url("img/estetica/ironmaidenwallpaper.jpg") center/cover fixed'
     'url("img/estetica/manowar.jpg") center/cover fixed'
-    'url("img/estetica/motley crue.jpg") center/cover fixed'
 ];
 
 // Inicializar el índice actual
