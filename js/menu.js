@@ -1,10 +1,12 @@
 // Definir un array con las URLs de las imágenes de fondo
 var backgrounds = [
-    'url("img/estetica/fondo1.jpg") center/cover fixed',
-    'url("img/estetica/fondo2.jpg") center/cover fixed',
-    'url("img/estetica/fondo3.jpg") center/cover fixed',
-    'url("img/estetica/fondo4.jpg") center/cover fixed',
-    'url("img/estetica/fondo5.jpg") center/cover fixed'
+    'url("img/estetica/uniontodasbandas.jpg") center/cover fixed',
+    'url("img/estetica/deathleprosy.jpg") center/cover fixed',
+    'url("img/estetica/judaspriest.jpg") center/cover fixed',
+    'url("img/estetica/ozzy.jpg") center/cover fixed',
+    'url("img/estetica/ironmaidenwallpaper.jpg") center/cover fixed'
+    'url("img/estetica/manowar.jpg") center/cover fixed'
+    'url("img/estetica/motley crue.jpg") center/cover fixed'
 ];
 
 // Inicializar el índice actual
