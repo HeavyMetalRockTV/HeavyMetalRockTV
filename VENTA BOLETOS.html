@@ -4,428 +4,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavy Metal Rock TV - Emisora</title>
-    <link rel="icon" href="img/estetica/HMR_recortada-icono.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heavy Metal Rock TV - Venta y Difusión de Boletos</title>
+    <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
     <style>
+        :root {
+            --accent-red: #d32f2f;
+            --accent-gold: #c5a059;
+            --dark-card: rgba(14, 14, 14, 0.92);
+            --border-metal: #2a2a2a;
+        }
+
         body {
-            /* Mantén los estilos existentes para el fondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #e0e0e0;
+            background-color: #080808;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)), url('img/estetica/diogustavo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            transition: background 1s ease;
-            /* Transición suave para el cambio de fondo */
-            background-color: #111;
-            zoom: 90%;
+            min-height: 100vh;
         }
 
+        /* Menú lateral estilo consola profesional */
         nav {
-            text-align: center;
-            background-color: #000000;
-            padding: 20px;
-            height: 200vh;
-            width: 200px;
+            background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             left: 0;
             top: 0;
-
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 15px 15px;
+            border-right: 2px solid #222;
+            border-image: linear-gradient(to bottom, #d32f2f, #333 35%, #111 80%, #d32f2f) 1;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9), 2px 0 10px rgba(211, 47, 47, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
         }
 
-        nav img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav .brand-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav .brand-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        nav img#HMRTV {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.35));
+        }
+
+        nav img#HMRTV:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 14px rgba(211, 47, 47, 0.7));
+        }
+
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #666;
-            width: 100%;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease-in-out;
+            color: #9e9e9e;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
-            background-color: #666;
             color: #fff;
+            background: rgba(211, 47, 47, 0.12);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
         }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav a:hover .nav-icon {
+            color: var(--accent-red);
         }
 
-        h1,
-        h2,
-        p {
+        /* Enlace Activo */
+        nav a.active {
             color: #fff;
+            background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
+            border-left: 3px solid var(--accent-red);
+            box-shadow: inset 0 0 10px rgba(211, 47, 47, 0.1);
         }
 
-        #quienes-somos {
-            text-align: justify;
+        nav a.active .nav-icon {
+            color: var(--accent-red);
         }
 
-        #emisora {
-            margin-top: 20px;
-            text-align: center;
+        .radio-status-card {
+            margin-top: 25px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        #producciones {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #producciones:hover {
-            transform: scale(1.1);
-        }
-
-        #emisora p {
-            margin-top: 10px;
-            color: #ccc;
-        }
-
-        button {
-            background-color: #666;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        #music-player-container {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            z-index: 1000;
-            text-align: center;
-        }
-
-        #music-player-button {
-            background-color: #666;
+        .pulse-live {
+            width: 10px;
+            height: 10px;
+            background-color: #e50914;
             border-radius: 50%;
-            cursor: pointer;
-            width: 80px;
-            /* Ajusta el ancho del botón según tus necesidades */
-            height: 80px;
-            /* Ajusta la altura del botón según tus necesidades */
-            overflow: hidden;
-            margin-bottom: 10px;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: live-pulse 1.8s infinite;
+        }
+
+        @keyframes live-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 9, 20, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+        }
+
+        .radio-status-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-status-text .title {
+            font-size: 11px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .radio-status-text .sub {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .nav-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+
+        .nav-socials {
             display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
-        #music-player-button img {
-            width: 100%;
-        }
-
-        #music-player {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            right: 10px;
-            width: 500px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 1001;
-            text-align: center;
-        }
-
-        #song-list-container {
-            margin-top: 10px;
-            overflow: auto;
-        }
-
-        #song-list-container ul {
-            list-style-type: none;
+        .nav-socials a {
+            width: 32px;
+            height: 32px;
             padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s ease;
         }
 
-        #song-list-container li {
-            cursor: pointer;
-            padding: 10px;
-            border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        #song-list-container li:hover {
-            background-color: #444;
+        .nav-socials a:hover {
+            background: var(--accent-red);
             color: #fff;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+            padding-left: 0;
         }
 
-        #album-art {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
+        .nav-copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        #song-info {
+        /* Área central */
+        main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        #album-art-small {
+        section {
             width: 100%;
-            max-height: 600px;
-            /* Cambia el valor según tus necesidades */
-            object-fit: contain;
+            max-width: 1100px;
+            background: var(--dark-card);
+            border: 1px solid var(--border-metal);
             border-radius: 8px;
-            margin-top: 10px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-sizing: border-box;
         }
 
-        #audio-player {
-            width: 100%;
-            /* Cambiado de 80% a 100% para cubrir todo el ancho */
-            margin: 10px auto;
-            /* Ajusta el margen según tus necesidades */
-        }
-
-        button {
-            background-color: #666;
+        h1, h2 {
             color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        button:hover {
-            background-color: #333;
-        }
-
-        #emisora {
+        p {
+            line-height: 1.8;
+            font-size: 15px;
             text-align: justify;
+            color: #bbb;
+            margin-bottom: 20px;
         }
 
-        #boton {
-            background-color: #666;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-            margin: 10px auto;
-            /* Centrar el botón horizontalmente */
+        .logo-quienes-somos {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
             display: block;
+            margin: 25px auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 12px rgba(211, 47, 47, 0.4));
+            transition: transform 0.3s ease;
         }
 
-        #boton:hover {
-            background-color: #333;
+        .logo-quienes-somos:hover {
+            transform: scale(1.03);
         }
 
-        #titulo {
-            text-align: center;
+        /* Tarjeta informativa de gestión de boletos */
+        .ticket-info-card {
+            background: rgba(20, 20, 20, 0.7);
+            border: 1px solid #282828;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin: 25px 0;
         }
 
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .ticket-info-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--accent-red);
+            padding-left: 10px;
+            text-transform: uppercase;
         }
 
-        @media screen and (max-width: 1200px) {
-
-            body {
-                flex-direction: column;
-                /* Cambia a disposición vertical */
-            }
-
-            nav {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                position: relative;
-                padding: 10px 0;
-                flex-direction: column;
-            }
-
-            nav img {
-                max-width: 80%;
-                /* Ajusta el ancho de la imagen según tus necesidades */
-                margin-bottom: 10px;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-                /* Oculta la lista de enlaces por defecto */
-            }
-
-            nav a {
-                width: auto;
-                display: inline-block;
-                margin: 0 10px;
-                padding: 8px 12px;
-                border-bottom: none;
-                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-            }
-
-            nav a:hover {
-                background-color: #666;
-                color: #fff;
-            }
-
-            #music-player-container {
-                display: none;
-            }
-
-            .menu-btn {
-                display: block;
-                background-color: #666;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 12px 0;
-                /* Ajusta el padding vertical a tu preferencia */
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px 0;
-                /* Ajusta el margen vertical a tu preferencia */
-                width: 100%;
-                /* Cubre todo el ancho disponible */
-                transition: background-color 0.3s ease-in-out;
-            }
-
-            .menu-btn:hover {
-                background-color: #333;
-                color: #fff;
-            }
+        /* Botón de Contacto / Compra */
+        .btn-metal {
+            background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid #ff4d4d;
+            border-radius: 4px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            margin: 15px auto 0 auto;
         }
 
-        @media screen and (min-width: 1200px) {
+        .btn-metal:hover {
+            background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
+            box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+            color: #fff;
+        }
 
-            .nav-links {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: none;
-            }
+        @media screen and (max-width: 992px) {
+            body { flex-direction: column; }
+            nav { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; padding: 15px; }
         }
     </style>
-
 </head>
 
 <body>
 
-    <div id="music-player-container">
-        <div id="music-player-button" onclick="toggleMusicPlayer()">
-            <img src="img/estetica/dio_boton.jpg" alt="Reproductor de música">
-        </div>
-        <div id="music-player">
-            <div id="song-info">
-                <h3 id="current-song">Canción Actual</h3>
-                <img id="album-art-small" src="" alt="Album Art">
-            </div>
-            <audio id="audio-player" controls></audio>
-            <div>
-                <button onclick="prevSong()"><span class="icon-first"></span></button>
-                <button onclick="togglePlayPause()"><span class="icon-play3"></span></button>
-                <button onclick="nextSong()"><span class="icon-last"></span></button>
-            </div>
-
-            <div id="song-list-container">
-                <ul>
-                    <li onclick="playSong('music/Cannibal Corpse - Evisceration Plague.mp3')">
-                        Cannibal Corpse - Evisceration Plague</li>
-                    <li onclick="playSong('music/Ozzy Osbourne - Crazy Train.mp3')">Ozzy
-                        Osbourne - Crazy Train</li>
-                    <li onclick="playSong('music/Dio - Rainbow In The Dark.mp3')">Dio -
-                        Rainbow In The Dark</li>
-                    <li onclick="playSong('music/Judas Priest - Trial By Fire.mp3')">Judas
-                        Priest - Trial By Fire</li>
-                    <li onclick="playSong('music/Anthrax - Keep It In The Family.mp3')">
-                        Anthrax - Keep It In The Family</li>
-                    <li onclick="playSong('music/Dio - Another Lie.mp3')">Dio - Another Lie
-                    </li>
-                    <li onclick="playSong('music/Nightwish - Bless The Child.mp3')">
-                        Nightwish - Bless The Child</li>
-                    <li onclick="playSong('music/Cradle Of Filth - Cruelty Brought Thee Orchids.mp3')">
-                        Cradle Of Filth - Cruelty Brought Thee Orchids</li>
-                    <li onclick="playSong('music/SLAUGHTER TO PREVAIL - Bratva.mp3')">
-                        SLAUGHTER TO PREVAIL - Bratva</li>
-                </ul>
-            </div>
-
-            <div>
-                <button onclick="toggleSongList()"><span class="icon-paragraph-justify"></span></button>
-            </div>
-
-        </div>
-    </div>
-
-
     <nav>
-        <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Logo">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="brand-container">
+            <a href="index.html">
+                <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
+
         <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="TIENDA.html">Tienda</a>
-            <a href="youtube.html">Canal de Youtube</a>
-            <a href="Emisora.html">Emisora</a>
-            <a href="VENTA BOLETOS.html">Venta Boletos </a>
+            <a href="index.html">
+                <span class="nav-icon">⚡</span> Inicio
+            </a>
+            <a href="TIENDA.html">
+                <span class="nav-icon">🛒</span> Tienda
+            </a>
+            <a href="youtube.html">
+                <span class="nav-icon">📺</span> YouTube
+            </a>
+            <a href="Emisora.html">
+                <span class="nav-icon">📻</span> Emisora
+            </a>
+            <a href="VENTA BOLETOS.html" class="active">
+                <span class="nav-icon">🎫</span> Boletos
+            </a>
+        </div>
+
+        <!-- Indicador de señal -->
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <!-- Pie de navegación -->
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="Emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
         </div>
     </nav>
 
     <main>
-        <section id="emisora">
-            <h2 id="titulo">VENTA DE BOLETOS</h2>
-            <img id="producciones" src="img/estetica/ROCKTV.png" alt="Estudio de Emisora">
-            <p>
-                Si eres una de esas personas que desean colaborar con nosotros o utilizar nuestra página web de
-                FACEBOOK, HEAVY METAL STORE, para
-                promocionar la venta de boletos de conciertos, no dudes en contactarnos a través de nuestro correo
-                electrónico. Solo tienes que hacer clic en el botón que se encuentra debajo de este texto para
-                comunicarte con nosotros.
-            </p>
+        <section id="boletos-section" style="text-align: center;">
+            <h2>Venta y Difusión de Boletos</h2>
+            
+            <img class="logo-quienes-somos" src="img/estetica/ROCKTV.png" alt="Heavy Metal Rock TV Logo">
 
-            <section>
-                <button id="boton"
-                    onclick="window.location.href='mailto:gustavomasacre31@hotmail.com'">CONTACTENOS</button>
-            </section>
+            <div class="ticket-info-card" style="text-align: left;">
+                <h3>Punto Oficial de Entradas y Alianzas</h3>
+                <p>
+                    Si eres productor, promotor de eventos o formas parte de una banda y buscas difundir y canalizar la preventa de entradas para conciertos, festivales y recitales de Metal, ponemos a disposición nuestra plataforma oficial, redes sociales y el canal de <strong>Heavy Metal Store</strong>.
+                </p>
+                <p>
+                    Contáctanos directamente para coordinar puntos de venta físicos, envíos de entradas a nivel nacional y cobertura de prensa para tu concierto.
+                </p>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <a class="btn-metal" href="mailto:gustavomasacre31@hotmail.com">CONTACTAR POR BOLETOS</a>
+            </div>
         </section>
-
     </main>
+
     <script async src="js/menu.js"></script>
 </body>
-
 </html>

@@ -4,292 +4,655 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavy Metal Rock TV - Emisora</title>
-    <link rel="icon" href="img/estetica/HMR_recortada-icono.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heavy Metal Rock TV - Emisora Online</title>
+    <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
-    <script async src="js/menu.js"></script>
     <style>
+        :root {
+            --accent-red: #d32f2f;
+            --accent-gold: #c5a059;
+            --dark-card: rgba(14, 14, 14, 0.92);
+            --border-metal: #2a2a2a;
+        }
+
         body {
-            /* Mantén los estilos existentes para el fondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #e0e0e0;
+            background-color: #080808;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)), url('img/estetica/diogustavo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            transition: background 1s ease;
-            /* Transición suave para el cambio de fondo */
-            background-color: #111;
-            zoom: 90%;
+            min-height: 100vh;
         }
 
+        /* Menú lateral estilo consola profesional */
         nav {
-            text-align: center;
-            background-color: #000000;
-            padding: 20px;
-            height: 200vh;
-            width: 200px;
+            background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             left: 0;
             top: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 15px 15px;
+            border-right: 2px solid #222;
+            border-image: linear-gradient(to bottom, #d32f2f, #333 35%, #111 80%, #d32f2f) 1;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9), 2px 0 10px rgba(211, 47, 47, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
         }
 
-        nav img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav .brand-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav .brand-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        nav img#HMRTV {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.35));
+        }
+
+        nav img#HMRTV:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 14px rgba(211, 47, 47, 0.7));
+        }
+
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #666;
-            width: 100%;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease-in-out;
+            color: #9e9e9e;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
-            background-color: #666;
             color: #fff;
+            background: rgba(211, 47, 47, 0.12);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
         }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav a:hover .nav-icon {
+            color: var(--accent-red);
         }
 
-        h1,
-        h2,
-        p {
+        /* Enlace Activo */
+        nav a.active {
             color: #fff;
+            background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
+            border-left: 3px solid var(--accent-red);
+            box-shadow: inset 0 0 10px rgba(211, 47, 47, 0.1);
         }
 
-        #quienes-somos {
-            text-align: justify;
+        nav a.active .nav-icon {
+            color: var(--accent-red);
         }
 
-        #emisora {
-            margin-top: 20px;
+        .radio-status-card {
+            margin-top: 25px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pulse-live {
+            width: 10px;
+            height: 10px;
+            background-color: #e50914;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: live-pulse 1.8s infinite;
+        }
+
+        @keyframes live-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 9, 20, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+        }
+
+        .radio-status-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-status-text .title {
+            font-size: 11px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .radio-status-text .sub {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .nav-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             text-align: center;
         }
 
-        #producciones {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            transition: transform 0.3s ease-in-out;
+        .nav-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
-        #producciones:hover {
-            transform: scale(1.1);
+        .nav-socials a {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s ease;
         }
 
-        #emisora p {
-            margin-top: 10px;
-            color: #ccc;
-        }
-
-        button {
-            background-color: #666;
+        .nav-socials a:hover {
+            background: var(--accent-red);
             color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+            padding-left: 0;
         }
 
-        button:hover {
-            background-color: #333;
+        .nav-copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-
-        button {
-            background-color: #666;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        #emisora {
-            text-align: justify;
-        }
-
-        #boton {
-            background-color: #666;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-            margin: 10px auto;
-            /* Centrar el botón horizontalmente */
-            display: block;
-        }
-
-        #boton:hover {
-            background-color: #333;
-        }
-
-
-        .nav-links {
+        /* Área central */
+        main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        @media screen and (max-width: 1200px) {
-
-            body {
-                flex-direction: column;
-                /* Cambia a disposición vertical */
-            }
-
-            nav {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                position: relative;
-                padding: 10px 0;
-                flex-direction: column;
-            }
-
-            nav img {
-                max-width: 80%;
-                /* Ajusta el ancho de la imagen según tus necesidades */
-                margin-bottom: 10px;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-                /* Oculta la lista de enlaces por defecto */
-            }
-
-            nav a {
-                width: auto;
-                display: inline-block;
-                margin: 0 10px;
-                padding: 8px 12px;
-                border-bottom: none;
-                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-            }
-
-            nav a:hover {
-                background-color: #666;
-                color: #fff;
-            }
-
-            #music-player-container {
-                display: none;
-            }
-
-            .menu-btn {
-                display: block;
-                background-color: #666;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 12px 0;
-                /* Ajusta el padding vertical a tu preferencia */
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px 0;
-                /* Ajusta el margen vertical a tu preferencia */
-                width: 100%;
-                /* Cubre todo el ancho disponible */
-                transition: background-color 0.3s ease-in-out;
-            }
-
-            .menu-btn:hover {
-                background-color: #333;
-                color: #fff;
-            }
+        section {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--dark-card);
+            border: 1px solid var(--border-metal);
+            border-radius: 8px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-sizing: border-box;
         }
 
-        @media screen and (min-width: 1200px) {
+        h1, h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-            .nav-links {
-                display: flex;
-            }
+        p {
+            line-height: 1.8;
+            font-size: 15px;
+            text-align: justify;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
 
-            .menu-btn {
-                display: none;
-            }
+        /* Bloque reproductor / ON AIR */
+        .live-broadcast-banner {
+            background: linear-gradient(135deg, #161616 0%, #0d0d0d 100%);
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+        }
+
+        .on-air-badge {
+            background: #e50914;
+            color: #fff;
+            font-weight: 900;
+            font-size: 12px;
+            letter-spacing: 2px;
+            padding: 5px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+        }
+
+        .on-air-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: live-pulse 1s infinite alternate;
+        }
+
+        .live-broadcast-banner h3 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .live-broadcast-banner p {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 0 25px 0;
+            color: #aaa;
+        }
+
+        /* Botón de Sintonización */
+        .btn-tune-in {
+            background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
+            color: #fff;
+            padding: 16px 45px;
+            font-size: 15px;
+            font-weight: 800;
+            border: 1px solid #ff4d4d;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.25s ease;
+            box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4);
+        }
+
+        .btn-tune-in:hover {
+            background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
+            box-shadow: 0 0 25px rgba(211, 47, 47, 0.8);
+            transform: scale(1.03);
+            color: #fff;
+        }
+
+        /* Banner promocional / App */
+        .app-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 35px;
+            background: rgba(18, 18, 18, 0.6);
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .app-showcase img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #333;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .app-showcase img:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-red);
+        }
+
+        .app-showcase-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .app-showcase-text h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            border-left: 3px solid var(--accent-red);
+            padding-left: 10px;
+        }
+
+        /* Tarjeta de Horarios */
+        .schedule-card {
+            background: rgba(18, 18, 18, 0.85);
+            border: 1px solid #282828;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-top: 20px;
+        }
+
+        .schedule-card h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .schedule-slot {
+            background: #111;
+            border-left: 3px solid var(--accent-red);
+            padding: 12px 16px;
+            border-radius: 4px;
+        }
+
+        .schedule-slot .days {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .schedule-slot .time {
+            font-size: 14px;
+            font-weight: 800;
+            color: #fff;
+            margin-top: 4px;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            border: 2px solid var(--accent-red);
+            box-shadow: 0 0 35px rgba(211, 47, 47, 0.5);
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            object-fit: contain;
+        }
+
+        .lightbox-modal.active .lightbox-content { transform: scale(1); }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+            line-height: 1;
+            user-select: none;
+        }
+
+        .lightbox-close:hover { color: var(--accent-red); transform: rotate(90deg); }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            color: #bbb;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 992px) {
+            body { flex-direction: column; }
+            nav { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; padding: 15px; }
+            .app-showcase { flex-direction: column; text-align: center; }
+            .app-showcase-text h3 { border-left: none; }
         }
     </style>
-
 </head>
 
 <body>
 
     <nav>
-        <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Logo">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="brand-container">
+            <a href="index.html">
+                <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
+
         <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="TIENDA.html">Tienda</a>
-            <a href="youtube.html">Canal de Youtube</a>
-            <a href="Emisora.html">Emisora</a>
-            <a href="VENTA BOLETOS.html">Venta Boletos </a>
+            <a href="index.html">
+                <span class="nav-icon">⚡</span> Inicio
+            </a>
+            <a href="TIENDA.html">
+                <span class="nav-icon">🛒</span> Tienda
+            </a>
+            <a href="youtube.html">
+                <span class="nav-icon">📺</span> YouTube
+            </a>
+            <a href="Emisora.html" class="active">
+                <span class="nav-icon">📻</span> Emisora
+            </a>
+            <a href="VENTA BOLETOS.html">
+                <span class="nav-icon">🎫</span> Boletos
+            </a>
+        </div>
+
+        <!-- Indicador de señal -->
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <!-- Pie de navegación -->
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="Emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
         </div>
     </nav>
 
     <main>
         <section id="emisora">
-            <h2>Emisora</h2>
-            <img id="producciones" src="img/estetica/HMR_APP.jpg" alt="Estudio de Emisora">
-            <p>
-                Descubre la emisora Heavy Metal Radio, donde transmitimos las mejores selecciones del Metal en los
-                horarios correspondientes. Sumérgete en la atmósfera oscura y potente de la música que amamos. Nuestra
-                emisora es
-                el lugar perfecto para explorar nuevas bandas, disfrutar de clásicos del género y mantenerte actualizado
-                con las últimas novedades en el mundo del Metal.
-            </p>
+            <h1>Emisora Oficial - Heavy Metal Radio</h1>
 
-            <h3 style="text-align: center; color: red;"> Lunes, Martes, Miercoles, Jueves, Viernes</h3>
-            <h3 style="text-align: center;color: red;">11:00 am - 1:00 pm / 4:30 pm - 6:00 pm / 9:00 pm - 10:30 pm</h3>
-            <p></p>
+            <!-- Transmisión en directo -->
+            <div class="live-broadcast-banner">
+                <div class="on-air-badge">En Transmisión</div>
+                <h3>Heavy Metal Radio Online</h3>
+                <p>
+                    Sintoniza la señal oficial con el sonido más crudo, clásico y demoledor del metal nacional e internacional. Conexión ininterrumpida y especiales de colección.
+                </p>
+                <a class="btn-tune-in" href="http://heavymetalextremo.radio12345.com" target="_blank">
+                    <span>📻 Escuchar Emisora en Vivo</span>
+                </a>
+            </div>
 
-            <section>
-                <button id="boton"
-                    onclick="window.location.href='http://heavymetalextremo.radio12345.com'">EMISORA</button>
-            </section>
+            <!-- Presentación de la emisora y app -->
+            <div class="app-showcase">
+                <img class="zoomable-img" src="img/estetica/HMR_APP.jpg" alt="Heavy Metal Radio App">
+                <div class="app-showcase-text">
+                    <h3>Sobre Nuestra Señal</h3>
+                    <p>
+                        Heavy Metal Radio nace como el bastión auditivo de Heavy Metal Rock TV. Un espacio diseñado para dar visibilidad a bandas emergentes, emitir programas temáticos y revivir las producciones legendarias del rock pesado y metal underground.
+                    </p>
+                    <p>
+                        Disponible para escuchar desde cualquier dispositivo móvil o navegador de escritorio con la máxima tasa de bits y fidelidad sonica.
+                    </p>
+                </div>
+            </div>
 
-
+            <!-- Parrilla de horarios organizada -->
+            <div class="schedule-card">
+                <h3>🕒 Programación y Horarios de Emisión</h3>
+                <p style="margin-bottom: 15px;">Bloques diarios de transmisión en vivo (Hora local de Perú / UTC-5):</p>
+                <div class="schedule-grid">
+                    <div class="schedule-slot">
+                        <span class="days">Lunes a Viernes</span>
+                        <div class="time">11:00 AM - 01:00 PM</div>
+                    </div>
+                    <div class="schedule-slot">
+                        <span class="days">Lunes a Viernes</span>
+                        <div class="time">04:30 PM - 06:00 PM</div>
+                    </div>
+                    <div class="schedule-slot">
+                        <span class="days">Lunes a Viernes</span>
+                        <div class="time">09:00 PM - 10:30 PM</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-</body>
 
+    <!-- Modal Lightbox -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Imagen ampliada">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <script async src="js/menu.js"></script>
+    <script>
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const captionText = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('lightboxClose');
+        const zoomImages = document.querySelectorAll('.zoomable-img');
+
+        zoomImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.add('active');
+                modalImg.src = img.src;
+                captionText.textContent = img.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+    </script>
+</body>
 </html>

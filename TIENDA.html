@@ -4,625 +4,916 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavy Metal Rock TV - Tienda</title>
-    <link rel="icon" href="img/estetica/HMR_recortada-icono.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heavy Metal Store - Tienda Oficial</title>
+    <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
     <style>
+        :root {
+            --accent-red: #d32f2f;
+            --accent-gold: #c5a059;
+            --dark-card: rgba(14, 14, 14, 0.92);
+            --border-metal: #2a2a2a;
+        }
+
         body {
-            /* Mantén los estilos existentes para el fondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #e0e0e0;
+            background-color: #080808;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)), url('img/estetica/diogustavo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            transition: background 1s ease;
-            /* Transición suave para el cambio de fondo */
-            background-color: #111;
-            zoom: 90%;
+            min-height: 100vh;
         }
 
+        /* Menú lateral estilo consola profesional */
         nav {
-            text-align: center;
-            background-color: #000000;
-            padding: 20px;
-            height: 200vh;
-            width: 200px;
+            background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             left: 0;
             top: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 15px 15px;
+            border-right: 2px solid #222;
+            border-image: linear-gradient(to bottom, #d32f2f, #333 35%, #111 80%, #d32f2f) 1;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9), 2px 0 10px rgba(211, 47, 47, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
         }
 
-        nav img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav .brand-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav .brand-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        nav img#HMRTV {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.35));
+        }
+
+        nav img#HMRTV:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 14px rgba(211, 47, 47, 0.7));
+        }
+
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #666;
-            width: 100%;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease-in-out;
+            color: #9e9e9e;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
-            background-color: #666;
             color: #fff;
+            background: rgba(211, 47, 47, 0.12);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
         }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fondo oscuro para mejorar la legibilidad del contenido */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav a:hover .nav-icon {
+            color: var(--accent-red);
         }
 
-        h1,
-        h2,
-        p {
+        nav a.active {
             color: #fff;
+            background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
+            border-left: 3px solid var(--accent-red);
+            box-shadow: inset 0 0 10px rgba(211, 47, 47, 0.1);
         }
 
-        #inicio-content {
-            margin-top: 20px;
+        nav a.active .nav-icon {
+            color: var(--accent-red);
+        }
+
+        .radio-status-card {
+            margin-top: 25px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            padding: 12px 14px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
         }
 
-        #inicio-content img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
+        .pulse-live {
+            width: 10px;
+            height: 10px;
+            background-color: #e50914;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: live-pulse 1.8s infinite;
         }
 
-        #video-container {
-            position: relative;
-            overflow: hidden;
-            padding-top: 56.25%;
-            margin-bottom: 20px;
+        @keyframes live-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 9, 20, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
         }
 
-        #youtube-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .radio-status-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .rounded-box {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        #correo {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        #quienes-somos p {
-            text-align: justify;
-        }
-
-        #conciertos {
-            text-align: justify;
-        }
-
-        #bandas {
-            text-align: justify;
-        }
-
-        #dio-gustavo,
-        #HMRTV,
-        .band-logo,
-        #logos-bm,
-        #concierto,
-        #correo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin: 10px auto;
-            /* Centro la imagen */
-            display: block;
-            /* Para centrar la imagen */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #dio-gustavo:hover,
-        #HMRTV:hover,
-        .band-logo:hover,
-        #logos-bm:hover,
-        #concierto:hover,
-        #correo:hover {
-            transform: scale(1.1);
-        }
-
-        #contactanos {
-            text-align: justify;
-            /* Centrar el contenido del bloque */
-        }
-
-        #correo-button {
-            background-color: #666;
+        .radio-status-text .title {
+            font-size: 11px;
+            font-weight: 800;
             color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-            margin: 10px auto;
-            /* Centrar el botón horizontalmente */
-            display: block;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        #correo-button:hover {
-            background-color: #333;
+        .radio-status-text .sub {
+            font-size: 10px;
+            color: #777;
         }
 
-        #music-player-container {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            z-index: 1000;
+        .nav-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             text-align: center;
         }
 
-        #music-player-button {
-            background-color: #666;
-            border-radius: 50%;
-            cursor: pointer;
-            width: 80px;
-            /* Ajusta el ancho del botón según tus necesidades */
-            height: 80px;
-            /* Ajusta la altura del botón según tus necesidades */
-            overflow: hidden;
-            margin-bottom: 10px;
+        .nav-socials {
             display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
-        #music-player-button img {
-            width: 100%;
-        }
-
-        #music-player {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            right: 10px;
-            width: 500px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 1001;
-            text-align: center;
-        }
-
-        #song-list-container {
-            margin-top: 10px;
-            overflow: auto;
-        }
-
-        #song-list-container ul {
-            list-style-type: none;
+        .nav-socials a {
+            width: 32px;
+            height: 32px;
             padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s ease;
         }
 
-        #song-list-container li {
-            cursor: pointer;
-            padding: 10px;
-            border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        #song-list-container li:hover {
-            background-color: #444;
+        .nav-socials a:hover {
+            background: var(--accent-red);
             color: #fff;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+            padding-left: 0;
         }
 
-        #album-art {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
+        .nav-copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        #song-info {
+        /* Área central */
+        main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        #album-art-small {
+        section {
             width: 100%;
-            max-height: 600px;
-            /* Cambia el valor según tus necesidades */
-            object-fit: contain;
+            max-width: 1250px;
+            background: var(--dark-card);
+            border: 1px solid var(--border-metal);
             border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        #audio-player {
-            width: 100%;
-            /* Cambiado de 80% a 100% para cubrir todo el ancho */
-            margin: 10px auto;
-            /* Ajusta el margen según tus necesidades */
-        }
-
-        button {
-            background-color: #666;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        #texto {
-            text-align: justify;
-        }
-
-        #tienda {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            /* Agrega bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            /* Agrega una sombra suave */
-            margin: 20px 0;
-            /* Ajusta el margen superior e inferior */
-            display: block;
-            /* Para centrar la imagen */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #tienda:hover {
-            transform: scale(1.1);
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-sizing: border-box;
         }
 
         h1 {
-            text-align: center;
-        }
-
-        #fondo_polo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            /* Agrega bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            /* Agrega una sombra suave */
-            margin: 20px 0;
-            /* Ajusta el margen superior e inferior */
-            display: block;
-            /* Para centrar la imagen */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #fondo_polo:hover {
-            transform: scale(1.1);
-        }
-
-        /* Agrega estos estilos a tu sección <style> */
-
-        .tarjeta {
-            max-width: 300px;
-            margin: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .tarjeta {
-            max-width: 300px;
-            margin: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .tarjeta:hover {
-            transform: scale(1.05);
-        }
-
-        .tarjeta img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .tarjeta p {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .tarjeta button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #666;
             color: #fff;
-            border: none;
-            border-radius: 0 0 8px 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 25px;
         }
 
-        .tarjeta button:hover {
-            background-color: #333;
+        /* Logo de tienda maximizado */
+        .logo-tienda-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0 30px 0;
         }
 
-        .nav-links {
+        .logo-tienda {
+            max-width: 900px;
+            width: 100%;
+            height: auto;
+            max-height: 320px;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(211, 47, 47, 0.55));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .logo-tienda:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 0 28px rgba(211, 47, 47, 0.85));
+        }
+
+        /* Controles de Tienda (Filtros y Buscador) */
+        .store-controls {
+            background: rgba(20, 20, 20, 0.7);
+            border: 1px solid #282828;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 35px;
             display: flex;
             flex-direction: column;
+            gap: 15px;
+        }
+
+        .search-bar-wrapper input {
+            width: 100%;
+            background: #0d0d0d;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 12px 18px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-bar-wrapper input:focus {
+            border-color: var(--accent-red);
+            box-shadow: 0 0 10px rgba(211, 47, 47, 0.35);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            background: #181818;
+            color: #aaa;
+            border: 1px solid #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            color: #fff;
+            border-color: #555;
+            background: #252525;
+        }
+
+        .filter-btn.active {
+            background: var(--accent-red);
+            color: #fff;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+        }
+
+        /* Grilla simétrica de 3 columnas */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: rgba(18, 18, 18, 0.9);
+            border: 1px solid #282828;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-red);
+            box-shadow: 0 10px 28px rgba(211, 47, 47, 0.35);
+        }
+
+        .product-card-img-wrapper {
+            width: 100%;
+            height: 260px;
+            background: #050505;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            border-bottom: 1px solid #222;
+        }
+
+        .product-card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-card-img-wrapper img {
+            transform: scale(1.07);
+        }
+
+        .badge-category {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid var(--accent-red);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-card-body {
+            padding: 20px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 6px 0;
+            text-transform: uppercase;
+        }
+
+        .product-band {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #8e8e8e;
+            margin: 0 0 15px 0;
+        }
+
+        .product-footer {
+            display: flex;
             align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+            margin-top: auto;
         }
 
-        @media screen and (max-width: 1200px) {
-
-            body {
-                flex-direction: column;
-                /* Cambia a disposición vertical */
-            }
-
-            nav {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                position: relative;
-                padding: 10px 0;
-                flex-direction: column;
-            }
-
-            nav img {
-                max-width: 80%;
-                /* Ajusta el ancho de la imagen según tus necesidades */
-                margin-bottom: 10px;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-                /* Oculta la lista de enlaces por defecto */
-            }
-
-            nav a {
-                width: auto;
-                display: inline-block;
-                margin: 0 10px;
-                padding: 8px 12px;
-                border-bottom: none;
-                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-            }
-
-            nav a:hover {
-                background-color: #666;
-                color: #fff;
-            }
-
-            #music-player-container {
-                display: none;
-            }
-
-            .menu-btn {
-                display: block;
-                background-color: #666;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 12px 0;
-                /* Ajusta el padding vertical a tu preferencia */
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px 0;
-                /* Ajusta el margen vertical a tu preferencia */
-                width: 100%;
-                /* Cubre todo el ancho disponible */
-                transition: background-color 0.3s ease-in-out;
-            }
-
-            .menu-btn:hover {
-                background-color: #333;
-                color: #fff;
-            }
+        .product-price {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
         }
 
-        @media screen and (min-width: 1200px) {
+        .btn-order {
+            background: linear-gradient(180deg, #25d366 0%, #128c7e 100%);
+            color: #fff;
+            padding: 10px 18px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border: 1px solid #25d366;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-            .nav-links {
-                display: flex;
-            }
+        .btn-order:hover {
+            background: linear-gradient(180deg, #2bf075 0%, #15a392 100%);
+            color: #fff;
+            box-shadow: 0 0 12px rgba(37, 211, 102, 0.6);
+            transform: scale(1.03);
+        }
 
-            .menu-btn {
-                display: none;
-            }
+        /* Modal Lightbox */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.active { display: flex; opacity: 1; }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            border: 2px solid var(--accent-red);
+            box-shadow: 0 0 35px rgba(211, 47, 47, 0.5);
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover { color: var(--accent-red); }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            color: #bbb;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Responsividad */
+        @media screen and (max-width: 1100px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media screen and (max-width: 992px) {
+            body { flex-direction: column; }
+            nav { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; padding: 15px; }
+            .logo-tienda { max-width: 95%; }
+        }
+
+        @media screen and (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
-
 </head>
 
 <body>
 
-    <div id="music-player-container">
-        <div id="music-player-button" onclick="toggleMusicPlayer()">
-            <img src="img/estetica/dio_boton.jpg" alt="Reproductor de música">
-        </div>
-        <div id="music-player">
-            <div id="song-info">
-                <h3 id="current-song">Canción Actual</h3>
-                <img id="album-art-small" src="" alt="Album Art">
-            </div>
-            <audio id="audio-player" controls></audio>
-            <div>
-                <button onclick="prevSong()"><span class="icon-first"></span></button>
-                <button onclick="togglePlayPause()"><span class="icon-play3"></span></button>
-                <button onclick="nextSong()"><span class="icon-last"></span></button>
-            </div>
-
-            <div id="song-list-container">
-                <ul>
-                    <li onclick="playSong('music/Cannibal Corpse - Evisceration Plague.mp3')">
-                        Cannibal Corpse - Evisceration Plague</li>
-                    <li onclick="playSong('music/Ozzy Osbourne - Crazy Train.mp3')">Ozzy
-                        Osbourne - Crazy Train</li>
-                    <li onclick="playSong('music/Dio - Rainbow In The Dark.mp3')">Dio -
-                        Rainbow In The Dark</li>
-                    <li onclick="playSong('music/Judas Priest - Trial By Fire.mp3')">Judas
-                        Priest - Trial By Fire</li>
-                    <li onclick="playSong('music/Anthrax - Keep It In The Family.mp3')">
-                        Anthrax - Keep It In The Family</li>
-                    <li onclick="playSong('music/Dio - Another Lie.mp3')">Dio - Another Lie
-                    </li>
-                    <li onclick="playSong('music/Nightwish - Bless The Child.mp3')">
-                        Nightwish - Bless The Child</li>
-                    <li onclick="playSong('music/Cradle Of Filth - Cruelty Brought Thee Orchids.mp3')">
-                        Cradle Of Filth - Cruelty Brought Thee Orchids</li>
-                    <li onclick="playSong('music/SLAUGHTER TO PREVAIL - Bratva.mp3')">
-                        SLAUGHTER TO PREVAIL - Bratva</li>
-                </ul>
-            </div>
-
-            <div>
-                <button onclick="toggleSongList()"><span class="icon-paragraph-justify"></span></button>
-            </div>
-
-        </div>
-    </div>
-
     <nav>
-        <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Logo">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="brand-container">
+            <a href="index.html">
+                <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
+
         <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="TIENDA.html">Tienda</a>
-            <a href="youtube.html">Canal de Youtube</a>
-            <a href="Emisora.html">Emisora</a>
-            <a href="VENTA BOLETOS.html">Venta Boletos </a>
+            <a href="index.html">
+                <span class="nav-icon">⚡</span> Inicio
+            </a>
+            <a href="TIENDA.html" class="active">
+                <span class="nav-icon">🛒</span> Tienda
+            </a>
+            <a href="youtube.html">
+                <span class="nav-icon">📺</span> YouTube
+            </a>
+            <a href="Emisora.html">
+                <span class="nav-icon">📻</span> Emisora
+            </a>
+            <a href="VENTA BOLETOS.html">
+                <span class="nav-icon">🎫</span> Boletos
+            </a>
+        </div>
+
+        <!-- Indicador de señal -->
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <!-- Pie de navegación -->
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="Emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
         </div>
     </nav>
 
     <main>
+        <section id="tienda-section">
+            <h1>Heavy Metal Store</h1>
 
-        <section id="inicio">
-            <h1>HEAVY METAL STORE</h1>
-            <div id="inicio-content">
-                <img id="tienda" clas="band-logo" src="img/estetica/STORE.png" alt="">
-                <p id="texto">
-                    Bienvenido a Heavy Metal Store, tu paraíso del Rock y Metal. Encuentra camisetas de tus bandas
-                    favoritas,
-                    vinilos, CD's y accesorios con la esencia rebelde que amas. Más que una tienda, somos tu
-                    comunidad metalera, con eventos en vivo y lanzamientos exclusivos. Sumérgete en el mundo del Metal
-                    en Heavy Metal Store, donde la música trasciende cada objeto. ¡Que el Metal te acompañe siempre!
-                </p>
-
-                <div class="tarjeta" onclick="window.location.href='polos.html'">
-                    <img src="img/estetica/polos1.jpg" alt="Descripción de la imagen 1">
-                    <p>Mira nuestro catalogo de polos que estan en Stock</p>
-                    <button onclick="window.location.href='polos.html'">VER POLOS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='pantalones.html'">
-                    <img src="img/estetica/pantalon_logo.jpg" alt="Descripción de la imagen 2">
-                    <p>Mira nuestro catalogo de pantalones que estan en Stock</p>
-                    <button onclick="window.location.href='pantalones.html'">VER PANTALONES</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='calzado.html'">
-                    <img src="img/calzado/botas_metal.jpg" alt="Descripción de la imagen 3">
-                    <p>Mira nuestro catalogo de calzado que estan en Stock</p>
-                    <button onclick="window.location.href='calzado.html'">VER CALZADO</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='mochilas.html'">
-                    <img src="img/estetica/mochila_logo.jpg" alt="Descripción de la imagen 4">
-                    <p>Mira nuestro catalogo de mochilas que estan en Stock</p>
-                    <button onclick="window.location.href='mochilas.html'">VER MOCHILAS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='accesorios.html'">
-                    <img src="img/estetica/accesorios_logo.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestro catalogo de accesorios que estan en Stock</p>
-                    <button onclick="window.location.href='accesorios.html'">VER ACCESORIOS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='posters.html'">
-                    <img src="img/posters/metallica.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestro catalogo de posters que estan en Stock</p>
-                    <button onclick="window.location.href='posters.html'">VER POSTERS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='ESTAMPADOS.html'">
-                    <img src="img/estampados/estampados_3.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestro catalogo de estampados que estan en Stock</p>
-                    <button onclick="window.location.href='ESTAMPADOS.html'">VER ESTAMPADOS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='casacas cuero.html'">
-                    <img src="img/casacas de cuero/casa cuero_1.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestro catalogo de casacas que estan en Stock</p>
-                    <button onclick="window.location.href='casacas cuero.html'">VER CASACAS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='poleras.html'">
-                    <img src="img/poleras/polera_exciter.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestro catalogo de poleras que estan en Stock</p>
-                    <button onclick="window.location.href='poleras.html'">VER POLERAS</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='emo.html'">
-                    <img src="img/emo/medias_largas_2.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestros productos estilo emo que estan en Stock</p>
-                    <button onclick="window.location.href='emo.html'">VER SECCIÓN</button>
-                </div>
-
-                <div class="tarjeta" onclick="window.location.href='discos vinilo.html'">
-                    <img src="img/discoss vinilo/discos vinilo_1.jpg" alt="Descripción de la imagen 5">
-                    <p>Mira nuestros discos vinilo de bandas nacionales que estan en Stock</p>
-                    <button onclick="window.location.href='disocs vinilos.html'">VER DISCOS VINILO </button>
-                </div>
-
+            <!-- Logo Store Maximizada -->
+            <div class="logo-tienda-container">
+                <img class="logo-tienda" src="img/estetica/STORE.png" alt="Heavy Metal Store Logo Oficial">
             </div>
 
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 25px auto; color: #bbb;">
+                Catálogo oficial de indumentaria, accesorios y material discográfico. Filtra por categoría o busca tu banda favorita. Envíos directos a todo el Perú y Sudamérica.
+            </p>
 
+            <!-- Panel de Controles y Filtros Dinámicos -->
+            <div class="store-controls">
+                <div class="search-bar-wrapper">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar por banda (Iron Maiden, Dio, Exciter, etc.) o producto..." onkeyup="filterProducts()">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="setCategory('todos', this)">Todos</button>
+                    <button class="filter-btn" onclick="setCategory('polos', this)">Polos</button>
+                    <button class="filter-btn" onclick="setCategory('casacas', this)">Casacas</button>
+                    <button class="filter-btn" onclick="setCategory('poleras', this)">Poleras</button>
+                    <button class="filter-btn" onclick="setCategory('pantalones', this)">Pantalones</button>
+                    <button class="filter-btn" onclick="setCategory('calzado', this)">Calzado</button>
+                    <button class="filter-btn" onclick="setCategory('mochilas', this)">Mochilas</button>
+                    <button class="filter-btn" onclick="setCategory('accesorios', this)">Accesorios</button>
+                    <button class="filter-btn" onclick="setCategory('posters', this)">Pósters</button>
+                    <button class="filter-btn" onclick="setCategory('vinilos', this)">Discos & Vinilos</button>
+                </div>
+            </div>
+
+            <!-- Grilla Dinámica de Productos -->
+            <div class="product-grid" id="productsContainer">
+                <!-- Se inyecta con JavaScript -->
             </div>
         </section>
-
     </main>
 
-    <script async src="js/menu.js"></script>
+    <!-- Modal Lightbox para fotos de productos -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Producto">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
 
+    <script async src="js/menu.js"></script>
+    <script>
+        // ==========================================
+        // BASE DE DATOS LOCAL DE PRODUCTOS
+        // ==========================================
+        const productsData = [
+            { id: 1, nombre: "Polo Accept - Metal Heart", banda: "Accept", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/accept_1.jpg", descripcion: "Algodón reactivo 100% con serigrafía de alta durabilidad. Disponible en todas las tallas." },
+            { id: 2, nombre: "Polo AC/DC - Classic Logo", banda: "AC/DC", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/acdc_1.jpg", descripcion: "Estampado clásico de alto contraste sobre algodón negro reactivo." },
+            { id: 3, nombre: "Polo AC/DC - Highway to Hell", banda: "AC/DC", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/acdc_2.jpg", descripcion: "Diseño vintage oficial. Disponible en tallas S, M, L y XL." },
+            { id: 4, nombre: "Polo Alice in Chains - Dirt Era", banda: "Alice in Chains", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/alice in chains_1.jpg", descripcion: "Tributo grunge/metal con serigrafía premium al tacto cero." },
+            { id: 5, nombre: "Polo Ángeles del Infierno - Pacto con el Diablo", banda: "Ángeles del Infierno", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/aneglesdelinfierno_1.jpg", descripcion: "Clásico del Heavy Metal en español. Estampado nítido y duradero." },
+            { id: 6, nombre: "Polo Anthrax - Spreading the Disease", banda: "Anthrax", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/anthrax1.jpg", descripcion: "Thrash metal de la vieja escuela. 100% algodón prelavado." },
+            { id: 7, nombre: "Polo Anthrax - Among the Living", banda: "Anthrax", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/anthrax2.jpg", descripcion: "Arte icónico de la banda neoyorquina. Máxima durabilidad." },
+            { id: 8, nombre: "Polo Asking Alexandria - Reckless", banda: "Asking Alexandria", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/asking alexandra_1.jpg", descripcion: "Edición metalcore con acabados reforzados en cuello y mangas." },
+            { id: 9, nombre: "Polo Atomic Aggressor - Death Metal Chile", banda: "Atomic Aggressor", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/atomic agressor_1.jpg", descripcion: "Banda de culto del underground sudamericano. Serigrafía frontal." },
+            { id: 10, nombre: "Polo Bathory - Goat Classic", banda: "Bathory", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/bachord_1.jpg", descripcion: "Emblema supremo del Black Metal de Quorthon. 100% algodón." },
+            { id: 11, nombre: "Polo Barón Rojo - Volumen Brutal", banda: "Barón Rojo", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/baron rojo_1.jpg", descripcion: "Leyenda del rock pesado hispano. Tallas completas disponibles." },
+            { id: 12, nombre: "Polo Behemoth - The Satanist", banda: "Behemoth", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/behemoth_1.jpg", descripcion: "Black/Death Metal de Polonia con estampado de altísima resolución." },
+            { id: 13, nombre: "Polo Black Sabbath - Master of Reality", banda: "Black Sabbath", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/black sabbath_1.jpg", descripcion: "Los padres del Doom y Heavy Metal. Algodón reactivo suave." },
+            { id: 14, nombre: "Polo Black Sabbath - Paranoid Vintage", banda: "Black Sabbath", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/black sabbath_2.jpg", descripcion: "Estampado clásico de Ozzy, Iommi, Butler y Ward." },
+            { id: 15, nombre: "Polo Black Sabbath - US Tour 78", banda: "Black Sabbath", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/black sabbath_3.jpg", descripcion: "Diseño conmemorativo de gira histórica. Corte estándar unisex." },
+            { id: 16, nombre: "Polo Black Veil Brides - Official Art", banda: "Black Veil Brides", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/black_veil_brides_1.jpg", descripcion: "Diseño alternativo/metal moderno en serigrafía resistente." },
+            { id: 17, nombre: "Polo Blink-182 - Smiley Logo", banda: "Blink-182", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/blink-182_1.jpg", descripcion: "Estilo Pop Punk clásico sobre tela negra premium." },
+            { id: 18, nombre: "Polo Bullet for My Valentine - The Poison", banda: "Bullet for My Valentine", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/bullet for my valentine_1.jpg", descripcion: "Metalcore galés con ilustración en acabado de alta duración." },
+            { id: 19, nombre: "Polo Burzum - Filosofem", banda: "Burzum", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/bursum_1.jpg", descripcion: "Black Metal atmosférico noruego con arte de Theodor Kittelsen." },
+            { id: 20, nombre: "Polo Cancer - To the Gory End", banda: "Cancer", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cancer_1.jpg", descripcion: "Death Metal británico de culto. Estampado brutal garantizado." },
+            { id: 21, nombre: "Polo Cannibal Corpse - Butchered at Birth", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_1.jpg", descripcion: "Edición clásica del Death Metal más agresivo." },
+            { id: 22, nombre: "Polo Cannibal Corpse - Tomb of the Mutilated", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_2.jpg", descripcion: "El arte insigne de Vincent Locke estampado en alta resolución." },
+            { id: 23, nombre: "Polo Cannibal Corpse - The Bleeding", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_3.jpg", descripcion: "Clásico indiscutible con serigrafía resistente al uso rudo." },
+            { id: 24, nombre: "Polo Cannibal Corpse - Evisceration Plague", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_4.jpg", descripcion: "Diseño de era moderna con Corpsegrinder en vocales." },
+            { id: 25, nombre: "Polo Cannibal Corpse - Skull Logo", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_5.jpg", descripcion: "Logotipo frontal con acabados de serigrafía en relieve." },
+            { id: 26, nombre: "Polo Cannibal Corpse - Gore Obsessed", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_6.jpg", descripcion: "Death Metal brutal sin concesiones. 100% algodón reactivo." },
+            { id: 27, nombre: "Polo Cannibal Corpse - Torture", banda: "Cannibal Corpse", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cannibal_corpse_7.jpg", descripcion: "Ilustración de alta fidelidad. Disponible en todas las tallas." },
+            { id: 28, nombre: "Polo Celtic Frost - To Mega Therion", banda: "Celtic Frost", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/celtic_frost_1.jpg", descripcion: "Obra maestra del metal suizo con pintura de H.R. Giger." },
+            { id: 29, nombre: "Polo Coldplay - Tour Edition", banda: "Coldplay", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/coldplay_1.jpg", descripcion: "Diseño alternativo rock/pop de gira en algodón suave." },
+            { id: 30, nombre: "Polo Cradle of Filth - Dusk and Her Embrace", banda: "Cradle of Filth", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/cradle_of_filth_1.jpg", descripcion: "Metal extremo gótico británico. Estampado frontal de alta calidad." },
+            { id: 31, nombre: "Polo Dark Funeral - Secrets of the Black Arts", banda: "Dark Funeral", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/dark funeral_1.jpg", descripcion: "Black Metal sueco impío. Algodón reactivo de exportación." },
+            { id: 32, nombre: "Polo Death - Scream Bloody Gore", banda: "Death", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/death_1.jpg", descripcion: "El nacimiento del Death Metal por Chuck Schuldiner." },
+            { id: 33, nombre: "Polo Death - Leprosy", banda: "Death", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/death_2.jpg", descripcion: "El legendario arte de Ed Repka en alta resolución." },
+            { id: 34, nombre: "Polo Death - Symbolic", banda: "Death", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/death_3.jpg", descripcion: "Death Metal técnico cumbre. Serigrafía suave al tacto." },
+            { id: 35, nombre: "Polo Death - The Sound of Perseverance", banda: "Death", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/death_4.jpg", descripcion: "El álbum final de Chuck Schuldiner estampado a full color." },
+            { id: 36, nombre: "Polo Def Leppard - Pyromania", banda: "Def Leppard", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/def leppard_1.jpg", descripcion: "Hard Rock británico clásico. Algodón 100% prelavado." },
+            { id: 37, nombre: "Polo Def Leppard - Hysteria", banda: "Def Leppard", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/def leppard_2.jpg", descripcion: "El arte del álbum insignia de la banda en serigrafía nítida." },
+            { id: 38, nombre: "Polo Deftones - White Pony", banda: "Deftones", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/deftone_1.jpg", descripcion: "Minimalismo y elegancia del metal alternativo de Sacramento." },
+            { id: 39, nombre: "Polo Deftones - Around the Fur", banda: "Deftones", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/deftones_2.jpg", descripcion: "Diseño noventero en algodón reactivo premium." },
+            { id: 40, nombre: "Polo Destruction - Sentence of Death", banda: "Destruction", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/destruction_1.jpg", descripcion: "Thrash Metal alemán teutónico de pura cepa." },
+            { id: 41, nombre: "Polo Dio - Holy Diver", banda: "Dio", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/dio_1.jpg", descripcion: "Ronnie James Dio y el demonio Murray en el clásico eterno." },
+            { id: 42, nombre: "Polo Dio - The Last in Line", banda: "Dio", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/dio_2.jpg", descripcion: "El templo del metal clásico en serigrafía de alto detalle." },
+            { id: 43, nombre: "Polo Exciter - Heavy Metal Maniac", banda: "Exciter", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/exiter_1.jpg", descripcion: "Speed Metal canadiense legendario. 100% algodón reactivo." },
+            { id: 44, nombre: "Polo Exodus - Bonded by Blood", banda: "Exodus", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/exodus_1.jpg", descripcion: "La furia de la Bay Area en serigrafía indestructible." },
+            { id: 45, nombre: "Polo Gamma Ray - Land of the Free", banda: "Gamma Ray", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/gammaray_1.jpg", descripcion: "Power Metal germano guiado por Kai Hansen." },
+            { id: 46, nombre: "Polo Ghost - Papa Emeritus Classic", banda: "Ghost", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/ghost_1.jpg", descripcion: "Rock teatral ocultista sueco en serigrafía a colores vivos." },
+            { id: 47, nombre: "Polo Gorillaz - Demon Days", banda: "Gorillaz", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/gorillaz_1.jpg", descripcion: "Edición especial con la ilustración de los 4 integrantes." },
+            { id: 48, nombre: "Polo Guns N' Roses - Appetite for Destruction", banda: "Guns N' Roses", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/GR_1.jpg", descripcion: "La cruz con las calaveras del álbum más salvaje del Hard Rock." },
+            { id: 49, nombre: "Polo Guns N' Roses - Classic Crest", banda: "Guns N' Roses", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/GR_2.jpg", descripcion: "Logo tradicional de revólveres y rosas en serigrafía dorada." },
+            { id: 50, nombre: "Polo Guns N' Roses - Use Your Illusion I", banda: "Guns N' Roses", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/GR_3.jpg", descripcion: "El arte renacentista amarillo de Mark Kostabi." },
+            { id: 51, nombre: "Polo Guns N' Roses - Use Your Illusion II", banda: "Guns N' Roses", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/GR_4.jpg", descripcion: "Edición azul de colección en algodón 100% reactivo." },
+            { id: 52, nombre: "Polo Grave - Into the Grave", banda: "Grave", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/grave_1.jpg", descripcion: "Death Metal sueco de la vieja escuela (Old School)." },
+            { id: 53, nombre: "Polo Green Day - Dookie", banda: "Green Day", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/greenday_1.jpg", descripcion: "Ilustración explosiva del clásico punk de 1994." },
+            { id: 54, nombre: "Polo Green Day - American Idiot", banda: "Green Day", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/greenday_2.jpg", descripcion: "La granada-corazón en rojo carmesí sobre fondo negro." },
+            { id: 55, nombre: "Polo HammerFall - Glory to the Brave", banda: "HammerFall", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/hammerfall_1.jpg", descripcion: "El guerrero templario Héctor en glorioso Power Metal." },
+            { id: 56, nombre: "Polo Helloween - Keeper of the Seven Keys", banda: "Helloween", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/helloween_1.jpg", descripcion: "La calabaza insignia del Speed/Power Metal alemán." },
+            { id: 57, nombre: "Polo In Flames - The Jester Race", banda: "In Flames", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/in flames_1.jpg", descripcion: "Pioneros del Death Metal melódico de Gotemburgo." },
+            { id: 58, nombre: "Polo Iron Maiden - The Number of the Beast", banda: "Iron Maiden", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/iron_maiden_1.jpg", descripcion: "Eddie manipulando al diablo. Imprescindible para todo metalero." },
+            { id: 59, nombre: "Polo Iron Maiden - Powerslave", banda: "Iron Maiden", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/iron_maiden_2.jpg", descripcion: "El templo egipcio de Eddie con detalles en dorado y azul." },
+            { id: 60, nombre: "Polo Iron Maiden - Piece of Mind (Trooper)", banda: "Iron Maiden", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/iron_maiden_3.jpg", descripcion: "Eddie en el campo de batalla con la bandera británica." },
+            { id: 61, nombre: "Polo Iron Maiden - Fear of the Dark", banda: "Iron Maiden", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/iron_maiden_4.jpg", descripcion: "Eddie árbol acechando bajo la luna llena. Gran definición." },
+            { id: 62, nombre: "Polo Judas Priest - British Steel", banda: "Judas Priest", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/judas_prist_1.jpg", descripcion: "La hoja de afeitar empuñada con orgullo metálico." },
+            { id: 63, nombre: "Polo Judas Priest - Painkiller", banda: "Judas Priest", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/judas_prist_2.jpg", descripcion: "El ángel de metal en su motocicleta alada sobre la ciudad." },
+            { id: 64, nombre: "Polo Judas Priest - Screaming for Vengeance", banda: "Judas Priest", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/judas_prist_3.jpg", descripcion: "El ave fénix mecánica en amarillo y rojo brillante." },
+            { id: 65, nombre: "Polo King Diamond - Abigail", banda: "King Diamond", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/king_diamond_1.jpg", descripcion: "La historia conceptual de terror gótico más famosa del metal." },
+            { id: 66, nombre: "Polo King Diamond - Fatal Portrait", banda: "King Diamond", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/king_diamond_2.jpg", descripcion: "El rostro del maestro del falsete en serigrafía contrastada." },
+            { id: 67, nombre: "Polo Korn - Follow the Leader", banda: "Korn", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/korn_1.jpg", descripcion: "Nu Metal clásico con la niña en el acantilado." },
+            { id: 68, nombre: "Polo Kreator - Pleasure to Kill", banda: "Kreator", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/kreator_1.jpg", descripcion: "Thrash salvaje y despiadado desde Essen, Alemania." },
+            { id: 69, nombre: "Polo Kreator - Coma of Souls", banda: "Kreator", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/kreator_2.jpg", descripcion: "El laberinto de cráneos en serigrafía violeta y negra." },
+            { id: 70, nombre: "Polo Kreator - Extreme Aggression", banda: "Kreator", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/kreator_3.jpg", descripcion: "Mille Petrozza y sus secuaces en camiseta de alto gramaje." },
+            { id: 71, nombre: "Polo Kreator - Gods of Violence", banda: "Kreator", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/kreator_4.jpg", descripcion: "Era contemporánea demoledora con detalles dorados y carmesí." },
+            { id: 72, nombre: "Polo Leuzemia - Un Lugar", banda: "Leuzemia", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/leuzemia_1.jpg", descripcion: "Pioneros del Rock Subterráneo Peruano. Algodón reactivo." },
+            { id: 73, nombre: "Polo Linkin Park (Corte Femenino)", banda: "Linkin Park", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/linkin park_femenino_1.jpg", descripcion: "Corte entallado para dama con logo oficial de Hybrid Theory." },
+            { id: 74, nombre: "Polo Loudness - Thunder in the East", banda: "Loudness", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/loudness_1.jpg", descripcion: "Heavy Metal legendario desde Japón. Gran rareza de colección." },
+            { id: 75, nombre: "Polo Mägo de Oz - Finisterra", banda: "Mägo de Oz", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/Mago_de_oz_1.jpg", descripcion: "Folk Metal español con el espantapájaros en el camino." },
+            { id: 76, nombre: "Polo Mägo de Oz - Gaia", banda: "Mägo de Oz", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/Mago_de_oz_2.jpg", descripcion: "Ilustración conceptual de Gaboni sobre tela negra de alta gama." },
+            { id: 77, nombre: "Polo Manowar - Kings of Metal", banda: "Manowar", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/manowar_1.jpg", descripcion: "El guerrero blandiendo la espada de acero por Ken Kelly." },
+            { id: 78, nombre: "Polo Manowar - Fighting the World", banda: "Manowar", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/manowar_2.jpg", descripcion: "Heavy Metal épico e hipertrofiado. Estampado frontal." },
+            { id: 79, nombre: "Polo Manowar - Louder Than Hell", banda: "Manowar", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/manowar_3.jpg", descripcion: "El jinete del infierno a toda velocidad. Corte unisex." },
+            { id: 80, nombre: "Polo Manowar - Battle Hymns", banda: "Manowar", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/manowar_4.jpg", descripcion: "El águila de guerra de su disco debut de 1982." },
+            { id: 81, nombre: "Polo Marilyn Manson (Corte Femenino)", banda: "Marilyn Manson", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/marilyn manson_femenino_1.jpg", descripcion: "Corte entallado para mujer con arte de Antichrist Superstar." },
+            { id: 82, nombre: "Polo Mayhem - De Mysteriis Dom Sathanas", banda: "Mayhem", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/mayhem_1.jpg", descripcion: "La catedral de Nidaros en el disco más oscuro del Black Metal." },
+            { id: 83, nombre: "Polo Mayhem - Deathcrush", banda: "Mayhem", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/mayhem_3.jpg", descripcion: "Las manos cercenadas en rojo sangre sobre fondo negro." },
+            { id: 84, nombre: "Polo Mayhem - Pure Fucking Armageddon", banda: "Mayhem", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/mayhem_4.jpg", descripcion: "El demo primigenio de Euronymous y Necrobutcher." },
+            { id: 85, nombre: "Polo Megadeth - Rust in Peace", banda: "Megadeth", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/megadeth_1.jpg", descripcion: "Vic Rattlehead en el Hangar 18 frente a los líderes mundiales." },
+            { id: 86, nombre: "Polo Megadeth - Peace Sells... But Who's Buying?", banda: "Megadeth", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/megadeth_2.jpg", descripcion: "Vic vendiendo las Naciones Unidas tras el ataque nuclear." },
+            { id: 87, nombre: "Polo Megadeth - Countdown to Extinction", banda: "Megadeth", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/megadeth_3.jpg", descripcion: "Thrash técnico y afilado de Dave Mustaine. 100% algodón." },
+            { id: 88, nombre: "Polo Mercyful Fate - Melissa", banda: "Mercyful Fate", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/mercyful fate_1.jpg", descripcion: "El cráneo sobre la cruz en llamas del debut de 1983." },
+            { id: 89, nombre: "Polo Mercyful Fate - Don't Break the Oath", banda: "Mercyful Fate", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/mercyful fate_2.jpg", descripcion: "El demonio señalando desde el abismo en colores vivos." },
+            { id: 90, nombre: "Polo Metallica - Kill 'Em All", banda: "Metallica", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/metallica_1.jpg", descripcion: "El mazo ensangrentado que inició la era dorada del Thrash." },
+            { id: 91, nombre: "Polo Metallica - Ride the Lightning", banda: "Metallica", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/metallica_2.jpg", descripcion: "La silla eléctrica entre relámpagos azules. Clásico eterno." },
+            { id: 92, nombre: "Polo Metallica - Master of Puppets", banda: "Metallica", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/metallica_3.jpg", descripcion: "El cementerio de cruces militares. Serigrafía de alta duración." },
+            { id: 93, nombre: "Polo Mötley Crüe - Shout at the Devil", banda: "Mötley Crüe", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/montley crue_1.jpg", descripcion: "Pentagrama y glamour decadente de Sunset Strip." },
+            { id: 94, nombre: "Polo Mötley Crüe - Dr. Feelgood", banda: "Mötley Crüe", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/montley crue_2.jpg", descripcion: "El caduceo de serpientes y dagas en verde tóxico." },
+            { id: 95, nombre: "Polo Mötley Crüe - Girls, Girls, Girls", banda: "Mötley Crüe", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/montley crue_3.jpg", descripcion: "Estilo motoquero salvaje de los años 80 en algodón negro." },
+            { id: 96, nombre: "Polo Mötley Crüe - Too Fast for Love", banda: "Mötley Crüe", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/montley crue_4.jpg", descripcion: "El debut rebelde e independiente de Nikki Sixx y Vince Neil." },
+            { id: 97, nombre: "Polo Morbid Angel (Corte Femenino)", banda: "Morbid Angel", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/morbid angel_femenino_1.jpg", descripcion: "Corte entallado para mujer con el logo de los reyes del Death Metal." },
+            { id: 100, nombre: "Polo Morbid Angel - Altars of Madness", banda: "Morbid Angel", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/morbid_angel_1.jpg", descripcion: "Las caras deformadas atrapadas en el altar de Dan Seagrave." },
+            { id: 101, nombre: "Polo Morbid Angel - Blessed Are the Sick", banda: "Morbid Angel", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/morbid_angel_2.jpg", descripcion: "El ángel de Jean Delville en sublime Death Metal litúrgico." },
+            { id: 102, nombre: "Polo Morbid Angel - Covenant", banda: "Morbid Angel", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/morbid_angel_4.jpg", descripcion: "El libro de magia negra y la vela encendida en pacto satánico." },
+            { id: 103, nombre: "Polo Motörhead - England (Dama)", banda: "Motörhead", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/motorhead_femenino_1.jpg", descripcion: "Snaggletooth en corte femenino entallado. En memoria de Lemmy." },
+            { id: 104, nombre: "Polo My Chemical Romance - The Black Parade", banda: "My Chemical Romance", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/mychemicalromance_1.jpg", descripcion: "El desfile de la muerte en serigrafía nítida y elegante." },
+            { id: 105, nombre: "Polo My Chemical Romance - Three Cheers", banda: "My Chemical Romance", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/mychemiclaromance_2.jpg", descripcion: "Los amantes ensangrentados de Demolition Lovers." },
+            { id: 106, nombre: "Polo Napalm Death - Scum", banda: "Napalm Death", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/napalm death_1.jpg", descripcion: "Pioneros absolutos del Grindcore mundial. Estampado rudo." },
+            { id: 107, nombre: "Polo Narcosis - Primera Dosis", banda: "Narcosis", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/narcosis_1.jpg", descripcion: "Historia pura del Punk y Rock Subterráneo en Lima." },
+            { id: 108, nombre: "Polo Nirvana - In Utero Angel", banda: "Nirvana", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/nirvana_1.jpg", descripcion: "El maniquí anatómico alado sobre algodón reactivo negro." },
+            { id: 109, nombre: "Polo Nirvana - Smiley (Dama)", banda: "Nirvana", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/nirvana_femenino_1.jpg", descripcion: "Corte entallado para dama con la carita sonriente de Kurt Cobain." },
+            { id: 110, nombre: "Polo Overkill - The Years of Decay", banda: "Overkill", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/over_kill_1.jpg", descripcion: "Chaly la calavera alada en verde radiactivo característico." },
+            { id: 111, nombre: "Polo Ozzy Osbourne - Blizzard of Ozz", banda: "Ozzy Osbourne", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/ozy osbourne_1.jpg", descripcion: "Ozzy con la cruz de madera y Randy Rhoads en la guitarra." },
+            { id: 112, nombre: "Polo Ozzy Osbourne - Bark at the Moon", banda: "Ozzy Osbourne", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/ozy osbourne_2.jpg", descripcion: "El hombre lobo aullando a la luna en serigrafía clásica." },
+            { id: 113, nombre: "Polo PXNDX - Para Ti Con Desprecio", banda: "PXNDX", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/panda_1.jpg", descripcion: "Diseño alternativo/emo rock en serigrafía resistente." },
+            { id: 114, nombre: "Polo Pantera - Vulgar Display of Power", banda: "Pantera", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/pantera_1.jpg", descripcion: "El golpe en la cara más demoledor del Groove Metal." },
+            { id: 115, nombre: "Polo Pantera - Cowboys from Hell", banda: "Pantera", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/pantera_2.jpg", descripcion: "Dimebag Darrell y Phil Anselmo en el saloon texano." },
+            { id: 116, nombre: "Polo Panzerfaust - Black Metal Warfare", banda: "Panzerfaust", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/panzerfaust_1.jpg", descripcion: "Black Metal bélico y oscuro en algodón reactivo premium." },
+            { id: 117, nombre: "Polo Pearl Jam - Stickman Classic", banda: "Pearl Jam", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/pearl jam_1.jpg", descripcion: "Clásico del Grunge de Seattle con Eddie Vedder." },
+            { id: 118, nombre: "Polo Rata Blanca - Magos, Espadas y Rosas", banda: "Rata Blanca", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/rata blanca_1.jpg", descripcion: "La guitarra de Walter Giardino y la voz de Barilari en un clásico." },
+            { id: 119, nombre: "Polo Rata Blanca - Guerrero del Arco Iris", banda: "Rata Blanca", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/rata blanca_2.jpg", descripcion: "Heavy Metal épico argentino en serigrafía a todo color." },
+            { id: 120, nombre: "Polo Rata Blanca - El Camino del Fuego", banda: "Rata Blanca", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/rata blanca_3.jpg", descripcion: "Diseño conmemorativo del regreso triunfal de la banda." },
+            { id: 121, nombre: "Polo Saratoga - A Morir", banda: "Saratoga", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/saracoga_1.jpg", descripcion: "Poderoso Heavy Metal español de Niko del Hierro y Leo Jiménez." },
+            { id: 122, nombre: "Polo Sarcófago - I.N.R.I.", banda: "Sarcófago", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/sarcofago_1.jpg", descripcion: "Pioneros del Metal Extremo sudamericano desde Brasil." },
+            { id: 123, nombre: "Polo Scorpions - Blackout", banda: "Scorpions", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/scorpions_1.jpg", descripcion: "El rostro vendado con tenedores en los ojos de Gottfried Helnwein." },
+            { id: 124, nombre: "Polo Sepultura - Arise", banda: "Sepultura", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/sepultura_1.jpg", descripcion: "La criatura lovecraftiana de Michael Whelan en Death/Thrash puro." },
+            { id: 125, nombre: "Polo Slayer - Reign in Blood", banda: "Slayer", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slayer_1.jpg", descripcion: "El pináculo del Thrash Metal satánico y despiadado." },
+            { id: 126, nombre: "Polo Slayer - Seasons in the Abyss", banda: "Slayer", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slayer_2.jpg", descripcion: "Las calaveras y cruces en la tumba del abismo." },
+            { id: 127, nombre: "Polo Slayer - Eagle Logo", banda: "Slayer", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slayer_3.jpg", descripcion: "El águila con las espadas cruzadas en serigrafía plateada." },
+            { id: 128, nombre: "Polo Slipknot - Self Titled 1999", banda: "Slipknot", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slipknot_1.jpg", descripcion: "Los 9 de Iowa con sus máscaras originales en su debut." },
+            { id: 129, nombre: "Polo Slipknot - Iowa Goat", banda: "Slipknot", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slipknot_2.jpg", descripcion: "La cabeza de cabra plateada del disco más brutal de la banda." },
+            { id: 130, nombre: "Polo Slipknot - Tribal S Logo", banda: "Slipknot", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slipknot_3.jpg", descripcion: "El logo tribal de la 'S' en rojo carmesí sobre fondo negro." },
+            { id: 131, nombre: "Polo Slipknot - All Hope Is Gone", banda: "Slipknot", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slipknot_4.jpg", descripcion: "Diseño conmemorativo de máscaras purgantes y uniforme oscuro." },
+            { id: 132, nombre: "Polo Slipknot - Nonagram Star", banda: "Slipknot", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/slipknot_5.jpg", descripcion: "La estrella de 9 puntas estampada en serigrafía reflectante." },
+            { id: 133, nombre: "Polo S.O.D. - Speak English or Die (Dama I)", banda: "Stormtroopers of Death", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/SOD_femenino_1.jpg", descripcion: "Sargent D en corte entallado femenino. Crossover Thrash." },
+            { id: 134, nombre: "Polo S.O.D. - Sargent D Logo (Dama II)", banda: "Stormtroopers of Death", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/SOD_femenino_2.jpg", descripcion: "Edición entallada para dama en algodón reactivo suave." },
+            { id: 135, nombre: "Polo Sodom - Agent Orange", banda: "Sodom", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/sodom_1.jpg", descripcion: "Knarrenheinz en el bombardero de la guerra de Vietnam." },
+            { id: 136, nombre: "Polo Sodom - Persecution Mania", banda: "Sodom", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/sodom_2.jpg", descripcion: "Thrash Metal alemán destructivo liderado por Tom Angelripper." },
+            { id: 137, nombre: "Polo Sodom - In the Sign of Evil", banda: "Sodom", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/sodom_3.jpg", descripcion: "El hacha empuñada en el EP de culto de 1984." },
+            { id: 138, nombre: "Polo Stryper - To Hell with the Devil", banda: "Stryper", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/stryper_1.jpg", descripcion: "Los ángeles arrojando a Satanás en rayas amarillas y negras." },
+            { id: 139, nombre: "Polo Testament - The Legacy", banda: "Testament", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/testament_1.jpg", descripcion: "El debut demoledor de Chuck Billy y Alex Skolnick." },
+            { id: 140, nombre: "Polo Testament - The New Order", banda: "Testament", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/testament_2.jpg", descripcion: "La orden mundial en el Thrash Metal supremo de la Bay Area." },
+            { id: 141, nombre: "Polo Testament - Practice What You Preach", banda: "Testament", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/testament_3.jpg", descripcion: "La balanza de la justicia en serigrafía clásica." },
+            { id: 142, nombre: "Polo The Black Dahlia Murder - Unhallowed", banda: "The Black Dahlia Murder", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/the black dahlia murder_1.jpg", descripcion: "Melodic Death Metal de altísima velocidad en honor a Trevor Strnad." },
+            { id: 143, nombre: "Polo The Smiths - The Queen Is Dead", banda: "The Smiths", categoria: "polos", precio: "S/ 50.00", imagen: "img/polos/the_smiths_1.jpg", descripcion: "Alain Delon en el clásico indie rock británico de Morrissey y Marr." },
+            { id: 144, nombre: "Polo Therion - Theli", banda: "Therion", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/therion_1.jpg", descripcion: "Metal sinfónico y operístico sueco de Christofer Johnsson." },
+            { id: 145, nombre: "Polo Toxic Holocaust - Evil Never Dies", banda: "Toxic Holocaust", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/toxiholocaust_1.jpg", descripcion: "Speed/Thrash Metal punk y tóxico de Joel Grind." },
+            { id: 146, nombre: "Polo Venom - Black Metal", banda: "Venom", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/venom_1.jpg", descripcion: "El rostro del macho cabrío que bautizó todo un subgénero." },
+            { id: 147, nombre: "Polo Venom - Welcome to Hell", banda: "Venom", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/venom_2.jpg", descripcion: "El pentagrama dorado de 1981 con Cronos, Mantas y Abaddon." },
+            { id: 148, nombre: "Polo W.A.S.P. - The Crimson Idol", banda: "W.A.S.P.", categoria: "polos", precio: "S/ 55.00", imagen: "img/polos/wasp_1.jpg", descripcion: "Blackie Lawless y la historia trágica de Jonathan Steel." },
+
+            // --- CASACAS & CHALECOS ---
+            { id: 149, nombre: "Casaca Jean sin Mangas (Chaleco Denim I)", banda: "Heavy Metal Gear", categoria: "casacas", precio: "S/ 95.00", imagen: "img/polos/casaca_jean_sin_mangas_1.jpg", descripcion: "Chaleco de denim pesado ideal para parches, pines y tachas." },
+            { id: 150, nombre: "Casaca Jean sin Mangas (Chaleco Denim II)", banda: "Heavy Metal Gear", categoria: "casacas", precio: "S/ 95.00", imagen: "img/polos/casaca_jean_sin_mangas_2.jpg", descripcion: "Denim oscuro prelavado con botones metálicos reforzados." },
+            { id: 151, nombre: "Casaca Militar Camuflada Táctica", banda: "Heavy Metal Gear", categoria: "casacas", precio: "S/ 130.00", imagen: "img/polos/casaca_militar_1.jpg", descripcion: "Casaca estilo militar de batalla con bolsillos tácticos frontales." },
+            { id: 152, nombre: "Casaca Alice in Chains - Grunge Era", banda: "Alice in Chains", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_alice in chains.jpg", descripcion: "Casaca acolchada con capucha y forro térmico. Serigrafía de alta durabilidad." },
+            { id: 153, nombre: "Casaca Death - Symbolic Art", banda: "Death", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_death.jpg", descripcion: "Casaca pesada de algodón y poliéster con estampado en espalda y pecho." },
+            { id: 154, nombre: "Casaca Iron Maiden - Eddie Trooper", banda: "Iron Maiden", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_iron maiden.jpg", descripcion: "Casaca clásica con cierre metálico, bolsillos frontales y arte oficial de Eddie." },
+            { id: 155, nombre: "Casaca Judas Priest - British Steel", banda: "Judas Priest", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_judas priest.jpg", descripcion: "Corte estándar con puños acanalados y serigrafía de la legendaria hoja de afeitar." },
+            { id: 156, nombre: "Casaca Linkin Park - Hybrid Theory", banda: "Linkin Park", categoria: "casacas", precio: "S/ 130.00", imagen: "img/poleras/casaca_likin park.jpg", descripcion: "Casaca urbana con forro interior suave y diseño icónico del soldado alado." },
+            { id: 157, nombre: "Casaca Morbid Angel - Altars Art", banda: "Morbid Angel", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_morbid angels.jpg", descripcion: "Diseño para metal extremo con cierre completo y materiales reforzados." },
+            { id: 158, nombre: "Casaca Slipknot - Nonagram Edition", banda: "Slipknot", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casaca_slipknot.jpg", descripcion: "Casaca pesada con el logo tribal y la estrella de 9 puntas de Iowa." },
+            { id: 159, nombre: "Casaca Judas Priest - Painkiller Ride", banda: "Judas Priest", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casca_judas priest.jpg", descripcion: "Edición especial Painkiller con estampado a full color en la espalda." },
+            { id: 160, nombre: "Casaca Slipknot - Iowa Tribal", banda: "Slipknot", categoria: "casacas", precio: "S/ 140.00", imagen: "img/poleras/casca_slipknot.jpg", descripcion: "Casaca con capucha y cierre reforzado para conciertos y uso diario." },
+
+            // --- POLERAS & HOODIES ---
+            { id: 161, nombre: "Polera Dio - Holy Diver Classic", banda: "Dio", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_dio.jpg", descripcion: "Polera con capucha en franela pesada 100% algodón. Estampado de alta calidad." },
+            { id: 162, nombre: "Polera Exciter - Heavy Metal Maniac", banda: "Exciter", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_exciter.jpg", descripcion: "Speed Metal canadiense en sudadera con bolsillo canguro y cordón ajustable." },
+            { id: 163, nombre: "Polera Foreigner - Classic Rock", banda: "Foreigner", categoria: "poleras", precio: "S/ 90.00", imagen: "img/poleras/polera_foreigner.jpg", descripcion: "Polera clásica de Hard Rock / AOR sobre franela negra prelavada." },
+            { id: 164, nombre: "Polera Green Day - American Heart", banda: "Green Day", categoria: "poleras", precio: "S/ 90.00", imagen: "img/poleras/polera_greenday.jpg", descripcion: "Diseño clásico de la granada en rojo sobre franela reactiva negra." },
+            { id: 165, nombre: "Polera Iron Maiden - Powerslave Era", banda: "Iron Maiden", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_ironmaiden.jpg", descripcion: "Sudadera de franela pesada con arte egipcio de Eddie estampado en el pecho." },
+            { id: 166, nombre: "Polera KISS - Destroyer Art", banda: "KISS", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_kiss.jpg", descripcion: "Las 4 leyendas del rock en serigrafía de alta definición sobre tela abrigadora." },
+            { id: 167, nombre: "Polera Manowar - Kings of Metal", banda: "Manowar", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_manowar.jpg", descripcion: "Heavy Metal épico e indestructible. Máxima retención de calor y suavidad." },
+            { id: 168, nombre: "Polera My Chemical Romance - Parade", banda: "My Chemical Romance", categoria: "poleras", precio: "S/ 90.00", imagen: "img/poleras/polera_mychemicalromance.jpg", descripcion: "Polera con capucha y acabados elásticos en puños y cintura." },
+            { id: 169, nombre: "Polera Venom - Black Metal Original", banda: "Venom", categoria: "poleras", precio: "S/ 95.00", imagen: "img/poleras/polera_venom.jpg", descripcion: "El pentagrama dorado y la cabeza de chivo en serigrafía clásica." }
+        ];
+
+        let activeCategory = 'todos';
+
+        // Configuración de contacto
+        const WHATSAPP_PHONE = "51"; // Reemplaza con el número real de WhatsApp (ej: 51987654321)
+
+        // Renderizar los productos en la grilla
+        function renderProducts(products) {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = '';
+
+            if (products.length === 0) {
+                container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #777;">
+                    <h3>No se encontraron productos para esta búsqueda 💀</h3>
+                </div>`;
+                return;
+            }
+
+            products.forEach(p => {
+                // Mensaje estructurado para WhatsApp
+                const msg = `¡Hola Heavy Metal Store! 🤘 Deseo pedir el siguiente producto:\n\n` +
+                            `📦 *Producto:* ${p.nombre}\n` +
+                            `🎸 *Banda:* ${p.banda}\n` +
+                            `💰 *Precio:* ${p.precio}\n\n` +
+                            `¿Tienen stock y disponible en mi talla?`;
+                
+                const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
+
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-card-img-wrapper" onclick="openLightbox('${p.imagen}', '${p.nombre}')">
+                        <span class="badge-category">${p.categoria}</span>
+                        <img src="${p.imagen}" alt="${p.nombre}">
+                    </div>
+                    <div class="product-card-body">
+                        <div>
+                            <div class="product-band">${p.banda}</div>
+                            <h3>${p.nombre}</h3>
+                            <p class="product-desc">${p.descripcion}</p>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">${p.precio}</div>
+                            <a class="btn-order" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer">
+                                💬 Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Filtrar por categoría y texto
+        function filterProducts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = productsData.filter(item => {
+                const matchesCategory = activeCategory === 'todos' || item.categoria === activeCategory;
+                const matchesSearch = item.nombre.toLowerCase().includes(searchTerm) || 
+                                      item.banda.toLowerCase().includes(searchTerm) ||
+                                      item.descripcion.toLowerCase().includes(searchTerm);
+                return matchesCategory && matchesSearch;
+            });
+            renderProducts(filtered);
+        }
+
+        function setCategory(category, buttonElement) {
+            activeCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+            filterProducts();
+        }
+
+        // Lightbox modal
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const captionText = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('lightboxClose');
+
+        function openLightbox(src, alt) {
+            modal.classList.add('active');
+            modalImg.src = src;
+            captionText.textContent = alt;
+            document.body.style.overflow = 'hidden';
+        }
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
+
+        // Carga inicial
+        renderProducts(productsData);
+    </script>
 </body>
+</html>

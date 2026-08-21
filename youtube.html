@@ -4,740 +4,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavy Metal Rock TV - Canal de Youtube</title>
-    <link rel="icon" href="img/estetica/HMR_recortada-icono.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heavy Metal Rock TV - Canal de YouTube</title>
+    <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
-    <script async src="js/menu.js"></script>
     <style>
+        :root {
+            --accent-red: #d32f2f;
+            --accent-gold: #c5a059;
+            --dark-card: rgba(14, 14, 14, 0.92);
+            --border-metal: #2a2a2a;
+        }
+
         body {
-            /* Mantén los estilos existentes para el fondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #e0e0e0;
+            background-color: #080808;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)), url('img/estetica/diogustavo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            transition: background 1s ease;
-            /* Transición suave para el cambio de fondo */
-            background-color: #111;
-            zoom: 90%;
+            min-height: 100vh;
         }
 
+        /* Menú lateral estilo consola profesional */
         nav {
-            text-align: center;
-            background-color: #000000;
-            padding: 20px;
-            height: 200vh;
-            width: 200px;
+            background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             left: 0;
             top: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 15px 15px;
+            border-right: 2px solid #222;
+            border-image: linear-gradient(to bottom, #d32f2f, #333 35%, #111 80%, #d32f2f) 1;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9), 2px 0 10px rgba(211, 47, 47, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
         }
 
-        nav img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav .brand-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav .brand-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        nav img#HMRTV {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.35));
+        }
+
+        nav img#HMRTV:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 14px rgba(211, 47, 47, 0.7));
+        }
+
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #666;
-            width: 100%;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease-in-out;
+            color: #9e9e9e;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
-            background-color: #666;
             color: #fff;
+            background: rgba(211, 47, 47, 0.12);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
         }
 
-        main {
-            flex: 1;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fondo oscuro para mejorar la legibilidad del contenido */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        nav a:hover .nav-icon {
+            color: var(--accent-red);
         }
 
-        h1,
-        h2,
-        p {
+        nav a.active {
             color: #fff;
+            background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
+            border-left: 3px solid var(--accent-red);
+            box-shadow: inset 0 0 10px rgba(211, 47, 47, 0.1);
         }
 
-        /* Agregamos estilos específicos para la tienda */
-        #tienda-content {
-            margin-top: 20px;
+        nav a.active .nav-icon {
+            color: var(--accent-red);
+        }
+
+        .radio-status-card {
+            margin-top: 25px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            padding: 12px 14px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
         }
 
-        .producto {
-            width: 300px;
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border: (0, 0, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
+        .pulse-live {
+            width: 10px;
+            height: 10px;
+            background-color: #e50914;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: live-pulse 1.8s infinite;
         }
 
-        .producto:hover {
-            transform: scale(1.05);
+        @keyframes live-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 9, 20, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
         }
 
-        .producto img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        .radio-status-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .producto h3 {
+        .radio-status-text .title {
+            font-size: 11px;
+            font-weight: 800;
             color: #fff;
-            margin-top: 10px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        .producto p {
-            color: #ccc;
+        .radio-status-text .sub {
+            font-size: 10px;
+            color: #777;
         }
 
-        .ir_a_ver {
-            background-color: #666;
-            color: #fff;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 10px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .ir_a_ver:hover {
-            background-color: #333;
-        }
-
-        #store {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            /* Sombra más pronunciada */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #store:hover {
-            transform: scale(1.1);
-            /* Efecto de escala al pasar el ratón */
-        }
-
-        #contenido {
-            text-align: justify;
-        }
-
-        #correo-button {
-            background-color: #666;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-            margin: 10px auto;
-            /* Centrar el botón horizontalmente */
-            display: block;
-        }
-
-        #correo-button:hover {
-            background-color: #333;
-        }
-
-
-
-        button {
-            background-color: #666;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #333;
-        }
-
-        #descrip {
-            text-align: justify;
-        }
-
-        #titulo {
+        .nav-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             text-align: center;
         }
 
-        .nav-links {
+        .nav-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .nav-socials a {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-socials a:hover {
+            background: var(--accent-red);
+            color: #fff;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+            padding-left: 0;
+        }
+
+        .nav-copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Área central */
+        main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        #youtube-content {
-            margin-top: 20px;
+        section {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--dark-card);
+            border: 1px solid var(--border-metal);
+            border-radius: 8px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-sizing: border-box;
         }
 
-        #youtube-video-container {
-            position: relative;
-            overflow: hidden;
-            padding-top: 56.25%;
+        h1, h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 15px;
+            text-align: justify;
+            color: #bbb;
             margin-bottom: 20px;
         }
 
-        #youtube-video {
+        /* Cabecera del canal */
+        .channel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 35px;
+        }
+
+        .channel-header-text h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.3rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .channel-header-text p {
+            margin: 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .btn-youtube {
+            background: linear-gradient(180deg, #e50914 0%, #b20710 100%);
+            color: #fff;
+            padding: 12px 26px;
+            font-size: 13px;
+            font-weight: 800;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+            transition: all 0.25s ease;
+        }
+
+        .btn-youtube:hover {
+            background: linear-gradient(180deg, #ff1a25 0%, #d40813 100%);
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Grilla de videos de 2 columnas */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: rgba(18, 18, 18, 0.85);
+            border: 1px solid #252525;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+            box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
+        }
+
+        .video-player-container {
+            position: relative;
+            padding-top: 56.25%;
+            background: #000;
+            border-bottom: 1px solid #222;
+        }
+
+        .video-player-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
 
-        #video-description {
+        .video-card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            border-left: 3px solid var(--accent-red);
+            padding-left: 10px;
+        }
+
+        .video-card-body p {
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: #aaa;
+            margin: 0;
             text-align: justify;
         }
 
-        #descrip {
-            text-align: justify;
-        }
-
-        @media screen and (max-width: 1200px) {
-
-            body {
-                flex-direction: column;
-                /* Cambia a disposición vertical */
-            }
-
-            nav {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                position: relative;
-                padding: 10px 0;
-                flex-direction: column;
-            }
-
-            nav img {
-                max-width: 80%;
-                /* Ajusta el ancho de la imagen según tus necesidades */
-                margin-bottom: 10px;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-                /* Oculta la lista de enlaces por defecto */
-            }
-
-            nav a {
-                width: auto;
-                display: inline-block;
-                margin: 0 10px;
-                padding: 8px 12px;
-                border-bottom: none;
-                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-            }
-
-            nav a:hover {
-                background-color: #666;
-                color: #fff;
-            }
-
-            #music-player-container {
-                display: none;
-            }
-
-            .menu-btn {
-                display: block;
-                background-color: #666;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 12px 0;
-                /* Ajusta el padding vertical a tu preferencia */
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px 0;
-                /* Ajusta el margen vertical a tu preferencia */
-                width: 100%;
-                /* Cubre todo el ancho disponible */
-                transition: background-color 0.3s ease-in-out;
-            }
-
-            .menu-btn:hover {
-                background-color: #333;
-                color: #fff;
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-
-            .nav-links {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: none;
-            }
+        @media screen and (max-width: 992px) {
+            body { flex-direction: column; }
+            nav { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; padding: 15px; }
+            .video-grid { grid-template-columns: 1fr; }
         }
     </style>
-
 </head>
 
 <body>
 
-
-
     <nav>
-        <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Logo">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="brand-container">
+            <a href="index.html">
+                <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
+
         <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="TIENDA.html">Tienda</a>
-            <a href="youtube.html">Canal de Youtube</a>
-            <a href="Emisora.html">Emisora</a>
-            <a href="VENTA BOLETOS.html">Venta Boletos </a>
+            <a href="index.html">
+                <span class="nav-icon">⚡</span> Inicio
+            </a>
+            <a href="TIENDA.html">
+                <span class="nav-icon">🛒</span> Tienda
+            </a>
+            <a href="youtube.html" class="active">
+                <span class="nav-icon">📺</span> YouTube
+            </a>
+            <a href="Emisora.html">
+                <span class="nav-icon">📻</span> Emisora
+            </a>
+            <a href="VENTA BOLETOS.html">
+                <span class="nav-icon">🎫</span> Boletos
+            </a>
+        </div>
+
+        <!-- Indicador de señal / radio -->
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <!-- Pie de navegación -->
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="Emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
         </div>
     </nav>
 
     <main>
-        <section id="youtube">
-            <h1>Heavy Metal Rock TV - Canal de Youtube</h1>
-            <div id="youtube-content">
+        <section id="youtube-section">
+            <h1>Canal Oficial de YouTube</h1>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/M_11WImpZG8" frameborder="0"
-                        allowfullscreen></iframe>
+            <div class="channel-header">
+                <div class="channel-header-text">
+                    <h3>Heavy Metal Rock TV</h3>
+                    <p>Entrevistas exclusivas, cobertura de festivales, videoclips e informes de la escena.</p>
                 </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Disinter, Aberrantes Ofrendas al Ukupacha Peru 2023</h3>
-                    <p id="descrip">
-                        En este episodio de Heavy Metal Rock TV, Dio Gustavo presenta un especial de la banda peruana
-                        Disinter y su nuevo videoclip "Aberrantes Ofrendas al Ukupacha". La banda es reconocida por su
-                        destacada participación en Lima Metal Fest y la nota anterior realizada en el programa. Leo
-                        Navarrete, el bajista y vocalista de Disinter, saluda a la audiencia y presenta el nuevo video.
-                        La presentación incluye extractos del videoclip y destaca la calidad del trabajo de la banda.
-                        Dio agradece a Disinter por confiar en el programa y alienta a otras bandas nacionales a
-                        contactarse para futuras notas. Además, promociona sus proyectos, como la tienda Heavy Metal
-                        Store y la radio online Heavy Metal Radio. Concluye agradeciendo nuevamente y enviando saludos a
-                        la audiencia.
-                    </p>
-                </div>
+                <a class="btn-youtube" href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank">
+                    <span>▶ Suscribirse al Canal</span>
+                </a>
+            </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/Pl35v9U6Kig" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Rotten Cannibal. Death Metal de Chile</h3>
-                    <p id="descrip">
-                        En esta edición de Heavy Metal Rock TV, Dio Gustavo presenta a la banda chilena Rotten
-                        Cannibal, destacando su género de Death Metal Brutal. Los miembros de la banda, Eduardo Araya y
-                        otros, envían saludos y comparten detalles sobre su álbum "Ritual Blasfemia" y un DVD en vivo
-                        próximo. Además, presentan su videoclip "Putre-Sangre Integro Cross". Dio agradece a la banda
-                        por confiar en el programa, invita a otras bandas a contactarse y promociona sus proyectos,
-                        incluyendo la tienda Heavy Metal Store y la radio online Heavy Metal Radio. Concluye
-                        agradeciendo a la audiencia y anunciando novedades futuras.
-                    </p>
+            <div class="video-grid">
+
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/M_11WImpZG8" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Disinter: Aberrantes Ofrendas al Ukupacha (Perú 2023)</h3>
+                        <p>Dio Gustavo presenta un especial de la banda peruana Disinter y su videoclip "Aberrantes Ofrendas al Ukupacha". Leo Navarrete, bajista y vocalista, saluda a la audiencia y presenta la obra tras su destacada actuación en Lima Metal Fest.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/PeKDt6v65rA" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Flagelum: Gorehound Perspective (part 1) Peru.</h3>
-                    <p id="descrip">
-                        En esta edición de Heavy Metal Rock TV, Dio Gustavo presenta la banda peruana Flagelum y
-                        destaca su nuevo video lírico "Gorehound Perspective (Part 1)". César, miembro de Flagelum,
-                        introduce el tema y agradece el apoyo. Luego, se muestra el video lírico, resaltando la calidad
-                        del Thrash Metal y Death Metal de la banda. Invita a las bandas a contactarse con el programa a
-                        través de redes sociales y agradece la confianza de Flagelum. Dio Gustavo cierra el programa
-                        con agradecimientos y la promesa de más novedades en futuras ediciones.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/Pl35v9U6Kig" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Rotten Cannibal: Death Metal de Chile</h3>
+                        <p>Presentación especial de la banda chilena Rotten Cannibal. Sus integrantes comparten detalles de su disco "Ritual Blasfemia", un adelanto de su próximo DVD en vivo y su videoclip "Putre-Sangre Integro Cross".</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/laB9q84XpTs" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Nathammer: Evil Nightmare 2023</h3>
-                    <p id="descrip">
-                        En este episodio de Heavy Metal Rock TV, Dio Gustavo presenta una nota sobre la banda peruana
-                        Nathammer y comparte la primicia del nuevo vídeo lírico "Evil Nightmare". Destaca la trayectoria
-                        de Nathammer, sus presentaciones nacionales e internacionales, y anticipa el próximo lanzamiento
-                        del disco "Evil Nightmare". Muestra el vídeo lírico y elogia la calidad musical de la banda,
-                        concluyendo
-                        con un llamado a suscribirse al canal, seguir en redes sociales y apoyar la escena del metal.
-                        Fátima, vocalista de Nathammer, envía un saludo agradeciendo el apoyo.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/PeKDt6v65rA" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Flagelum: Gorehound Perspective (Part 1)</h3>
+                        <p>Dio Gustavo presenta a la banda peruana Flagelum destacando su video lírico oficial. César introduce el tema agradeciendo el apoyo continuo a la escena de Thrash y Death Metal nacional.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/NIC1n5sstDI" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023 Banda: Armagedon, Parte final</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, la banda Armagedon realiza una potente presentación en el
-                        escenario, recibiendo aplausos y elogios del público de Huacho. Posteriormente, Dio Gustavo,
-                        conductor del programa Heavy Metal TV, entrevista al vocalista de Armagedon, conocido como "El
-                        Lobo". Durante la entrevista, "El Lobo" agradece a Pepe y a los amigos de Huacho por la
-                        recepción, destaca la grabación de su nuevo disco en proceso de edición y anuncia su
-                        participación en un concierto con la banda Rata Blanca en Lima el 29 de abril. La entrevista
-                        concluye con agradecimientos y saludos, marcando el cierre del Baquifest VI en Huacho. Dio
-                        Gustavo aprovecha para invitar a la audiencia a suscribirse a su canal de YouTube y a mantenerse
-                        en contacto a través de las redes sociales y proyectos relacionados con el Heavy Metal. La
-                        transmisión termina con un mensaje de despedida y la promesa de más eventos y conciertos en el
-                        futuro.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/laB9q84XpTs" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Nathammer: Evil Nightmare 2023</h3>
+                        <p>Primicia del vídeo lírico "Evil Nightmare" de la banda Nathammer. Recorrido por su trayectoria nacional e internacional con un saludo exclusivo de su vocalista Fátima.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/SK3SBrEhBLQ" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023 Banda: Contracara</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, la banda Contracara se presenta en el escenario y realiza una
-                        actuación llena de energía. La audiencia de Huacho muestra su entusiasmo aplaudiendo y
-                        disfrutando de la música de la banda. Después de la presentación, Dio Gustavo, conductor del
-                        programa Heavy Metal Rock TV, entrevista a Sara Monzón y a la banda Contracara. Durante la
-                        entrevista, Sara y Ricardo expresan su agradecimiento al público de Huacho, destacando la buena
-                        acogida que siempre han tenido en la ciudad. También mencionan que no es la primera vez que
-                        visitan Huacho y comparten su experiencia positiva en cada visita. Además, Dio Gustavo elogia
-                        la actuación de Contracara y les desea mucho éxito en su carrera musical.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/NIC1n5sstDI" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Armagedon (Parte Final)</h3>
+                        <p>Presentación demoledora de la histórica banda Armagedon en Huacho, seguida de una entrevista exclusiva de Dio Gustavo a "El Lobo", vocalista de la banda, hablando del nuevo disco y su show con Rata Blanca.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/blpxmVgeQRw" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023 Banda: Strogena</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, la banda Estrógena se presenta en el escenario y comparte su
-                        música con la audiencia de Huacho. Las integrantes de la banda expresan su agradecimiento a los
-                        organizadores y al público por la cálida recepción. Mostraron su entusiasmo
-                        por tocar y disfrutar del evento. Después de su actuación, las chicas de Strógena son
-                        entrevistadas por Dio Gustavo, conductor del programa Heavy Metal Rock TV. En la entrevista, las
-                        integrantes de la banda hablan sobre su experiencia en Huacho, la recepción del público y
-                        comparten detalles sobre su música. Además, Dio Gustavo destaca la presencia de mujeres en la
-                        escena del metal y muestra su aprecio por la calidad musical de Strógena.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/SK3SBrEhBLQ" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Contracara</h3>
+                        <p>Actuación en vivo de la banda Contracara llena de energía, complementada con una entrevista a Sara Monzón y Ricardo agradeciendo la cálida recepción del público huachano.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/b2FxbbG7FIQ" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023 Banda: JORGE HARD</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, Dio Gustavo presenta la banda Jorge Hard. El vídeo muestra
-                        momentos destacados de la
-                        presentación en vivo de la banda, con imágenes del público y la interacción con la audiencia.
-                        Luego, Dio Gustavo entrevista al vocalista Jorge y al manager Sergio, compartiendo anécdotas y
-                        la emoción de tocar en el Baquifest VI. La banda presenta canciones de su disco y adelanta la
-                        posibilidad de un nuevo álbum. La entrevista destaca la larga amistad entre Dio Gustavo y la
-                        banda Jorge Hard, que provienen del mismo barrio.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/blpxmVgeQRw" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Strógena</h3>
+                        <p>Presentación y entrevista en el Baquifest VI a la agrupación Strógena, resaltando la fuerza femenina en la escena del Heavy Metal y compartiendo detalles de sus composiciones.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/Ism2AjIBInw" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023 Banda: Transito Pesado</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, Dio Gustavo presenta a la banda Transito Pesado, en vivo y en
-                        directo en el Baquifest VI.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/b2FxbbG7FIQ" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Jorge Hard</h3>
+                        <p>Momentos destacados en el escenario y entrevista amical con el vocalista Jorge y Sergio, compartiendo anécdotas de barrio, temas de su disco y planes de futuras grabaciones.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/xMtSMsMSezU" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUIFEST VI 2023, Banda: ORION</h3>
-                    <p id="descrip">
-                        En este video del Baquifest VI, Dio Gustavo presenta un especial que destaca momentos del
-                        evento. Saluda a los organizadores y agradece a Pepe Guillén y Ricardo Segura. Presenta imágenes
-                        y entrevistas del festival, reconociendo la participación de bandas y el entusiasmo del público.
-                        Se menciona la apertura oficial del evento con Pepe Guillén y Ricardo Segura en el escenario,
-                        agradeciendo la asistencia y resaltando la importancia del evento para la comunidad. Se presenta
-                        la banda Orion con su actuación en vivo y se anuncia la siguiente presentación de la banda
-                        Tránsito Pesado.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/Ism2AjIBInw" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Tránsito Pesado</h3>
+                        <p>Registro en vivo y en directo de la potente presentación de la banda Tránsito Pesado sacudiendo el escenario del Baquifest VI.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/EFzuXYic_bg" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Baquifest VI , Reel de fotos</h3>
-                    <p id="descrip">
-                        En este video, Dio Gustavo presenta una sección especial de fotos del Baquifest VI en Huacho
-                        . Muestra diversas imágenes del evento y agradece a los organizadores por la exitosa
-                        realización. Invita a suscriptores a seguir su canal de YouTube, menciona sus proyectos
-                        adicionales (Heavy Metal Radio y Heavy Metal Store) y se despide agradeciendo a la audiencia con
-                        un "larga vida al metal".
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/xMtSMsMSezU" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Banda Orión</h3>
+                        <p>Cobertura de la apertura oficial del evento con los organizadores Pepe Guillén y Ricardo Segura, seguida de la actuación en directo de la banda Orión.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/fnIWdE-DvcQ" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Invitación al Baquifest VI, Huacho-Perú 25-3-2023</h3>
-                    <p id="descrip">
-                        En este video de YouTube titulado "Invitación al Baquifest VI, Huacho-Perú 25-3-2023", Dio
-                        Gustavo presenta una invitación a un evento musical en Huacho, Perú. El Baquifest VI se llevará
-                        a cabo el 25 de marzo y contará con la participación de bandas tanto de Lima como locales de
-                        Huacho. Entre las bandas destacadas se encuentran Armagedón, Contracara, Strógena, Jorge Hard,
-                        Orión y Tránsito Pesado. El evento promete ser un concierto lleno de música Metal y Hard Rock.
-                        Dio Gustavo invita a la audiencia a asistir al concierto, mencionando detalles como la
-                        ubicación, la hora de inicio y el costo de las entradas. También proporciona información sobre
-                        cómo seguir el programa y otros proyectos, como Heavy Metal Radio y Heavy Metal Store. La nota
-                        incluye mensajes de algunas de las bandas participantes, invitando a los espectadores a unirse
-                        al evento. Dio Gustavo agradece el apoyo y cierra el programa, instando a la audiencia a
-                        suscribirse a su canal de YouTube y mantenerse al tanto de futuras ediciones.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/EFzuXYic_bg" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquifest VI: Reel Oficial de Fotos</h3>
+                        <p>Galería fotográfica y resumen visual de los mejores momentos, público y bandas del Baquifest VI en Huacho con el agradecimiento de Dio Gustavo.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/KUbyndIYNYg" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Kike Yompián: Oriental Remember II feat Tavo Castillo 2023</h3>
-                    <p id="descrip">
-                        El video de YouTube titulado "Kike Yompián: Oriental Remember II feat Tavo Castillo 2023"
-                        presenta una entrevista y discusión sobre el nuevo videoclip "Oriental Remember" de Kike
-                        Yompián y su banda. Durante la entrevista, se destaca la colaboración con Tavo Castillo, músico
-                        de la banda Frágil. Kike Yompián explica la inspiración detrás de la canción, basada en
-                        melodías orientales y recuerdos de generaciones anteriores. También se menciona la experiencia
-                        de la grabación del videoclip y se adelanta información sobre un próximo disco con un estilo de
-                        fusión. Además, se invita a la audiencia a suscribirse al canal y seguir el programa "Heavy
-                        Metal Rock TV".
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/fnIWdE-DvcQ" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Invitación Oficial Baquifest VI (Huacho)</h3>
+                        <p>Convocatoria oficial al festival con detalles de cartelera, bandas invitadas (Armagedón, Contracara, Strógena, Jorge Hard, Orión, Tránsito Pesado), horarios y entradas.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/UnRo9s0ImRI" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Conciertos Enero 2023, HMRTV</h3>
-                    <p id="descrip">
-                        En este video de YouTube titulado "Conciertos Enero 2023, HMRTV", el conductor Dio Gustavo
-                        presenta
-                        información sobre tres conciertos programados para enero de 2023 en Perú. Los conciertos
-                        incluyen la presentación de la banda nacional M.A.S.A.C.R.E en el Yeald Rock, con la
-                        participación de
-                        Omar Pizarro y un dueto especial con el loco Cervantes. El siguiente concierto se llevará a cabo
-                        en Huacho, en el norte chico, con
-                        bandas locales y de provincia. Dio Gustavo invita a la audiencia a escoger entre estos
-                        conciertos y
-                        destaca la rareza de tener tres eventos importantes en la misma fecha. Además, anuncia futuras
-                        novedades y proyectos, como Heavy Metal Store y Heavy Metal Radio. Dio Gustavo agradece el apoyo
-                        y
-                        cierra el programa, invitando a sus seguidores a suscribirse a su canal de YouTube y a
-                        mantenerse atentos a futuras ediciones.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/KUbyndIYNYg" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Kike Yompián: Oriental Remember II (feat. Tavo Castillo)</h3>
+                        <p>Entrevista sobre el videoclip "Oriental Remember" con la colaboración del legendario Tavo Castillo (Frágil), explorando melodías orientales y adelantos de su disco fusión.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/2WOMVTaz0DA" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Feliz año 2023, Heavy Metal Rock Tv</h3>
-                    <p id="descrip">
-                        El conductor del programa de Heavy Metal Rock TV en YouTube, Dio Gustavo, se despide del año
-                        2022
-                        agradeciendo a la audiencia y reflexionando sobre las experiencias vividas. Destaca la
-                        importancia de la amistad y la perseverancia frente a la pandemia. Agradece a quienes han
-                        apoyado el programa y menciona la pérdida de un amigo del Metal. A pesar de los altibajos, se
-                        despide con orgullo y optimismo, anticipando novedades para el próximo año. Saluda a varias
-                        bandas y concluye con buenos deseos para el 2023, instando a cuidarse y disfrutar de la música
-                        Metal.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/UnRo9s0ImRI" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Cartelera de Conciertos Enero 2023</h3>
+                        <p>Informe especial sobre las fechas de conciertos en Lima y Huacho, incluyendo el show de M.A.S.A.C.R.E en Yield Rock junto a Omar Pizarro y dueto con el Loco Cervantes.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/CRfhypbGBSc" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Enbor Arnasa 2022</h3>
-                    <p id="descrip">
-                        El presentador Dio Gustavo de Heavy Metal Rock TV presenta un informe sobre el proyecto
-                        musical "Enbor Arnasa" liderado por Iñaki Esparza desde el País Vasco. Destaca la trayectoria
-                        musical de Iñaki, quien es el único miembro de la banda y se encarga de múltiples roles. Muestra
-                        imágenes del proceso de grabación de su tercer álbum, que será lanzado a principios de 2023.
-                        Dio elogia la iniciativa de apoyar bandas internacionales y destaca la colaboración con
-                        músicos de diferentes partes del mundo. Agradece a la audiencia por confiar en el programa y
-                        promociona otros proyectos, como Heavy Metal Radio y Heavy Metal Store. Termina agradeciendo a
-                        los seguidores y al País Vasco por la confianza, deseando un Feliz Año 2023 y anticipando nuevas
-                        propuestas para el próximo año.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/2WOMVTaz0DA" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Mensaje Especial de Fin de Año - HMRTV</h3>
+                        <p>Dio Gustavo reflexiona junto a la comunidad metalera sobre los desafíos, la unión, homenajes a camaradas caídos y los nuevos proyectos que se avecinan para el canal.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/-PQGraseaP4" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUISHOP, Hualmay-Huacho 2022, parte final.</h3>
-                    <p id="descrip">
-                        El video muestra la parte final de un evento llamado "BAQUISHOP" en Huacho, presentado por Heavy
-                        Metal Rock TV. El presentador, Dio Gustavo, destaca la presencia del encargado de seguridad,
-                        Mario Durán, quien ha estado en el campo de la seguridad por ocho a diez años. Mario comparte su
-                        número de contacto para aquellos interesados en sus servicios.
-
-                        Luego, el video muestra clips de la actuación de diversas bandas en el evento, agradecimientos a
-                        la audiencia, y destaca la presencia de Heavy Metal Radio en el concierto. Dio también
-                        promociona su
-                        canal de YouTube, Heavy Metal Rock TV, e invita a la audiencia a suscribirse para ver más
-                        contenido.
-                        Menciona otros proyectos, como Heavy Metal Store, donde se venden productos relacionados con el
-                        Metal. Finalmente, agradece a la ciudad de Huacho, a los organizadores del evento, y anticipa
-                        novedades para futuras ediciones del programa.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/CRfhypbGBSc" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Enbor Arnasa (País Vasco)</h3>
+                        <p>Informe especial sobre el proyecto unipersonal "Enbor Arnasa" liderado por Iñaki Esparza desde el País Vasco, mostrando el proceso de grabación de su tercer álbum de estudio.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/qhxyJ6S4ecg" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUISHOP, Hualmay-Huacho, 2022, 3ra parte.</h3>
-                    <p id="descrip">
-                        El video presenta la tercera parte del evento "BAQUISHOP" en Huacho. Destaca la entrevista a
-                        Víctor Voz, un músico local, y la llegada de la banda de
-                        Kike Yompián, liderada por Kike Yompián, que regresa de una gira internacional. Se anticipa una
-                        sorpresa en el escenario y la banda interpreta dos temas de heavy metal clásico, destacando la
-                        historia del monitor Huáscar. El video concluye con agradecimientos y la promesa de más música.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/-PQGraseaP4" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquishop (Hualmay - Huacho) - Parte Final</h3>
+                        <p>Cierre del evento con clips de bandas en vivo, entrevista a Mario Durán (seguridad del evento) y balance general de la jornada metalera.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/l0dWcJOgb5Y" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUISHOP, Hualmay-Huacho 2022, 2da parte</h3>
-                    <p id="descrip">
-                        El video presenta la segunda parte del evento "BAQUISHOP" en Huacho. Comienza con una entrevista
-                        a la banda Extremo, agradeciendo su participación en el evento. Luego, se destaca la iniciativa
-                        del Back Fest, un evento reconocido en el norte chico de Perú, con una entrevista al organizador
-                        Pepe Guillén. Se menciona la expansión del evento a otras ciudades y se anticipa el próximo
-                        BaquiFest. La entrevista concluye con agradecimientos y la promoción de sorpresas futuras.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/qhxyJ6S4ecg" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquishop - 3ra Parte (Kike Yompián en Vivo)</h3>
+                        <p>Entrevista a Víctor Voz y la llegada de Kike Yompián tras su gira internacional, interpretando dos temas de corte clásico dedicados a la historia del monitor Huáscar.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/Jn_szok_dRY" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">BAQUISHOP, Hualmay-Huacho 2022, 1ra parte</h3>
-                    <p id="descrip">
-                        El video presenta la primera parte del evento "BAQUISHOP" en Huacho. Comienza con la
-                        introducción de Heavy Metal Rock TV y destaca el evento "BAQUISHOP" en Huacho. Se agradece
-                        a los organizadores y se muestra a la banda Extremo tocando en el escenario. Luego, Ricardo
-                        Segura, uno de los organizadores, expresa su agradecimiento a la audiencia y habla sobre la idea
-                        del evento como un espacio para que las bandas del Norte chico expresen su arte. Se menciona la
-                        importancia de la versatilidad musical y se aborda la normativa municipal sobre el nivel de
-                        decibeles. El evento continúa con la presentación de más bandas en el escenario.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/l0dWcJOgb5Y" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquishop - 2da Parte (Banda Extremo & Pepe Guillén)</h3>
+                        <p>Entrevista a la agrupación Extremo y conversación con el organizador Pepe Guillén sobre la expansión del festival en el norte chico peruano.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/gsGwwkYo3Dc" frameborder="0"
-                        allowfullscreen></iframe>
-                </div>
-                <div id="video-description">
-                    <h3 style="color: red;">Fallen Symmetry: videoclip "Aun en Pie" PERÚ</h3>
-                    <p id="descrip">
-                        El video es un programa especial de Heavy Metal Rock TV presentado por Dio Gustavo. Destaca el
-                        nuevo videoclip "Aun en Pie" de la banda Fallen Symmetry y elogia su calidad. Menciona la
-                        participación de invitados especiales, como Gustavo Efrain. Se envían saludos a Fallen Symmetry
-                        por su actuación en Heavy Metal Vortex y se anticipa el lanzamiento del disco "Rehenes". Se
-                        promocionan proyectos personales, como la tienda virtual "Heavy Metal Store". Dio invita a
-                        suscribirse al canal de YouTube y seguir en redes sociales. Cierra agradeciendo y deseando larga
-                        vida al metal.
-                    </p>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/Jn_szok_dRY" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Baquishop - 1ra Parte (Apertura y Escena Norte Chico)</h3>
+                        <p>Inicio de la cobertura del Baquishop con la actuación de Extremo y entrevista a Ricardo Segura sobre los espacios culturales para bandas independientes.</p>
+                    </div>
                 </div>
 
-                <div id="youtube-video-container">
-                    <!-- Reemplaza 'VIDEO_ID' con el ID del video de YouTube -->
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/oeaqyTGRMfQ?si=zcVEaCP7dxdXYVhQ"
-                        frameborder="0" allowfullscreen></iframe>
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/gsGwwkYo3Dc" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Fallen Symmetry: Videoclip "Aún en Pie"</h3>
+                        <p>Especial dedicado a la banda nacional Fallen Symmetry y el estreno de su videoclip "Aún en Pie" con invitados especiales y detalles de su álbum "Rehenes".</p>
+                    </div>
                 </div>
-                <div id="video-description">
-                    <h3 style="color: red;">EDWIN MEDINA, R.I.P. Nov. 2,022</h3>
-                    <p id="descrip">
-                        El video es un programa homenaje a Edwin Medina, un bajista de la banda Sepulcro que falleció
-                        recientemente. El presentador expresa sus condolencias a la familia y amigos de Medina y
-                        comparte recuerdos personales. Se incluye una entrevista previa con Medina, donde habla sobre su
-                        carrera musical y su trabajo como manager de la banda Hermandad Miserable. También se mencionan
-                        planes futuros para tocar en Argentina, Uruguay y Paraguay. El presentador destaca el apoyo de
-                        Medina a la escena musical peruana y finaliza con saludos a la banda Sepulcro y un llamado a
-                        suscribirse al canal para ver el homenaje completo.
-                    </p>
+
+                <div class="video-card">
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/oeaqyTGRMfQ" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-card-body">
+                        <h3>Homenaje Póstumo: Edwin Medina (R.I.P.)</h3>
+                        <p>Programa tributo a la memoria del bajista de Sepulcro y manager de Hermandad Miserable, recordando su incalculable aporte a la escena subterránea nacional.</p>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
+
     <script async src="js/menu.js"></script>
 </body>
-
 </html>

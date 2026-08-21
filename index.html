@@ -6,104 +6,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="oFYf31ZxDozxW3Z-rtAoEff6qPRNexP-_isom8Gw5IQ" />
-    <link rel="manifest" href="/site.webmanifest">
     <title>Heavy Metal Rock TV</title>
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
     <style>
+        :root {
+            --accent-red: #d32f2f;
+            --accent-gold: #c5a059;
+            --dark-card: rgba(14, 14, 14, 0.92);
+            --border-metal: #2a2a2a;
+        }
+
         body {
-            /* Mantén los estilos existentes para el fondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #e0e0e0;
+            background-color: #080808;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('img/estetica/diogustavo.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            transition: background 1s ease;
-            /* Transición suave para el cambio de fondo */
-            background-color: #111;
-            ZOOM: 90%
+            min-height: 100vh;
         }
 
+       /* Menú lateral estilo consola profesional */
         nav {
-            text-align: center;
-            background-color: #000000;
-            padding: 20px;
-            height: 200vh;
-            width: 200px;
+            background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             left: 0;
             top: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px 15px 15px;
+            
+            /* Marco personalizado con borde metálico y neón sutil */
+            border-right: 2px solid #222;
+            border-image: linear-gradient(to bottom, #d32f2f, #333 35%, #111 80%, #d32f2f) 1;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.9), 2px 0 10px rgba(211, 47, 47, 0.15);
+            
+            z-index: 100;
+            box-sizing: border-box;
         }
 
-        nav img {
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Centrado horizontal milimétrico del logo */
+        nav .brand-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav .brand-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        nav img#HMRTV {
+            display: block;
+            width: auto;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.35));
+        }
+
+        nav img#HMRTV:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 14px rgba(211, 47, 47, 0.7));
+        }
+        
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         nav a {
             text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #666;
-            width: 100%;
-            box-sizing: border-box;
-            transition: background-color 0.3s ease-in-out;
+            color: #9e9e9e;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        nav a .nav-icon {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666;
+            transition: color 0.25s ease;
         }
 
         nav a:hover {
-            background-color: #666;
             color: #fff;
+            background: rgba(211, 47, 47, 0.12);
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
         }
 
+        nav a:hover .nav-icon {
+            color: var(--accent-red);
+        }
+
+        /* Enlace Activo de la página actual */
+        nav a.active {
+            color: #fff;
+            background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
+            border-left: 3px solid var(--accent-red);
+            box-shadow: inset 0 0 10px rgba(211, 47, 47, 0.1);
+        }
+
+        nav a.active .nav-icon {
+            color: var(--accent-red);
+        }
+
+        /* Estado de la Emisora / Live Status */
+        .radio-status-card {
+            margin-top: 25px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #1f1f1f;
+            border-radius: 6px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pulse-live {
+            width: 10px;
+            height: 10px;
+            background-color: #e50914;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: live-pulse 1.8s infinite;
+        }
+
+        @keyframes live-pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 9, 20, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+        }
+
+        .radio-status-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-status-text .title {
+            font-size: 11px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .radio-status-text .sub {
+            font-size: 10px;
+            color: #777;
+        }
+
+        /* Pie del menú lateral (Redes y Copyright) */
+        .nav-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+
+        .nav-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .nav-socials a {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #141414;
+            border: 1px solid #222;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-socials a:hover {
+            background: var(--accent-red);
+            color: #fff;
+            border-color: var(--accent-red);
+            box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+            padding-left: 0;
+        }
+
+        .nav-copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Área central */
         main {
+            margin-left: 240px;
             flex: 1;
-            padding: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Fondo oscuro para mejorar la legibilidad del contenido */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h1,
-        h2,
-        p {
+        section {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--dark-card);
+            border: 1px solid var(--border-metal);
+            border-radius: 8px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
             color: #fff;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        #inicio-content {
-            margin-top: 20px;
+        p {
+            line-height: 1.8;
+            font-size: 15px;
+            text-align: justify;
+            color: #bbb;
+            margin-bottom: 20px;
         }
 
-        #inicio-content img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
+        .banner-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #333;
+            margin-bottom: 25px;
         }
 
-       #youtube-content {
-            margin-top: 20px;
+        .logo-quienes-somos {
+            max-width: 550px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto 10px auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-quienes-somos:hover {
+            transform: scale(1.03);
         }
 
         #youtube-video-container {
             position: relative;
-            overflow: hidden;
             padding-top: 56.25%;
-            margin-bottom: 20px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border-metal);
+            margin: 25px 0;
         }
 
-        #youtube-video {
+        #youtube-video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -111,452 +321,285 @@
             height: 100%;
         }
 
-        #video-description {
-            text-align: justify;
+        /* Grilla de imágenes interactiva */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .rounded-box {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        .image-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #222;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        #correo {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .image-grid img:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: var(--accent-red);
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
         }
 
-        #quienes-somos p {
-            text-align: justify;
-        }
-
-        #conciertos {
-            text-align: justify;
-        }
-
-        #bandas {
-            text-align: justify;
-        }
-
-        #dio-gustavo,
-        #HMRTV,
-        .band-logo,
-        #logos-bm,
-        #concierto,
-        #correo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin: 10px auto;
-            /* Centro la imagen */
-            display: block;
-            /* Para centrar la imagen */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #dio-gustavo:hover,
-        #HMRTV:hover,
-        .band-logo:hover,
-        #logos-bm:hover,
-        #concierto:hover,
-        #correo:hover {
-            transform: scale(1.1);
-        }
-
-        #contactanos {
-            text-align: justify;
-            /* Centrar el contenido del bloque */
-        }
-
-        #correo-button {
-            background-color: #666;
+        /* Botón de correo */
+        .btn-metal {
+            background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
             color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
+            padding: 14px 35px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid #ff4d4d;
+            border-radius: 4px;
+            letter-spacing: 1.5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease-in-out;
-            margin: 10px auto;
-            /* Centrar el botón horizontalmente */
-            display: block;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
 
-        #correo-button:hover {
-            background-color: #333;
+        .btn-metal:hover {
+            background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
+            box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+            color: #fff;
         }
 
-        #music-player-container {
+        /* Lightbox Modal para ampliar imágenes */
+        .lightbox-modal {
+            display: none;
             position: fixed;
-            bottom: 10px;
-            right: 10px;
-            z-index: 1000;
-            text-align: center;
-        }
-
-        #music-player-button {
-            background-color: #666;
-            border-radius: 50%;
-            cursor: pointer;
-            width: 80px;
-            /* Ajusta el ancho del botón según tus necesidades */
-            height: 80px;
-            /* Ajusta la altura del botón según tus necesidades */
-            overflow: hidden;
-            margin-bottom: 10px;
-            display: flex;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        #music-player-button img {
-            width: 100%;
-        }
-
-        #music-player {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            right: 10px;
-            width: 500px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 1001;
-            text-align: center;
-        }
-
-        #song-list-container {
-            margin-top: 10px;
-            overflow: auto;
-            display: none;
-        }
-
-        #song-list-container ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #song-list-container li {
-            cursor: pointer;
-            padding: 10px;
-            border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        #song-list-container li:hover {
-            background-color: #444;
-            color: #fff;
-        }
-
-        #album-art {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        #song-info {
+        .lightbox-modal.active {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            opacity: 1;
         }
 
-        #album-art-small {
-            width: 100%;
-            max-height: 600px;
-            /* Cambia el valor según tus necesidades */
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            border: 2px solid var(--accent-red);
+            box-shadow: 0 0 35px rgba(211, 47, 47, 0.5);
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             object-fit: contain;
-            border-radius: 8px;
-            margin-top: 10px;
         }
 
-        #audio-player {
-            width: 100%;
-            /* Cambiado de 80% a 100% para cubrir todo el ancho */
-            margin: 10px auto;
-            /* Ajusta el margen según tus necesidades */
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
         }
 
-        /* Resto del código CSS sigue igual */
-
-        button {
-            background-color: #666;
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
             color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
+            font-size: 40px;
+            font-weight: bold;
             cursor: pointer;
-            font-size: 14px;
-            margin: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            transition: color 0.2s ease, transform 0.2s ease;
+            line-height: 1;
+            user-select: none;
         }
 
-        button:hover {
-            background-color: #333;
+        .lightbox-close:hover {
+            color: var(--accent-red);
+            transform: rotate(90deg);
         }
 
-        #texto {
-            text-align: justify;
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            color: #bbb;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        @media screen and (max-width: 1200px) {
-
-            body {
-                flex-direction: column;
-                /* Cambia a disposición vertical */
-            }
-
-            nav {
-                width: 100%;
-                height: auto;
-                text-align: center;
-                position: relative;
-                padding: 10px 0;
-                flex-direction: column;
-            }
-
-            nav img {
-                max-width: 80%;
-                /* Ajusta el ancho de la imagen según tus necesidades */
-                margin-bottom: 10px;
-            }
-
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                display: none;
-                /* Oculta la lista de enlaces por defecto */
-            }
-
-            nav a {
-                width: auto;
-                display: inline-block;
-                margin: 0 10px;
-                padding: 8px 12px;
-                border-bottom: none;
-                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-            }
-
-            nav a:hover {
-                background-color: #666;
-                color: #fff;
-            }
-
-            #music-player-container {
-                display: none;
-            }
-
-            .menu-btn {
-                display: block;
-                background-color: #666;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 12px 0;
-                /* Ajusta el padding vertical a tu preferencia */
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px 0;
-                /* Ajusta el margen vertical a tu preferencia */
-                width: 100%;
-                /* Cubre todo el ancho disponible */
-                transition: background-color 0.3s ease-in-out;
-            }
-
-            .menu-btn:hover {
-                background-color: #333;
-                color: #fff;
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-
-            .nav-links {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: none;
-            }
+        @media screen and (max-width: 992px) {
+            body { flex-direction: column; }
+            nav { position: relative; width: 100%; height: auto; }
+            main { margin-left: 0; padding: 15px; }
         }
     </style>
-
 </head>
 
 <body>
 
-    <div id="music-player-container">
-        <div id="music-player-button" onclick="toggleMusicPlayer()">
-            <img src="img/estetica/dio_boton.jpg" alt="Reproductor de música">
-        </div>
-        <div id="music-player">
-            <div id="song-info">
-                <h3 id="current-song">Canción Actual</h3>
-                <img id="album-art-small" src="" alt="Album Art">
-            </div>
-            <audio id="audio-player" controls></audio>
-            <div>
-                <button onclick="prevSong()"><span class="icon-first"></span></button>
-                <button onclick="togglePlayPause()"><span class="icon-play3"></span></button>
-                <button onclick="nextSong()"><span class="icon-last"></span></button>
-            </div>
-
-            <div id="song-list-container">
-                <ul>
-                    <li onclick="playSong('music/Cannibal Corpse - Evisceration Plague.mp3')">
-                        Cannibal Corpse - Evisceration Plague</li>
-                    <li onclick="playSong('music/Ozzy Osbourne - Crazy Train.mp3')">Ozzy
-                        Osbourne - Crazy Train</li>
-                    <li onclick="playSong('music/Dio - Rainbow In The Dark.mp3')">Dio -
-                        Rainbow In The Dark</li>
-                    <li onclick="playSong('music/Judas Priest - Trial By Fire.mp3')">Judas
-                        Priest - Trial By Fire</li>
-                    <li onclick="playSong('music/Anthrax - Keep It In The Family.mp3')">
-                        Anthrax - Keep It In The Family</li>
-                    <li onclick="playSong('music/Dio - Another Lie.mp3')">Dio - Another Lie
-                    </li>
-                    <li onclick="playSong('music/Nightwish - Bless The Child.mp3')">
-                        Nightwish - Bless The Child</li>
-                    <li onclick="playSong('music/Cradle Of Filth - Cruelty Brought Thee Orchids.mp3')">
-                        Cradle Of Filth - Cruelty Brought Thee Orchids</li>
-                    <li onclick="playSong('music/SLAUGHTER TO PREVAIL - Bratva.mp3')">
-                        SLAUGHTER TO PREVAIL - Bratva</li>
-                </ul>
-            </div>
-
-            <div>
-                <button onclick="toggleSongList()"><span class="icon-paragraph-justify"></span></button>
-            </div>
-
-        </div>
-    </div>
-
     <nav>
-        <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Logo">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="TIENDA.html">Tienda</a>
-            <a href="youtube.html">Canal de Youtube</a>
-            <a href="Emisora.html">Emisora</a>
-            <a href="VENTA BOLETOS.html">Venta Boletos </a>
+        <div class="brand-container">
+            <a href="index.html" style="background: none; border: none; padding: 0;">
+                <img id="HMRTV" src="img/estetica/HMRTV.jpg" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
 
+        <div class="nav-links">
+            <a href="index.html" class="active">
+                <span class="nav-icon">⚡</span> Inicio
+            </a>
+            <a href="TIENDA.html">
+                <span class="nav-icon">🛒</span> Tienda
+            </a>
+            <a href="youtube.html">
+                <span class="nav-icon">📺</span> YouTube
+            </a>
+            <a href="Emisora.html">
+                <span class="nav-icon">📻</span> Emisora
+            </a>
+            <a href="VENTA BOLETOS.html">
+                <span class="nav-icon">🎫</span> Boletos
+            </a>
+        </div>
+
+        <!-- Indicador de señal / radio -->
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <!-- Pie de navegación con redes y copyright -->
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="Emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
         </div>
     </nav>
 
     <main>
         <section id="inicio">
-            <h1> Heavy Metal Rock TV</h1>
-            <div id="inicio-content">
-                <img id="dio-gustavo" src="img/estetica/diogustavo.jpg" alt="Black Metal Band">
-                <p id="texto">
+            <h1>Heavy Metal Rock TV</h1>
+            <img class="banner-img" src="img/estetica/diogustavo.jpg" alt="Dio Gustavo">
+            <p>
+                Sean todos bienvenidos a Heavy Metal Rock TV, un espacio creado para todos los amantes
+                del rock y metal. Aquí encontrarás contenido dedicado a mantener viva la pasión por 
+                la música que nos une. Conoce los próximos conciertos, descubre bandas destacadas y 
+                disfruta de programas especiales.
+            </p>
+            <div id="youtube-video-container">
+                <iframe src="https://www.youtube.com/embed/WwDOOEc9esk" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="quienes-somos">
+            <h2>¿Quiénes Somos?</h2>
+            <p>
+                Somos un proyecto conformado por tres unidades que se complementan entre sí: 
+                <strong>Heavy Metal Rock TV</strong> (medio de comunicación y canal audiovisual), 
+                <strong>Heavy Metal Store</strong> (tienda especializada en indumentaria y accesorios con envíos a nivel nacional) 
+                y <strong>Heavy Metal Fanzine</strong> (propuesta editorial sobre la historia y discografía del metal).
+            </p>
+            <img class="logo-quienes-somos" src="img/estetica/heavyrocktv.png" alt="Logo Heavy Rock TV">
+        </section>
 
-                <p id="texto">
-                    Sean todos bienvenidos a Heavy Metal Rock TV, un espacio creado para todos los amantes
-                    del rock y metal. Aquí encontrarás un contenido dedicado a mantener viva la pasión por 
-                    la música que nos une. En nuestra plataforma podrás conocer los próximos conciertos y 
-                    eventos, descubrir bandas destacadas, enterarte de las últimas novedades del mundo del 
-                    metal y disfrutar de contenido especial para verdaderos fanáticos.
-                </p>
-                <p id="texto">
-                    También podrás conocer nuestra tienda virtual, acceder a nuestra emisora radial y 
-                    disfrutar de entrevistas, programas y contenido exclusivo a través de nuestro canal 
-                    de YouTube.
-                </p>
-                 <div id="youtube-content">
+        <section id="bandas">
+            <h2>Bandas Destacadas</h2>
+            <p>Descubre aquí algunas de las bandas más influyentes y poderosas de la escena. <em>(Haz clic en cualquier imagen para ampliarla)</em></p>
+            <div class="image-grid">
+                <img class="zoomable-img" src="img/estetica/bd-korn.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-cinderella.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-IronMaiden.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-dio.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-kreator.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-CanibalCorpse.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-helloween.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-nightwish.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-burzum.jpg">
 
-                <div id="youtube-video-container">
-                    <iframe id="youtube-video" src="https://www.youtube.com/embed/WwDOOEc9esk" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img class="zoomable-img" src="img/estetica/bd-acdc.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-dokken.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-judapriest.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-exciter.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-havok.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-SadisticIntent.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-spite.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-obituar.jpg">
+                <img class="zoomable-img" src="img/estetica/bd-MotionlessInWhite.png">
                 
             </div>
         </section>
 
-        <section id="quienes-somos">
-            <h2>¿QUIÉNES SOMOS?</h2>
-            <p>Somos un proyecto conformado por tres unidades que se complementan entre sí: Heavy Metal Rock TV, 
-                nuestro medio de comunicación donde encontrarás noticias, entrevistas, bandas destacadas, 
-                próximos conciertos, programas, emisora radial y contenido audiovisual en nuestro canal de 
-                YouTube; Heavy Metal Store, nuestra tienda especializada en indumentaria, accesorios y productos 
-                inspirados en las grandes bandas de la historia, con envíos a nivel nacional; y Heavy Metal Fanzine, 
-                nuestra nueva propuesta editorial dedicada a la historia, trayectoria, discografía y legado de las 
-                grandes figuras y bandas. Tres unidades, una misma pasión: difundir, apoyar 
-                y mantener viva la esencia del rock y el metal.</p>
-            <img class="band-logo" src="img/estetica/heavyrocktv.png" alt="">
-            <!-- Agrega más información sobre tu proyecto o comunidad -->
-        </section>
-
-        <section id="bandas">
-            <h2>BANDAS DESTACADAS</h2>
-            <p>Descubre aquí algunas de las bandas más influyentes y poderosas en el género. El Metal es caracterizado
-                por su sonido agresivo y enérgico. Las bandas que te presentaremos han dejado huella en la escena musical 
-                y han influenciado a muchas otras en su género.
-            
-                Prepárate para sumergirte en un mundo sonoro lleno de intensidad y potencia.</p>
-            
-            <img id="logos-bm" src="img/estetica/collage1.jpg" alt="">
-            <img id="logos-bm" src="img/estetica/collage2.jpg" alt="">
-
-            <!-- Agrega contenido relacionado con las bandas -->
-        </section>
-
         <section id="conciertos">
-            <h2>PRÓXIMOS CONCIERTOS</h2>
-            <p>Descubre las próximas fechas, eventos y presentaciones de la escena metalera. Conoce las bandas 
-                que estarán en concierto, las novedades de cada evento y disfruta de su música a través de nuestra 
-                emisora radial.</p>
-
-            <!-- Agregar conciertos -->
-            <img id="concierto" src="img/estetica/ironmaidenconcierto.jpeg" alt="">
-            <img id="concierto" src="img/estetica/saratoga.jpeg" alt="">
-            <img id="concierto" src="img/estetica/tierrasanta.jpeg" alt="">
-            <img id="concierto" src="img/estetica/apocalyptica.jpeg" alt="">
-            <img id="concierto" src="img/estetica/deathmetalrulesvol3.jpeg" alt="">
-            <img id="concierto" src="img/estetica/ritualinfernal.jpeg" alt="">
-
-            
-            
-            
-            
+            <h2>Próximos Conciertos</h2>
+            <p>Cartelera de fechas y eventos de la escena metalera. <em>(Haz clic en el afiche para ver los detalles completos)</em></p>
+            <div class="image-grid">
+                <img class="zoomable-img" src="img/estetica/ironmaidenconcierto.jpeg" alt="Iron Maiden en Concierto">
+                <img class="zoomable-img" src="img/estetica/saratoga.jpeg" alt="Saratoga en Concierto">
+                <img class="zoomable-img" src="img/estetica/tierrasanta.jpeg" alt="Tierra Santa en Concierto">
+                <img class="zoomable-img" src="img/estetica/apocalyptica.jpeg" alt="Apocalyptica en Concierto">
+                <img class="zoomable-img" src="img/estetica/deathmetalrulesvol3.jpeg" alt="Death Metal Rules Vol. 3">
+                <img class="zoomable-img" src="img/estetica/ritualinfernal.jpeg" alt="Ritual Infernal en Concierto">
+            </div>
         </section>
 
-        <section id="contactanos">
-            <h2>CONTÁCTANOS</h2>
-            <p>Si deseas comunicarte con nosotros, encontrarás nuestros medios de contacto y redes sociales 
-                para que puedas formar parte de esta comunidad. Heavy Metal Rock TV: música, cultura, información 
-                y pasión por el metal. ¡Bienvenidos y larga vida al metal!</p>
-   
-            <img id="correo" src="img/estetica/correo.jpg" alt="">
-        </section>
-
-        <section>
-            <button id="correo-button" onclick="window.location.href='mailto:gustavomasacre31@hotmail.'">NUESTRO
-                CORREO</button>
-        </section>
+        <section id="contactanos" style="text-align: center;">
+            <h2>Contáctanos</h2>
+            <p>Escríbenos para consultas comerciales, difusión de eventos o unirte a la comunidad:</p>
+            <a class="btn-metal" href="mailto:gustavomasacre31@hotmail.com">ENVIAR CORREO</a>
         </section>
     </main>
+
+    <!-- Ventana Modal de Ampliación (Lightbox) -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Afiche ampliado">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
     <script async src="js/menu.js"></script>
+    <script>
+        // Script interactivo del Visor de Imágenes
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const captionText = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('lightboxClose');
+        const zoomImages = document.querySelectorAll('.zoomable-img');
+
+        zoomImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.classList.add('active');
+                modalImg.src = img.src;
+                captionText.textContent = img.alt;
+                document.body.style.overflow = 'hidden'; // Bloquea el scroll de fondo
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restaura el scroll
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
