@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // BOTÓN FLOTANTE GLOBAL DE WHATSAPP
 // ==========================================
 (function() {
-    const WHATSAPP_NUMBER = "51999999999"; // Reemplaza con tu número oficial (con código de país sin '+')
+    const WHATSAPP_NUMBER = "51950324368"; // Reemplaza con tu número oficial (con código de país sin '+')
     const DEFAULT_MSG = "¡Hola Heavy Metal Rock TV! 🤘 Deseo hacer una consulta.";
     const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MSG)}`;
 
