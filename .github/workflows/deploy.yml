@@ -1,0 +1,58 @@
+name: CI/CD Heavy Metal Rock TV
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Permisos para validar y desplegar en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # 1. Fase CI: Validar que el JSON no esté roto
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Validar sintaxis de data/products.json
+        run: |
+          echo "Verificando estructura de data/products.json..."
+          python3 -m json.tool data/products.json > /dev/null
+          echo "¡El archivo JSON es 100% valido!"
+
+      - name: Configurar GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v4
+
+      - name: Preparar artefactos para despliegue
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  # 2. Fase CD: Desplegar a produccion (SOLO cuando el push sea a main)
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: validate-and-build
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
