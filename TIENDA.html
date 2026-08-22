@@ -9,6 +9,68 @@
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Heavy Metal Store - Heavy Metal Rock TV",
+      "image": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp",
+      "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/TIENDA.html",
+      "telephone": "+51999999999",
+      "priceRange": "S/ 50.00 - S/ 140.00",
+      "currenciesAccepted": "PEN",
+      "paymentAccepted": "Efectivo, Yape, Plin, Transferencia Bancaria",
+      "description": "Tienda oficial de indumentaria, polos, casacas y discos de bandas de Heavy, Thrash, Death y Black Metal con envíos a todo el Perú.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de Indumentaria Metal & Rock",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Polos de Metal",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Polos de Bandas de Metal 100% Algodón Reactivo",
+                  "category": "Clothing"
+                },
+                "price": "55.00",
+                "priceCurrency": "PEN",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Casacas y Chalecos",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Casacas y Chalecos Denim Heavy Metal",
+                  "category": "Clothing"
+                },
+                "price": "140.00",
+                "priceCurrency": "PEN",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Heavy Metal Store | Tienda Oficial de Polos, Casacas y Discos">
@@ -18,11 +80,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/TIENDA.html">
     <meta name="twitter:card" content="summary_large_image">
+
     <style>
         :root {
             --accent-red: #d32f2f;
             --accent-gold: #c5a059;
-            --dark-card: rgba(14, 14, 14, 0.92);
+            --dark-card: rgba(14, 14, 14, 0.94);
             --border-metal: #2a2a2a;
         }
 
@@ -244,6 +307,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
         }
 
         section {
@@ -343,6 +408,7 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         .filter-btn:hover {
@@ -543,7 +609,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.92);
             backdrop-filter: blur(8px);
             z-index: 2000;
             justify-content: center;
@@ -556,47 +622,190 @@
 
         .lightbox-content {
             max-width: 90vw;
-            max-height: 88vh;
+            max-height: 85vh;
             border-radius: 8px;
             border: 2px solid var(--accent-red);
             box-shadow: 0 0 35px rgba(211, 47, 47, 0.5);
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             object-fit: contain;
+        }
+
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
         }
 
         .lightbox-close {
             position: absolute;
-            top: 25px;
-            right: 35px;
+            top: 20px;
+            right: 25px;
             color: #fff;
-            font-size: 40px;
+            font-size: 38px;
             font-weight: bold;
             cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+            line-height: 1;
+            user-select: none;
+            z-index: 2010;
         }
 
-        .lightbox-close:hover { color: var(--accent-red); }
+        .lightbox-close:hover { 
+            color: var(--accent-red); 
+            transform: rotate(90deg);
+        }
 
         .lightbox-caption {
             position: absolute;
             bottom: 20px;
             color: #bbb;
             font-size: 15px;
+            letter-spacing: 1px;
+            text-align: center;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: 600;
+            padding: 0 15px;
         }
 
+        /* =======================================================
+           OPTIMIZACIONES RESPONSIVAS PROFESIONALES (MÓVIL Y TABLET)
+           ======================================================= */
         @media screen and (max-width: 1100px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .product-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 20px;
+            }
         }
 
         @media screen and (max-width: 992px) {
-            body { flex-direction: column; }
-            nav { position: relative; width: 100%; height: auto; }
-            main { margin-left: 0; padding: 15px; }
-            .logo-tienda { max-width: 95%; }
+            body { 
+                flex-direction: column; 
+            }
+
+            /* Barra de navegación superior compacta para móvil */
+            nav { 
+                position: sticky; 
+                top: 0;
+                width: 100%; 
+                height: auto; 
+                padding: 12px 15px;
+                border-right: none;
+                border-bottom: 2px solid var(--accent-red);
+                border-image: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #0d0d0d;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            }
+
+            nav .brand-container {
+                margin-bottom: 0;
+                padding-bottom: 8px;
+            }
+
+            nav img#HMRTV {
+                max-width: 130px;
+            }
+
+            /* Enlaces del menú en scroll horizontal suave */
+            .nav-links {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                gap: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .nav-links::-webkit-scrollbar-thumb {
+                background: var(--accent-red);
+                border-radius: 3px;
+            }
+
+            nav a {
+                white-space: nowrap;
+                padding: 8px 14px;
+                font-size: 12px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+
+            nav a:hover, nav a.active {
+                border-left: none;
+                border-bottom: 2px solid var(--accent-red);
+                padding-left: 14px;
+            }
+
+            /* Ocultar widgets secundarios del menú en móvil */
+            .radio-status-card,
+            .nav-footer {
+                display: none;
+            }
+
+            /* Área de contenido */
+            main { 
+                margin-left: 0; 
+                width: 100%;
+                padding: 15px 12px; 
+            }
+
+            section {
+                padding: 22px 18px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                margin-bottom: 18px;
+            }
+
+            .logo-tienda { 
+                max-width: 95%; 
+            }
+
+            .store-controls {
+                padding: 15px;
+                gap: 12px;
+            }
+
+            /* Barra de filtros con scroll horizontal táctil (chips scroll) */
+            .filter-buttons {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .filter-buttons::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .filter-buttons::-webkit-scrollbar-thumb {
+                background: var(--accent-red);
+                border-radius: 3px;
+            }
         }
 
+        /* Pantallas muy pequeñas (Smartphones de 650px hacia abajo) */
         @media screen and (max-width: 650px) {
-            .product-grid { grid-template-columns: 1fr; }
+            .product-grid { 
+                grid-template-columns: 1fr; 
+                gap: 18px;
+            }
+
+            .product-card-img-wrapper {
+                height: 240px;
+            }
+
+            .btn-load-more {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 20px;
+            }
         }
     </style>
 </head>
@@ -660,7 +869,7 @@
 
             <div class="store-controls">
                 <div class="search-bar-wrapper">
-                    <input type="text" id="searchInput" placeholder="🔍 Buscar por banda (Iron Maiden, Dio, Exciter, etc.) o producto..." onkeyup="handleFilterChange()">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar por banda (Iron Maiden, Dio, Exciter, etc.) o producto..." oninput="debouncedSearch()">
                 </div>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="setCategory('todos', this)">Todos</button>
@@ -707,6 +916,21 @@
         let currentlyDisplayed = 0;
         let activeCategory = 'todos';
 
+        // Utilidad Debounce para optimizar la búsqueda
+        function debounce(func, delay = 300) {
+            let timeoutId;
+            return (...args) => {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    func.apply(this, args);
+                }, delay);
+            };
+        }
+
+        const debouncedSearch = debounce(() => {
+            handleFilterChange();
+        }, 300);
+
         document.addEventListener('DOMContentLoaded', () => {
             fetch('data/products.json')
                 .then(response => {
@@ -728,7 +952,6 @@
                 });
         });
 
-        // Filtrado y reinicio de paginación
         function handleFilterChange() {
             const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
             
@@ -740,18 +963,12 @@
                 return matchesCategory && matchesSearch;
             });
 
-            // Reiniciar contador de items visibles
             currentlyDisplayed = 0;
             document.getElementById('productsContainer').innerHTML = '';
-
-            // Actualizar texto del contador dinámico
             updateCounterText(searchTerm);
-
-            // Cargar los primeros 12
             loadMoreProducts();
         }
 
-        // Contador contextual inteligente
         function updateCounterText(searchTerm) {
             const counter = document.getElementById('resultsCounter');
             const total = filteredProducts.length;
@@ -773,7 +990,6 @@
             counter.innerHTML = text;
         }
 
-        // Carga progresiva de 12 en 12
         function loadMoreProducts() {
             const container = document.getElementById('productsContainer');
             const loadMoreBtn = document.getElementById('loadMoreContainer');
@@ -823,13 +1039,7 @@
             });
 
             currentlyDisplayed += nextBatch.length;
-
-            // Mostrar u ocultar el botón según si quedan más productos
-            if (currentlyDisplayed < filteredProducts.length) {
-                loadMoreBtn.style.display = 'flex';
-            } else {
-                loadMoreBtn.style.display = 'none';
-            }
+            loadMoreBtn.style.display = (currentlyDisplayed < filteredProducts.length) ? 'flex' : 'none';
         }
 
         function setCategory(category, buttonElement) {
@@ -839,7 +1049,7 @@
             handleFilterChange();
         }
 
-        // Lightbox modal
+        // Modal Lightbox
         const modal = document.getElementById('lightboxModal');
         const modalImg = document.getElementById('lightboxImg');
         const captionText = document.getElementById('lightboxCaption');

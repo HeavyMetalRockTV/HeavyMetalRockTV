@@ -10,7 +10,6 @@ on:
       - main
   workflow_dispatch:
 
-# Permisos para validar y desplegar en GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -21,18 +20,43 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 1. Fase CI: Validar que el JSON no esté roto
   validate-and-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar código del repositorio
+      - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Validar sintaxis de data/products.json
+      - name: Validar integridad de JSON
         run: |
           echo "Verificando estructura de data/products.json..."
           python3 -m json.tool data/products.json > /dev/null
           echo "¡El archivo JSON es 100% valido!"
+
+      - name: Configurar Node.js y Minificar Assets
+        if: github.ref == 'refs/heads/main'
+        run: |
+          npm install -g html-minifier-terser terser csso-cli
+          
+          # Minificar JavaScript global
+          if [ -f "js/menu.js" ]; then
+            terser js/menu.js -c -m -o js/menu.min.js
+            mv js/menu.min.js js/menu.js
+          fi
+
+          # Minificar archivos HTML (incluye CSS y JS embebido)
+          for file in *.html; do
+            if [ -f "$file" ]; then
+              html-minifier-terser \
+                --collapse-whitespace \
+                --remove-comments \
+                --remove-redundant-attributes \
+                --remove-script-type-attributes \
+                --remove-style-link-type-attributes \
+                --minify-css true \
+                --minify-js true \
+                -o "$file" "$file"
+            fi
+          done
 
       - name: Configurar GitHub Pages
         if: github.ref == 'refs/heads/main'
@@ -44,7 +68,6 @@ jobs:
         with:
           path: '.'
 
-  # 2. Fase CD: Desplegar a produccion (SOLO cuando el push sea a main)
   deploy:
     if: github.ref == 'refs/heads/main'
     environment:

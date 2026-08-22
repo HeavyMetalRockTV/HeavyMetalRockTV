@@ -9,6 +9,24 @@
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Venta y Difusión de Boletos - Heavy Metal Rock TV",
+      "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/VENTA%20BOLETOS.html",
+      "description": "Plataforma oficial de difusión, prensa y preventa de entradas para conciertos y festivales de Metal en Perú.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Heavy Metal Rock TV",
+        "logo": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/HMRTV.webp"
+      },
+      "areaServed": "PE"
+    }
+    </script>
+
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Venta de Boletos | Próximos Conciertos Heavy Metal Rock TV">
@@ -18,11 +36,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/VENTA%20BOLETOS.html">
     <meta name="twitter:card" content="summary_large_image">
+
     <style>
         :root {
             --accent-red: #d32f2f;
             --accent-gold: #c5a059;
-            --dark-card: rgba(14, 14, 14, 0.92);
+            --dark-card: rgba(14, 14, 14, 0.94);
             --border-metal: #2a2a2a;
         }
 
@@ -137,7 +156,6 @@
             color: var(--accent-red);
         }
 
-        /* Enlace Activo */
         nav a.active {
             color: #fff;
             background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
@@ -245,6 +263,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
         }
 
         section {
@@ -259,7 +279,7 @@
             box-sizing: border-box;
         }
 
-        h1, h2 {
+        h2 {
             color: #fff;
             font-size: 1.8rem;
             font-weight: 800;
@@ -271,6 +291,7 @@
             margin-bottom: 25px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
         }
 
@@ -339,12 +360,123 @@
             background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
             box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
             color: #fff;
+            transform: translateY(-2px);
         }
 
+        /* =======================================================
+           OPTIMIZACIONES RESPONSIVAS PROFESIONALES (MÓVIL Y TABLET)
+           ======================================================= */
         @media screen and (max-width: 992px) {
-            body { flex-direction: column; }
-            nav { position: relative; width: 100%; height: auto; }
-            main { margin-left: 0; padding: 15px; }
+            body {
+                flex-direction: column;
+            }
+
+            /* Barra de navegación superior compacta para móvil */
+            nav {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: auto;
+                padding: 12px 15px;
+                border-right: none;
+                border-bottom: 2px solid var(--accent-red);
+                border-image: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #0d0d0d;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            }
+
+            nav .brand-container {
+                margin-bottom: 0;
+                padding-bottom: 8px;
+            }
+
+            nav img#HMRTV {
+                max-width: 130px;
+            }
+
+            /* Enlaces del menú en scroll horizontal suave */
+            .nav-links {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                gap: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .nav-links::-webkit-scrollbar-thumb {
+                background: var(--accent-red);
+                border-radius: 3px;
+            }
+
+            nav a {
+                white-space: nowrap;
+                padding: 8px 14px;
+                font-size: 12px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+
+            nav a:hover, nav a.active {
+                border-left: none;
+                border-bottom: 2px solid var(--accent-red);
+                padding-left: 14px;
+            }
+
+            /* Ocultar widgets secundarios del menú en móvil */
+            .radio-status-card,
+            .nav-footer {
+                display: none;
+            }
+
+            /* Área de contenido */
+            main {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px 12px;
+            }
+
+            section {
+                padding: 22px 18px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                margin-bottom: 18px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+                text-align: left;
+            }
+
+            .logo-quienes-somos {
+                max-width: 90%;
+            }
+
+            .ticket-info-card {
+                padding: 18px 15px;
+            }
+
+            .ticket-info-card h3 {
+                font-size: 1.15rem;
+            }
+
+            .btn-metal {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 14px 20px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -400,7 +532,7 @@
         <section id="boletos-section" style="text-align: center;">
             <h2>Venta y Difusión de Boletos</h2>
             
-            <img class="logo-quienes-somos" src="img/estetica/ROCKTV.webp" alt="Heavy Metal Rock TV Logo">
+            <img class="logo-quienes-somos" src="img/estetica/ROCKTV.webp" alt="Heavy Metal Rock TV Logo" loading="lazy">
 
             <div class="ticket-info-card" style="text-align: left;">
                 <h3>Punto Oficial de Entradas y Alianzas</h3>

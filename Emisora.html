@@ -9,6 +9,22 @@
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RadioStation",
+      "name": "HMR Radio - Heavy Metal Rock TV",
+      "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/Emisora.html",
+      "logo": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/HMRTV.webp",
+      "image": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp",
+      "description": "Emisora online 24/7 de Heavy Metal, Thrash, Death y Black Metal.",
+      "genre": ["Heavy Metal", "Rock", "Thrash Metal", "Death Metal"],
+      "broadcastTimeRange": "24/7"
+    }
+    </script>
+
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="HMR Radio | Emisora Metal Stream 24/7">
@@ -18,11 +34,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/Emisora.html">
     <meta name="twitter:card" content="summary_large_image">
+
     <style>
         :root {
             --accent-red: #d32f2f;
             --accent-gold: #c5a059;
-            --dark-card: rgba(14, 14, 14, 0.92);
+            --dark-card: rgba(14, 14, 14, 0.94);
             --border-metal: #2a2a2a;
         }
 
@@ -137,7 +154,6 @@
             color: var(--accent-red);
         }
 
-        /* Enlace Activo */
         nav a.active {
             color: #fff;
             background: linear-gradient(90deg, rgba(211, 47, 47, 0.25) 0%, rgba(211, 47, 47, 0.05) 100%);
@@ -245,6 +261,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
         }
 
         section {
@@ -463,7 +481,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.88);
+            background: rgba(0, 0, 0, 0.92);
             backdrop-filter: blur(8px);
             z-index: 2000;
             justify-content: center;
@@ -479,7 +497,7 @@
 
         .lightbox-content {
             max-width: 90vw;
-            max-height: 88vh;
+            max-height: 85vh;
             border-radius: 8px;
             border: 2px solid var(--accent-red);
             box-shadow: 0 0 35px rgba(211, 47, 47, 0.5);
@@ -492,15 +510,16 @@
 
         .lightbox-close {
             position: absolute;
-            top: 25px;
-            right: 35px;
+            top: 20px;
+            right: 25px;
             color: #fff;
-            font-size: 40px;
+            font-size: 38px;
             font-weight: bold;
             cursor: pointer;
             transition: color 0.2s ease, transform 0.2s ease;
             line-height: 1;
             user-select: none;
+            z-index: 2010;
         }
 
         .lightbox-close:hover { color: var(--accent-red); transform: rotate(90deg); }
@@ -509,19 +528,142 @@
             position: absolute;
             bottom: 20px;
             color: #bbb;
-            font-size: 16px;
+            font-size: 15px;
             letter-spacing: 1px;
             text-align: center;
             text-transform: uppercase;
             font-weight: 600;
+            padding: 0 15px;
         }
 
+        /* =======================================================
+           OPTIMIZACIONES RESPONSIVAS PROFESIONALES (MÓVIL Y TABLET)
+           ======================================================= */
         @media screen and (max-width: 992px) {
-            body { flex-direction: column; }
-            nav { position: relative; width: 100%; height: auto; }
-            main { margin-left: 0; padding: 15px; }
-            .app-showcase { flex-direction: column; text-align: center; }
-            .app-showcase-text h3 { border-left: none; }
+            body {
+                flex-direction: column;
+            }
+
+            /* Barra de navegación superior compacta para móvil */
+            nav {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: auto;
+                padding: 12px 15px;
+                border-right: none;
+                border-bottom: 2px solid var(--accent-red);
+                border-image: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #0d0d0d;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            }
+
+            nav .brand-container {
+                margin-bottom: 0;
+                padding-bottom: 8px;
+            }
+
+            nav img#HMRTV {
+                max-width: 130px;
+            }
+
+            /* Enlaces del menú en scroll horizontal suave */
+            .nav-links {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                gap: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .nav-links::-webkit-scrollbar-thumb {
+                background: var(--accent-red);
+                border-radius: 3px;
+            }
+
+            nav a {
+                white-space: nowrap;
+                padding: 8px 14px;
+                font-size: 12px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+
+            nav a:hover, nav a.active {
+                border-left: none;
+                border-bottom: 2px solid var(--accent-red);
+                padding-left: 14px;
+            }
+
+            /* Ocultar widgets secundarios del menú en móvil */
+            .radio-status-card,
+            .nav-footer {
+                display: none;
+            }
+
+            /* Área de contenido */
+            main {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px 12px;
+            }
+
+            section {
+                padding: 22px 18px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+            }
+
+            h1, h2 {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                margin-bottom: 18px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+                text-align: left;
+            }
+
+            .live-broadcast-banner {
+                padding: 20px 15px;
+            }
+
+            .live-broadcast-banner h3 {
+                font-size: 1.3rem;
+            }
+
+            .btn-tune-in {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 13px;
+            }
+
+            .app-showcase {
+                flex-direction: column;
+                text-align: center;
+                padding: 18px;
+            }
+
+            .app-showcase-text h3 {
+                border-left: none;
+            }
+
+            .schedule-card {
+                padding: 20px 15px;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -584,14 +726,14 @@
                 <p>
                     Sintoniza la señal oficial con el sonido más crudo, clásico y demoledor del metal nacional e internacional. Conexión ininterrumpida y especiales de colección.
                 </p>
-                <a class="btn-tune-in" href="http://heavymetalextremo.radio12345.com" target="_blank">
+                <a class="btn-tune-in" href="http://heavymetalextremo.radio12345.com" target="_blank" rel="noopener noreferrer">
                     <span>📻 Escuchar Emisora en Vivo</span>
                 </a>
             </div>
 
             <!-- Presentación de la emisora y app -->
             <div class="app-showcase">
-                <img class="zoomable-img" src="img/estetica/HMR_APP.webp" alt="Heavy Metal Radio App">
+                <img class="zoomable-img" src="img/estetica/HMR_APP.webp" alt="Heavy Metal Radio App" loading="lazy">
                 <div class="app-showcase-text">
                     <h3>Sobre Nuestra Señal</h3>
                     <p>

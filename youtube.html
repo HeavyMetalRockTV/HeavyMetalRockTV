@@ -9,6 +9,23 @@
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/style.css">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Canal Oficial de YouTube - Heavy Metal Rock TV",
+      "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/youtube.html",
+      "description": "Entrevistas exclusivas, cobertura de conciertos, videoclips y especiales de bandas de metal y rock.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Heavy Metal Rock TV",
+        "logo": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/HMRTV.webp"
+      }
+    }
+    </script>
+
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Heavy Metal Rock TV | Canal Oficial de YouTube">
@@ -18,11 +35,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/youtube.html">
     <meta name="twitter:card" content="summary_large_image">
+
     <style>
         :root {
             --accent-red: #d32f2f;
             --accent-gold: #c5a059;
-            --dark-card: rgba(14, 14, 14, 0.92);
+            --dark-card: rgba(14, 14, 14, 0.94);
             --border-metal: #2a2a2a;
         }
 
@@ -40,7 +58,7 @@
             min-height: 100vh;
         }
 
-        /* Menú lateral estilo consola profesional */
+        /* Menú lateral de escritorio */
         nav {
             background: linear-gradient(180deg, #0d0d0d 0%, #050505 100%);
             width: 250px;
@@ -244,6 +262,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
         }
 
         section {
@@ -258,7 +278,7 @@
             box-sizing: border-box;
         }
 
-        h1, h2 {
+        h1 {
             color: #fff;
             font-size: 1.8rem;
             font-weight: 800;
@@ -271,14 +291,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        p {
-            line-height: 1.8;
-            font-size: 15px;
-            text-align: justify;
-            color: #bbb;
-            margin-bottom: 20px;
         }
 
         /* Cabecera del canal */
@@ -333,10 +345,10 @@
             transform: translateY(-2px);
         }
 
-        /* Grilla de videos de 2 columnas */
+        /* Grilla de videos */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
@@ -387,6 +399,7 @@
             line-height: 1.4;
             border-left: 3px solid var(--accent-red);
             padding-left: 10px;
+            text-transform: uppercase;
         }
 
         .video-card-body p {
@@ -397,11 +410,121 @@
             text-align: justify;
         }
 
+        /* =======================================================
+           OPTIMIZACIONES RESPONSIVAS PROFESIONALES (MÓVIL Y TABLET)
+           ======================================================= */
         @media screen and (max-width: 992px) {
-            body { flex-direction: column; }
-            nav { position: relative; width: 100%; height: auto; }
-            main { margin-left: 0; padding: 15px; }
-            .video-grid { grid-template-columns: 1fr; }
+            body {
+                flex-direction: column;
+            }
+
+            /* Barra de navegación superior compacta para móvil */
+            nav {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                height: auto;
+                padding: 12px 15px;
+                border-right: none;
+                border-bottom: 2px solid var(--accent-red);
+                border-image: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #0d0d0d;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            }
+
+            nav .brand-container {
+                margin-bottom: 0;
+                padding-bottom: 8px;
+            }
+
+            nav img#HMRTV {
+                max-width: 130px;
+            }
+
+            /* Enlaces del menú en scroll horizontal suave */
+            .nav-links {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                gap: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                height: 3px;
+            }
+
+            .nav-links::-webkit-scrollbar-thumb {
+                background: var(--accent-red);
+                border-radius: 3px;
+            }
+
+            nav a {
+                white-space: nowrap;
+                padding: 8px 14px;
+                font-size: 12px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+
+            nav a:hover, nav a.active {
+                border-left: none;
+                border-bottom: 2px solid var(--accent-red);
+                padding-left: 14px;
+            }
+
+            /* Ocultar widgets secundarios del menú en móvil */
+            .radio-status-card,
+            .nav-footer {
+                display: none;
+            }
+
+            /* Área de contenido */
+            main {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px 12px;
+            }
+
+            section {
+                padding: 22px 18px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                margin-bottom: 18px;
+            }
+
+            .channel-header {
+                padding: 18px;
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+
+            .btn-youtube {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .video-card-body {
+                padding: 16px;
+            }
+
+            .video-card-body p {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -433,7 +556,6 @@
             </a>
         </div>
 
-        <!-- Indicador de señal / radio -->
         <div class="radio-status-card">
             <div class="pulse-live"></div>
             <div class="radio-status-text">
@@ -442,7 +564,6 @@
             </div>
         </div>
 
-        <!-- Pie de navegación -->
         <div class="nav-footer">
             <div class="nav-socials">
                 <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" title="YouTube">▶</a>
@@ -462,7 +583,7 @@
                     <h3>Heavy Metal Rock TV</h3>
                     <p>Entrevistas exclusivas, cobertura de festivales, videoclips e informes de la escena.</p>
                 </div>
-                <a class="btn-youtube" href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank">
+                <a class="btn-youtube" href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" rel="noopener noreferrer">
                     <span>▶ Suscribirse al Canal</span>
                 </a>
             </div>
@@ -471,7 +592,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/M_11WImpZG8" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/M_11WImpZG8" title="Disinter: Aberrantes Ofrendas al Ukupacha" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Disinter: Aberrantes Ofrendas al Ukupacha (Perú 2023)</h3>
@@ -481,7 +602,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Pl35v9U6Kig" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Pl35v9U6Kig" title="Rotten Cannibal: Death Metal de Chile" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Rotten Cannibal: Death Metal de Chile</h3>
@@ -491,7 +612,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/PeKDt6v65rA" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/PeKDt6v65rA" title="Flagelum: Gorehound Perspective" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Flagelum: Gorehound Perspective (Part 1)</h3>
@@ -501,7 +622,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/laB9q84XpTs" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/laB9q84XpTs" title="Nathammer: Evil Nightmare 2023" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Nathammer: Evil Nightmare 2023</h3>
@@ -511,7 +632,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/NIC1n5sstDI" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/NIC1n5sstDI" title="Baquifest VI: Armagedon" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Armagedon (Parte Final)</h3>
@@ -521,7 +642,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/SK3SBrEhBLQ" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/SK3SBrEhBLQ" title="Baquifest VI: Contracara" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Contracara</h3>
@@ -531,7 +652,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/blpxmVgeQRw" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/blpxmVgeQRw" title="Baquifest VI: Strógena" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Strógena</h3>
@@ -541,7 +662,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/b2FxbbG7FIQ" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/b2FxbbG7FIQ" title="Baquifest VI: Jorge Hard" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Jorge Hard</h3>
@@ -551,7 +672,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Ism2AjIBInw" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Ism2AjIBInw" title="Baquifest VI: Tránsito Pesado" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Tránsito Pesado</h3>
@@ -561,7 +682,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/xMtSMsMSezU" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/xMtSMsMSezU" title="Baquifest VI: Banda Orión" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Banda Orión</h3>
@@ -571,7 +692,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/EFzuXYic_bg" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/EFzuXYic_bg" title="Baquifest VI: Reel Oficial de Fotos" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquifest VI: Reel Oficial de Fotos</h3>
@@ -581,7 +702,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/fnIWdE-DvcQ" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/fnIWdE-DvcQ" title="Invitación Oficial Baquifest VI" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Invitación Oficial Baquifest VI (Huacho)</h3>
@@ -591,7 +712,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/KUbyndIYNYg" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/KUbyndIYNYg" title="Kike Yompián: Oriental Remember II" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Kike Yompián: Oriental Remember II (feat. Tavo Castillo)</h3>
@@ -601,7 +722,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/UnRo9s0ImRI" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/UnRo9s0ImRI" title="Cartelera de Conciertos Enero 2023" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Cartelera de Conciertos Enero 2023</h3>
@@ -611,7 +732,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/2WOMVTaz0DA" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/2WOMVTaz0DA" title="Mensaje Especial de Fin de Año - HMRTV" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Mensaje Especial de Fin de Año - HMRTV</h3>
@@ -621,7 +742,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/CRfhypbGBSc" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/CRfhypbGBSc" title="Enbor Arnasa (País Vasco)" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Enbor Arnasa (País Vasco)</h3>
@@ -631,7 +752,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/-PQGraseaP4" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/-PQGraseaP4" title="Baquishop (Hualmay - Huacho) - Parte Final" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquishop (Hualmay - Huacho) - Parte Final</h3>
@@ -641,7 +762,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/qhxyJ6S4ecg" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/qhxyJ6S4ecg" title="Baquishop - 3ra Parte" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquishop - 3ra Parte (Kike Yompián en Vivo)</h3>
@@ -651,7 +772,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/l0dWcJOgb5Y" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/l0dWcJOgb5Y" title="Baquishop - 2da Parte" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquishop - 2da Parte (Banda Extremo & Pepe Guillén)</h3>
@@ -661,7 +782,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Jn_szok_dRY" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Jn_szok_dRY" title="Baquishop - 1ra Parte" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Baquishop - 1ra Parte (Apertura y Escena Norte Chico)</h3>
@@ -671,7 +792,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/gsGwwkYo3Dc" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/gsGwwkYo3Dc" title="Fallen Symmetry: Videoclip Aún en Pie" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Fallen Symmetry: Videoclip "Aún en Pie"</h3>
@@ -681,7 +802,7 @@
 
                 <div class="video-card">
                     <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/oeaqyTGRMfQ" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/oeaqyTGRMfQ" title="Homenaje Póstumo: Edwin Medina" loading="lazy" allowfullscreen></iframe>
                     </div>
                     <div class="video-card-body">
                         <h3>Homenaje Póstumo: Edwin Medina (R.I.P.)</h3>
