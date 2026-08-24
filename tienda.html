@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heavy Metal Store - Tienda Oficial</title>
+    <link rel="icon" href="img/estetica/HMR_recortada.ico">
+    
+    <!-- Hojas de Estilos Centralizadas (Cero Bootstrap, Cero redundancia) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="canonical" href="https://heavymetalrocktv.github.io/HeavyMetalRockTV/tienda.html">
+
+    <!-- Datos Estructurados JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Heavy Metal Store - Heavy Metal Rock TV",
+      "image": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp",
+      "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/tienda.html",
+      "telephone": "+51950324368",
+      "priceRange": "S/ 50.00 - S/ 140.00",
+      "currenciesAccepted": "PEN",
+      "paymentAccepted": "Efectivo, Yape, Plin, Transferencia Bancaria",
+      "description": "Tienda oficial de indumentaria, polos, casacas y discos de bandas de Heavy, Thrash, Death y Black Metal con envíos a todo el Perú.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    }
+    </script>
+
+    <!-- Metadatos de Redes Sociales / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Heavy Metal Store | Tienda Oficial de Polos, Casacas y Discos">
+    <meta property="og:description" content="Catálogo oficial con más de 160 artículos de metal y rock. Envíos directos a todo el Perú por WhatsApp.">
+    <meta property="og:image" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/tienda.html">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+
+    <nav aria-label="Navegación Principal">
+        <div class="brand-container">
+            <a href="index.html" aria-label="Ir a Inicio">
+                <img id="HMRTV" src="img/estetica/HMRTV.webp" alt="Heavy Metal Rock TV">
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">
+                <span class="nav-icon" aria-hidden="true">⚡</span> Inicio
+            </a>
+            <a href="tienda.html" class="active" aria-current="page">
+                <span class="nav-icon" aria-hidden="true">🛒</span> Tienda
+            </a>
+            <a href="youtube.html">
+                <span class="nav-icon" aria-hidden="true">📺</span> YouTube
+            </a>
+            <a href="emisora.html">
+                <span class="nav-icon" aria-hidden="true">📻</span> Emisora
+            </a>
+            <a href="venta-boletos.html">
+                <span class="nav-icon" aria-hidden="true">🎫</span> Boletos
+            </a>
+        </div>
+
+        <div class="radio-status-card">
+            <div class="pulse-live"></div>
+            <div class="radio-status-text">
+                <span class="title">HMR Radio</span>
+                <span class="sub">24/7 Metal Stream</span>
+            </div>
+        </div>
+
+        <div class="nav-footer">
+            <div class="nav-socials">
+                <a href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" rel="noopener noreferrer" title="YouTube">▶</a>
+                <a href="mailto:gustavomasacre31@hotmail.com" title="Correo">✉</a>
+                <a href="emisora.html" title="Radio en vivo">♫</a>
+            </div>
+            <div class="nav-copy">© 2026 Heavy Metal Rock TV</div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="tienda-section">
+            <h1>Heavy Metal Store</h1>
+
+            <div class="logo-tienda-container">
+                <img class="logo-tienda" src="img/estetica/STORE.webp" alt="Heavy Metal Store Logo Oficial">
+            </div>
+
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 25px auto;">
+                Catálogo oficial de indumentaria, accesorios y material discográfico. Filtra por categoría o busca tu banda favorita. Envíos directos a todo el Perú y Sudamérica.
+            </p>
+
+            <!-- Controles de la Tienda -->
+            <div class="store-controls">
+                <div class="search-bar-wrapper">
+                    <input 
+                        type="search" 
+                        id="searchInput" 
+                        placeholder="🔍 Buscar por banda (Iron Maiden, Dio, Exciter, etc.) o producto..." 
+                        aria-label="Buscar productos en el catálogo"
+                    >
+                </div>
+                <div class="filter-buttons" role="group" aria-label="Filtro de categorías">
+                    <button type="button" class="filter-btn active" data-category="todos">Todos</button>
+                    <button type="button" class="filter-btn" data-category="polos">Polos</button>
+                    <button type="button" class="filter-btn" data-category="casacas">Casacas</button>
+                    <button type="button" class="filter-btn" data-category="poleras">Poleras</button>
+                    <button type="button" class="filter-btn" data-category="pantalones">Pantalones</button>
+                    <button type="button" class="filter-btn" data-category="calzado">Calzado</button>
+                    <button type="button" class="filter-btn" data-category="mochilas">Mochilas</button>
+                    <button type="button" class="filter-btn" data-category="accesorios">Accesorios</button>
+                    <button type="button" class="filter-btn" data-category="posters">Pósters</button>
+                    <button type="button" class="filter-btn" data-category="vinilos">Discos & Vinilos</button>
+                </div>
+            </div>
+
+            <!-- Contador Dinámico -->
+            <div class="results-counter" id="resultsCounter" aria-live="polite">
+                Cargando catálogo...
+            </div>
+
+            <!-- Grilla Dinámica de Productos -->
+            <div class="product-grid" id="productsContainer"></div>
+
+            <!-- Paginación: Load More -->
+            <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+                <button type="button" class="btn-load-more" id="btnLoadMore">
+                    <span>⚡ Cargar Más Productos</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Lightbox Reutilizable -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <span class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista previa">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Vista previa del producto">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Scripts Modulares -->
+    <script async src="js/menu.js"></script>
+    <script defer src="js/store.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-name: CI/CD Heavy Metal Rock TV
+name: CI/CD Heavy Metal Rock TV - Production Engine
 
 on:
   push:
@@ -26,27 +26,76 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Validar integridad de JSON
+      # 1. Validación Semántica Estricta de Esquema (Python 3)
+      - name: Validar Integridad Estructural de products.json
         run: |
-          echo "Verificando estructura de data/products.json..."
-          python3 -m json.tool data/products.json > /dev/null
-          echo "¡El archivo JSON es 100% valido!"
+          python3 -c "
+          import json, sys
 
+          REQUIRED_FIELDS = {'id', 'nombre', 'categoria', 'banda', 'descripcion', 'precio', 'imagen'}
+          ALLOWED_CATEGORIES = {'polos', 'casacas', 'poleras', 'pantalones', 'calzado', 'mochilas', 'accesorios', 'posters', 'vinilos'}
+
+          try:
+              with open('data/products.json', 'r', encoding='utf-8') as f:
+                  data = json.load(f)
+              
+              if not isinstance(data, list):
+                  sys.exit('FATAL: data/products.json debe ser un array de objetos.')
+
+              if len(data) == 0:
+                  sys.exit('FATAL: El catálogo no puede estar vacío.')
+
+              seen_ids = set()
+              for idx, item in enumerate(data):
+                  missing = REQUIRED_FIELDS - set(item.keys())
+                  if missing:
+                      sys.exit(f'FATAL en índice {idx}: Faltan campos requeridos {missing}')
+
+                  item_id = str(item['id']).strip()
+                  if not item_id:
+                      sys.exit(f'FATAL en índice {idx}: ID no puede estar vacío.')
+                  if item_id in seen_ids:
+                      sys.exit(f'FATAL: ID duplicado detectado: \"{item_id}\" en índice {idx}')
+                  seen_ids.add(item_id)
+
+                  cat = str(item['categoria']).strip().lower()
+                  if cat not in ALLOWED_CATEGORIES:
+                      sys.exit(f'FATAL en ID \"{item_id}\": Categoría \"{cat}\" inválida. Permitidas: {ALLOWED_CATEGORIES}')
+
+                  if not str(item['nombre']).strip():
+                      sys.exit(f'FATAL en ID \"{item_id}\": El campo \"nombre\" no puede estar vacío.')
+
+              print(f'Validación superada con éxito: {len(data)} reliquias auditadas sin inconsistencias. ❄️')
+          except Exception as err:
+              sys.exit(f'CRITICAL FAILURE: {err}')
+          "
+
+      # 2. Minificación Total de Assets (HTML, CSS, JS) en Main
       - name: Configurar Node.js y Minificar Assets
         if: github.ref == 'refs/heads/main'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Minificar Todo el Árbol Estático
+        if: github.ref == 'refs/heads/main'
         run: |
-          npm install -g html-minifier-terser terser csso-cli
-          
-          # Minificar JavaScript global
-          if [ -f "js/menu.js" ]; then
-            terser js/menu.js -c -m -o js/menu.min.js
-            mv js/menu.min.js js/menu.js
+          # Minificar todos los scripts JS (incluyendo store.js, menu.js y sw.js)
+          npx terser js/menu.js -c -m -o js/menu.js || true
+          npx terser js/store.js -c -m -o js/store.js || true
+          if [ -f "sw.js" ]; then
+            npx terser sw.js -c -m -o sw.js
           fi
 
-          # Minificar archivos HTML (incluye CSS y JS embebido)
+          # Minificar CSS centralizado
+          if [ -f "css/style.css" ]; then
+            npx csso-cli css/style.css -o css/style.css
+          fi
+
+          # Minificar todas las vistas HTML
           for file in *.html; do
             if [ -f "$file" ]; then
-              html-minifier-terser \
+              npx html-minifier-terser \
                 --collapse-whitespace \
                 --remove-comments \
                 --remove-redundant-attributes \
