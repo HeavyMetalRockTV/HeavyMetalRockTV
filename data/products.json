@@ -5,161 +5,161 @@
     "banda": "Accept",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/accept_1.webp",
-    "descripcion": "Algodón reactivo 100% con serigrafía de alta durabilidad. Disponible en todas las tallas."
+    "imagen": "img/products/polos/polo_Accept_MetalHeart.webp",
+    "descripcion": "Estampado de alta fidelidad del legendario corazón biomecánico del clásico álbum teutón de 1985."
   },
   {
     "id": 2,
-    "nombre": "Polo AC/DC - Classic Logo",
-    "banda": "AC/DC",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/acdc_1.webp",
-    "descripcion": "Estampado clásico de alto contraste sobre algodón negro reactivo."
-  },
-  {
-    "id": 3,
     "nombre": "Polo AC/DC - Highway to Hell",
     "banda": "AC/DC",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/acdc_2.webp",
-    "descripcion": "Diseño vintage oficial. Disponible en tallas S, M, L y XL."
+    "imagen": "img/products/polos/polo_ACDC_HighwaytoHell.webp",
+    "descripcion": "Arte icónico de Bon Scott y Angus Young con cuernos infernales en algodón reactivo de alta densidad."
+  },
+  {
+    "id": 3,
+    "nombre": "Polo AC/DC - Rock or Bust",
+    "banda": "AC/DC",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_ACDC_RockOrBust.webp",
+    "descripcion": "Gráfica explosiva del logo en relieve de piedra detonando en el decimoquinto disco internacional de la banda."
   },
   {
     "id": 4,
-    "nombre": "Polo Alice in Chains - Dirt Era",
+    "nombre": "Polo Alice in Chains - Dirt",
     "banda": "Alice in Chains",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/alice in chains_1.webp",
-    "descripcion": "Tributo grunge/metal con serigrafía premium al tacto cero."
+    "imagen": "img/products/polos/polo_AliceInChains_Dirt.webp",
+    "descripcion": "Diseño clásico de la figura femenina enterrada en el desierto, piedra angular del grunge y sludge metal."
   },
   {
     "id": 5,
-    "nombre": "Polo Ángeles del Infierno - Pacto con el Diablo",
+    "nombre": "Polo Ángeles del Infierno - Diabólica",
     "banda": "Ángeles del Infierno",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/aneglesdelinfierno_1.webp",
-    "descripcion": "Clásico del Heavy Metal en español. Estampado nítido y duradero."
+    "imagen": "img/products/polos/polo_AngelesDelInfierno_Diabolicca.webp",
+    "descripcion": "Emblemática portada de la doncella con alas y garras del heavy metal clásico español de 1985."
   },
   {
     "id": 6,
-    "nombre": "Polo Anthrax - Spreading the Disease",
+    "nombre": "Polo Anthrax - Fistful of Metal",
     "banda": "Anthrax",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/anthrax1.webp",
-    "descripcion": "Thrash metal de la vieja escuela. 100% algodón prelavado."
+    "imagen": "img/products/polos/polo_Anthrax_FistfulOfMetal.webp",
+    "descripcion": "Ilustración brutal del puño de acero ensangrentado del álbum debut que cimentó el Big Four del thrash metal."
   },
   {
     "id": 7,
-    "nombre": "Polo Anthrax - Among the Living",
+    "nombre": "Polo Anthrax - State of Euphoria",
     "banda": "Anthrax",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/anthrax2.webp",
-    "descripcion": "Arte icónico de la banda neoyorquina. Máxima durabilidad."
+    "imagen": "img/products/polos/polo_Anthrax_StateOfEuphoria.webp",
+    "descripcion": "Portada con ilusión óptica y el carismático Not Man en serigrafía duradera de alto contraste."
   },
   {
     "id": 8,
-    "nombre": "Polo Asking Alexandria - Reckless",
+    "nombre": "Polo Asking Alexandria - Knife Head",
     "banda": "Asking Alexandria",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/asking alexandra_1.webp",
-    "descripcion": "Edición metalcore con acabados reforzados en cuello y mangas."
+    "imagen": "img/products/polos/polo_AskingAlexandria_KnifeHead.webp",
+    "descripcion": "Diseño agresivo de metalcore con arte conceptual de dagas cruzadas y tipografía moderna en blanco y rojo."
   },
   {
     "id": 9,
-    "nombre": "Polo Atomic Aggressor - Death Metal Chile",
+    "nombre": "Polo Atomic Aggressor - Rise of the Ancient Ones",
     "banda": "Atomic Aggressor",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/atomic agressor_1.webp",
-    "descripcion": "Banda de culto del underground sudamericano. Serigrafía frontal."
+    "imagen": "img/products/polos/polo_AtomicAgressor_RiseOfTheAncientOnes.webp",
+    "descripcion": "Brutal arte de death metal sudamericano con criaturas lovecraftianas oscuras de la legendaria banda chilena."
   },
   {
     "id": 10,
-    "nombre": "Polo Bathory - Goat Classic",
+    "nombre": "Polo Bathory - Bathory (The Goat)",
     "banda": "Bathory",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/bachord_1.webp",
-    "descripcion": "Emblema supremo del Black Metal de Quorthon. 100% algodón."
+    "imagen": "img/products/polos/polo_Bachord_Bathory.webp",
+    "descripcion": "El mítico macho cabrío dorado/blanco de Quorthon que inauguró la primera ola del black metal en 1984."
   },
   {
     "id": 11,
-    "nombre": "Polo Barón Rojo - Volumen Brutal",
+    "nombre": "Polo Barón Rojo - Metalmorfosis",
     "banda": "Barón Rojo",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/baron rojo_1.webp",
-    "descripcion": "Leyenda del rock pesado hispano. Tallas completas disponibles."
+    "imagen": "img/products/polos/polo_BaronRojo_Metalmorfosis.webp",
+    "descripcion": "Diseño original de la mano mecánica empuñando el micrófono del himno indiscutible del rock duro hispano."
   },
   {
     "id": 12,
-    "nombre": "Polo Behemoth - The Satanist",
+    "nombre": "Polo Behemoth - Zos Kia Cultus",
     "banda": "Behemoth",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/behemoth_1.webp",
-    "descripcion": "Black/Death Metal de Polonia con estampado de altísima resolución."
+    "imagen": "img/products/polos/polo_Behemoth_ZosKiaCultus.webp",
+    "descripcion": "Simbología oculta y gráfica ceremonial del sexto asalto de blackened death metal comandado por Nergal."
   },
   {
     "id": 13,
-    "nombre": "Polo Black Sabbath - Master of Reality",
+    "nombre": "Polo Black Sabbath - Dehumanizer / Disembody",
     "banda": "Black Sabbath",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/black sabbath_1.webp",
-    "descripcion": "Los padres del Doom y Heavy Metal. Algodón reactivo suave."
+    "imagen": "img/products/polos/polo_BlackSabbath_Disembody.webp",
+    "descripcion": "Ilustración macabra de la era pesada con Ronnie James Dio y la parca robótica del metal clásico."
   },
   {
     "id": 14,
-    "nombre": "Polo Black Sabbath - Paranoid Vintage",
+    "nombre": "Polo Black Sabbath - Live Evil",
     "banda": "Black Sabbath",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/black sabbath_2.webp",
-    "descripcion": "Estampado clásico de Ozzy, Iommi, Butler y Ward."
+    "imagen": "img/products/polos/polo_BlackSabbath_LiveEvil.webp",
+    "descripcion": "Doble cara conceptual de la figura encapuchada y el demonio en la bahía del mítico registro en directo."
   },
   {
     "id": 15,
-    "nombre": "Polo Black Sabbath - US Tour 78",
+    "nombre": "Polo Black Sabbath - Vol. 4",
     "banda": "Black Sabbath",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/black sabbath_3.webp",
-    "descripcion": "Diseño conmemorativo de gira histórica. Corte estándar unisex."
+    "imagen": "img/products/polos/polo_BlackSabbath_Vol4.webp",
+    "descripcion": "Silueta clásica de Ozzy Osbourne con brazos alzados en amarillo solar sobre fondo negro puro."
   },
   {
     "id": 16,
-    "nombre": "Polo Black Veil Brides - Official Art",
+    "nombre": "Polo Black Veil Brides - Dust Mask",
     "banda": "Black Veil Brides",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/black_veil_brides_1.webp",
-    "descripcion": "Diseño alternativo/metal moderno en serigrafía resistente."
+    "imagen": "img/products/polos/polo_BlackVeilBrides_DustMask.webp",
+    "descripcion": "Gráfica post-apocalíptica de Andy Biersack con máscara antigás y estética teatral de hard rock moderno."
   },
   {
     "id": 17,
-    "nombre": "Polo Blink-182 - Smiley Logo",
+    "nombre": "Polo Blink-182 - 20th Anniversary",
     "banda": "Blink-182",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/blink-182_1.webp",
-    "descripcion": "Estilo Pop Punk clásico sobre tela negra premium."
+    "imagen": "img/products/polos/polo_Blink-182_20Aniversary.webp",
+    "descripcion": "Edición conmemorativa con el clásico Smiley face de seis flechas y tipografía noventera de pop punk."
   },
   {
     "id": 18,
-    "nombre": "Polo Bullet for My Valentine - The Poison",
+    "nombre": "Polo Bullet for My Valentine - Skull Kiss",
     "banda": "Bullet for My Valentine",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/bullet for my valentine_1.webp",
-    "descripcion": "Metalcore galés con ilustración en acabado de alta duración."
+    "imagen": "img/products/polos/polo_BulletForMyValentine_SkullKiss.webp",
+    "descripcion": "Arte romántico-gótico de calaveras enfrentadas con detalles florales oscuros y serigrafía de larga vida."
   },
   {
     "id": 19,
@@ -167,152 +167,152 @@
     "banda": "Burzum",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/bursum_1.webp",
-    "descripcion": "Black Metal atmosférico noruego con arte de Theodor Kittelsen."
+    "imagen": "img/products/polos/polo_Burzum_Filosofem.webp",
+    "descripcion": "La pintura 'Op under Fjeldet toner en Luur' de Theodor Kittelsen impresa con máxima fidelidad atmosférica."
   },
   {
     "id": 20,
-    "nombre": "Polo Cancer - To the Gory End",
+    "nombre": "Polo Cancer - Death Shall Rise",
     "banda": "Cancer",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cancer_1.webp",
-    "descripcion": "Death Metal británico de culto. Estampado brutal garantizado."
+    "imagen": "img/products/polos/polo_Cancer_DeathShallRise.webp",
+    "descripcion": "Clásica portada gore del death metal británico de 1991 con arte explícito de cadáveres renacientes."
   },
   {
     "id": 21,
-    "nombre": "Polo Cannibal Corpse - Butchered at Birth",
+    "nombre": "Polo Cannibal Corpse - Butchered at Birth (Variante 1)",
     "banda": "Cannibal Corpse",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_1.webp",
-    "descripcion": "Edición clásica del Death Metal más agresivo."
+    "imagen": "img/products/polos/polo_CannibalCorpse_ButcheredAtBirth_1.webp",
+    "descripcion": "El arte sin censura de Vincent Locke que fue prohibido en múltiples países por su brutalidad visual."
   },
   {
     "id": 22,
-    "nombre": "Polo Cannibal Corpse - Tomb of the Mutilated",
+    "nombre": "Polo Cannibal Corpse - Butchered at Birth (Variante 2)",
     "banda": "Cannibal Corpse",
-    "categoria": "poleras",
+    "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_2.webp",
-    "descripcion": "El arte insigne de Vincent Locke estampado en alta resolución."
+    "imagen": "img/products/polos/polo_CannibalCorpse_ButcheredAtBirth_2.webp",
+    "descripcion": "Enfoque alternativo de la carnicería visceral de 1991 con logo sangriento en rojo bermellón profundo."
   },
   {
     "id": 23,
-    "nombre": "Polo Cannibal Corpse - The Bleeding",
+    "nombre": "Polo Cannibal Corpse - Eaten Back to Life",
     "banda": "Cannibal Corpse",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_3.webp",
-    "descripcion": "Clásico indiscutible con serigrafía resistente al uso rudo."
+    "imagen": "img/products/polos/polo_CannibalCorpse_EatenBackToLife.webp",
+    "descripcion": "La icónica portada del zombi devorando sus propias entrañas que definió la estética del death metal en 1990."
   },
   {
     "id": 24,
-    "nombre": "Polo Cannibal Corpse - Evisceration Plague",
+    "nombre": "Polo Cannibal Corpse - Tomb of the Mutilated",
     "banda": "Cannibal Corpse",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_4.webp",
-    "descripcion": "Diseño de era moderna con Corpsegrinder en vocales."
+    "imagen": "img/products/polos/polo_CannibalCorpse_TombOfTheMutilated.webp",
+    "descripcion": "Obra cumbre de la depravación lírica con el himno Hammer Smashed Face en un estampado indestructible."
   },
   {
     "id": 25,
-    "nombre": "Polo Cannibal Corpse - Skull Logo",
+    "nombre": "Polo Cannibal Corpse - Violence Unimagined",
     "banda": "Cannibal Corpse",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_5.webp",
-    "descripcion": "Logotipo frontal con acabados de serigrafía en relieve."
+    "imagen": "img/products/polos/polo_CannibalCorpse_ViolenceUnimagined.webp",
+    "descripcion": "Arte grotesco del decimoquinto disco con Erik Rutan a la guitarra, impreso con colores reactivos nítidos."
   },
   {
     "id": 26,
-    "nombre": "Polo Cannibal Corpse - Gore Obsessed",
-    "banda": "Cannibal Corpse",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_6.webp",
-    "descripcion": "Death Metal brutal sin concesiones. 100% algodón reactivo."
-  },
-  {
-    "id": 27,
-    "nombre": "Polo Cannibal Corpse - Torture",
-    "banda": "Cannibal Corpse",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/cannibal_corpse_7.webp",
-    "descripcion": "Ilustración de alta fidelidad. Disponible en todas las tallas."
-  },
-  {
-    "id": 28,
-    "nombre": "Polo Celtic Frost - To Mega Therion",
+    "nombre": "Polo Celtic Frost - Morbid Tales",
     "banda": "Celtic Frost",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/celtic_frost_1.webp",
-    "descripcion": "Obra maestra del metal suizo con pintura de H.R. Giger."
+    "imagen": "img/products/polos/polo_CelticFrost_MorbidTales.webp",
+    "descripcion": "El pentagrama clásico y los cráneos ancestrales de Tom G. Warrior que forjaron el metal extremo mundial."
   },
   {
-    "id": 29,
-    "nombre": "Polo Coldplay - Tour Edition",
+    "id": 27,
+    "nombre": "Polo Coldplay - In My Place",
     "banda": "Coldplay",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/coldplay_1.webp",
-    "descripcion": "Diseño alternativo rock/pop de gira en algodón suave."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Coldplay_InMyPlace.webp",
+    "descripcion": "Diseño sobrio y minimalista de la era A Rush of Blood to the Head con tipografía clásica británica."
   },
   {
-    "id": 30,
-    "nombre": "Polo Cradle of Filth - Dusk and Her Embrace",
+    "id": 28,
+    "nombre": "Polo Cradle of Filth - Nine Tenths of the Law",
     "banda": "Cradle of Filth",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/cradle_of_filth_1.webp",
-    "descripcion": "Metal extremo gótico británico. Estampado frontal de alta calidad."
+    "imagen": "img/products/polos/polo_CradleOfFilth_NineTenthsOfTheLord.webp",
+    "descripcion": "Estética vampírica sinfónica noventera con la elegancia decadente y oscura de Dani Filth."
   },
   {
-    "id": 31,
-    "nombre": "Polo Dark Funeral - Secrets of the Black Arts",
+    "id": 29,
+    "nombre": "Polo Dark Funeral - Where Shadows Forever Reign",
     "banda": "Dark Funeral",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/dark funeral_1.webp",
-    "descripcion": "Black Metal sueco impío. Algodón reactivo de exportación."
+    "imagen": "img/products/polos/polo_DarkFuneral_WhereShadowsForeverReign.webp",
+    "descripcion": "Impresionante pintura de Necrolord en tonos azul gélido y sombras blasfemas del black metal sueco."
+  },
+  {
+    "id": 30,
+    "nombre": "Polo Darkthrone - Panzerfaust",
+    "banda": "Darkthrone",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Darkthrone_Panzerfaust.webp",
+    "descripcion": "El bosque noruego bajo la noche polar y la cruda voz de Fenriz inmortalizados en serigrafía cruda."
+  },
+  {
+    "id": 31,
+    "nombre": "Polo Death - Human",
+    "banda": "Death",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Death_Human.webp",
+    "descripcion": "El salto evolutivo de Chuck Schuldiner hacia el death metal técnico y progresivo con arte anatómico estelar."
   },
   {
     "id": 32,
+    "nombre": "Polo Death - Individual Thought Patterns",
+    "banda": "Death",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Death_IndividualThoughtPatterns.webp",
+    "descripcion": "El laberinto filosófico y las manos celestiales del disco con Gene Hoglan y Steve DiGiorgio."
+  },
+  {
+    "id": 33,
+    "nombre": "Polo Death - Live in L.A. (Death & Raw)",
+    "banda": "Death",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Death_LiveInL.A.(Death & Raw).webp",
+    "descripcion": "Homenaje al directo benéfico de 1998 en el Whisky a Go Go con Chuck Schuldiner en pleno virtuosismo."
+  },
+  {
+    "id": 34,
     "nombre": "Polo Death - Scream Bloody Gore",
     "banda": "Death",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/death_1.webp",
-    "descripcion": "El nacimiento del Death Metal por Chuck Schuldiner."
-  },
-  {
-    "id": 33,
-    "nombre": "Polo Death - Leprosy",
-    "banda": "Death",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/death_2.webp",
-    "descripcion": "El legendario arte de Ed Repka en alta resolución."
-  },
-  {
-    "id": 34,
-    "nombre": "Polo Death - Symbolic",
-    "banda": "Death",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/death_3.webp",
-    "descripcion": "Death Metal técnico cumbre. Serigrafía suave al tacto."
+    "imagen": "img/products/polos/polo_Death_ScreamBloodyGore.webp",
+    "descripcion": "La reunión de sacerdotes cadáveres y copas de sangre de Edward J. Repka que dio vida al género en 1987."
   },
   {
     "id": 35,
-    "nombre": "Polo Death - The Sound of Perseverance",
-    "banda": "Death",
+    "nombre": "Polo Def Leppard - Hysteria",
+    "banda": "Def Leppard",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/death_4.webp",
-    "descripcion": "El álbum final de Chuck Schuldiner estampado a full color."
+    "imagen": "img/products/polos/polo_DeFLeppard_Hysteria.webp",
+    "descripcion": "La célebre cara triangular distorsionada del álbum de hard rock más vendido de los años ochenta."
   },
   {
     "id": 36,
@@ -320,71 +320,71 @@
     "banda": "Def Leppard",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/def leppard_1.webp",
-    "descripcion": "Hard Rock británico clásico. Algodón 100% prelavado."
+    "imagen": "img/products/polos/polo_DefLeppard_PyrMania.webp",
+    "descripcion": "La mira telescópica apuntando al rascacielos en llamas, clásico absoluto del rock de estadios de 1983."
   },
   {
     "id": 37,
-    "nombre": "Polo Def Leppard - Hysteria",
+    "nombre": "Polo Def Leppard - The World Tour 2023",
     "banda": "Def Leppard",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/def leppard_2.webp",
-    "descripcion": "El arte del álbum insignia de la banda en serigrafía nítida."
+    "imagen": "img/products/polos/polo_DefLeppard_TheWorldTour2023.webp",
+    "descripcion": "Gráfica oficial de la gira mundial conjunta con Mötley Crüe con acabado moderno y fechas conmemorativas."
   },
   {
     "id": 38,
-    "nombre": "Polo Deftones - White Pony",
+    "nombre": "Polo Deftones - Adrenaline",
     "banda": "Deftones",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/deftone_1.webp",
-    "descripcion": "Minimalismo y elegancia del metal alternativo de Sacramento."
+    "imagen": "img/products/polos/polo_Deftones_Adrenaline.webp",
+    "descripcion": "El aspirador nasal rosado del debut discográfico que definió el metal alternativo crudo de 1995."
   },
   {
     "id": 39,
-    "nombre": "Polo Deftones - Around the Fur",
+    "nombre": "Polo Deftones - Skull and Roses",
     "banda": "Deftones",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/deftones_2.webp",
-    "descripcion": "Diseño noventero en algodón reactivo premium."
+    "imagen": "img/products/polos/polo_Deftones_SkullAndRoses.webp",
+    "descripcion": "Estética alternativa y gótica del álbum homónimo de 2003 con calavera floreciente en serigrafía mate."
   },
   {
     "id": 40,
-    "nombre": "Polo Destruction - Sentence of Death",
+    "nombre": "Polo Destruction - Thrash Anthems",
     "banda": "Destruction",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/destruction_1.webp",
-    "descripcion": "Thrash Metal alemán teutónico de pura cepa."
+    "imagen": "img/products/polos/polo_Destruction_TrashAnthems.webp",
+    "descripcion": "El carnicero encadenado Mad Butcher empuñando la cuchilla con los himnos regrabados del thrash alemán."
   },
   {
     "id": 41,
-    "nombre": "Polo Dio - Holy Diver",
+    "nombre": "Polo DIO - Holy Diver / Magica",
     "banda": "Dio",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/dio_1.webp",
-    "descripcion": "Ronnie James Dio y el demonio Murray en el clásico eterno."
+    "imagen": "img/products/polos/polo_DIO_IronMagica.webp",
+    "descripcion": "El demonio Murray conjurando poderes arcanos en las profundidades del heavy metal fantástico tradicional."
   },
   {
     "id": 42,
-    "nombre": "Polo Dio - The Last in Line",
+    "nombre": "Polo Ronnie James Dio - The Voice of Metal",
     "banda": "Dio",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/dio_2.webp",
-    "descripcion": "El templo del metal clásico en serigrafía de alto detalle."
+    "imagen": "img/products/polos/polo_DIO_RonniJamesDio.webp",
+    "descripcion": "Tributo al legendario vocalista alzando la clásica 'Mano Cornuta' inmortalizada en el rock pesado."
   },
   {
     "id": 43,
-    "nombre": "Polo Exciter - Heavy Metal Maniac",
+    "nombre": "Polo Exciter - Long Live the Loud",
     "banda": "Exciter",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/exiter_1.webp",
-    "descripcion": "Speed Metal canadiense legendario. 100% algodón reactivo."
+    "imagen": "img/products/polos/polo_Exciter_LonLiveTheLoud.webp",
+    "descripcion": "El trío canadiense de speed metal en plena batalla sónica con tachas, cuero y decibelios al máximo."
   },
   {
     "id": 44,
@@ -392,161 +392,161 @@
     "banda": "Exodus",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/exodus_1.webp",
-    "descripcion": "La furia de la Bay Area en serigrafía indestructible."
+    "imagen": "img/products/polos/polo_Exodus_BondedByBlood.webp",
+    "descripcion": "Los gemelos siameses siameses diabólicos del disco más violento del Bay Area Thrash Metal de 1985."
   },
   {
     "id": 45,
-    "nombre": "Polo Gamma Ray - Land of the Free",
+    "nombre": "Polo Gamma Ray - Master of Confusion",
     "banda": "Gamma Ray",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/gammaray_1.webp",
-    "descripcion": "Power Metal germano guiado por Kai Hansen."
+    "imagen": "img/products/polos/polo_Gammaray_MasterOfConfusion.webp",
+    "descripcion": "Kai Hansen y la criatura alienígena del power metal en una ilustración cósmica a todo color."
   },
   {
     "id": 46,
-    "nombre": "Polo Ghost - Papa Emeritus Classic",
+    "nombre": "Polo Ghost - Ceremony and Devotion",
     "banda": "Ghost",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/ghost_1.webp",
-    "descripcion": "Rock teatral ocultista sueco en serigrafía a colores vivos."
+    "imagen": "img/products/polos/polo_Ghost_CeremonyAndDevotion.webp",
+    "descripcion": "Papa Emeritus III en su catedral gótica rodeado de Nameless Ghouls en una liturgia de rock ocultista."
   },
   {
     "id": 47,
-    "nombre": "Polo Gorillaz - Demon Days",
+    "nombre": "Polo Gorillaz - Rock the House",
     "banda": "Gorillaz",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/gorillaz_1.webp",
-    "descripcion": "Edición especial con la ilustración de los 4 integrantes."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Gorillaz_RockTheHouse.webp",
+    "descripcion": "Murdoc, 2-D, Russel y Noodle en la era clásica animada de Jamie Hewlett en algodón reactivo premium."
   },
   {
     "id": 48,
-    "nombre": "Polo Guns N' Roses - Appetite for Destruction",
-    "banda": "Guns N' Roses",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/GR_1.webp",
-    "descripcion": "La cruz con las calaveras del álbum más salvaje del Hard Rock."
-  },
-  {
-    "id": 49,
-    "nombre": "Polo Guns N' Roses - Classic Crest",
-    "banda": "Guns N' Roses",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/GR_2.webp",
-    "descripcion": "Logo tradicional de revólveres y rosas en serigrafía dorada."
-  },
-  {
-    "id": 50,
-    "nombre": "Polo Guns N' Roses - Use Your Illusion I",
-    "banda": "Guns N' Roses",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/GR_3.webp",
-    "descripcion": "El arte renacentista amarillo de Mark Kostabi."
-  },
-  {
-    "id": 51,
-    "nombre": "Polo Guns N' Roses - Use Your Illusion II",
-    "banda": "Guns N' Roses",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/GR_4.webp",
-    "descripcion": "Edición azul de colección en algodón 100% reactivo."
-  },
-  {
-    "id": 52,
-    "nombre": "Polo Grave - Into the Grave",
+    "nombre": "Polo Grave - As Rapture Comes",
     "banda": "Grave",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/grave_1.webp",
-    "descripcion": "Death Metal sueco de la vieja escuela (Old School)."
+    "imagen": "img/products/polos/polo_Grave_AsRaptureComes.webp",
+    "descripcion": "Atmósfera pútrida y calaveras esculpidas en el sonido de sierra sueco Sunlight Studios de Estocolmo."
+  },
+  {
+    "id": 49,
+    "nombre": "Polo Green Day - American Idiot (Variante 1)",
+    "banda": "Green Day",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GreenDay_AmericanIdiot_1.webp",
+    "descripcion": "La icónica granada en forma de corazón ensangrentada que revolucionó la ópera punk en 2004."
+  },
+  {
+    "id": 50,
+    "nombre": "Polo Green Day - American Idiot (Variante 2)",
+    "banda": "Green Day",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GreenDay_AmericanIdiot_2.webp",
+    "descripcion": "Versión alternativa con fondo tipográfico y contraste rojo/negro de la icónica era política del trío."
+  },
+  {
+    "id": 51,
+    "nombre": "Polo Guns N' Roses - Appetite for Destruction (Cruz Clásica)",
+    "banda": "Guns N' Roses",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GunsNRoses_AppetiteForDestruction_1.webp",
+    "descripcion": "La legendaria cruz celta con las calaveras caricaturizadas de los cinco miembros fundadores de 1987."
+  },
+  {
+    "id": 52,
+    "nombre": "Polo Guns N' Roses - Appetite for Destruction (Arte Robert Williams)",
+    "banda": "Guns N' Roses",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GunsNRoses_AppetiteForDestruction_2.webp",
+    "descripcion": "La polémica pintura censurada del monstruo robótico saltando la cerca, codiciada por coleccionistas."
   },
   {
     "id": 53,
-    "nombre": "Polo Green Day - Dookie",
-    "banda": "Green Day",
+    "nombre": "Polo Guns N' Roses - Bullet Logo (Classic)",
+    "banda": "Guns N' Roses",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/greenday_1.webp",
-    "descripcion": "Ilustración explosiva del clásico punk de 1994."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GunsNRoses_BulletLogo_1.webp",
+    "descripcion": "El tradicional círculo de balas, revólveres cruzados y rosas rojas en serigrafía de máxima nitidez."
   },
   {
     "id": 54,
-    "nombre": "Polo Green Day - American Idiot",
-    "banda": "Green Day",
+    "nombre": "Polo Guns N' Roses - Bullet Logo (Gold Edition)",
+    "banda": "Guns N' Roses",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/greenday_2.webp",
-    "descripcion": "La granada-corazón en rojo carmesí sobre fondo negro."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_GunsNRoses_BulletLogo_2.webp",
+    "descripcion": "Variante con marco dorado y degradados vintage del emblema más reconocido del hard rock mundial."
   },
   {
     "id": 55,
-    "nombre": "Polo HammerFall - Glory to the Brave",
+    "nombre": "Polo HammerFall - Steel Meets Steel (Ten Years of Glory)",
     "banda": "HammerFall",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/hammerfall_1.webp",
-    "descripcion": "El guerrero templario Héctor en glorioso Power Metal."
+    "imagen": "img/products/polos/polo_HammerFall_SteelMeetsSteel-TenYearsOfGlory.webp",
+    "descripcion": "El guerrero templario Héctor empuñando el martillo de guerra dorado del power metal sueco."
   },
   {
     "id": 56,
-    "nombre": "Polo Helloween - Keeper of the Seven Keys",
+    "nombre": "Polo Helloween - Keeper of the Seven Keys Part II",
     "banda": "Helloween",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/helloween_1.webp",
-    "descripcion": "La calabaza insignia del Speed/Power Metal alemán."
+    "imagen": "img/products/polos/polo_Helloween_KeeperOfTheSevenKeysPartII.webp",
+    "descripcion": "El guardián contemplando las siete llaves cósmicas en la obra cumbre indiscutible del speed/power metal."
   },
   {
     "id": 57,
-    "nombre": "Polo In Flames - The Jester Race",
+    "nombre": "Polo In Flames - Colony",
     "banda": "In Flames",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/in flames_1.webp",
-    "descripcion": "Pioneros del Death Metal melódico de Gotemburgo."
+    "imagen": "img/products/polos/polo_InFlames_Colony.webp",
+    "descripcion": "La silueta del Jesterhead y los mundos futuristas del sonido clásico melódico de Gotemburgo de 1999."
   },
   {
     "id": 58,
+    "nombre": "Polo Iron Maiden - Eddie the Head",
+    "banda": "Iron Maiden",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_IronMaiden_EddieTheHead.webp",
+    "descripcion": "Primer plano del rostro de la doncella de hierro con mirada psicópata y detalles en serigrafía brillante."
+  },
+  {
+    "id": 59,
     "nombre": "Polo Iron Maiden - The Number of the Beast",
     "banda": "Iron Maiden",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/iron_maiden_1.webp",
-    "descripcion": "Eddie manipulando al diablo. Imprescindible para todo metalero."
+    "imagen": "img/products/polos/polo_IronMaiden_NumberOfTheBeast.webp",
+    "descripcion": "Eddie controlando a Satán como marioneta sobre las llamas infernales dibujadas por Derek Riggs."
   },
   {
-    "id": 59,
+    "id": 60,
+    "nombre": "Polo Iron Maiden - Piece of Mind",
+    "banda": "Iron Maiden",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_IronMaiden_PieceOfMind.webp",
+    "descripcion": "Eddie lobotomizado y encadenado en la celda acolchada, un estándar indispensable del metal de 1983."
+  },
+  {
+    "id": 61,
     "nombre": "Polo Iron Maiden - Powerslave",
     "banda": "Iron Maiden",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/iron_maiden_2.webp",
-    "descripcion": "El templo egipcio de Eddie con detalles en dorado y azul."
-  },
-  {
-    "id": 60,
-    "nombre": "Polo Iron Maiden - Piece of Mind (Trooper)",
-    "banda": "Iron Maiden",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/iron_maiden_3.webp",
-    "descripcion": "Eddie en el campo de batalla con la bandera británica."
-  },
-  {
-    "id": 61,
-    "nombre": "Polo Iron Maiden - Fear of the Dark",
-    "banda": "Iron Maiden",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/iron_maiden_4.webp",
-    "descripcion": "Eddie árbol acechando bajo la luna llena. Gran definición."
+    "imagen": "img/products/polos/polo_IronMaiden_PowerSlave.webp",
+    "descripcion": "El colosal monumento egipcio de Eddie faraón con jeroglíficos detallados enSerigrafía de alta definición."
   },
   {
     "id": 62,
@@ -554,53 +554,53 @@
     "banda": "Judas Priest",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/judas_prist_1.webp",
-    "descripcion": "La hoja de afeitar empuñada con orgullo metálico."
+    "imagen": "img/products/polos/polo_JudasPriest_BritishSteel.webp",
+    "descripcion": "La emblemática mano empuñando la hoja de afeitar que marcó a fuego la New Wave of British Heavy Metal."
   },
   {
     "id": 63,
+    "nombre": "Polo Judas Priest - Defenders of the Faith",
+    "banda": "Judas Priest",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_JudasPriest_DefendersOfTheFaith.webp",
+    "descripcion": "La máquina de guerra acorazada 'Metallian' con cañones gemelos en los cuernos, lista para el combate."
+  },
+  {
+    "id": 64,
     "nombre": "Polo Judas Priest - Painkiller",
     "banda": "Judas Priest",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/judas_prist_2.webp",
-    "descripcion": "El ángel de metal en su motocicleta alada sobre la ciudad."
-  },
-  {
-    "id": 64,
-    "nombre": "Polo Judas Priest - Screaming for Vengeance",
-    "banda": "Judas Priest",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/judas_prist_3.webp",
-    "descripcion": "El ave fénix mecánica en amarillo y rojo brillante."
+    "imagen": "img/products/polos/polo_JudasPriest_PainKiller.webp",
+    "descripcion": "El ángel de metal sobre la motocicleta con ruedas de sierra circular cabalgando sobre el apocalipsis."
   },
   {
     "id": 65,
-    "nombre": "Polo King Diamond - Abigail",
+    "nombre": "Polo King Diamond - Abigail II: The Revenge",
     "banda": "King Diamond",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/king_diamond_1.webp",
-    "descripcion": "La historia conceptual de terror gótico más famosa del metal."
+    "imagen": "img/products/polos/polo_KingDiamond_AbigailIITheRevenge.webp",
+    "descripcion": "El rostro cadavérico del rey del horror conceptual y la continuación de la trágica historia gótica."
   },
   {
     "id": 66,
-    "nombre": "Polo King Diamond - Fatal Portrait",
+    "nombre": "Polo King Diamond - The Family Ghost",
     "banda": "King Diamond",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/king_diamond_2.webp",
-    "descripcion": "El rostro del maestro del falsete en serigrafía contrastada."
+    "imagen": "img/products/polos/polo_KingDiamond_TheFamilyGhost.webp",
+    "descripcion": "El espectro de Lafeyette señalando el secreto oscuro de la mansión con el maquillaje corpsepaint clásico."
   },
   {
     "id": 67,
-    "nombre": "Polo Korn - Follow the Leader",
+    "nombre": "Polo Korn - The Serenity of Suffering",
     "banda": "Korn",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/korn_1.webp",
-    "descripcion": "Nu Metal clásico con la niña en el acantilado."
+    "imagen": "img/products/polos/polo_Korn_TheSerenityOfSuffering.webp",
+    "descripcion": "El siniestro muñeco de peluche desmembrado y el parque de atracciones lúgubre del nu metal moderno."
   },
   {
     "id": 68,
@@ -608,53 +608,53 @@
     "banda": "Kreator",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/kreator_1.webp",
-    "descripcion": "Thrash salvaje y despiadado desde Essen, Alemania."
+    "imagen": "img/products/polos/polo_Kreator_PleasureToKill.webp",
+    "descripcion": "El demonio del averno decapitando almas en la obra magna que definió la brutalidad del thrash europeo."
   },
   {
     "id": 69,
-    "nombre": "Polo Kreator - Coma of Souls",
+    "nombre": "Polo Kreator - Terrible Certainty (Variante 1)",
     "banda": "Kreator",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/kreator_2.webp",
-    "descripcion": "El laberinto de cráneos en serigrafía violeta y negra."
+    "imagen": "img/products/polos/polo_Kreator_TerribleCertainty_1.webp",
+    "descripcion": "El cráneo cibernético mutante del tercer disco de Mille Petrozza en serigrafía clásica de 1987."
   },
   {
     "id": 70,
-    "nombre": "Polo Kreator - Extreme Aggression",
+    "nombre": "Polo Kreator - Terrible Certainty (Variante 2)",
     "banda": "Kreator",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/kreator_3.webp",
-    "descripcion": "Mille Petrozza y sus secuaces en camiseta de alto gramaje."
+    "imagen": "img/products/polos/polo_Kreator_TerribleCertainty_2.webp",
+    "descripcion": "Edición con logo rojo sangriento y marco vintage con los tonos apocalípticos de la criatura nuclear."
   },
   {
     "id": 71,
-    "nombre": "Polo Kreator - Gods of Violence",
+    "nombre": "Polo Kreator - Terrible Certainty (Variante 3)",
     "banda": "Kreator",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/kreator_4.webp",
-    "descripcion": "Era contemporánea demoledora con detalles dorados y carmesí."
+    "imagen": "img/products/polos/polo_Kreator_TerribleCertainty_3.webp",
+    "descripcion": "Diseño extendido de alto contraste sobre fondo negro puro con detalles ampliados de la ilustración."
   },
   {
     "id": 72,
-    "nombre": "Polo Leuzemia - Un Lugar",
+    "nombre": "Polo Leuzemia - A la Mierda lo Demás",
     "banda": "Leuzemia",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/leuzemia_1.webp",
-    "descripcion": "Pioneros del Rock Subterráneo Peruano. Algodón reactivo."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Leuzemia_ALaMierdaLoDemas.webp",
+    "descripcion": "El clásico grito de guerra del rock subterráneo peruano con Daniel F y la rata punk en serigrafía resistente."
   },
   {
     "id": 73,
-    "nombre": "Polo Linkin Park (Corte Femenino)",
+    "nombre": "Polo Linkin Park - Hybrid Theory (Corte Femenino)",
     "banda": "Linkin Park",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/linkin park_femenino_1.webp",
-    "descripcion": "Corte entallado para dama con logo oficial de Hybrid Theory."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_LinkinPark_Femenino.webp",
+    "descripcion": "El soldado con alas de libélula en corte entallado femenino con algodón reactivo suave de alta calidad."
   },
   {
     "id": 74,
@@ -662,35 +662,35 @@
     "banda": "Loudness",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/loudness_1.webp",
-    "descripcion": "Heavy Metal legendario desde Japón. Gran rareza de colección."
+    "imagen": "img/products/polos/polo_Loudness_ThunderInTheEast.webp",
+    "descripcion": "El sol naciente y las cadenas doradas del virtuoso guitarrista Akira Takasaki que conquistó el heavy mundial."
   },
   {
     "id": 75,
-    "nombre": "Polo Mägo de Oz - Finisterra",
+    "nombre": "Polo Mägo de Oz - Bandera Negra",
     "banda": "Mägo de Oz",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/Mago_de_oz_1.webp",
-    "descripcion": "Folk Metal español con el espantapájaros en el camino."
+    "imagen": "img/products/polos/polo_MagoDeOZ_BanderaNegra.webp",
+    "descripcion": "La calavera pirata y la tripulación folk metalera de Txus di Fellatio navegando bajo pabellón negro."
   },
   {
     "id": 76,
-    "nombre": "Polo Mägo de Oz - Gaia",
+    "nombre": "Polo Mägo de Oz - La Bruja",
     "banda": "Mägo de Oz",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/Mago_de_oz_2.webp",
-    "descripcion": "Ilustración conceptual de Gaboni sobre tela negra de alta gama."
+    "imagen": "img/products/polos/polo_MagoDeOZ_LaBruja.webp",
+    "descripcion": "La hechicera clásica del EP fundacional de 1997 sobre fondo negro con detalles coloridos en serigrafía."
   },
   {
     "id": 77,
-    "nombre": "Polo Manowar - Kings of Metal",
+    "nombre": "Polo Manowar - Battle Hymns",
     "banda": "Manowar",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/manowar_1.webp",
-    "descripcion": "El guerrero blandiendo la espada de acero por Ken Kelly."
+    "imagen": "img/products/polos/polo_Manowar_BattleHymns.webp",
+    "descripcion": "El águila heráldica de bronce del primer himno épico de True Metal grabado por Eric Adams y Joey DeMaio."
   },
   {
     "id": 78,
@@ -698,44 +698,44 @@
     "banda": "Manowar",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/manowar_2.webp",
-    "descripcion": "Heavy Metal épico e hipertrofiado. Estampado frontal."
+    "imagen": "img/products/polos/polo_Manowar_FightingTheWorld.webp",
+    "descripcion": "La icónica pintura de Ken Kelly con los cuatro reyes del metal alzando las armas frente al fuego."
   },
   {
     "id": 79,
-    "nombre": "Polo Manowar - Louder Than Hell",
+    "nombre": "Polo Manowar - Hell on Wheels",
     "banda": "Manowar",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/manowar_3.webp",
-    "descripcion": "El jinete del infierno a toda velocidad. Corte unisex."
+    "imagen": "img/products/polos/polo_Manowar_HellOnWheels.webp",
+    "descripcion": "El guerrero de acero a lomos de la bestia mecánica en llamas durante la gira mundial en directo de 1997."
   },
   {
     "id": 80,
-    "nombre": "Polo Manowar - Battle Hymns",
+    "nombre": "Polo Manowar - Kings of Metal",
     "banda": "Manowar",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/manowar_4.webp",
-    "descripcion": "El águila de guerra de su disco debut de 1982."
+    "imagen": "img/products/polos/polo_Manowar_KingsOfMetal.webp",
+    "descripcion": "El guerrero victorioso plantando las banderas de las naciones sobre la cima del monte del heavy metal."
   },
   {
     "id": 81,
-    "nombre": "Polo Marilyn Manson (Corte Femenino)",
+    "nombre": "Polo Marilyn Manson - Portrait of an American Family (Corte Femenino)",
     "banda": "Marilyn Manson",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/marilyn manson_femenino_1.webp",
-    "descripcion": "Corte entallado para mujer con arte de Antichrist Superstar."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MarilinManson_Femenino.webp",
+    "descripcion": "Retrato tétrico de la familia de plastilina con corte femenino estilizado y algodón peinado suave."
   },
   {
     "id": 82,
-    "nombre": "Polo Mayhem - De Mysteriis Dom Sathanas",
+    "nombre": "Polo Mayhem - Dawn of the Black Hearts",
     "banda": "Mayhem",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/mayhem_1.webp",
-    "descripcion": "La catedral de Nidaros en el disco más oscuro del Black Metal."
+    "imagen": "img/products/polos/polo_Mayhem_DawnOfTheBlackHearts.webp",
+    "descripcion": "El infame concierto de Sarpsborg de 1990 con la formación clásica de Dead y Euronymous en serigrafía cruda."
   },
   {
     "id": 83,
@@ -743,80 +743,80 @@
     "banda": "Mayhem",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/mayhem_3.webp",
-    "descripcion": "Las manos cercenadas en rojo sangre sobre fondo negro."
+    "imagen": "img/products/polos/polo_Mayhem_Deathcrush.webp",
+    "descripcion": "Las manos amputadas en el histórico fondo rosa/rojo del primer mini-álbum que originó el black metal noruego."
   },
   {
     "id": 84,
-    "nombre": "Polo Mayhem - Pure Fucking Armageddon",
+    "nombre": "Polo Mayhem - Live in Leipzig",
     "banda": "Mayhem",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/mayhem_4.webp",
-    "descripcion": "El demo primigenio de Euronymous y Necrobutcher."
+    "imagen": "img/products/polos/polo_Mayhem_LiveInLeipzig.webp",
+    "descripcion": "Dead empuñando el micrófono en el legendario ritual de 1990 con logo púrpura original."
   },
   {
     "id": 85,
-    "nombre": "Polo Megadeth - Rust in Peace",
-    "banda": "Megadeth",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/megadeth_1.webp",
-    "descripcion": "Vic Rattlehead en el Hangar 18 frente a los líderes mundiales."
-  },
-  {
-    "id": 86,
-    "nombre": "Polo Megadeth - Peace Sells... But Who's Buying?",
-    "banda": "Megadeth",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/megadeth_2.webp",
-    "descripcion": "Vic vendiendo las Naciones Unidas tras el ataque nuclear."
-  },
-  {
-    "id": 87,
     "nombre": "Polo Megadeth - Countdown to Extinction",
     "banda": "Megadeth",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/megadeth_3.webp",
-    "descripcion": "Thrash técnico y afilado de Dave Mustaine. 100% algodón."
+    "imagen": "img/products/polos/polo_Megadeth_CountdownToExtintion.webp",
+    "descripcion": "El anciano en el abismo y los símbolos matemáticos de la extinción con Dave Mustaine en la cima del thrash."
+  },
+  {
+    "id": 86,
+    "nombre": "Polo Megadeth - Rust in Peace",
+    "banda": "Megadeth",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Megadeth_RustInPeace.webp",
+    "descripcion": "Vic Rattlehead sobre la cápsula alienígena frente a los líderes mundiales en el Hangar 18."
+  },
+  {
+    "id": 87,
+    "nombre": "Polo Megadeth - Youthanasia",
+    "banda": "Megadeth",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Megadeth_Youthanasia.webp",
+    "descripcion": "La anciana colgando bebés en el tendedero infinito bajo el cielo violeta de Hugh Syme."
   },
   {
     "id": 88,
-    "nombre": "Polo Mercyful Fate - Melissa",
+    "nombre": "Polo Mercyful Fate - Don't Break the Oath (Variante 1)",
     "banda": "Mercyful Fate",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/mercyful fate_1.webp",
-    "descripcion": "El cráneo sobre la cruz en llamas del debut de 1983."
+    "imagen": "img/products/polos/polo_MercyfulFate_DontBreakTheOath_1.webp",
+    "descripcion": "El demonio rojo apuntando desde las llamas del pacto inquebrantable de King转换为 y Hank Shermann."
   },
   {
     "id": 89,
-    "nombre": "Polo Mercyful Fate - Don't Break the Oath",
+    "nombre": "Polo Mercyful Fate - Don't Break the Oath (Variante 2)",
     "banda": "Mercyful Fate",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/mercyful fate_2.webp",
-    "descripcion": "El demonio señalando desde el abismo en colores vivos."
+    "imagen": "img/products/polos/polo_MercyfulFate_DontBreakTheOath_2.webp",
+    "descripcion": "Versión alternativa con tipografía gótica ampliada y enfoque al rostro infernal de 1984."
   },
   {
     "id": 90,
-    "nombre": "Polo Metallica - Kill 'Em All",
+    "nombre": "Polo Metallica - 72 Seasons (Global Premiere)",
     "banda": "Metallica",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/metallica_1.webp",
-    "descripcion": "El mazo ensangrentado que inició la era dorada del Thrash."
+    "imagen": "img/products/polos/polo_Metallica_72SeasonsGlobalPremiere.webp",
+    "descripcion": "La cuna amarilla calcinada rodeada de fragmentos infantiles del undécimo disco de estudio."
   },
   {
     "id": 91,
-    "nombre": "Polo Metallica - Ride the Lightning",
+    "nombre": "Polo Metallica - Live Shit: Binge & Purge",
     "banda": "Metallica",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/metallica_2.webp",
-    "descripcion": "La silla eléctrica entre relámpagos azules. Clásico eterno."
+    "imagen": "img/products/polos/polo_Metallica_LiveShitBinge&Purge.webp",
+    "descripcion": "La caja de pruebas forenses del hombre del saco Scary Guy de la gira monstruosa de 1993."
   },
   {
     "id": 92,
@@ -824,682 +824,2187 @@
     "banda": "Metallica",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/metallica_3.webp",
-    "descripcion": "El cementerio de cruces militares. Serigrafía de alta duración."
+    "imagen": "img/products/polos/polo_Metallica_MasterOfPuppets.webp",
+    "descripcion": "El cementerio militar con cascos y cruces manipuladas por las manos celestiales de la obra maestra de 1986."
   },
   {
     "id": 93,
-    "nombre": "Polo Mötley Crüe - Shout at the Devil",
-    "banda": "Mötley Crüe",
+    "nombre": "Polo Morbid Angel - Abominations of Desolation",
+    "banda": "Morbid Angel",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/montley crue_1.webp",
-    "descripcion": "Pentagrama y glamour decadente de Sunset Strip."
+    "imagen": "img/products/polos/polo_MorbidAngel_AbominationsOfDesolations.webp",
+    "descripcion": "Las grabaciones oscuras primigenias de 1986 con el logo ancestral de Trey Azagthoth."
   },
   {
     "id": 94,
-    "nombre": "Polo Mötley Crüe - Dr. Feelgood",
-    "banda": "Mötley Crüe",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/montley crue_2.webp",
-    "descripcion": "El caduceo de serpientes y dagas en verde tóxico."
-  },
-  {
-    "id": 95,
-    "nombre": "Polo Mötley Crüe - Girls, Girls, Girls",
-    "banda": "Mötley Crüe",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/montley crue_3.webp",
-    "descripcion": "Estilo motoquero salvaje de los años 80 en algodón negro."
-  },
-  {
-    "id": 96,
-    "nombre": "Polo Mötley Crüe - Too Fast for Love",
-    "banda": "Mötley Crüe",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/montley crue_4.webp",
-    "descripcion": "El debut rebelde e independiente de Nikki Sixx y Vince Neil."
-  },
-  {
-    "id": 97,
-    "nombre": "Polo Morbid Angel (Corte Femenino)",
-    "banda": "Morbid Angel",
-    "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/morbid angel_femenino_1.webp",
-    "descripcion": "Corte entallado para mujer con el logo de los reyes del Death Metal."
-  },
-  {
-    "id": 100,
     "nombre": "Polo Morbid Angel - Altars of Madness",
     "banda": "Morbid Angel",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/morbid_angel_1.webp",
-    "descripcion": "Las caras deformadas atrapadas en el altar de Dan Seagrave."
+    "imagen": "img/products/polos/polo_MorbidAngel_AltarsOfMadness.webp",
+    "descripcion": "El disco giratorio de almas torturadas y rostros atrapados que sentó las bases del death metal de Tampa."
+  },
+  {
+    "id": 95,
+    "nombre": "Polo Morbid Angel - Blessed are the Sick (Corte Femenino)",
+    "banda": "Morbid Angel",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MorbidAngel_Femenino.webp",
+    "descripcion": "La pintura 'Les Trésors de Satan' de Jean Delville en elegante corte entallado femenino."
+  },
+  {
+    "id": 96,
+    "nombre": "Polo Morbid Angel - Classic Logo",
+    "banda": "Morbid Angel",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MorbidAngel.webp",
+    "descripcion": "El emblemático logo de letras en llamas invertidas en serigrafía dorada sobre algodón negro reactivo."
+  },
+  {
+    "id": 97,
+    "nombre": "Polo Mötley Crüe - Shout at the Devil (Variante 1)",
+    "banda": "Mötley Crüe",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MotleyCrue_ShoutAttheDevil_1.webp",
+    "descripcion": "El pentagrama negro brillante y las cuatro caras glam metaleras del álbum pesado de 1983."
+  },
+  {
+    "id": 98,
+    "nombre": "Polo Mötley Crüe - Shout at the Devil (Variante 2)",
+    "banda": "Mötley Crüe",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MotleyCrue_ShoutAttheDevil_2.webp",
+    "descripcion": "Diseño conmemorativo con tipografía roja demoníaca y fotos individuales de Nikki, Tommy, Mick y Vince."
+  },
+  {
+    "id": 99,
+    "nombre": "Polo Mötley Crüe - Too Fast for Love",
+    "banda": "Mötley Crüe",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MotleyCrue_TooFastForLovw.webp",
+    "descripcion": "El pantalón de cuero con tachas y esposas tributo al Sticky Fingers en el debut independiente de Leathür Records."
+  },
+  {
+    "id": 100,
+    "nombre": "Polo Motörhead - Snaggletooth (Corte Femenino)",
+    "banda": "Motörhead",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Motorhead_Femenino.webp",
+    "descripcion": "El colmillo de hierro Warpig de Lemmy Kilmister en corte femenino con hombros ceñidos y cuello cómodo."
   },
   {
     "id": 101,
-    "nombre": "Polo Morbid Angel - Blessed Are the Sick",
-    "banda": "Morbid Angel",
+    "nombre": "Polo My Chemical Romance - One Night Only",
+    "banda": "My Chemical Romance",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/morbid_angel_2.webp",
-    "descripcion": "El ángel de Jean Delville en sublime Death Metal litúrgico."
+    "imagen": "img/products/polos/polo_MyChemicalRomance_OneNigthOnly.webp",
+    "descripcion": "Póster de concierto exclusivo con la imaginería gótica y teatral de Gerard Way."
   },
   {
     "id": 102,
-    "nombre": "Polo Morbid Angel - Covenant",
-    "banda": "Morbid Angel",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/morbid_angel_4.webp",
-    "descripcion": "El libro de magia negra y la vela encendida en pacto satánico."
-  },
-  {
-    "id": 103,
-    "nombre": "Polo Motörhead - England (Dama)",
-    "banda": "Motörhead",
-    "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/motorhead_femenino_1.webp",
-    "descripcion": "Snaggletooth en corte femenino entallado. En memoria de Lemmy."
-  },
-  {
-    "id": 104,
     "nombre": "Polo My Chemical Romance - The Black Parade",
     "banda": "My Chemical Romance",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/mychemicalromance_1.webp",
-    "descripcion": "El desfile de la muerte en serigrafía nítida y elegante."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_MyChemicalRomance_TheBlackParade.webp",
+    "descripcion": "El uniforme de marcha militar de Pepe y la procesión del álbum conceptual más aclamado del rock alternativo."
   },
   {
-    "id": 105,
-    "nombre": "Polo My Chemical Romance - Three Cheers",
-    "banda": "My Chemical Romance",
-    "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/mychemiclaromance_2.webp",
-    "descripcion": "Los amantes ensangrentados de Demolition Lovers."
-  },
-  {
-    "id": 106,
-    "nombre": "Polo Napalm Death - Scum",
+    "id": 103,
+    "nombre": "Polo Napalm Death - Utopia Banished",
     "banda": "Napalm Death",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/napalm death_1.webp",
-    "descripcion": "Pioneros absolutos del Grindcore mundial. Estampado rudo."
+    "imagen": "img/products/polos/polo_NapalmDeath_UtopiaBanished.webp",
+    "descripcion": "La máquina de tortura humana y el caos sónico del grindcore de Barney Greenway de 1992."
   },
   {
-    "id": 107,
+    "id": 104,
     "nombre": "Polo Narcosis - Primera Dosis",
     "banda": "Narcosis",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/narcosis_1.webp",
-    "descripcion": "Historia pura del Punk y Rock Subterráneo en Lima."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Narcosis_PrimeraDosis.webp",
+    "descripcion": "El cassette de maqueta fundacional de Wicho García y Cachorro que detonó el punk subterráneo en Lima en 1985."
   },
   {
-    "id": 108,
-    "nombre": "Polo Nirvana - In Utero Angel",
+    "id": 105,
+    "nombre": "Polo Nirvana - In Utero (Corte Femenino)",
     "banda": "Nirvana",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/nirvana_1.webp",
-    "descripcion": "El maniquí anatómico alado sobre algodón reactivo negro."
+    "imagen": "img/products/polos/polo_Nirvana_Femenino.webp",
+    "descripcion": "El ángel anatómico transparente de Kurt Cobain con alas transparentes en fino corte entallado."
   },
   {
-    "id": 109,
-    "nombre": "Polo Nirvana - Smiley (Dama)",
+    "id": 106,
+    "nombre": "Polo Nirvana - Smiley Face Logo",
     "banda": "Nirvana",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/nirvana_femenino_1.webp",
-    "descripcion": "Corte entallado para dama con la carita sonriente de Kurt Cobain."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Nirvana_SmileyFaceLogo.webp",
+    "descripcion": "La carita sonriente mareada con ojos en cruz en amarillo brillante sobre algodón negro de alto gramaje."
   },
   {
-    "id": 110,
-    "nombre": "Polo Overkill - The Years of Decay",
+    "id": 107,
+    "nombre": "Polo Overkill - Under the Influence",
     "banda": "Overkill",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/over_kill_1.webp",
-    "descripcion": "Chaly la calavera alada en verde radiactivo característico."
+    "imagen": "img/products/polos/polo_OverKill_UnderTheInfluence.webp",
+    "descripcion": "El murciélago con calavera Chaly volando sobre el cementerio verde fosforescente de Bobby Blitz."
+  },
+  {
+    "id": 108,
+    "nombre": "Polo Ozzy Osbourne - Tribute (Randy Rhoads - Variante 1)",
+    "banda": "Ozzy Osbourne",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_OzzyOsbourne_Tribute_1.webp",
+    "descripcion": "Ozzy levantando en brazos al inmortal guitarrista Randy Rhoads con su guitarra Jackson de lunares."
+  },
+  {
+    "id": 109,
+    "nombre": "Polo Ozzy Osbourne - Tribute (Randy Rhoads - Variante 2)",
+    "banda": "Ozzy Osbourne",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_OzzyOsbourne_Tribute_2.webp",
+    "descripcion": "Edición especial con marco plateado del homenaje en vivo grabado antes del trágico accidente de 1982."
+  },
+  {
+    "id": 110,
+    "nombre": "Polo PXNDX - Para Ti con Desprecio",
+    "banda": "PXNDX",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Panda_ParaTiConDesprecio.webp",
+    "descripcion": "Arte sombrío del disco de desamor y despecho con el reconocible logo de la banda mexicana."
   },
   {
     "id": 111,
-    "nombre": "Polo Ozzy Osbourne - Blizzard of Ozz",
-    "banda": "Ozzy Osbourne",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/ozy osbourne_1.webp",
-    "descripcion": "Ozzy con la cruz de madera y Randy Rhoads en la guitarra."
-  },
-  {
-    "id": 112,
-    "nombre": "Polo Ozzy Osbourne - Bark at the Moon",
-    "banda": "Ozzy Osbourne",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/ozy osbourne_2.webp",
-    "descripcion": "El hombre lobo aullando a la luna en serigrafía clásica."
-  },
-  {
-    "id": 113,
-    "nombre": "Polo PXNDX - Para Ti Con Desprecio",
-    "banda": "PXNDX",
-    "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/panda_1.webp",
-    "descripcion": "Diseño alternativo/emo rock en serigrafía resistente."
-  },
-  {
-    "id": 114,
-    "nombre": "Polo Pantera - Vulgar Display of Power",
-    "banda": "Pantera",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/pantera_1.webp",
-    "descripcion": "El golpe en la cara más demoledor del Groove Metal."
-  },
-  {
-    "id": 115,
     "nombre": "Polo Pantera - Cowboys from Hell",
     "banda": "Pantera",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/pantera_2.webp",
-    "descripcion": "Dimebag Darrell y Phil Anselmo en el saloon texano."
+    "imagen": "img/products/polos/polo_Pantera_CowboysFromHell.webp",
+    "descripcion": "Dimebag Darrell y Phil Anselmo en el saloon tejano revolucionando el power groove metal de los noventa."
   },
   {
-    "id": 116,
-    "nombre": "Polo Panzerfaust - Black Metal Warfare",
-    "banda": "Panzerfaust",
+    "id": 112,
+    "nombre": "Polo Pantera - Live from Donington '94",
+    "banda": "Pantera",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/panzerfaust_1.webp",
-    "descripcion": "Black Metal bélico y oscuro en algodón reactivo premium."
+    "imagen": "img/products/polos/polo_Pantera_LiveFromDonington94.webp",
+    "descripcion": "El demoledor asalto del festival Monsters of Rock de 1994 capturado en un diseño crudo e incendiario."
   },
   {
-    "id": 117,
-    "nombre": "Polo Pearl Jam - Stickman Classic",
+    "id": 113,
+    "nombre": "Polo Pearl Jam - Stickman (Alive)",
     "banda": "Pearl Jam",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/pearl jam_1.webp",
-    "descripcion": "Clásico del Grunge de Seattle con Eddie Vedder."
+    "imagen": "img/products/polos/polo_PearlJam_Stickman.webp",
+    "descripcion": "El dibujo original de Eddie Vedder con brazos arriba del sencillo 'Alive' de la era dorada del grunge Ten."
   },
   {
-    "id": 118,
+    "id": 114,
+    "nombre": "Polo Rata Blanca - La Llave de la Puerta Secreta",
+    "banda": "Rata Blanca",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_RataBlanca_LaLLaveDeLaPuertaSecreta.webp",
+    "descripcion": "La llave dorada entre engranajes místicos inspirada en la novela de Dan Brown con Walter Giardino."
+  },
+  {
+    "id": 115,
     "nombre": "Polo Rata Blanca - Magos, Espadas y Rosas",
     "banda": "Rata Blanca",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/rata blanca_1.webp",
-    "descripcion": "La guitarra de Walter Giardino y la voz de Barilari en un clásico."
+    "imagen": "img/products/polos/polo_RataBlanca_MagosEspadasYRosas.webp",
+    "descripcion": "El castillo medieval y la rosa roja del álbum insigne que contiene Mujer Amante y La Leyenda del Hada y el Mago."
   },
   {
-    "id": 119,
-    "nombre": "Polo Rata Blanca - Guerrero del Arco Iris",
+    "id": 116,
+    "nombre": "Polo Rata Blanca - VII",
     "banda": "Rata Blanca",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/rata blanca_2.webp",
-    "descripcion": "Heavy Metal épico argentino en serigrafía a todo color."
+    "imagen": "img/products/polos/polo_RataBlanca_VII.webp",
+    "descripcion": "La estrella de siete puntas y el sonido pesado noventero con Gabriel Marian en las voces."
   },
   {
-    "id": 120,
-    "nombre": "Polo Rata Blanca - El Camino del Fuego",
-    "banda": "Rata Blanca",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/rata blanca_3.webp",
-    "descripcion": "Diseño conmemorativo del regreso triunfal de la banda."
-  },
-  {
-    "id": 121,
-    "nombre": "Polo Saratoga - A Morir",
+    "id": 117,
+    "nombre": "Polo Saratoga - Némesis",
     "banda": "Saratoga",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/saracoga_1.webp",
-    "descripcion": "Poderoso Heavy Metal español de Niko del Hierro y Leo Jiménez."
+    "imagen": "img/products/polos/polo_Saracoga_Nemesis.webp",
+    "descripcion": "La figura alada de la justicia y la venganza del heavy metal madrileño de Niko del Hierro y Tete Novoa."
   },
   {
-    "id": 122,
-    "nombre": "Polo Sarcófago - I.N.R.I.",
+    "id": 118,
+    "nombre": "Polo Sarcófago - Satanic Lust",
     "banda": "Sarcófago",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/sarcofago_1.webp",
-    "descripcion": "Pioneros del Metal Extremo sudamericano desde Brasil."
+    "imagen": "img/products/polos/polo_Sarcofago_SatanicLust.webp",
+    "descripcion": "El culto extremo brasileño de Wagner Antichrist con tachas masivas, balas y blasfemia pura de 1986."
   },
   {
-    "id": 123,
-    "nombre": "Polo Scorpions - Blackout",
+    "id": 119,
+    "nombre": "Polo Scorpions - Animal Magnetism (Jack Plug)",
     "banda": "Scorpions",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/scorpions_1.webp",
-    "descripcion": "El rostro vendado con tenedores en los ojos de Gottfried Helnwein."
+    "imagen": "img/products/polos/polo_Scorpions_7jackPlug.webp",
+    "descripcion": "Arte fotográfico de Storm Thorgerson (Hipgnosis) para los gigantes del hard rock alemán de 1980."
   },
   {
-    "id": 124,
-    "nombre": "Polo Sepultura - Arise",
+    "id": 120,
+    "nombre": "Polo Sepultura - Morbid Visions",
     "banda": "Sepultura",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/sepultura_1.webp",
-    "descripcion": "La criatura lovecraftiana de Michael Whelan en Death/Thrash puro."
+    "imagen": "img/products/polos/polo_Sepultura_MorbidVisions.webp",
+    "descripcion": "La crucifixión profana y el sonido black/death primitivo de Max e Iggor Cavalera grabado en Belo Horizonte."
   },
   {
-    "id": 125,
-    "nombre": "Polo Slayer - Reign in Blood",
+    "id": 121,
+    "nombre": "Polo Slayer - Criminally Insane",
     "banda": "Slayer",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/slayer_1.webp",
-    "descripcion": "El pináculo del Thrash Metal satánico y despiadado."
+    "imagen": "img/products/polos/polo_Slayer_CriminallyInsane.webp",
+    "descripcion": "La calavera en la celda de contención psiquiátrica del demoledor sencillo del Reign in Blood."
   },
   {
-    "id": 126,
-    "nombre": "Polo Slayer - Seasons in the Abyss",
+    "id": 122,
+    "nombre": "Polo Slayer - Hell Awaits",
     "banda": "Slayer",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/slayer_2.webp",
-    "descripcion": "Las calaveras y cruces en la tumba del abismo."
+    "imagen": "img/products/polos/polo_Slayer_HellAwaits.webp",
+    "descripcion": "Las puertas del averno abriéndose ante las legiones de condenados en el clásico inmortal de 1985."
   },
   {
-    "id": 127,
-    "nombre": "Polo Slayer - Eagle Logo",
+    "id": 123,
+    "nombre": "Polo Slayer - Show No Mercy",
     "banda": "Slayer",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/slayer_3.webp",
-    "descripcion": "El águila con las espadas cruzadas en serigrafía plateada."
+    "imagen": "img/products/polos/polo_Slayer_ShowNoMercy.webp",
+    "descripcion": "El Minotauro guerrero empuñando la espada de fuego sobre el pentagrama de espadas invertidas."
   },
   {
-    "id": 128,
-    "nombre": "Polo Slipknot - Self Titled 1999",
-    "banda": "Slipknot",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/slipknot_1.webp",
-    "descripcion": "Los 9 de Iowa con sus máscaras originales en su debut."
-  },
-  {
-    "id": 129,
-    "nombre": "Polo Slipknot - Iowa Goat",
-    "banda": "Slipknot",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/slipknot_2.webp",
-    "descripcion": "La cabeza de cabra plateada del disco más brutal de la banda."
-  },
-  {
-    "id": 130,
-    "nombre": "Polo Slipknot - Tribal S Logo",
-    "banda": "Slipknot",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/slipknot_3.webp",
-    "descripcion": "El logo tribal de la 'S' en rojo carmesí sobre fondo negro."
-  },
-  {
-    "id": 131,
+    "id": 124,
     "nombre": "Polo Slipknot - All Hope Is Gone",
     "banda": "Slipknot",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/slipknot_4.webp",
-    "descripcion": "Diseño conmemorativo de máscaras purgantes y uniforme oscuro."
+    "imagen": "img/products/polos/polo_Slipknot_AllHopeIsGone.webp",
+    "descripcion": "Los nueve integrantes de Iowa con sus máscaras del 2008 posando en el campo desolado de Paul Gray y Joey Jordison."
   },
   {
-    "id": 132,
-    "nombre": "Polo Slipknot - Nonagram Star",
+    "id": 125,
+    "nombre": "Polo Slipknot - Nonagram",
     "banda": "Slipknot",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/slipknot_5.webp",
-    "descripcion": "La estrella de 9 puntas estampada en serigrafía reflectante."
+    "imagen": "img/products/polos/polo_Slipknot_Nonagram.webp",
+    "descripcion": "La estrella de nueve puntas tejida con la S tribal en serigrafía roja y blanca de alto relieve."
   },
   {
-    "id": 133,
-    "nombre": "Polo S.O.D. - Speak English or Die (Dama I)",
-    "banda": "Stormtroopers of Death",
+    "id": 126,
+    "nombre": "Polo Slipknot - Rotting Goat",
+    "banda": "Slipknot",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/SOD_femenino_1.webp",
-    "descripcion": "Sargent D en corte entallado femenino. Crossover Thrash."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Slipknot_RottingGoat.webp",
+    "descripcion": "La cabeza de cabra en descomposición con estética macabra de la era de la obra cumbre Iowa."
   },
   {
-    "id": 134,
-    "nombre": "Polo S.O.D. - Sargent D Logo (Dama II)",
-    "banda": "Stormtroopers of Death",
+    "id": 127,
+    "nombre": "Polo Slipknot - .5: The Gray Chapter",
+    "banda": "Slipknot",
     "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/SOD_femenino_2.webp",
-    "descripcion": "Edición entallada para dama en algodón reactivo suave."
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Slipknot_TheGrayChapter.webp",
+    "descripcion": "La doncella esquelética vendada y la estética lúgubre en memoria del bajista Paul Gray."
   },
   {
-    "id": 135,
+    "id": 128,
+    "nombre": "Polo Slipknot - Tribal S",
+    "banda": "Slipknot",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Slipknot_Tribal S.webp",
+    "descripcion": "La icónica letra S tribal con púas metálicas sobre fondo negro en algodón reactivo 100%."
+  },
+  {
+    "id": 129,
     "nombre": "Polo Sodom - Agent Orange",
     "banda": "Sodom",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/sodom_1.webp",
-    "descripcion": "Knarrenheinz en el bombardero de la guerra de Vietnam."
+    "imagen": "img/products/polos/polo_Sodom_AgentOrange.webp",
+    "descripcion": "El artillero del helicóptero sobre la selva de Vietnam arrasada por napalm de Tom Angelripper en 1989."
   },
   {
-    "id": 136,
-    "nombre": "Polo Sodom - Persecution Mania",
-    "banda": "Sodom",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/sodom_2.webp",
-    "descripcion": "Thrash Metal alemán destructivo liderado por Tom Angelripper."
-  },
-  {
-    "id": 137,
+    "id": 130,
     "nombre": "Polo Sodom - In the Sign of Evil",
     "banda": "Sodom",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/sodom_3.webp",
-    "descripcion": "El hacha empuñada en el EP de culto de 1984."
+    "imagen": "img/products/polos/polo_Sodom_InTheSignOfEvil.webp",
+    "descripcion": "El verdugo encapuchado empuñando el hacha ensangrentada del EP germano que definió el black/thrash."
   },
   {
-    "id": 138,
-    "nombre": "Polo Stryper - To Hell with the Devil",
+    "id": 131,
+    "nombre": "Polo Sodom - Persecution Mania",
+    "banda": "Sodom",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Sodom_Persecution Mania.webp",
+    "descripcion": "Knarrenheinz con máscara antigás y fusil cruzando la tierra de nadie de la guerra química."
+  },
+  {
+    "id": 132,
+    "nombre": "Polo Stryper - Isaiah 53:5",
     "banda": "Stryper",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/stryper_1.webp",
-    "descripcion": "Los ángeles arrojando a Satanás en rayas amarillas y negras."
+    "imagen": "img/products/polos/polo_Stryper_Isaiah53-5.webp",
+    "descripcion": "Las franjas amarillas y negras del heavy metal cristiano con el versículo bíblico fundacional de Michael Sweet."
   },
   {
-    "id": 139,
-    "nombre": "Polo Testament - The Legacy",
+    "id": 133,
+    "nombre": "Polo System of a Down - Toxicity (Corte Femenino - Variante 1)",
+    "banda": "System of a Down",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_SystemOfADown_Femenino_1.webp",
+    "descripcion": "El letrero de Hollywood transformado en System of a Down en corte entallado femenino con cuello reforzado."
+  },
+  {
+    "id": 134,
+    "nombre": "Polo System of a Down - Hand Logo (Corte Femenino - Variante 2)",
+    "banda": "System of a Down",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_SystemOfADown_Femenino_2.webp",
+    "descripcion": "La mano abierta antifascista de John Heartfield del disco debut de 1998 en estilizado corte para mujer."
+  },
+  {
+    "id": 135,
+    "nombre": "Polo Testament - Dark Roots of Earth",
     "banda": "Testament",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/testament_1.webp",
-    "descripcion": "El debut demoledor de Chuck Billy y Alex Skolnick."
+    "imagen": "img/products/polos/polo_Testament_DarkRootsOfEarth.webp",
+    "descripcion": "El chamán ancestral invocando las raíces místicas de la tierra con Chuck Billy y Alex Skolnick."
   },
   {
-    "id": 140,
-    "nombre": "Polo Testament - The New Order",
-    "banda": "Testament",
-    "categoria": "polos",
-    "precio": "S/ 55.00",
-    "imagen": "img/polos/testament_2.webp",
-    "descripcion": "La orden mundial en el Thrash Metal supremo de la Bay Area."
-  },
-  {
-    "id": 141,
+    "id": 136,
     "nombre": "Polo Testament - Practice What You Preach",
     "banda": "Testament",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/testament_3.webp",
-    "descripcion": "La balanza de la justicia en serigrafía clásica."
+    "imagen": "img/products/polos/polo_Testament_PracticeWhatYourPreach.webp",
+    "descripcion": "El púlpito de piedra y la corte corrupta del himno de thrash metal de la bahía de 1989."
   },
   {
-    "id": 142,
-    "nombre": "Polo The Black Dahlia Murder - Unhallowed",
+    "id": 137,
+    "nombre": "Polo Testament - The Legacy",
+    "banda": "Testament",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_Testament_TheLegacy.webp",
+    "descripcion": "La pirámide mística y la bola de cristal del disco debut que consagró a la banda en el panteón del metal."
+  },
+  {
+    "id": 138,
+    "nombre": "Polo The Black Dahlia Murder - Nocturnal",
     "banda": "The Black Dahlia Murder",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/the black dahlia murder_1.webp",
-    "descripcion": "Melodic Death Metal de altísima velocidad en honor a Trevor Strnad."
+    "imagen": "img/products/polos/polo_TheBlackDahliaMurder_Nocturnal.webp",
+    "descripcion": "El castillo de Necrolord bajo la luna azul en la obra magna de melodic death metal de Trevor Strnad."
   },
   {
-    "id": 143,
-    "nombre": "Polo The Smiths - The Queen Is Dead",
-    "banda": "The Smiths",
-    "categoria": "polos",
-    "precio": "S/ 50.00",
-    "imagen": "img/polos/the_smiths_1.webp",
-    "descripcion": "Alain Delon en el clásico indie rock británico de Morrissey y Marr."
-  },
-  {
-    "id": 144,
-    "nombre": "Polo Therion - Theli",
+    "id": 139,
+    "nombre": "Polo Therion - Vovin",
     "banda": "Therion",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/therion_1.webp",
-    "descripcion": "Metal sinfónico y operístico sueco de Christofer Johnsson."
+    "imagen": "img/products/polos/polo_Therion_Vovin.webp",
+    "descripcion": "El dragón alado de la magia dracioniana en el álbum que redefinió el metal sinfónico y orquestal."
   },
   {
-    "id": 145,
-    "nombre": "Polo Toxic Holocaust - Evil Never Dies",
+    "id": 140,
+    "nombre": "Polo The Smiths - Meat Is Murder",
+    "banda": "The Smiths",
+    "categoria": "polos",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/polos/polo_TheSmiths_MeatIsMurder.webp",
+    "descripcion": "El soldado de Vietnam con la consigna vegetariana en el casco, himno del post-punk y jangle pop de 1985."
+  },
+  {
+    "id": 141,
+    "nombre": "Polo Toxic Holocaust - Hell on Earth",
     "banda": "Toxic Holocaust",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/toxiholocaust_1.webp",
-    "descripcion": "Speed/Thrash Metal punk y tóxico de Joel Grind."
+    "imagen": "img/products/polos/polo_ToxicHolocaust_HellOnEarth.webp",
+    "descripcion": "El mutante radioactivo vomitando fuego nuclear en el implacable blackened thrash metal de Joel Grind."
   },
   {
-    "id": 146,
+    "id": 142,
     "nombre": "Polo Venom - Black Metal",
     "banda": "Venom",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/venom_1.webp",
-    "descripcion": "El rostro del macho cabrío que bautizó todo un subgénero."
+    "imagen": "img/products/polos/polo_Venom_BlackMetal.webp",
+    "descripcion": "El rostro demoníaco con ojos vacíos de Cronos que bautizó a todo un subgénero extremo en 1982."
   },
   {
-    "id": 147,
+    "id": 143,
     "nombre": "Polo Venom - Welcome to Hell",
     "banda": "Venom",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/venom_2.webp",
-    "descripcion": "El pentagrama dorado de 1981 con Cronos, Mantas y Abaddon."
+    "imagen": "img/products/polos/polo_Venom_WelcomeToHell.webp",
+    "descripcion": "El pentagrama dorado con la cabra de Mendes del disco que inició la New Wave of British Heavy Metal satánica."
   },
   {
-    "id": 148,
-    "nombre": "Polo W.A.S.P. - The Crimson Idol",
+    "id": 144,
+    "nombre": "Polo W.A.S.P. - The Last Command",
     "banda": "W.A.S.P.",
     "categoria": "polos",
     "precio": "S/ 55.00",
-    "imagen": "img/polos/wasp_1.webp",
-    "descripcion": "Blackie Lawless y la historia trágica de Jonathan Steel."
+    "imagen": "img/products/polos/polo_WASP_TheLastCommand.webp",
+    "descripcion": "Blackie Lawless con sierra en la entrepierna y armadura de cuero en el clásico salvaje de 1985."
   },
   {
-    "id": 149,
-    "nombre": "Casaca Jean sin Mangas (Chaleco Denim I)",
-    "banda": "Heavy Metal Gear",
-    "categoria": "casacas",
-    "precio": "S/ 95.00",
-    "imagen": "img/polos/casaca_jean_sin_mangas_1.webp",
-    "descripcion": "Chaleco de denim pesado ideal para parches, pines y tachas."
+    "id": 145,
+    "nombre": "Polera Cannibal Corpse - Butchered Logo",
+    "banda": "Cannibal Corpse",
+    "categoria": "poleras",
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_cannibal_corpse.webp",
+    "descripcion": "Polera con capucha en franela reactiva 100% algodón. Estampado frontal de alta densidad con el clásico logo visceral de la banda insignia del death metal."
   },
   {
-    "id": 150,
-    "nombre": "Casaca Jean sin Mangas (Chaleco Denim II)",
-    "banda": "Heavy Metal Gear",
-    "categoria": "casacas",
-    "precio": "S/ 95.00",
-    "imagen": "img/polos/casaca_jean_sin_mangas_2.webp",
-    "descripcion": "Denim oscuro prelavado con botones metálicos reforzados."
-  },
-  {
-    "id": 151,
-    "nombre": "Casaca Militar Camuflada Táctica",
-    "banda": "Heavy Metal Gear",
-    "categoria": "casacas",
-    "precio": "S/ 130.00",
-    "imagen": "img/polos/casaca_militar_1.webp",
-    "descripcion": "Casaca estilo militar de batalla con bolsillos tácticos frontales."
-  },
-  {
-    "id": 152,
-    "nombre": "Casaca Alice in Chains - Grunge Era",
-    "banda": "Alice in Chains",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_alice in chains.webp",
-    "descripcion": "Casaca acolchada con capucha y forro térmico. Serigrafía de alta durabilidad."
-  },
-  {
-    "id": 153,
-    "nombre": "Casaca Death - Symbolic Art",
-    "banda": "Death",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_death.webp",
-    "descripcion": "Casaca pesada de algodón y poliéster con estampado en espalda y pecho."
-  },
-  {
-    "id": 154,
-    "nombre": "Casaca Iron Maiden - Eddie Trooper",
-    "banda": "Iron Maiden",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_iron maiden.webp",
-    "descripcion": "Casaca clásica con cierre metálico, bolsillos frontales y arte oficial de Eddie."
-  },
-  {
-    "id": 155,
-    "nombre": "Casaca Judas Priest - British Steel",
-    "banda": "Judas Priest",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_judas priest.webp",
-    "descripcion": "Corte estándar con puños acanalados y serigrafía de la legendaria hoja de afeitar."
-  },
-  {
-    "id": 156,
-    "nombre": "Casaca Linkin Park - Hybrid Theory",
-    "banda": "Linkin Park",
-    "categoria": "casacas",
-    "precio": "S/ 130.00",
-    "imagen": "img/poleras/casaca_likin park.webp",
-    "descripcion": "Casaca urbana con forro interior suave y diseño icónico del soldado alado."
-  },
-  {
-    "id": 157,
-    "nombre": "Casaca Morbid Angel - Altars Art",
-    "banda": "Morbid Angel",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_morbid angels.webp",
-    "descripcion": "Diseño para metal extremo con cierre completo y materiales reforzados."
-  },
-  {
-    "id": 158,
-    "nombre": "Casaca Slipknot - Nonagram Edition",
-    "banda": "Slipknot",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casaca_slipknot.webp",
-    "descripcion": "Casaca pesada con el logo tribal y la estrella de 9 puntas de Iowa."
-  },
-  {
-    "id": 159,
-    "nombre": "Casaca Judas Priest - Painkiller Ride",
-    "banda": "Judas Priest",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casca_judas priest.webp",
-    "descripcion": "Edición especial Painkiller con estampado a full color en la espalda."
-  },
-  {
-    "id": 160,
-    "nombre": "Casaca Slipknot - Iowa Tribal",
-    "banda": "Slipknot",
-    "categoria": "casacas",
-    "precio": "S/ 140.00",
-    "imagen": "img/poleras/casca_slipknot.webp",
-    "descripcion": "Casaca con capucha y cierre reforzado para conciertos y uso diario."
-  },
-  {
-    "id": 161,
-    "nombre": "Polera Dio - Holy Diver Classic",
+    "id": 146,
+    "nombre": "Polera DIO - Holy Diver Arcane",
     "banda": "Dio",
     "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_dio.webp",
-    "descripcion": "Polera con capucha en franela pesada 100% algodón. Estampado de alta calidad."
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_dio.webp",
+    "descripcion": "Diseño abrigador de corte clásico con capucha y bolsillo canguro. Gráfica en serigrafía duradera inspirada en las leyendas místicas de Ronnie James Dio."
   },
   {
-    "id": 162,
-    "nombre": "Polera Exciter - Heavy Metal Maniac",
+    "id": 147,
+    "nombre": "Polera Exciter - Heavy Metal Speed",
     "banda": "Exciter",
     "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_exciter.webp",
-    "descripcion": "Speed Metal canadiense en sudadera con bolsillo canguro y cordón ajustable."
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_exciter.webp",
+    "descripcion": "Prenda térmica de máxima densidad con puños y pretina reforzados. Emblema frontal del trío pionero del speed metal canadiense en serigrafía resistente."
   },
   {
-    "id": 163,
-    "nombre": "Polera Foreigner - Classic Rock",
+    "id": 148,
+    "nombre": "Polera Foreigner - Classic Rock Heritage",
     "banda": "Foreigner",
     "categoria": "poleras",
     "precio": "S/ 90.00",
-    "imagen": "img/poleras/polera_foreigner.webp",
-    "descripcion": "Polera clásica de Hard Rock / AOR sobre franela negra prelavada."
+    "imagen": "img/products/poleras/polera_foreigner.webp",
+    "descripcion": "Acabado suave al tacto y costuras dobles. Tipografía clásica de los gigantes del hard rock melódico sobre franela negra reactiva anti-decoloración."
   },
   {
-    "id": 164,
-    "nombre": "Polera Green Day - American Heart",
+    "id": 149,
+    "nombre": "Polera Green Day - Heart Grenade",
     "banda": "Green Day",
     "categoria": "poleras",
     "precio": "S/ 90.00",
-    "imagen": "img/poleras/polera_greenday.webp",
-    "descripcion": "Diseño clásico de la granada en rojo sobre franela reactiva negra."
+    "imagen": "img/products/poleras/polera_greenday.webp",
+    "descripcion": "Polera urbana unisex con capucha y cordones ajustables. Estampado de la emblemática granada de mano en rojo y blanco de la era American Idiot."
   },
   {
-    "id": 165,
-    "nombre": "Polera Iron Maiden - Powerslave Era",
+    "id": 150,
+    "nombre": "Polera Iron Maiden - Eddie Trooper Legacy",
     "banda": "Iron Maiden",
     "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_ironmaiden.webp",
-    "descripcion": "Sudadera de franela pesada con arte egipcio de Eddie estampado en el pecho."
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_ironmaiden.webp",
+    "descripcion": "Confección prémium para climas gélidos con interior perchado térmico. Gráfica de Eddie the Head con colores vivos de alta fidelidad que no cuartean."
   },
   {
-    "id": 166,
-    "nombre": "Polera KISS - Destroyer Art",
+    "id": 151,
+    "nombre": "Polera KISS - Rock and Roll Over",
     "banda": "KISS",
     "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_kiss.webp",
-    "descripcion": "Las 4 leyendas del rock en serigrafía de alta definición sobre tela abrigadora."
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_kiss.webp",
+    "descripcion": "Estilo glam rock de alto impacto. Franela reactiva con capucha que mantiene la intensidad del logotipo relampagueante lavado tras lavado."
   },
   {
-    "id": 167,
-    "nombre": "Polera Manowar - Kings of Metal",
+    "id": 152,
+    "nombre": "Polera Manowar - Sign of the Hammer",
     "banda": "Manowar",
     "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_manowar.webp",
-    "descripcion": "Heavy Metal épico e indestructible. Máxima retención de calor y suavidad."
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_manowar.webp",
+    "descripcion": "Armadura textil para guerreros del True Metal. Forro interior abrigador y estampado frontal del místico signo del martillo en oro y acero."
   },
   {
-    "id": 168,
-    "nombre": "Polera My Chemical Romance - Parade",
+    "id": 153,
+    "nombre": "Polera My Chemical Romance - The Black Parade March",
     "banda": "My Chemical Romance",
     "categoria": "poleras",
     "precio": "S/ 90.00",
-    "imagen": "img/poleras/polera_mychemicalromance.webp",
-    "descripcion": "Polera con capucha y acabados elásticos en puños y cintura."
+    "imagen": "img/products/poleras/polera_mychemicalromance.webp",
+    "descripcion": "Corte moderno y cómodo con capucha envolvente. Estética gótica/rock alternativo en serigrafía de tonos plata y blanco sobre negro profundo."
+  },
+  {
+    "id": 154,
+    "nombre": "Polera Venom - Black Metal Baphomet",
+    "banda": "Venom",
+    "categoria": "poleras",
+    "precio": "S/ 90.00",
+    "imagen": "img/products/poleras/polera_venom.webp",
+    "descripcion": "El macho cabrío profano y el pentagrama original de 1982 sobre franela pesada de máxima retención térmica para soportar cualquier tormenta invernal."
+  },
+  
+  {
+    "id": 155,
+    "nombre": "Casaca Biker Cuero Genuino - Classic Heavy Metal",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca cuero_1.webp",
+    "descripcion": "Casaca de cuero vacuno de alto gramaje con cierres cruzados YKK, solapas con broches de presión y forro térmico satinado."
+  },
+  {
+    "id": 156,
+    "nombre": "Casaca de Cuero Tachonada - Thrash Dominator",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca cuero_2.webp",
+    "descripcion": "Acabado en cuero premium con aplicaciones de remaches y tachas metálicas en hombreras y solapa. Resistencia extrema para concierto."
+  },
+  {
+    "id": 157,
+    "nombre": "Casaca de Cuero Vintage - Moto Rocker",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca cuero_3.webp",
+    "descripcion": "Diseño clásico de corte recto con ajuste en cintura mediante cinturón de hebilla metálica y bolsillos frontales con cremallera reforzada."
+  },
+  {
+    "id": 158,
+    "nombre": "Casaca de Cuero Custom - Dark Silhouette",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca cuero_4.webp",
+    "descripcion": "Corte moderno entallado en cuero tratado contra humedad y desgaste, con costuras reforzadas en paneles laterales y codos."
+  },
+  {
+    "id": 159,
+    "nombre": "Casaca Denim Alice in Chains - Dirt Backpatch",
+    "banda": "Alice in Chains",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_alice in chains.webp",
+    "descripcion": "Casaca jean oscura con parche dorsal bordado de gran formato del álbum Dirt y botones metálicos troquelados."
+  },
+  {
+    "id": 160,
+    "nombre": "Casaca Denim Death - Scream Bloody Gore Tribute",
+    "banda": "Death",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_death.webp",
+    "descripcion": "Confección en denim rígido prelavado con backpatch oficial de Death y parches laterales de serigrafía de alta densidad."
+  },
+  {
+    "id": 161,
+    "nombre": "Casaca Denim Iron Maiden - The Trooper Battlewear",
+    "banda": "Iron Maiden",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_iron maiden.webp",
+    "descripcion": "Casaca jean clásica azul acero con el imponente Eddie de The Trooper en la espalda y desgastes industriales controlados."
+  },
+  {
+    "id": 162,
+    "nombre": "Chaleco Denim Heavy Metal - Jean Sin Mangas Azul",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_JeanSinMangas_Azul.webp",
+    "descripcion": "Chaleco clásico de denim azul índigo con sisas deshilachadas, listo para personalizar con parches y pines de bandas extremas."
+  },
+  {
+    "id": 163,
+    "nombre": "Chaleco Denim Heavy Metal - Jean Sin Mangas Celeste",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_JeanSinMangas_Celeste.webp",
+    "descripcion": "Chaleco de mezclilla en tono celeste vintage ochentero con bolsillos frontales con solapa y costuras en contraste de alta tensión."
+  },
+  {
+    "id": 164,
+    "nombre": "Casaca Denim Judas Priest - British Steel Razor",
+    "banda": "Judas Priest",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_judas priest_1.webp",
+    "descripcion": "Edición especial con parche dorsal de la hoja de afeitar y logo clásico bordado en hilo plata sobre mezclilla negra."
+  },
+  {
+    "id": 165,
+    "nombre": "Casaca Denim Judas Priest - Painkiller Metal Monster",
+    "banda": "Judas Priest",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_judas priest_2.webp",
+    "descripcion": "Mezclilla oscura con arte dorsal del Painkiller alado y herrajes metálicos anticorrosivos en puños y pretina."
+  },
+  {
+    "id": 166,
+    "nombre": "Casaca Denim Linkin Park - Hybrid Soldier",
+    "banda": "Linkin Park",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_likin park.webp",
+    "descripcion": "Casaca urbana jean con parche dorsal del emblemático soldado callejero de Hybrid Theory y remaches reforzados."
+  },
+  {
+    "id": 167,
+    "nombre": "Casaca Táctica Camuflada - Military Metal",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_Militar.webp",
+    "descripcion": "Patrón de camuflaje militar en tejido ripstop antidesgarro con múltiples bolsillos tácticos y parches temáticos de guerra."
+  },
+  {
+    "id": 168,
+    "nombre": "Casaca Denim Morbid Angel - Altars of Death",
+    "banda": "Morbid Angel",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_morbid angels.webp",
+    "descripcion": "Armadura de death metal con backpatch de Altars of Madness en serigrafía indeleble sobre denim negro azabache."
   },
   {
     "id": 169,
-    "nombre": "Polera Venom - Black Metal Original",
+    "nombre": "Casaca Denim Slipknot - Nonagram Iowa Edition",
+    "banda": "Slipknot",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_slipknot_1.webp",
+    "descripcion": "Mezclilla rígida con la estrella de 9 puntas bordada en hilo rojo fuego en la espalda y logo tribal en el pecho."
+  },
+  {
+    "id": 170,
+    "nombre": "Casaca Denim Slipknot - Maggot Corp",
+    "banda": "Slipknot",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/casaca_slipknot_2.webp",
+    "descripcion": "Diseño alternativo con arte tribal desgastado y código de barras característico de la banda en la parte posterior."
+  },
+  {
+    "id": 171,
+    "nombre": "Battle Vest Personalizado - Heavy Metal Classic #1",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_1.webp",
+    "descripcion": "Chaleco de mezclilla negra con curaduría de parches de bandas clásicas de heavy y thrash metal cosidos a mano con hilo reforzado."
+  },
+  {
+    "id": 172,
+    "nombre": "Battle Vest Personalizado - Thrash Attack #2",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_2.webp",
+    "descripcion": "Chaleco denim azul desgastado con distribución frontal y trasera completa de parches de bandas del Big Four y metal underground."
+  },
+  {
+    "id": 173,
+    "nombre": "Battle Vest Personalizado - Speed & Power #3",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_3.webp",
+    "descripcion": "Pieza única de coleccionista con backpatch central y parches laterales superpuestos en tejido denim resistente a pogos."
+  },
+  {
+    "id": 174,
+    "nombre": "Battle Vest Personalizado - Extreme Metal #4",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_4.webp",
+    "descripcion": "Configuración de parches orientada a death y black metal con tachas piramidales en hombros y tejido denim prelavado."
+  },
+  {
+    "id": 175,
+    "nombre": "Battle Vest Personalizado - Old School Legends #5",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_5.webp",
+    "descripcion": "Chaleco jean corte clásico sin mangas con insignias de leyendas de la NWOBHM y detalles metálicos en solapas."
+  },
+  {
+    "id": 176,
+    "nombre": "Battle Vest Personalizado - Dark Doom #6",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_6.webp",
+    "descripcion": "Acabado oscuro monocromático con parches en blanco y negro de culto extremo sobre mezclilla de 14 onzas."
+  },
+  {
+    "id": 177,
+    "nombre": "Battle Vest Personalizado - Headbanger Pride #7",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_7.webp",
+    "descripcion": "Chaleco táctico rockero con parches frontales simétricos y forro interior reforzado para resistir el uso rudo en conciertos."
+  },
+  {
+    "id": 178,
+    "nombre": "Battle Vest Personalizado - Metal Overkill #8",
+    "banda": "Heavy Metal",
+    "categoria": "casacas",
+    "precio": "S/ 140.00",
+    "imagen": "img/products/casacas/chaleco_8.webp",
+    "descripcion": "Edición definitiva totalmente recubierta de parches conmemorativos de festivales internacionales de metal pesado."
+  },
+  {
+    "id": 179,
+    "nombre": "Pantalón Engomado Heavy Metal - Corte Masculino",
+    "banda": "Heavy Metal",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/pantalon_engomado_hombre.webp",
+    "descripcion": "Pantalón de tela stretch engomada con efecto símil cuero negro brillante, corte recto y costuras dobles de alta resistencia."
+  },
+  {
+    "id": 180,
+    "nombre": "Pantalón Engomado Heavy Metal - Corte Femenino",
+    "banda": "Heavy Metal",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/pantalon_engomado_mujer.webp",
+    "descripcion": "Pantalón ajustado de tiro alto en acabado engomado negro profundo, ultra elástico con ajuste anatómico estilizado."
+  },
+  {
+    "id": 181,
+    "nombre": "Short Metalero AC/DC - High Voltage",
+    "banda": "AC/DC",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_ACDC.webp",
+    "descripcion": "Short de algodón reactivo y corte cómodo para verano o concierto con el logotipo clásico del relámpago estampado en serigrafía."
+  },
+  {
+    "id": 182,
+    "nombre": "Short Metalero Anthrax - Spreading the Disease",
+    "banda": "Anthrax",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Anthrax.webp",
+    "descripcion": "Short deportivo/urbano en tela transpirable con pretina elástica y cordón ajustable con el logo clásico de Anthrax."
+  },
+  {
+    "id": 183,
+    "nombre": "Short Metalero Def Leppard - Hysteria Flame",
+    "banda": "Def Leppard",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_DefLepard.webp",
+    "descripcion": "Short casual con estampado gráfico de Def Leppard en serigrafía duradera que no se desgasta con los lavados."
+  },
+  {
+    "id": 184,
+    "nombre": "Short Metalero Guns N' Roses - Appetite Guns",
+    "banda": "Guns N' Roses",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_GunsNRoses.webp",
+    "descripcion": "Short de algodón pesado con el emblema de pistolas y rosas en el lateral, bolsillos profundos y costuras reforzadas."
+  },
+  {
+    "id": 185,
+    "nombre": "Short Metalero Kreator - Extreme Thrash",
+    "banda": "Kreator",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Kreator.webp",
+    "descripcion": "Short de combate thrashero en color negro con el agresivo logo de Kreator en rojo escarlata de alta densidad."
+  },
+  {
+    "id": 186,
+    "nombre": "Short Metalero M.A.S.A.C.R.E - Metal Peruano",
+    "banda": "M.A.S.A.C.R.E",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Masacre.webp",
+    "descripcion": "Edición oficial tributo al pilar del heavy metal nacional con tipografía emblemática y confección nacional de primera."
+  },
+  {
+    "id": 187,
+    "nombre": "Short Grunge Nirvana - In Utero Angel",
+    "banda": "Nirvana",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Nirvana.webp",
+    "descripcion": "Short de corte urbano relajado con la gráfica de Nirvana y el ángel anatómico en serigrafía suave al tacto."
+  },
+  {
+    "id": 188,
+    "nombre": "Short Metalero Venom - Gold Black Metal Edition",
     "banda": "Venom",
-    "categoria": "poleras",
-    "precio": "S/ 95.00",
-    "imagen": "img/poleras/polera_venom.webp",
-    "descripcion": "El pentagrama dorado y la cabeza de chivo en serigrafía clásica."
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Venom_dorado.webp",
+    "descripcion": "Short con el macho cabrío profano de Venom estampado en tinta dorada metálica especial de larga durabilidad."
+  },
+  {
+    "id": 189,
+    "nombre": "Short Metalero Venom - Welcome to Hell Classic",
+    "banda": "Venom",
+    "categoria": "pantalones",
+    "precio": "S/ 85.00",
+    "imagen": "img/products/pantalones/shorts_Venom.webp",
+    "descripcion": "Short negro con el pentagrama de Venom en blanco de alto contraste, pretina reforzada y bolsillos laterales."
+  },
+  {
+    "id": 190,
+    "nombre": "Botas Militares Clásicas - Cuero Negro Matte",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas negras.webp",
+    "descripcion": "Borceguíes de combate en cuero genuino con caña de 8 ojales, suela de caucho vulcanizado antideslizante y puntera reforzada."
+  },
+  {
+    "id": 191,
+    "nombre": "Botas Metaleras con Cadena - Heavy Chain Combat #2",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_cadenita_2.webp",
+    "descripcion": "Botas de cuero con correa cruzada de eslabones de acero niquelado desmontables y suela con grabado de tracción profunda."
+  },
+  {
+    "id": 192,
+    "nombre": "Botas Rockeras con Cadena - Silver Link #1",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_cadenita.webp",
+    "descripcion": "Botines de estilo gótico/metalero con aplique de cadena lateral plateada, cierre de cremallera interior y cuero tratado."
+  },
+  {
+    "id": 193,
+    "nombre": "Botas Góticas Doble Cadena - Twin Metal Straps",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_doble_cadena.webp",
+    "descripcion": "Botas de caña media con doble hilera de cadenas de acero cromado y hebillas regulables sobre cuerpo de cuero negro azabache."
+  },
+  {
+    "id": 194,
+    "nombre": "Borceguíes Tácticos de Combate - Male Heavy Walker",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_hombre.webp",
+    "descripcion": "Calzado de alta resistencia diseñado para conciertos masivos con plantilla ergonómica acolchada y suela cosida Goodyear."
+  },
+  {
+    "id": 195,
+    "nombre": "Botas de Cuero Marrón Vintage - Classic Biker",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_marrones.webp",
+    "descripcion": "Cuero vacuno en tono marrón tostado con acabado rústico encerado, pasadores de alta tensión y suela de goma reforzada."
+  },
+  {
+    "id": 196,
+    "nombre": "Botas Metaleras con Apliques de Acero - Metal Destroyer",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_metal.webp",
+    "descripcion": "Diseño agresivo con placas metálicas protectoras en talón y puntera, remaches de aleación y cierre frontal acordonado."
+  },
+  {
+    "id": 197,
+    "nombre": "Botas Altas de Cuero Negro - Dominator Edition #2",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_negras 2.webp",
+    "descripcion": "Botas de 10 ojales con caña extendida en cuero negro lustre, forro térmico transpirable y suela comando de alta densidad."
+  },
+  {
+    "id": 198,
+    "nombre": "Botas Militares Urbanas - Dark Platform #3",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_negras_3.webp",
+    "descripcion": "Calzado robusto con plataforma reforzada de amortiguación de impactos y cuero resistente al agua para recitales al aire libre."
+  },
+  {
+    "id": 199,
+    "nombre": "Botines con Doble Cierre Horizontal - Industrial Dark",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_negras_cierre_dible_horizontal.webp",
+    "descripcion": "Diseño vanguardista con doble cremallera horizontal decorativa y funcional, interior de cuero suave y suela antifatiga."
+  },
+  {
+    "id": 200,
+    "nombre": "Botines con Cierre Lateral Rápido - Quick Zip Combat",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_negras_cierre_lateral.webp",
+    "descripcion": "Botas con cremallera lateral YKK para calce instantáneo sin desatar cordones, confeccionadas en cuero vacuno prémium."
+  },
+  {
+    "id": 201,
+    "nombre": "Botas de Cuero Negro Clásicas - Headbanger Essential",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/botas_negras.webp",
+    "descripcion": "El modelo esencial del metalhead: caña media, cuero negro mate con tratamiento hidrófugo y suela vulcanizada indestructible."
+  },
+  {
+    "id": 202,
+    "nombre": "Botas Urbanas de Cuero Blanco - White Leather Rocker",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/calzado_blanco.webp",
+    "descripcion": "Corte atrevido en cuero blanco pulido de alto contraste con pasadores negros y suela oscura de tracción reforzada."
+  },
+  {
+    "id": 203,
+    "nombre": "Zapatillas Urbanas Rockeras - High Top Black Canvas #1",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_1.webp",
+    "descripcion": "Zapatillas de lona negra reforzada de caña alta con suela de goma vulcanizada, puntera de caucho y diseño clásico rockero."
+  },
+  {
+    "id": 204,
+    "nombre": "Zapatillas Skate Metal - Padded Edition #2",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_2.webp",
+    "descripcion": "Zapatillas acolchadas con lengüeta ancha y soporte reforzado en tobillo, ideales para movilidad en el mosh pit."
+  },
+  {
+    "id": 205,
+    "nombre": "Zapatillas Urbanas Cuero Negro - Street Rocker #3",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_3.webp",
+    "descripcion": "Confección híbrida en cuero sintético de alta resistencia y lona transpirable con detalles en costuras reforzadas."
+  },
+  {
+    "id": 206,
+    "nombre": "Zapatillas High Top - Dark Silhouette #4",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_4.webp",
+    "descripcion": "Zapatillas de caña media con ojales metálicos inoxidables y plantilla ergonómica con memoria para máxima comodidad."
+  },
+  {
+    "id": 207,
+    "nombre": "Zapatillas de Lona Reforzada - Classic Low #5",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_5.webp",
+    "descripcion": "Zapatillas de corte bajo en lona gruesa anti-desgarro con suela plana de caucho antideslizante para festivales."
+  },
+  {
+    "id": 208,
+    "nombre": "Zapatillas Urbanas con Remaches - Metal Studs #6",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_6.webp",
+    "descripcion": "Calzado urbano con detalles de mini-tachas metálicas incrustadas en el lateral y suela de tracción urbana."
+  },
+  {
+    "id": 209,
+    "nombre": "Zapatillas High Top Vintage - Retro Metal #7",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_7.webp",
+    "descripcion": "Estética thrash ochentera de bota alta con suela de goma flexible y puntera protectora de goma sólida."
+  },
+  {
+    "id": 210,
+    "nombre": "Zapatillas de Cuero Sintético - Dark Rider #8",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_8.webp",
+    "descripcion": "Zapatillas deportivas con revestimiento impermeable en color negro azabache y pasadores gruesos reforzados."
+  },
+  {
+    "id": 211,
+    "nombre": "Zapatillas Skate con Soporte - Mosh Walker #9",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_9.webp",
+    "descripcion": "Suela de doble densidad resistente a la abrasión con refuerzos laterales para soportar el impacto en conciertos."
+  },
+  {
+    "id": 212,
+    "nombre": "Zapatillas Urbanas Street Punk - All Black #10",
+    "banda": "Heavy Metal",
+    "categoria": "calzado",
+    "precio": "S/ 120.00",
+    "imagen": "img/products/calzado/zapatillas_10.webp",
+    "descripcion": "Diseño totalmente negro (suela, tela y ojales) con perfil bajo, minimalista y ultra resistente para uso diario."
+  },
+  {
+    "id": 213,
+    "nombre": "Medias Bucaneras Rayadas - Dark Emo #1",
+    "banda": "Alternativo",
+    "categoria": "emo",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/emo/medias_largas_1.webp",
+    "descripcion": "Medias largas sobre la rodilla en tejido elástico reforzado con patrón de rayas horizontales en blanco y negro."
+  },
+  {
+    "id": 214,
+    "nombre": "Medias Bucaneras Góticas - Striped Shadow #2",
+    "banda": "Alternativo",
+    "categoria": "emo",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/emo/medias_largas_2.webp",
+    "descripcion": "Medias altas de algodón con lycra antideslizante y compresión media para soporte en uso diario."
+  },
+  {
+    "id": 215,
+    "nombre": "Medias Largas Alternativas - Crimson Stripes #3",
+    "banda": "Alternativo",
+    "categoria": "emo",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/emo/medias_largas_3.webp",
+    "descripcion": "Diseño alternativo de caña alta con contraste bicolor de alta fijación textil que no destiñe."
+  },
+  {
+    "id": 216,
+    "nombre": "Polo Oversized - Alternative Dark Scene",
+    "banda": "Alternativo",
+    "categoria": "emo",
+    "precio": "S/ 55.00",
+    "imagen": "img/products/emo/polos.webp",
+    "descripcion": "Corte holgado de estética post-hardcore en algodón peinado suave con acabado mate profundo."
+  },
+  {
+    "id": 217,
+    "nombre": "Mochila Urbana Avenged Sevenfold - Deathbat Edition",
+    "banda": "Avenged Sevenfold",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_avenged_sevenfold.webp",
+    "descripcion": "Mochila escolar/urbana con el Deathbat frontal, compartimento para laptop de 15.6 pulgadas y forro impermeable."
+  },
+  {
+    "id": 218,
+    "nombre": "Mochila Reforzada Iron Maiden - The Trooper Combat",
+    "banda": "Iron Maiden",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_iron maiden_1.webp",
+    "descripcion": "Confección en poliéster 600D de alta densidad con arte de Eddie ondeando la bandera británica y costuras dobles."
+  },
+  {
+    "id": 219,
+    "nombre": "Mochila Escolar Iron Maiden - Powerslave Era",
+    "banda": "Iron Maiden",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_iron maiden_2.webp",
+    "descripcion": "Mochila de gran capacidad con bolsillos laterales de malla para botellas y correas ergonómicas acolchadas."
+  },
+  {
+    "id": 220,
+    "nombre": "Mochila Táctica Megadeth - Rust in Peace Warfare",
+    "banda": "Megadeth",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_megadeth.webp",
+    "descripcion": "Gráfica frontal de Vic Rattlehead con cierres autorreparables y panel trasero transpirable contra el sudor."
+  },
+  {
+    "id": 221,
+    "nombre": "Mochila Urbana Metallica - Master of Puppets Graves",
+    "banda": "Metallica",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_metallica.webp",
+    "descripcion": "Arte clásico del cementerio de cruces impreso en serigrafía resistente con base de lona antidesgaste."
+  },
+  {
+    "id": 222,
+    "nombre": "Mochila Urbana Metallica - Classic Glitch Logo",
+    "banda": "Metallica",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_metallica2.webp",
+    "descripcion": "Diseño sobrio y moderno con el icónico logo angular en alto relieve y organizador interno multiuso."
+  },
+  {
+    "id": 223,
+    "nombre": "Mochila Punk Misfits - The Crimson Ghost",
+    "banda": "Misfits",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_misfits.webp",
+    "descripcion": "La legendaria calavera de horror punk en blanco sobre negro con bolsillo frontal de acceso rápido."
+  },
+  {
+    "id": 224,
+    "nombre": "Mochila Reforzada Motörhead - Warpig Snaggletooth",
+    "banda": "Motörhead",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_motorhead.webp",
+    "descripcion": "Estructura pesada con remaches metálicos y el colmillo de guerra estampado para soportar uso continuo."
+  },
+  {
+    "id": 225,
+    "nombre": "Mochila Urbana Nirvana - Smiley Face Classic",
+    "banda": "Nirvana",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_nirvana.webp",
+    "descripcion": "Diseño grunge minimalista en amarillo y negro con tirantes acolchados ajustables y tiradores metálicos."
+  },
+  {
+    "id": 226,
+    "nombre": "Mochila Pink Floyd - The Dark Side of the Moon Prism",
+    "banda": "Pink Floyd",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_pinkfloyd.webp",
+    "descripcion": "El prisma refractario sobre fondo negro azabache con compartimentos acolchados para tecnología."
+  },
+  {
+    "id": 227,
+    "nombre": "Mochila Red Hot Chili Peppers - Asterisk Logo",
+    "banda": "Red Hot Chili Peppers",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_red_hot_chili_peppers.webp",
+    "descripcion": "El asterisco infinito rojo en serigrafía vinílica sobre lona poliéster repelente al agua."
+  },
+  {
+    "id": 228,
+    "nombre": "Mochila Metalera Ocultista - Pentagram Baphomet",
+    "banda": "Heavy Metal",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_satanica.webp",
+    "descripcion": "Simbología esotérica y pentagrama invertido con remaches de acero en bolsillo frontal."
+  },
+  {
+    "id": 229,
+    "nombre": "Mochila Thrash Slayer - Eagle Pentagram Edition",
+    "banda": "Slayer",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_slayer_1.webp",
+    "descripcion": "El águila heráldica y las espadas del thrash metal impresas en serigrafía de máxima durabilidad."
+  },
+  {
+    "id": 230,
+    "nombre": "Mochila Thrash Slayer - Show No Mercy Vintage",
+    "banda": "Slayer",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_slayer_2.webp",
+    "descripcion": "Acabado clásico ochentero con compartimentos laterales y refuerzo inferior antidesgaste."
+  },
+  {
+    "id": 231,
+    "nombre": "Mochila Slipknot - Nonagram Tribal Heavy Duty",
+    "banda": "Slipknot",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_slipknot.webp",
+    "descripcion": "La estrella de 9 puntas en rojo escarlata con tejido anti-rasgado y hebillas de alta resistencia."
+  },
+  {
+    "id": 232,
+    "nombre": "Mochila The Beatles - Abbey Road Silhouette",
+    "banda": "The Beatles",
+    "categoria": "mochilas",
+    "precio": "S/ 75.00",
+    "imagen": "img/products/mochilas/mochila_the beatles.webp",
+    "descripcion": "La silueta clásica del cruce peatonal de 1969 en contraste blanco/negro con diseño ergonómico."
+  },
+  {
+    "id": 233,
+    "nombre": "Set de Accesorios Metaleros - Skull & Bones Pack",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/accesorios_1.webp",
+    "descripcion": "Kit de pines metálicos y colgantes de aleación de zinc fundido con baño de plata antigua."
+  },
+  {
+    "id": 234,
+    "nombre": "Anillo de Acero Inoxidable - Skull Crusher #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_1.webp",
+    "descripcion": "Anillo fundido en acero quirúrgico 316L con calavera tallada en alto relieve resistente a la corrosión."
+  },
+  {
+    "id": 235,
+    "nombre": "Anillo de Acero - Demon Horns #2",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_2.webp",
+    "descripcion": "Diseño de cuernos esculpidos en aleación maciza con acabado envejecido y pulido interior."
+  },
+  {
+    "id": 236,
+    "nombre": "Anillo Heavy Metal - Dragon Claw #3",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_3.webp",
+    "descripcion": "Garra de dragón envolvente con engaste de piedra sintética negra y cuerpo macizo."
+  },
+  {
+    "id": 237,
+    "nombre": "Anillo Gótico - Grim Reaper #4",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_4.webp",
+    "descripcion": "Figura de la muerte con guadaña tallada con microdetalles en acero hipoalergénico."
+  },
+  {
+    "id": 238,
+    "nombre": "Anillo Ocultista - Baphomet Pentagram #5",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_5.webp",
+    "descripcion": "Sello de Baphomet circular en bajorrelieve sobre base metálica pulida al espejo."
+  },
+  {
+    "id": 239,
+    "nombre": "Anillo Vikingo - Nordic Runes #6",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_6.webp",
+    "descripcion": "Banda giratoria con runas del Futhark antiguo grabadas al láser en acero 316L."
+  },
+  {
+    "id": 240,
+    "nombre": "Anillo Biker - Iron Cross #7",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_7.webp",
+    "descripcion": "Cruz de hierro con esmalte negro central y marco de acero pulido de estilo clásico motociclista."
+  },
+  {
+    "id": 241,
+    "nombre": "Anillo Extremo - Biohazard Skull #8",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_8.webp",
+    "descripcion": "Calavera con máscara antigás y detalles industriales fundidos en metal plateado macizo."
+  },
+  {
+    "id": 242,
+    "nombre": "Anillo Medieval - Templar Shield #9",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_9.webp",
+    "descripcion": "Escudo templario en relieve con acabados patinados para una estética histórica auténtica."
+  },
+  {
+    "id": 243,
+    "nombre": "Anillo Dominator - Triple Skull Band #10",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/anillos_10.webp",
+    "descripcion": "Hilera de tres cráneos con mandíbulas detalladas en aleación inoxidable de alto impacto."
+  },
+  {
+    "id": 244,
+    "nombre": "Armera de Cuero con Tachas - Wrist Guard #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/armera_1.webp",
+    "descripcion": "Muñequera ancha de cuero legítimo con tres filas de tachas cónicas plateadas y doble hebilla."
+  },
+  {
+    "id": 245,
+    "nombre": "Armera de Cuero Extrema - Spiked Gauntlet #2",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/armera_2.webp",
+    "descripcion": "Brazalete de combate con púas de acero atornilladas y forro suave interior para recitales."
+  },
+  {
+    "id": 246,
+    "nombre": "Cinturón de Cuero con Tachas Piramidales - 3 Filas #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/cinturones_1.webp",
+    "descripcion": "Cinturón de cuero vacuno grueso con tres hileras completas de tachas piramidales de aleación niquelada."
+  },
+  {
+    "id": 247,
+    "nombre": "Cinturón de Balas Simulado - Bullet Belt #2",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/cinturones_2.webp",
+    "descripcion": "Cinturón estilo canana con eslabones metálicos y réplicas de casquillos de munición pesada."
+  },
+  {
+    "id": 248,
+    "nombre": "Cinturón Punk Rock - Double Grommet Leather #3",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/cinturones_3.webp",
+    "descripcion": "Correa de cuero negro con doble fila de ojalillos metálicos a lo largo de toda la extensión."
+  },
+  {
+    "id": 249,
+    "nombre": "Gorra Trucker Metalera - Embroidered Logo #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorra_1.webp",
+    "descripcion": "Gorra con visera curva, malla trasera transpirable y parche frontal bordado en relieve."
+  },
+  {
+    "id": 250,
+    "nombre": "Gorra Snapback Urbana - Flat Brim Black #2",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorra_2.webp",
+    "descripcion": "Gorra de visera plana con broche plástico ajustable y bordado 3D de alta definición."
+  },
+  {
+    "id": 251,
+    "nombre": "Gorra Béisbol Clásica - Washed Cotton #3",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorra_3.webp",
+    "descripcion": "Algodón prelavado en color negro con hebilla metálica de ajuste y logotipo frontal discreto."
+  },
+  {
+    "id": 252,
+    "nombre": "Gorra de Banda de Rock - Official Patch #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorras_1.webp",
+    "descripcion": "Gorra de 6 paneles con banda de absorción interior y parche termofijado de alta resistencia."
+  },
+  {
+    "id": 253,
+    "nombre": "Gorra Trucker Vintage - Retro Metal #2",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorras_2.webp",
+    "descripcion": "Diseño clásico de camionero con panel frontal de espuma estructurada y visera protectora."
+  },
+  {
+    "id": 254,
+    "nombre": "Gorra Snapback Thrash - Red Contrast #3",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorras_3.webp",
+    "descripcion": "Visera inferior en color rojo en contraste con bordado frontal temático de metal pesado."
+  },
+  {
+    "id": 255,
+    "nombre": "Gorra Street Metal - All Black Stealth #4",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/gorras_4.webp",
+    "descripcion": "Diseño monocromático negro sobre negro con ojales bordados de ventilación superior."
+  },
+  {
+    "id": 256,
+    "nombre": "Pack de Púas de Guitarra - Heavy Gauge Collector #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/puas_1.webp",
+    "descripcion": "Juego de plumillas de celuloide de 1.14mm con estampados de portadas legendarias de metal."
+  },
+  {
+    "id": 257,
+    "nombre": "Pulsera de Cuero con Remaches - Metal Wristband #1",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/pulseras_1.webp",
+    "descripcion": "Brazalete de cuero con broches de presión regulables y tachas piramidales cromadas."
+  },
+  {
+    "id": 258,
+    "nombre": "Set de Muñequeras de Tela Elástica - Sweatbands Pack",
+    "banda": "Heavy Metal",
+    "categoria": "accesorios",
+    "precio": "S/ 35.00",
+    "imagen": "img/products/accesorios/pulseras_tela.webp",
+    "descripcion": "Muñequeras de rizo de algodón absorbente con bordados de logos de bandas de rock."
+  },
+  {
+    "id": 259,
+    "nombre": "Bandera de Tela Black Sabbath - Henry Demon Logo",
+    "banda": "Black Sabbath",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_black sabbath.webp",
+    "descripcion": "Bandera de tela poliéster de 110x75 cm con ojales metálicos reforzados y arte del ángel caído."
+  },
+  {
+    "id": 260,
+    "nombre": "Bandera de Tela Cannibal Corpse - Butchered Carnage #1",
+    "banda": "Cannibal Corpse",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_CannibalCorpse_1.webp",
+    "descripcion": "Tapiz mural lavable de death metal con impresión digital por sublimación de alta definición."
+  },
+  {
+    "id": 261,
+    "nombre": "Bandera de Tela Cannibal Corpse - Tomb Visceral #2",
+    "banda": "Cannibal Corpse",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_CannibalCorpse_2.webp",
+    "descripcion": "Estandarte decorativo para habitación o local con colores vivos resistentes al sol y lavado."
+  },
+  {
+    "id": 262,
+    "nombre": "Bandera de Tela Coldplay - Parachutes Era #1",
+    "banda": "Coldplay",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Coldplay_1.webp",
+    "descripcion": "Póster textil decorativo en tela ligera de acabado satinado con diseño clásico de la banda."
+  },
+  {
+    "id": 263,
+    "nombre": "Bandera de Tela Coldplay - A Rush of Blood #2",
+    "banda": "Coldplay",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Coldplay_2.webp",
+    "descripcion": "Tapiz decorativo con costuras perimetrales reforzadas y gráfica icónica británica."
+  },
+  {
+    "id": 264,
+    "nombre": "Bandera de Tela Deicide - Legion Inverted Cross #1",
+    "banda": "Deicide",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Deicide_1.webp",
+    "descripcion": "Estandarte de death metal blasfemo con la cruz invertida trifurcada de Glen Benton."
+  },
+  {
+    "id": 265,
+    "nombre": "Bandera de Tela Demon - Night of the Demon #1",
+    "banda": "Demon",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Demon_1.webp",
+    "descripcion": "Póster de tela de culto NWOBHM con la criatura del averno en sublimación de alto contraste."
+  },
+  {
+    "id": 266,
+    "nombre": "Bandera de Tela Ghost - Meliora Papa Emeritus #1",
+    "banda": "Ghost",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Ghost_1.webp",
+    "descripcion": "Arte arquitectónico art decó con el sumo pontífice profano en tela de poliéster de 100g."
+  },
+  {
+    "id": 267,
+    "nombre": "Bandera de Tela KISS - Alive Vintage Stage #1",
+    "banda": "KISS",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Kiss_1.webp",
+    "descripcion": "Los cuatro jinetes del glam rock sobre el escenario con logotipo iluminado clásico."
+  },
+  {
+    "id": 268,
+    "nombre": "Bandera de Tela KISS - Destroyer Formation #2",
+    "banda": "KISS",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Kiss_2.webp",
+    "descripcion": "Ilustración mítica de Ken Kelly caminando entre ruinas con colores intensos y dobladillo."
+  },
+  {
+    "id": 269,
+    "nombre": "Bandera de Tela Mayhem - De Mysteriis Dom Sathanas #1",
+    "banda": "Mayhem",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Mayhem_1.webp",
+    "descripcion": "La catedral de Nidaros en azul nocturno, piedra angular del black metal noruego."
+  },
+  {
+    "id": 270,
+    "nombre": "Bandera de Tela Mayhem - Deathcrush Raw #2",
+    "banda": "Mayhem",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Mayhem_2.webp",
+    "descripcion": "El fondo carmesí con el logo clásico de Euronymous impreso sobre tela resistente a dobleces."
+  },
+  {
+    "id": 271,
+    "nombre": "Bandera de Tela Obituary - Slowly We Rot #1",
+    "banda": "Obituary",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Obituary_1.webp",
+    "descripcion": "El pantano fúnebre del death metal floridano de John Tardy en tapiz de gran escala."
+  },
+  {
+    "id": 272,
+    "nombre": "Bandera de Tela Venom - Black Metal Sabbath #1",
+    "banda": "Venom",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/bandera_Venom_1.webp",
+    "descripcion": "El pentagrama original de 1982 con ojales metálicos esquineros para anclaje firme en pared."
+  },
+  {
+    "id": 273,
+    "nombre": "Póster AC/DC - Back in Black World Tour",
+    "banda": "AC/DC",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_ACDC.webp",
+    "descripcion": "Afiche en papel couché de 300g con barniz UV brillante de alta resolución y fidelidad gráfica."
+  },
+  {
+    "id": 274,
+    "nombre": "Póster Deftones - White Pony Minimalist",
+    "banda": "Deftones",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Deftones.webp",
+    "descripcion": "La silueta del corcel blanco sobre fondo gris metálico en impresión offset de alta gama."
+  },
+  {
+    "id": 275,
+    "nombre": "Póster Guns N' Roses - Live Era Sunset",
+    "banda": "Guns N' Roses",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_GunsNRoses.webp",
+    "descripcion": "Afiche de pared en formato 60x90 cm con los revólveres cruzados y rosas sangrantes."
+  },
+  {
+    "id": 276,
+    "nombre": "Póster Iron Maiden - The Number of the Beast #1",
+    "banda": "Iron Maiden",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_IronMaiden_1.webp",
+    "descripcion": "Póster conmemorativo de Derek Riggs con saturación de color balanceada y papel pesado."
+  },
+  {
+    "id": 277,
+    "nombre": "Póster Iron Maiden - Piece of Mind Asylum #2",
+    "banda": "Iron Maiden",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_IronMaiden_2.webp",
+    "descripcion": "Eddie encadenado en la cámara acolchada impreso con tintas resistentes a la luz solar."
+  },
+  {
+    "id": 278,
+    "nombre": "Póster Iron Maiden - Powerslave Pyramid #3",
+    "banda": "Iron Maiden",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_IronMaiden_3.webp",
+    "descripcion": "El monumento egipcio del World Slavery Tour en papel couché prémium de acabado semimate."
+  },
+  {
+    "id": 279,
+    "nombre": "Póster Metallica - Ride the Lightning #1",
+    "banda": "Metallica",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Metallica_1.webp",
+    "descripcion": "La silla eléctrica bajo la tormenta de relámpagos azules de 1984 en alta resolución."
+  },
+  {
+    "id": 280,
+    "nombre": "Póster Metallica - Master of Puppets #2",
+    "banda": "Metallica",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Metallica_2.webp",
+    "descripcion": "Las cuerdas celestiales sobre el cementerio militar en impresión fotográfica de 300 DPI."
+  },
+  {
+    "id": 281,
+    "nombre": "Póster Metallica - And Justice for All #3",
+    "banda": "Metallica",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Metallica_3.webp",
+    "descripcion": "La estatua de la justicia atada con dólares cayendo de la balanza en papel grueso."
+  },
+  {
+    "id": 282,
+    "nombre": "Póster Misfits - Die, Die My Darling #1",
+    "banda": "Misfits",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Misfits_1.webp",
+    "descripcion": "Arte de cómic vintage de terror pulp de Glenn Danzig en acabado satinado."
+  },
+  {
+    "id": 283,
+    "nombre": "Póster Misfits - Fiend Club Classic #2",
+    "banda": "Misfits",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Misfits_2.webp",
+    "descripcion": "La calavera fantasma carmesí sobre fondo negro en póster mural de alta calidad."
+  },
+  {
+    "id": 284,
+    "nombre": "Póster Motörhead - England Overkill",
+    "banda": "Motörhead",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Motorhead.webp",
+    "descripcion": "El rostro blindado de Lemmy Kilmister con cadenas y colmillos en serigrafía plana."
+  },
+  {
+    "id": 285,
+    "nombre": "Póster My Chemical Romance - Three Cheers Revenge",
+    "banda": "My Chemical Romance",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_MyChemicalRomance.webp",
+    "descripcion": "Los amantes ensangrentados de Gerard Way con tintas pigmentadas de alta durabilidad."
+  },
+  {
+    "id": 286,
+    "nombre": "Póster Red Hot Chili Peppers - Californication Era",
+    "banda": "Red Hot Chili Peppers",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_RedHotChiliPeppers.webp",
+    "descripcion": "La piscina invertida y el cielo de agua de 1999 en papel ilustración de 300g."
+  },
+  {
+    "id": 287,
+    "nombre": "Póster Slayer - Reign in Blood Decapitation",
+    "banda": "Slayer",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Slayer.webp",
+    "descripcion": "La grotesca corte infernal de Larry Carroll en póster de gran formato para coleccionistas."
+  },
+  {
+    "id": 288,
+    "nombre": "Póster Slipknot - Self-Titled 1999 Masks",
+    "banda": "Slipknot",
+    "categoria": "posters",
+    "precio": "S/ 25.00",
+    "imagen": "img/products/posters/poster_Slipknot.webp",
+    "descripcion": "La formación original de los 9 de Iowa con sus primeros uniformes y máscaras de látex."
+  },
+{
+    "id": 289,
+    "nombre": "Vinilo Armagedon - Primera Dosis del Metal",
+    "banda": "Armagedon",
+    "categoria": "vinilos",
+    "precio": "S/ 110.00",
+    "imagen": "img/products/discoss vinilo/discos vinilo_Armagedon.webp",
+    "descripcion": "Edición oficial en vinilo de 12 pulgadas (180g) para coleccionistas con audio remasterizado de la histórica banda de heavy metal peruano."
+  },
+  {
+    "id": 290,
+    "nombre": "Vinilo Metal Crucifier - The First Strike",
+    "banda": "Metal Crucifier",
+    "categoria": "vinilos",
+    "precio": "S/ 110.00",
+    "imagen": "img/products/discoss vinilo/discos vinilo_MetalCrucifier.webp",
+    "descripcion": "Prensado analógico de alta fidelidad en vinilo negro pesado. Heavy/speed metal crudo y tradicional con inserto lírico y póster exclusivo."
+  },
+  {
+    "id": 291,
+    "nombre": "Vinilo Sepelio - Ritos de Ultratumba",
+    "banda": "Sepelio",
+    "categoria": "vinilos",
+    "precio": "S/ 110.00",
+    "imagen": "img/products/discoss vinilo/discos vinilo_Sepelio.webp",
+    "descripcion": "Joya del death/thrash metal subterráneo en vinilo de edición limitada. Sonido demoledor prensado directamente desde las cintas maestras."
+  },
+  {
+    "id": 292,
+    "nombre": "CD Anthrax - The Greater of Two Evils",
+    "banda": "Anthrax",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_Anthrax_TheGreaterOfTwoEvils.webp",
+    "descripcion": "Edición en Jewel Case con los clásicos de la era Neil Turbin y Joey Belladonna regrabados en vivo en estudio con la potente voz de John Bush."
+  },
+  {
+    "id": 293,
+    "nombre": "CD Cannibal Corpse - The Bleeding",
+    "banda": "Cannibal Corpse",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_CannibalCorpse._TheBleeding.webp",
+    "descripcion": "Obra cumbre del death metal técnico de 1994 y último álbum con Chris Barnes. Incluye libreto completo con letras y arte sin censura."
+  },
+  {
+    "id": 294,
+    "nombre": "CD Cradle of Filth - Cruelty and the Beast",
+    "banda": "Cradle of Filth",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_CradleOfFilth_CrueltyAndTheBeast.webp",
+    "descripcion": "Álbum conceptual sinfónico sobre la condesa sangrienta Elizabeth Báthory. Edición física con libreto gótico ilustrado de colección."
+  },
+  {
+    "id": 295,
+    "nombre": "CD DIO - Holy Diver Live",
+    "banda": "Dio",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_Dio_HolyDiverLive.webp",
+    "descripcion": "Registro en directo histórico interpretando el disco Holy Diver de principio a fin en Londres, con el poder vocal inigualable de Ronnie James Dio."
+  },
+  {
+    "id": 296,
+    "nombre": "CD DIO - Sacred Heart",
+    "banda": "Dio",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_Dio_SacredHeart.webp",
+    "descripcion": "Tercer álbum de estudio de 1985 con el dragón mecanizado y los solos magistrales de Vivian Campbell. Audio remasterizado digitalmente."
+  },
+  {
+    "id": 297,
+    "nombre": "CD Judas Priest - Invincible Shield",
+    "banda": "Judas Priest",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_JudasPriest_InvincibleShield.webp",
+    "descripcion": "El demoledor asalto de heavy metal británico con Rob Halford y Richie Faulkner en estado de gracia. Formato físico en estuche de lujo con libreto."
+  },
+  {
+    "id": 298,
+    "nombre": "CD Nightwish - Century Child",
+    "banda": "Nightwish",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_Nightwish_CenturyChild.webp",
+    "descripcion": "Piedra angular del metal sinfónico con la majestuosa voz lírica de Tarja Turunen y el debut del bajista/vocalista Marko Hietala."
+  },
+  {
+    "id": 299,
+    "nombre": "CD Ozzy Osbourne - Bark at the Moon",
+    "banda": "Ozzy Osbourne",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_OzzyOsbourne_BarkAtTheMoon.webp",
+    "descripcion": "El clásico inmortal del heavy metal de 1983 con la guitarra estelar de Jake E. Lee y el legendario arte del hombre lobo en el libreto."
+  },
+  {
+    "id": 300,
+    "nombre": "CD Slaughter to Prevail - Kostolom",
+    "banda": "Slaughter to Prevail",
+    "categoria": "album",
+    "precio": "S/ 65.00",
+    "imagen": "img/products/albums/album_Slaughter to Prevail_Kostolom.webp",
+    "descripcion": "Furia brutal de deathcore ruso liderada por los guturales demoledores de Alex Terrible. Edición física con arte gráfico de la máscara de oro."
+  },
+  {
+    "id": 301,
+    "nombre": "Espaldera Bordada - Heavy Metal Classic Crest #1",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_1.webp",
+    "descripcion": "Parche dorsal gigante de 30x36 cm tejido en telar jacquard de alta densidad con bordes reforzados para costura en casacas denim o chalecos."
+  },
+  {
+    "id": 302,
+    "nombre": "Espaldera Bordada - Thrash Dominator #2",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_2.webp",
+    "descripcion": "Backpatch dorsal de alta resistencia mecánica a la tracción y lavado. Colores firmes que no destiñen bajo la intemperie del pogo."
+  },
+  {
+    "id": 303,
+    "nombre": "Espaldera Bordada - Speed Metal War #3",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_3.webp",
+    "descripcion": "Parche de gran formato con soporte termofijable o para costura directa. Hilos de poliéster brillante con relieve táctil prémium."
+  },
+  {
+    "id": 304,
+    "nombre": "Espaldera Bordada - Dark Ocultism #4",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_4.webp",
+    "descripcion": "Arte dorsal esotérico con simbología mística del metal extremo. Definición milimétrica en trazos finos y marco perimetral overlock."
+  },
+  {
+    "id": 305,
+    "nombre": "Espaldera Bordada - Death Metal Carnage #5",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_5.webp",
+    "descripcion": "Backpatch visceral con tipografía sangrienta y fondo negro azabache de máxima opacidad para armar tu battle vest definitivo."
+  },
+  {
+    "id": 306,
+    "nombre": "Espaldera Bordada - Power & Steel #6",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_6.webp",
+    "descripcion": "Insignia dorsal de corte trapezoidal anatómico para encajar con precisión entre las costuras de hombro de chalecos de mezclilla."
+  },
+  {
+    "id": 307,
+    "nombre": "Espaldera Bordada - Black Metal Northern Darkness #7",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_7.webp",
+    "descripcion": "Bordado monocromático en blanco y negro de alto contraste con estética cruda y oscura de la vieja escuela escandinava."
+  },
+  {
+    "id": 308,
+    "nombre": "Espaldera Bordada - Vintage Biker Skull #8",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_8.webp",
+    "descripcion": "Calavera motera con pistones cruzados y alas mecánicas en relieve bordado de triple puntada ultra resistente."
+  },
+  {
+    "id": 309,
+    "nombre": "Espaldera Bordada - Doom & Gloom #9",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_9.webp",
+    "descripcion": "Parche dorsal de gran tamaño con fondo de sarga de algodón reforzada y remate exterior que evita deshilachados con el uso continuo."
+  },
+  {
+    "id": 310,
+    "nombre": "Espaldera Bordada - Headbanger Force #10",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_10.webp",
+    "descripcion": "El blasón definitivo para el chaleco de batalla metalero: resistencia térmica, colores sólidos y fijación estructural inquebrantable."
+  },
+  {
+    "id": 311,
+    "nombre": "Espaldera Bordada - Iron Wings #11",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_11.webp",
+    "descripcion": "Parche dorsal con silueta de águila heráldica y espadas de acero con acabado de hilo satinado de larga vida útil."
+  },
+  {
+    "id": 312,
+    "nombre": "Espaldera Bordada - Necro Realm #12",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_12.webp",
+    "descripcion": "Ilustración gótica y tétrica bordada punto a punto en maquinaria industrial japonesa para garantizar máxima nitidez de detalles."
+  },
+  {
+    "id": 313,
+    "nombre": "Espaldera Bordada - Crimson Beast #13",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_13.webp",
+    "descripcion": "Arte en tonos rojo fuego y negro carbón sobre soporte textil flexible que se adapta a los movimientos del cuerpo sin quebrarse."
+  },
+  {
+    "id": 314,
+    "nombre": "Espaldera Bordada - Toxic Radiation #14",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_14.webp",
+    "descripcion": "Estética thrash ochentera con tonos verde ácido y amarillo flúor sobre tejido negro indestructible para conciertos masivos."
+  },
+  {
+    "id": 315,
+    "nombre": "Espaldera Bordada - Ancient Sorcery #15",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_15.webp",
+    "descripcion": "Diseño de fantasía épica medieval para amantes del power y heavy metal clásico con marco dorado brillante."
+  },
+  {
+    "id": 316,
+    "nombre": "Espaldera Bordada - Skull Crossbones #16",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_16.webp",
+    "descripcion": "Calavera tradicional con tibias cruzadas en blanco níveo sobre fondo negro profundo en tejido de máxima densidad."
+  },
+  {
+    "id": 317,
+    "nombre": "Espaldera Bordada - Demon Throne #17",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_17.webp",
+    "descripcion": "Backpatch ceremonial con el trono de las tinieblas esculpido en miles de puntadas de hilo reforzado anti-fricción."
+  },
+  {
+    "id": 318,
+    "nombre": "Espaldera Bordada - Battle Metal Overlord #18",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/espaldera_18.webp",
+    "descripcion": "La pieza central definitiva para personalizar casacas de cuero o tela denim con el sello indiscutible del heavy metal."
+  },
+  {
+    "id": 319,
+    "nombre": "Parche Bordado - Heavy Metal Logo Strip #1",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_1.webp",
+    "descripcion": "Parche frontal de 10x4 cm con logotipo clásico bordado en hilo plata y borde merrowed reforzado para costura o termofijado."
+  },
+  {
+    "id": 320,
+    "nombre": "Parche Bordado - Thrash Metal Cut #2",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_2.webp",
+    "descripcion": "Insignia textil resistente al desgaste y rozamiento para mangas, solapas de casacas, mochilas o pantalones."
+  },
+  {
+    "id": 321,
+    "nombre": "Parche Bordado - Death Metal Icon #3",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_3.webp",
+    "descripcion": "Logo con silueta afilada y relieve 3D en hilo rojo sangre sobre sarga de algodón negro de alta duración."
+  },
+  {
+    "id": 322,
+    "nombre": "Parche Bordado - Black Metal Rune #4",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_4.webp",
+    "descripcion": "Parche en forma de escudo medieval con simbología nórdica y fondo negro impermeable."
+  },
+  {
+    "id": 323,
+    "nombre": "Parche Bordado - Power Metal Crest #5",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_5.webp",
+    "descripcion": "Detalles metálicos dorados en hilo de rayón brillante con backing termoadhesivo para planchado doméstico directo."
+  },
+  {
+    "id": 324,
+    "nombre": "Parche Bordado - Speed Metal Blade #6",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_6.webp",
+    "descripcion": "Forma rectangular compacta ideal para llenar espacios libres en chalecos de combate y bolsillos de mochilas."
+  },
+  {
+    "id": 325,
+    "nombre": "Parche Bordado - Doom Bell #7",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_7.webp",
+    "descripcion": "Acabado mate de estética fúnebre con bordes dobles que impiden que el parche se deshilache tras lavados intensos."
+  },
+  {
+    "id": 326,
+    "nombre": "Parche Bordado - Heavy Rock Lightning #8",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_8.webp",
+    "descripcion": "El rayo de alto voltaje del rock pesado en serigrafía bordada con relieve táctil y colores fluorescentes."
+  },
+  {
+    "id": 327,
+    "nombre": "Parche Bordado - Grindcore Noise #9",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_9.webp",
+    "descripcion": "Diseño salvaje y asimétrico para fanáticos del metal más visceral y subterráneo con bordes termocortados."
+  },
+  {
+    "id": 328,
+    "nombre": "Parche Bordado - Biker Skull Emblem #10",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_10.webp",
+    "descripcion": "Parche circular clásico de 9 cm de diámetro con calavera motera y ribete perimetral negro."
+  },
+  {
+    "id": 329,
+    "nombre": "Parche Bordado - Ocultist Pentagram #11",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_11.webp",
+    "descripcion": "Estrella invertida trazada en hilo blanco puro sobre sarga negra rígida para costura firme."
+  },
+  {
+    "id": 330,
+    "nombre": "Parche Bordado - Metal Vanguard #12",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_12.webp",
+    "descripcion": "Insignia militar metalera de corte horizontal con tipografía gótica en relieve."
+  },
+  {
+    "id": 331,
+    "nombre": "Parche Bordado - Skull Horns #13",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_13.webp",
+    "descripcion": "Cráneo cornudo en color rojo fuego con sombreados tramados en hilo de alta precisión."
+  },
+  {
+    "id": 332,
+    "nombre": "Parche Bordado - Iron Fist #14",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_14.webp",
+    "descripcion": "El puño blindado del heavy metal clásico con tachas bordadas en hilo plata metalizado."
+  },
+  {
+    "id": 333,
+    "nombre": "Parche Bordado - Dark Horns #15",
+    "banda": "Heavy Metal",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_15.webp",
+    "descripcion": "Diseño exclusivo de la Mano Cornuta alzada entre cadenas de acero para solapa o gorra."
+  },
+  {
+    "id": 334,
+    "nombre": "Parche Bordado - Heavy Metal Rock TV Official #16",
+    "banda": "Heavy Metal Rock TV",
+    "categoria": "estampado",
+    "precio": "S/ 30.00",
+    "imagen": "img/products/estampados/estampados_16.webp",
+    "descripcion": "Insignia oficial de la plataforma y hermandad del rock pesado. Parche conmemorativo exclusivo para la comunidad."
   }
 ]
+

@@ -26,21 +26,25 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      # 1. Validación Semántica Estricta de Esquema (Python 3)
+      # 1. Validación Semántica Estricta de Esquema (12 Categorías Canónicas)
       - name: Validar Integridad Estructural de products.json
         run: |
           python3 -c "
           import json, sys
 
           REQUIRED_FIELDS = {'id', 'nombre', 'categoria', 'banda', 'descripcion', 'precio', 'imagen'}
-          ALLOWED_CATEGORIES = {'polos', 'casacas', 'poleras', 'pantalones', 'calzado', 'mochilas', 'accesorios', 'posters', 'vinilos'}
+          ALLOWED_CATEGORIES = {
+              'polos', 'poleras', 'casacas', 'pantalones', 'calzado', 
+              'emo', 'mochilas', 'accesorios', 'posters', 'vinilos', 
+              'album', 'estampado'
+          }
 
           try:
               with open('data/products.json', 'r', encoding='utf-8') as f:
                   data = json.load(f)
               
               if not isinstance(data, list):
-                  sys.exit('FATAL: data/products.json debe ser un array de objetos.')
+                  sys.exit('FATAL: data/products.json debe ser un array de objetos JSON.')
 
               if len(data) == 0:
                   sys.exit('FATAL: El catálogo no puede estar vacío.')
@@ -49,11 +53,11 @@ jobs:
               for idx, item in enumerate(data):
                   missing = REQUIRED_FIELDS - set(item.keys())
                   if missing:
-                      sys.exit(f'FATAL en índice {idx}: Faltan campos requeridos {missing}')
+                      sys.exit(f'FATAL en índice {idx}: Faltan campos obligatorios: {missing}')
 
                   item_id = str(item['id']).strip()
                   if not item_id:
-                      sys.exit(f'FATAL en índice {idx}: ID no puede estar vacío.')
+                      sys.exit(f'FATAL en índice {idx}: El ID no puede ser nulo o vacío.')
                   if item_id in seen_ids:
                       sys.exit(f'FATAL: ID duplicado detectado: \"{item_id}\" en índice {idx}')
                   seen_ids.add(item_id)
@@ -65,37 +69,46 @@ jobs:
                   if not str(item['nombre']).strip():
                       sys.exit(f'FATAL en ID \"{item_id}\": El campo \"nombre\" no puede estar vacío.')
 
-              print(f'Validación superada con éxito: {len(data)} reliquias auditadas sin inconsistencias. ❄️')
+                  if not str(item['imagen']).strip():
+                      sys.exit(f'FATAL en ID \"{item_id}\": El campo \"imagen\" no puede estar vacío.')
+
+              print(f'Validación superada: {len(data)} reliquias auditadas con éxito bajo las 12 categorías oficiales. ❄️')
           except Exception as err:
               sys.exit(f'CRITICAL FAILURE: {err}')
           "
 
-      # 2. Minificación Total de Assets (HTML, CSS, JS) en Main
-      - name: Configurar Node.js y Minificar Assets
+      # 2. Configurar Node.js y Tooling Global de Minificación
+      - name: Configurar Node.js (Tooling Engine)
         if: github.ref == 'refs/heads/main'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Minificar Todo el Árbol Estático
+      - name: Instalar Minificadores y Optimizar Assets
         if: github.ref == 'refs/heads/main'
         run: |
-          # Minificar todos los scripts JS (incluyendo store.js, menu.js y sw.js)
-          npx terser js/menu.js -c -m -o js/menu.js || true
-          npx terser js/store.js -c -m -o js/store.js || true
+          npm install -g terser csso-cli html-minifier-terser
+
+          # Minificar JavaScript global y modular
+          if [ -f "js/menu.js" ]; then
+            terser js/menu.js -c -m -o js/menu.js
+          fi
+          if [ -f "js/store.js" ]; then
+            terser js/store.js -c -m -o js/store.js
+          fi
           if [ -f "sw.js" ]; then
-            npx terser sw.js -c -m -o sw.js
+            terser sw.js -c -m -o sw.js
           fi
 
-          # Minificar CSS centralizado
+          # Minificar CSS Universal
           if [ -f "css/style.css" ]; then
-            npx csso-cli css/style.css -o css/style.css
+            csso css/style.css -o css/style.css
           fi
 
-          # Minificar todas las vistas HTML
+          # Minificar Vistas HTML (Ignorando tokens de Search Console si aplica)
           for file in *.html; do
             if [ -f "$file" ]; then
-              npx html-minifier-terser \
+              html-minifier-terser \
                 --collapse-whitespace \
                 --remove-comments \
                 --remove-redundant-attributes \
@@ -107,11 +120,12 @@ jobs:
             fi
           done
 
+      # 3. Empaquetar y Configurar GitHub Pages
       - name: Configurar GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v4
 
-      - name: Preparar artefactos para despliegue
+      - name: Preparar Artefactos para Despliegue
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
