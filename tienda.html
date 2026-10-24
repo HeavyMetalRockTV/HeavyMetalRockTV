@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Heavy Metal Store - Tienda Oficial</title>
+    <meta name="description" content="Catálogo oficial de Heavy Metal Store con más de 330 reliquias de metal y rock. Envíos directos a todo el Perú por WhatsApp.">
+    <meta name="theme-color" content="#d32f2f">
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     
-    <!-- Hojas de Estilos Centralizadas (Cero Bootstrap, Cero redundancia) -->
+    <!-- Hojas de Estilos Centralizadas -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://heavymetalrocktv.github.io/HeavyMetalRockTV/tienda.html">
 
@@ -21,7 +25,7 @@
       "image": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp",
       "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/tienda.html",
       "telephone": "+51950324368",
-      "priceRange": "S/ 50.00 - S/ 140.00",
+      "priceRange": "S/ 25.00 - S/ 140.00",
       "currenciesAccepted": "PEN",
       "paymentAccepted": "Efectivo, Yape, Plin, Transferencia Bancaria",
       "description": "Tienda oficial de indumentaria, polos, casacas y discos de bandas de Heavy, Thrash, Death y Black Metal con envíos a todo el Perú.",
@@ -36,7 +40,7 @@
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Heavy Metal Store | Tienda Oficial de Polos, Casacas y Discos">
-    <meta property="og:description" content="Catálogo oficial con más de 160 artículos de metal y rock. Envíos directos a todo el Perú por WhatsApp.">
+    <meta property="og:description" content="Catálogo oficial con más de 330 reliquias de metal y rock. Envíos directos a todo el Perú por WhatsApp.">
     <meta property="og:image" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -93,46 +97,134 @@
 
     <main>
         <section id="tienda-section">
-            <h1>Heavy Metal Store</h1>
-
-            <div class="logo-tienda-container">
-                <img class="logo-tienda" src="img/estetica/STORE.webp" alt="Heavy Metal Store Logo Oficial">
+            
+            <!-- Hero Compacto de Tienda -->
+            <div class="store-hero">
+                <div class="store-hero-content">
+                    <span class="store-badge-tag">⚡ HEAVY METAL STORE &bull; OFICIAL</span>
+                    <h1>Reliquias &amp; Merchandising</h1>
+                    <p class="store-hero-desc">
+                        Más de 330 artículos originales de rock pesado y metal subterráneo. Filtra por banda, categoría o precio. Envíos garantizados a todo el Perú por Olva Courier y Shalom.
+                    </p>
+                    <div class="store-trust-pills">
+                        <span class="trust-pill">📦 Envíos a Nivel Nacional</span>
+                        <span class="trust-pill">💳 Yape / Plin / Transferencias</span>
+                        <span class="trust-pill">🛡️ Garantía Oficial HMRTV</span>
+                    </div>
+                </div>
+                <div class="store-hero-logo-box">
+                    <img src="img/estetica/STORE.webp" alt="Heavy Metal Store" class="store-hero-logo" width="280" height="100">
+                </div>
             </div>
-
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 25px auto;">
-                Catálogo oficial de indumentaria, accesorios y material discográfico. Filtra por categoría o busca tu banda favorita. Envíos directos a todo el Perú y Sudamérica.
-            </p>
 
             <!-- Controles de la Tienda -->
             <div class="store-controls">
-                <div class="search-bar-wrapper">
-                    <input 
-                        type="search" 
-                        id="searchInput" 
-                        placeholder="🔍 Buscar por banda (Iron Maiden, Dio, Exciter, etc.) o producto..." 
-                        aria-label="Buscar productos en el catálogo"
-                    >
+                
+                <!-- Buscador y Ordenamiento -->
+                <div class="store-toolbar-row">
+                    <div class="search-bar-wrapper">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <input 
+                            type="search" 
+                            id="searchInput" 
+                            placeholder="Buscar por banda (Iron Maiden, Dio, Exciter...), prenda o álbum..." 
+                            aria-label="Buscar productos en el catálogo"
+                        >
+                        <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda" style="display: none;">&times;</button>
+                    </div>
+
+                    <div class="sort-wrapper">
+                        <label for="sortSelect" class="sort-label">Ordenar:</label>
+                        <select id="sortSelect" class="sort-select" aria-label="Ordenar catálogo">
+                            <option value="relevance">⚡ Más Relevantes</option>
+                            <option value="price-asc">💵 Precio: Menor a Mayor</option>
+                            <option value="price-desc">💵 Precio: Mayor a Menor</option>
+                            <option value="band-asc">🎸 Banda: A - Z</option>
+                            <option value="band-desc">🎸 Banda: Z - A</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="filter-buttons" role="group" aria-label="Filtro de categorías">
-                    <button type="button" class="filter-btn active" data-category="todos">Todos</button>
-                    <button type="button" class="filter-btn" data-category="polos">Polos</button>
-                    <button type="button" class="filter-btn" data-category="poleras">Poleras</button>
-                    <button type="button" class="filter-btn" data-category="casacas">Casacas</button>
-                    <button type="button" class="filter-btn" data-category="pantalones">Pantalones</button>
-                    <button type="button" class="filter-btn" data-category="calzado">Calzado</button>
-                    <button type="button" class="filter-btn" data-category="emo">Emo/Alternativo</button>
-                    <button type="button" class="filter-btn" data-category="mochilas">Mochilas</button>
-                    <button type="button" class="filter-btn" data-category="accesorios">Accesorios</button>
-                    <button type="button" class="filter-btn" data-category="posters">Pósters</button>
-                    <button type="button" class="filter-btn" data-category="vinilos">Discos & Vinilos</button>
-                    <button type="button" class="filter-btn" data-category="album">Albums</button>
-                    <button type="button" class="filter-btn" data-category="estampado">Estampados</button>
+
+                <!-- Filtro por Categorías con Conteo -->
+                <div class="filter-group-wrapper">
+                    <div class="filter-group-label">Categorías:</div>
+                    <div class="filter-buttons" role="group" aria-label="Filtro de categorías" id="categoryFilterContainer">
+                        <button type="button" class="filter-btn active" data-category="todos">
+                            <span>Todos</span> <span class="badge-count" id="count-todos">334</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="polos">
+                            <span>Polos</span> <span class="badge-count" id="count-polos">144</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="poleras">
+                            <span>Poleras</span> <span class="badge-count" id="count-poleras">10</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="casacas">
+                            <span>Casacas</span> <span class="badge-count" id="count-casacas">24</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="pantalones">
+                            <span>Pantalones</span> <span class="badge-count" id="count-pantalones">11</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="calzado">
+                            <span>Calzado</span> <span class="badge-count" id="count-calzado">23</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="mochilas">
+                            <span>Mochilas</span> <span class="badge-count" id="count-mochilas">16</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="accesorios">
+                            <span>Accesorios</span> <span class="badge-count" id="count-accesorios">26</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="posters">
+                            <span>Pósters</span> <span class="badge-count" id="count-posters">30</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="estampado">
+                            <span>Estampados</span> <span class="badge-count" id="count-estampado">34</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="album">
+                            <span>Albums</span> <span class="badge-count" id="count-album">9</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="vinilos">
+                            <span>Discos &amp; Vinilos</span> <span class="badge-count" id="count-vinilos">3</span>
+                        </button>
+                        <button type="button" class="filter-btn" data-category="emo">
+                            <span>Emo/Alternativo</span> <span class="badge-count" id="count-emo">4</span>
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Filtro Rápido por Bandas Populares -->
+                <div class="band-group-wrapper">
+                    <div class="filter-group-label">Bandas Populares:</div>
+                    <div class="band-chips-scroll" id="bandChipsContainer" role="group" aria-label="Filtro rápido por banda">
+                        <button type="button" class="band-chip active" data-band="">Todas</button>
+                        <button type="button" class="band-chip" data-band="Iron Maiden">Iron Maiden</button>
+                        <button type="button" class="band-chip" data-band="Cannibal Corpse">Cannibal Corpse</button>
+                        <button type="button" class="band-chip" data-band="Slipknot">Slipknot</button>
+                        <button type="button" class="band-chip" data-band="Metallica">Metallica</button>
+                        <button type="button" class="band-chip" data-band="AC/DC">AC/DC</button>
+                        <button type="button" class="band-chip" data-band="Judas Priest">Judas Priest</button>
+                        <button type="button" class="band-chip" data-band="Slayer">Slayer</button>
+                        <button type="button" class="band-chip" data-band="Dio">Dio</button>
+                        <button type="button" class="band-chip" data-band="Kreator">Kreator</button>
+                        <button type="button" class="band-chip" data-band="Venom">Venom</button>
+                        <button type="button" class="band-chip" data-band="Death">Death</button>
+                        <button type="button" class="band-chip" data-band="Morbid Angel">Morbid Angel</button>
+                        <button type="button" class="band-chip" data-band="Black Sabbath">Black Sabbath</button>
+                        <button type="button" class="band-chip" data-band="Megadeth">Megadeth</button>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Contador Dinámico -->
-            <div class="results-counter" id="resultsCounter" aria-live="polite">
-                Cargando catálogo...
+            <!-- Barra de Resultados y Acceso a Carrito -->
+            <div class="store-results-bar">
+                <div class="results-counter" id="resultsCounter" aria-live="polite">
+                    Cargando catálogo...
+                </div>
+                <button type="button" id="openCartBtnTop" class="btn-top-cart" aria-label="Abrir bolsa de pedidos">
+                    <span class="cart-icon" aria-hidden="true">🛒</span>
+                    <span>Mi Bolsa</span>
+                    <span class="top-cart-badge" id="cartBadgeTop">0</span>
+                </button>
             </div>
 
             <!-- Grilla Dinámica de Productos -->
@@ -147,12 +239,57 @@
         </section>
     </main>
 
+    <!-- Botón Flotante de Bolsa de Pedidos -->
+    <button type="button" id="cartFloatBtn" class="cart-float-btn" aria-label="Abrir bolsa de pedidos (0 artículos)">
+        <span class="cart-float-icon" aria-hidden="true">🛒</span>
+        <span class="cart-float-badge" id="cartFloatCount">0</span>
+    </button>
+
+    <!-- Overlay y Drawer Lateral de Bolsa de Pedidos -->
+    <div id="cartOverlay" class="cart-overlay" aria-hidden="true"></div>
+    <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Bolsa de Pedidos" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <div class="cart-title-box">
+                <h2>🛒 Bolsa de Pedidos</h2>
+                <span class="cart-badge-count-label" id="cartItemsCountLabel">0 artículos</span>
+            </div>
+            <button type="button" id="cartCloseBtn" class="cart-close-btn" aria-label="Cerrar bolsa">&times;</button>
+        </div>
+
+        <div class="cart-drawer-body" id="cartItemsContainer">
+            <!-- Items del carrito -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-box">
+                <div class="cart-subtotal-row">
+                    <span>Total Estimado:</span>
+                    <span class="cart-total-amount" id="cartTotalPrice">S/ 0.00</span>
+                </div>
+                <p class="cart-shipping-notice">
+                    📦 Envíos por Olva Courier y Shalom a todo el Perú. Las tallas y métodos de pago (Yape/Plin/Transferencia) se confirman al enviar el pedido por WhatsApp.
+                </p>
+            </div>
+            <div class="cart-action-buttons">
+                <button type="button" id="btnCartClear" class="btn-cart-clear" aria-label="Vaciar toda la bolsa">
+                    🗑️ Vaciar
+                </button>
+                <a id="btnCartCheckout" class="btn-cart-checkout" href="#" target="_blank" rel="noopener noreferrer">
+                    <span>⚡ Solicitar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
     <!-- Modal Lightbox Reutilizable -->
     <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
         <span class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista previa">&times;</span>
         <img class="lightbox-content" id="lightboxImg" alt="Vista previa del producto">
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
+
+    <!-- Toast Notification al agregar -->
+    <div id="storeToast" class="store-toast" role="status" aria-live="polite"></div>
 
     <!-- Scripts Modulares -->
     <script defer src="js/menu.js"></script>

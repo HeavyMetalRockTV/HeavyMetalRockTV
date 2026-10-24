@@ -2,7 +2,7 @@
  * Heavy Metal Rock TV - Service Worker (Frozen Cache)
  * Strategy: Stale-While-Revalidate for App Shell, Cache-First for Assets
  */
-const CACHE_NAME = 'hmrtv-core-v1';
+const CACHE_NAME = 'hmrtv-core-v2';
 const PRECACHE_ASSETS = [
   './',
   'index.html',
@@ -14,6 +14,10 @@ const PRECACHE_ASSETS = [
   'js/menu.js',
   'js/store.js',
   'data/products.json',
+  'site.webmanifest',
+  'android-chrome-192x192.png',
+  'apple-touch-icon.png',
+  'img/estetica/HMR_recortada.ico',
   'img/estetica/HMRTV.webp',
   'img/estetica/STORE.webp',
   'img/estetica/diogustavo.webp'
