@@ -149,10 +149,11 @@
       const safeDesc = Security.escapeHTML(product.descripcion);
       const safePrice = Security.escapeHTML(product.precio);
       const safeImg = Security.escapeHTML(product.imagen || CONFIG.DEFAULT_IMAGE);
-      const waUrl = Utils.buildWhatsAppDeepLink(product);
+      const rawImg = product.imagen || CONFIG.DEFAULT_IMAGE;
+      const safeWaUrl = Security.escapeHTML(Utils.buildWhatsAppDeepLink(product));
 
       card.innerHTML = `
-        <div class="product-card-img-wrapper" tabindex="0" role="button" aria-label="Ver afiche de ${safeName}">
+        <div class="product-card-img-wrapper" tabindex="0" role="button" aria-label="Ver afiche de ${safeName}" data-fullimg="${Security.escapeHTML(rawImg)}" data-title="${safeName}">
           <span class="badge-category">${safeCat}</span>
           <img 
             src="${safeImg}" 
@@ -171,24 +172,12 @@
           </div>
           <div class="product-footer">
             <div class="product-price">${safePrice}</div>
-            <a class="btn-order" href="${waUrl}" target="_blank" rel="noopener noreferrer" aria-label="Pedir ${safeName} por WhatsApp">
+            <a class="btn-order" href="${safeWaUrl}" target="_blank" rel="noopener noreferrer" aria-label="Pedir ${safeName} por WhatsApp">
               💬 Pedir
             </a>
           </div>
         </div>
       `;
-
-      // Delegación de eventos accesibles para apertura de Lightbox
-      const mediaWrapper = card.querySelector('.product-card-img-wrapper');
-      if (mediaWrapper) {
-        mediaWrapper.addEventListener('click', () => Lightbox.open(safeImg, safeName));
-        mediaWrapper.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            Lightbox.open(safeImg, safeName);
-          }
-        });
-      }
 
       return card;
     },
@@ -317,6 +306,26 @@
   // 5. REGISTRO DETERMINISTA DE EVENT LISTENERS
   // =========================================================================
   function bindEvents() {
+    // Delegación atómica en el contenedor: Cero fugas de memoria
+    if (DOM.container) {
+      DOM.container.addEventListener('click', (e) => {
+        const wrapper = e.target.closest('.product-card-img-wrapper');
+        if (!wrapper) return;
+        const fullImg = wrapper.getAttribute('data-fullimg') || CONFIG.DEFAULT_IMAGE;
+        const title = wrapper.getAttribute('data-title') || '';
+        Lightbox.open(fullImg, title);
+      });
+      DOM.container.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const wrapper = e.target.closest('.product-card-img-wrapper');
+        if (!wrapper) return;
+        e.preventDefault();
+        const fullImg = wrapper.getAttribute('data-fullimg') || CONFIG.DEFAULT_IMAGE;
+        const title = wrapper.getAttribute('data-title') || '';
+        Lightbox.open(fullImg, title);
+      });
+    }
+
     // Paginación por demanda
     if (DOM.btnLoadMore) {
       DOM.btnLoadMore.addEventListener('click', () => Renderer.renderBatch(false));

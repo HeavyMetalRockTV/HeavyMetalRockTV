@@ -11,7 +11,6 @@ const PRECACHE_ASSETS = [
   'youtube.html',
   'venta-boletos.html',
   'css/style.css',
-  'fonts/style.css',
   'js/menu.js',
   'js/store.js',
   'data/products.json',
@@ -31,9 +30,7 @@ self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) return caches.delete(key);
-        })
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
       )
     )
   );
@@ -41,7 +38,11 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  if (e.request.method !== 'GET') return;
+  if (e.request.method !== 'GET' || !e.request.url.startsWith('http')) return;
+
+  // Excluir streaming de audio y servicios multimedia externos
+  const url = new URL(e.request.url);
+  if (url.hostname.includes('radio12345.com') || url.hostname.includes('youtube.com') || url.hostname.includes('googlevideo.com')) return;
 
   e.respondWith(
     caches.match(e.request).then((cachedResponse) => {

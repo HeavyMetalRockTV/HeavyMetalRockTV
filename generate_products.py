@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Dict, List, Any
 
 # --- CONFIGURACIÓN MAESTRA ---
-IMG_ROOT = Path("img")
+IMG_ROOT = Path("img/products")
 OUTPUT_JSON = Path("data/products.json")
 
 # Mapeo: Nombre de carpeta en disco -> Categoría canónica esperada por deploy.yml
@@ -28,9 +28,11 @@ CATEGORY_MAPPING: Dict[str, str] = {
     "pósters": "posters",
     "discoss vinilo": "vinilos",
     "discos & vinilos": "vinilos",
-    "albums": "vinilos",
-    "emo": "polos",
-    "estampados": "polos"
+    "albums": "album",
+    "album": "album",
+    "emo": "emo",
+    "estampados": "estampado",
+    "estampado": "estampado"
 }
 
 # Precios por defecto según categoría
@@ -43,7 +45,10 @@ DEFAULT_PRICING: Dict[str, str] = {
     "mochilas": "S/ 75.00",
     "accesorios": "S/ 35.00",
     "posters": "S/ 25.00",
-    "vinilos": "S/ 110.00"
+    "vinilos": "S/ 110.00",
+    "album": "S/ 95.00",
+    "emo": "S/ 55.00",
+    "estampado": "S/ 50.00"
 }
 
 # Plantillas de descripción por defecto
@@ -56,7 +61,10 @@ DEFAULT_DESCRIPTIONS: Dict[str, str] = {
     "mochilas": "Mochila táctica/urbana de alta capacidad con compartimentos reforzados.",
     "accesorios": "Accesorio oficial de metal pesado y colección exclusiva.",
     "posters": "Afiche de alta resolución en papel couché de 300g.",
-    "vinilos": "Edición oficial en vinilo/disco para coleccionistas con audio masterizado."
+    "vinilos": "Edición oficial en vinilo/disco para coleccionistas con audio masterizado.",
+    "album": "Producción discográfica oficial en CD/Digipack de alta fidelidad sonora.",
+    "emo": "Indumentaria alternativa de corte contemporáneo y diseño exclusivo.",
+    "estampado": "Estampado artístico de alta durabilidad en serigrafía metalera."
 }
 
 # Diccionario de nombres de bandas para formateo capitalizado correcto
@@ -158,7 +166,7 @@ def build_catalog() -> List[Dict[str, Any]]:
         )
 
         for img_file in image_files:
-            rel_path = f"img/{folder_path.name}/{img_file.name}".replace("\\", "/")
+            rel_path = f"img/products/{folder_path.name}/{img_file.name}".replace("\\", "/")
             
             # Si el artículo ya existía, preservamos sus metadatos y reindexamos ID
             if rel_path in existing_by_img:

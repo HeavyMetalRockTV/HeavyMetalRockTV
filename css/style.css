@@ -337,6 +337,18 @@ p {
     box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
 }
 
+/* Regla unificada para imágenes ampliables en toda la plataforma */
+.zoomable-img {
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoomable-img:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--accent-red);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -39,6 +39,7 @@
 
         window.openLightbox = (src, alt = '') => {
             modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
             if (modalImg) {
                 modalImg.src = src;
                 modalImg.alt = alt;
@@ -49,6 +50,7 @@
 
         window.closeLightbox = () => {
             modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = 'auto';
         };
 
@@ -72,10 +74,15 @@
     function registerServiceWorker() {
         const isSecure = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
         if ('serviceWorker' in navigator && isSecure) {
-            window.addEventListener('load', () => {
+            const register = () => {
                 navigator.serviceWorker.register('./sw.js', { scope: './' })
                     .catch(err => console.error('[SW Registration Error]:', err));
-            });
+            };
+            if (document.readyState === 'complete') {
+                register();
+            } else {
+                window.addEventListener('load', register);
+            }
         }
     }
 

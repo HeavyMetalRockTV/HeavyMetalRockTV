@@ -139,40 +139,10 @@
     <!-- Modal Lightbox -->
     <div id="lightboxModal" class="lightbox-modal">
         <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <img class="lightbox-content" id="lightboxImg" src="" alt="Imagen ampliada">
+        <img class="lightbox-content" id="lightboxImg" alt="Imagen ampliada">
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
-    <script async src="js/menu.js"></script>
-    <script>
-        const modal = document.getElementById('lightboxModal');
-        const modalImg = document.getElementById('lightboxImg');
-        const captionText = document.getElementById('lightboxCaption');
-        const closeBtn = document.getElementById('lightboxClose');
-        const zoomImages = document.querySelectorAll('.zoomable-img');
-
-        zoomImages.forEach(img => {
-            img.addEventListener('click', () => {
-                modal.classList.add('active');
-                modalImg.src = img.src;
-                captionText.textContent = img.alt;
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        const closeModal = () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        };
-
-        closeBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
-        });
-    </script>
+    <script defer src="js/menu.js"></script>
 </body>
 </html>
