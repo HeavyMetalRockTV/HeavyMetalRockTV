@@ -38,6 +38,9 @@
         const closeBtn = document.getElementById('lightboxClose');
 
         window.openLightbox = (src, alt = '') => {
+            if (!src || typeof src !== 'string' || /^\s*(javascript|data|vbscript):/i.test(src)) {
+                return;
+            }
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             if (modalImg) {

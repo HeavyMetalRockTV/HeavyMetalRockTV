@@ -44,6 +44,9 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (url.hostname.includes('radio12345.com') || url.hostname.includes('youtube.com') || url.hostname.includes('googlevideo.com')) return;
 
+  // Solo gestionar caché para el origen propio (evitar envenenamiento de caché cross-origin)
+  if (url.origin !== self.location.origin) return;
+
   e.respondWith(
     caches.match(e.request).then((cachedResponse) => {
       const fetchPromise = fetch(e.request)

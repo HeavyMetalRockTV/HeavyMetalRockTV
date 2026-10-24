@@ -87,7 +87,7 @@ jobs:
       - name: Instalar Minificadores y Optimizar Assets
         if: github.ref == 'refs/heads/main'
         run: |
-          npm install -g terser csso-cli html-minifier-terser
+          npm install -g --ignore-scripts terser@5 csso-cli@4 html-minifier-terser@7
 
           # Minificar JavaScript global y modular
           if [ -f "js/menu.js" ]; then

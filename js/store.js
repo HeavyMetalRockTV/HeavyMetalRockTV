@@ -71,7 +71,19 @@
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
+        .replace(/'/g, '&#039;')
+        .replace(/`/g, '&#96;');
+    },
+
+    /**
+     * Valida y sanitiza URIs asegurando protocolos seguros y previniendo vectores de inyección.
+     * @param {string} uri
+     * @returns {boolean}
+     */
+    isSafeURI(uri) {
+      if (!uri || typeof uri !== 'string') return false;
+      if (/^\s*(javascript|data|vbscript):/i.test(uri)) return false;
+      return true;
     },
 
     /**
@@ -80,14 +92,18 @@
      * @returns {string}
      */
     resolveCanonicalImage(relativePath) {
-      if (!relativePath || typeof relativePath !== 'string') {
+      if (!Security.isSafeURI(relativePath)) {
         return new URL(CONFIG.DEFAULT_IMAGE, window.location.href).href;
       }
       if (/^https?:\/\//i.test(relativePath)) {
         return relativePath;
       }
       try {
-        return new URL(relativePath, window.location.href).href;
+        const resolved = new URL(relativePath, window.location.href);
+        if (resolved.protocol !== 'http:' && resolved.protocol !== 'https:') {
+          return new URL(CONFIG.DEFAULT_IMAGE, window.location.href).href;
+        }
+        return resolved.href;
       } catch {
         return new URL(CONFIG.DEFAULT_IMAGE, window.location.href).href;
       }
@@ -160,8 +176,7 @@
             alt="${safeName}" 
             loading="lazy" 
             width="300" 
-            height="260" 
-            onerror="this.onerror=null;this.src='${CONFIG.DEFAULT_IMAGE}';"
+            height="260"
           >
         </div>
         <div class="product-card-body">
@@ -284,6 +299,7 @@
   const Lightbox = {
     open(src, alt) {
       if (!DOM.modal) return;
+      if (!Security.isSafeURI(src)) return;
       DOM.modal.classList.add('active');
       DOM.modal.setAttribute('aria-hidden', 'false');
       if (DOM.modalImg) {
@@ -306,8 +322,19 @@
   // 5. REGISTRO DETERMINISTA DE EVENT LISTENERS
   // =========================================================================
   function bindEvents() {
-    // Delegación atómica en el contenedor: Cero fugas de memoria
+    // Manejo centralizado y seguro de imágenes rotas (cero scripts inline / Compatible con CSP estricto)
     if (DOM.container) {
+      DOM.container.addEventListener('error', (e) => {
+        const target = /** @type {HTMLImageElement} */ (e.target);
+        if (target && target.tagName === 'IMG') {
+          const fallback = new URL(CONFIG.DEFAULT_IMAGE, window.location.href).href;
+          if (target.src !== fallback) {
+            target.src = fallback;
+          }
+        }
+      }, true);
+
+      // Delegación atómica en el contenedor: Cero fugas de memoria
       DOM.container.addEventListener('click', (e) => {
         const wrapper = e.target.closest('.product-card-img-wrapper');
         if (!wrapper) return;
