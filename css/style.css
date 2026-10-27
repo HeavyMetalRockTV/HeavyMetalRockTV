@@ -271,39 +271,61 @@ p {
 }
 
 /* =======================================================
-   REGLAS ESPECÍFICAS DE INDEX.HTML (BANNERS & GRILLAS)
+   REGLAS ESPECÍFICAS DE INDEX.HTML (MODELO ORIGINAL ELEVADO)
    ======================================================= */
+
+/* Iconografía de Encabezados */
+.header-icon {
+    display: inline-block;
+    color: var(--accent-red);
+    font-size: 1.3rem;
+}
+
+/* 1. Sección Inicio: Banner & Video */
+.banner-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-metal);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85);
+    margin-bottom: 25px;
+    background: #000;
+}
+
 .banner-img {
     width: 100%;
-    max-height: 380px;
+    max-height: 420px;
     object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #333;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.banner-wrapper:hover .banner-img {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
+
+.intro-paragraph {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    text-align: justify;
     margin-bottom: 25px;
 }
 
-.logo-quienes-somos {
-    max-width: 550px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 25px auto 10px auto;
-    object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
-    transition: transform 0.3s ease;
-}
-
-.logo-quienes-somos:hover {
-    transform: scale(1.03);
+.intro-paragraph strong {
+    color: #fff;
 }
 
 #youtube-video-container {
     position: relative;
     padding-top: 56.25%;
-    border-radius: 6px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border-metal);
-    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.25);
+    margin: 25px 0 10px 0;
+    background: #000;
 }
 
 #youtube-video-container iframe {
@@ -312,66 +334,164 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
+}
+
+/* 2. Sección Quiénes Somos */
+.logo-quienes-somos-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 25px auto 10px auto;
+}
+
+.logo-quienes-somos {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(211, 47, 47, 0.35));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-quienes-somos:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 25px rgba(211, 47, 47, 0.65));
+}
+
+/* 3. Sección Bandas Destacadas & Próximos Conciertos */
+.section-lead {
+    font-size: 14.5px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.section-lead em {
+    color: var(--accent-gold);
+    font-style: normal;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.image-grid img {
+.grid-item-card {
+    position: relative;
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid #282828;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-red);
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.45);
+}
+
+.grid-item-card img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.grid-item-card:hover img {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+}
+
+.item-name-tag {
+    background: #111;
+    border-top: 1px solid #222;
+    color: #e0e0e0;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.grid-item-card:hover .item-name-tag {
+    color: #fff;
+    background: #181818;
+    border-top-color: var(--accent-red);
+}
+
+/* Conciertos: afiches más altos con proporción cartelera */
+.concerts-grid .grid-item-card img {
+    height: 310px;
+}
+
+.section-action-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-box-office-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(180deg, #1c1c1c 0%, #111111 100%);
+    border: 1px solid var(--accent-red);
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: 800;
     border-radius: 6px;
-    border: 1px solid #222;
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    transition: all 0.25s ease;
 }
 
-.image-grid img:hover {
-    transform: translateY(-6px) scale(1.02);
-    border-color: var(--accent-red);
-    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
+.btn-box-office-link:hover {
+    background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
+    box-shadow: 0 0 25px rgba(211, 47, 47, 0.7);
+    transform: translateY(-2px);
+    color: #fff;
 }
 
-/* Regla unificada para imágenes ampliables en toda la plataforma */
-.zoomable-img {
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.zoomable-img:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-color: var(--accent-red);
-    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
-}
-
+/* 4. Sección Contacto: Banners y Redes Sociales */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    margin: 25px 0;
+    margin: 30px 0;
     align-items: center;
 }
 
 .contact-banner-card {
-    background: rgba(10, 10, 10, 0.8);
-    border: 1px solid #222;
+    background: rgba(14, 14, 14, 0.9);
+    border: 1px solid #282828;
     border-radius: 8px;
-    padding: 15px;
+    padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-banner-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent-red);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.35);
 }
 
 .contact-banner-card img {
@@ -380,26 +500,27 @@ p {
     height: auto;
     border-radius: 6px;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(211, 47, 47, 0.25));
+    filter: drop-shadow(0 0 10px rgba(211, 47, 47, 0.2));
+    display: block;
 }
 
 .social-buttons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .btn-social-action {
     background: linear-gradient(180deg, #1c1c1c 0%, #111111 100%);
     color: #eee;
-    padding: 12px 24px;
+    padding: 12px 22px;
     font-size: 13px;
     font-weight: 800;
     border: 1px solid #333;
     border-radius: 6px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
@@ -414,8 +535,26 @@ p {
     background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
     color: #fff;
     border-color: var(--accent-red);
-    box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+    box-shadow: 0 0 16px rgba(211, 47, 47, 0.6);
     transform: translateY(-2px);
+}
+
+.btn-social-action.btn-whatsapp:hover {
+    background: linear-gradient(180deg, #25d366 0%, #128c7e 100%);
+    border-color: #25d366;
+    box-shadow: 0 0 16px rgba(37, 211, 102, 0.6);
+}
+
+/* Regla unificada para imágenes ampliables en toda la plataforma */
+.zoomable-img {
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoomable-img:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: var(--accent-red);
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
 }
 
 /* =======================================================
@@ -1405,37 +1544,89 @@ p {
 /* =======================================================
    REGLAS ESPECÍFICAS DE EMISORA.HTML & YOUTUBE.HTML & BOLETOS
    ======================================================= */
-.live-broadcast-banner {
-    background: linear-gradient(135deg, #161616 0%, #0d0d0d 100%);
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
+/* -------------------------------------------------------
+   THE METAL RACK PLAYER (EMISORA.HTML)
+   ------------------------------------------------------- */
+.radio-rack-panel {
+    position: relative;
+    background: linear-gradient(145deg, #181818 0%, #0e0e0e 50%, #141414 100%);
+    border: 2px solid #333;
+    border-radius: 10px;
     padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.rack-screw {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #888 30%, #333 70%, #111 100%);
+    border-radius: 50%;
+    border: 1px solid #222;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.rack-screw::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 8px;
+    height: 2px;
+    background: #111;
+}
+
+.rack-screw.top-left { top: 10px; left: 10px; }
+.rack-screw.top-right { top: 10px; right: 10px; }
+.rack-screw.bottom-left { bottom: 10px; left: 10px; }
+.rack-screw.bottom-right { bottom: 10px; right: 10px; }
+
+.rack-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.rack-brand {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 35px;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+}
+
+.rack-brand-title {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.rack-model {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
 }
 
 .on-air-badge {
     background: #e50914;
     color: #fff;
     font-weight: 900;
-    font-size: 12px;
-    letter-spacing: 2px;
-    padding: 5px 16px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    padding: 6px 14px;
     border-radius: 20px;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 15px;
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
 }
 
-.on-air-badge::before {
-    content: '';
+.on-air-dot {
     width: 8px;
     height: 8px;
     background: #fff;
@@ -1443,45 +1634,275 @@ p {
     animation: live-pulse 1s infinite alternate;
 }
 
-.live-broadcast-banner h3 {
-    color: #fff;
-    font-size: 1.6rem;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
+/* Display LED */
+.rack-display {
+    background: #030804;
+    border: 2px solid #142a18;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 15px rgba(0, 255, 65, 0.15), 0 4px 12px rgba(0,0,0,0.6);
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.display-top-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #00e676;
     letter-spacing: 1px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed rgba(0, 230, 118, 0.25);
+    padding-bottom: 4px;
 }
 
-.live-broadcast-banner p {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 0 25px 0;
-    color: #aaa;
+.display-main {
+    font-size: 14px;
+    font-weight: 700;
+    color: #69f0ae;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(105, 240, 174, 0.6);
+    margin-bottom: 12px;
 }
 
-.btn-tune-in {
+/* Visualizador de audio animado */
+.audio-visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 28px;
+    padding-top: 4px;
+}
+
+.v-bar {
+    flex: 1;
+    background: linear-gradient(to top, #00e676 0%, #ffd600 70%, #ff1744 100%);
+    border-radius: 1px;
+    height: 4px;
+    transition: height 0.15s ease;
+}
+
+.audio-visualizer.active .bar-1 { animation: eq-anim 0.4s infinite alternate; }
+.audio-visualizer.active .bar-2 { animation: eq-anim 0.6s infinite 0.1s alternate; }
+.audio-visualizer.active .bar-3 { animation: eq-anim 0.5s infinite 0.2s alternate; }
+.audio-visualizer.active .bar-4 { animation: eq-anim 0.7s infinite 0.15s alternate; }
+.audio-visualizer.active .bar-5 { animation: eq-anim 0.45s infinite 0.25s alternate; }
+.audio-visualizer.active .bar-6 { animation: eq-anim 0.65s infinite 0.05s alternate; }
+.audio-visualizer.active .bar-7 { animation: eq-anim 0.55s infinite 0.18s alternate; }
+.audio-visualizer.active .bar-8 { animation: eq-anim 0.4s infinite 0.12s alternate; }
+.audio-visualizer.active .bar-9 { animation: eq-anim 0.7s infinite 0.22s alternate; }
+.audio-visualizer.active .bar-10 { animation: eq-anim 0.5s infinite 0.08s alternate; }
+.audio-visualizer.active .bar-11 { animation: eq-anim 0.6s infinite 0.3s alternate; }
+.audio-visualizer.active .bar-12 { animation: eq-anim 0.45s infinite 0.16s alternate; }
+
+@keyframes eq-anim {
+    0% { height: 4px; }
+    50% { height: 18px; }
+    100% { height: 26px; }
+}
+
+/* Fila de controles principales */
+.rack-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.btn-rack-play {
+    flex: 1;
     background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
     color: #fff;
-    padding: 16px 45px;
-    font-size: 15px;
+    padding: 16px 30px;
+    font-size: 14px;
     font-weight: 800;
     border: 1px solid #ff4d4d;
-    border-radius: 50px;
+    border-radius: 6px;
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
-    text-decoration: none;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
     transition: all 0.25s ease;
-    box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
 }
 
-.btn-tune-in:hover {
+.btn-rack-play:hover {
     background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
     box-shadow: 0 0 25px rgba(211, 47, 47, 0.8);
-    transform: scale(1.03);
+    transform: translateY(-2px);
+}
+
+.btn-rack-play.playing {
+    background: linear-gradient(180deg, #2e7d32 0%, #1b5e20 100%);
+    border-color: #4caf50;
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.6);
+}
+
+.rack-volume-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #0d0d0d;
+    border: 1px solid #282828;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.btn-mute {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
     color: #fff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 110px;
+    height: 6px;
+    border-radius: 3px;
+    background: #2a2a2a;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.8);
+    border: 1px solid #fff;
+}
+
+/* Acciones Secundarias (Pop-up y Pedidos) */
+.rack-secondary-actions {
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #222;
+    padding-top: 18px;
+}
+
+.btn-rack-action {
+    flex: 1;
+    background: #161616;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #ccc;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 11px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.btn-rack-action:hover {
+    background: #222;
+    color: #fff;
+    border-color: #555;
+    transform: translateY(-2px);
+}
+
+.btn-rack-wa {
+    border-color: #25d366;
+    color: #25d366;
+}
+
+.btn-rack-wa:hover {
+    background: rgba(37, 211, 102, 0.15);
+    color: #fff;
+    border-color: #25d366;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+}
+
+.radio-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    font-size: 20px;
+}
+
+.feature-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item strong {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.feature-item span {
+    font-size: 11px;
+    color: #888;
+}
+
+.slot-badge {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.slot-badge.highlight {
+    color: var(--accent-red);
+}
+
+.slot-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.slot-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #888;
+    margin: 8px 0 0 0;
+    text-align: left;
+}
+
+.highlight-slot {
+    border-left: 3px solid var(--accent-red);
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.08) 0%, #111 100%);
+    box-shadow: 0 0 15px rgba(211, 47, 47, 0.15);
 }
 
 .app-showcase {
@@ -1625,14 +2046,118 @@ p {
     transform: translateY(-2px);
 }
 
+/* =======================================================
+   REGLAS ESPECÍFICAS DE YOUTUBE.HTML (VIDEO HUB 2.0)
+   ======================================================= */
+/* 1. Video Estelar / Spotlight */
+.video-spotlight-box {
+    background: linear-gradient(145deg, #181818 0%, #0d0d0d 100%);
+    border: 2px solid var(--accent-red);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.35);
+}
+
+.spotlight-badge {
+    background: var(--accent-red);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+}
+
+.spotlight-player-container {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
+}
+
+.spotlight-player-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.spotlight-info {
+    padding: 22px 25px;
+}
+
+.spotlight-info h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spotlight-info p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+/* 2. Barra de Controles y Búsqueda */
+.video-controls-toolbar {
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid #282828;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.video-filter-btn {
+    background: #141414;
+    border: 1px solid #333;
+    color: #bbb;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.video-filter-btn:hover {
+    color: #fff;
+    border-color: var(--accent-red);
+    background: rgba(211, 47, 47, 0.15);
+}
+
+.video-filter-btn.active {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(211, 47, 47, 0.5);
+}
+
+/* 3. Grilla y Facade Pattern */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 25px;
 }
 
 .video-card {
-    background: rgba(18, 18, 18, 0.85);
+    background: rgba(18, 18, 18, 0.9);
     border: 1px solid #252525;
     border-radius: 8px;
     overflow: hidden;
@@ -1642,25 +2167,100 @@ p {
 }
 
 .video-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--accent-red);
-    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.3);
 }
 
-.video-player-container {
+.video-facade {
     position: relative;
     padding-top: 56.25%;
     background: #000;
-    border-bottom: 1px solid #222;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.video-player-container iframe {
+.video-facade img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.video-facade:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.video-facade::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+}
+
+.facade-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    padding-left: 4px;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.7);
+    z-index: 2;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-facade:hover .facade-play-btn {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 35px rgba(229, 9, 20, 0.9);
+}
+
+.video-facade.playing::after,
+.video-facade.playing .facade-play-btn,
+.video-facade.playing .video-tag-pill {
+    display: none !important;
+}
+
+.video-facade iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    z-index: 5;
+}
+
+.video-tag-pill {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 2;
 }
 
 .video-card-body {
@@ -1670,11 +2270,21 @@ p {
     flex-direction: column;
 }
 
+.video-band-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+}
+
 .video-card-body h3 {
     font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
     line-height: 1.4;
     border-left: 3px solid var(--accent-red);
     padding-left: 10px;
@@ -1682,53 +2292,426 @@ p {
 }
 
 .video-card-body p {
-    font-size: 13.5px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.6;
     color: #aaa;
-    margin: 0;
-    text-align: justify;
+    margin: 0 0 15px 0;
+    text-align: left;
+    flex: 1;
 }
 
-.ticket-info-card {
-    background: rgba(20, 20, 20, 0.7);
+.video-yt-link {
+    align-self: flex-start;
+    color: var(--accent-red);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.video-yt-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* =======================================================
+   REGLAS ESPECÍFICAS DE VENTA-BOLETOS.HTML (TAQUILLA OFICIAL)
+   ======================================================= */
+.tickets-hero-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.95) 0%, rgba(12, 12, 12, 0.98) 100%);
+    border: 1px solid var(--border-metal);
+    border-radius: 8px;
+    padding: 24px 30px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.tickets-hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-red), var(--accent-gold));
+}
+
+.tickets-hero-content {
+    flex: 1;
+}
+
+.tickets-hero-content h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tickets-hero-content p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #aaa;
+    margin: 0 0 16px 0;
+    text-align: left;
+    max-width: 650px;
+}
+
+.tickets-hero-logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tickets-hero-logo-box img {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(211, 47, 47, 0.4));
+}
+
+/* Barra de filtros de eventos */
+.events-toolbar {
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid #282828;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+}
+
+.events-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.event-filter-btn {
+    background: #141414;
+    border: 1px solid #333;
+    color: #bbb;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.event-filter-btn:hover {
+    color: #fff;
+    border-color: var(--accent-red);
+    background: rgba(211, 47, 47, 0.15);
+}
+
+.event-filter-btn.active {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(211, 47, 47, 0.5);
+}
+
+/* Grilla de Conciertos */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.event-card {
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid #282828;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-red);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.3);
+}
+
+.event-poster-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #000;
+    overflow: hidden;
+}
+
+.event-poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-poster-container img {
+    transform: scale(1.04);
+}
+
+.event-badge-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.status-preventa { background: #d32f2f; color: #fff; }
+.status-ultimas { background: #ff9800; color: #000; }
+.status-disponible { background: #2e7d32; color: #fff; }
+.status-under { background: #7b1fa2; color: #fff; }
+
+.event-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-date-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.event-calendar-badge {
+    background: #111;
+    border: 2px solid var(--accent-red);
+    border-radius: 6px;
+    width: 50px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
+}
+
+.cal-month {
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--accent-red);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.cal-day {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+}
+
+.event-venue-info {
+    flex: 1;
+}
+
+.event-city {
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.event-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.event-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #aaa;
+    margin: 0 0 18px 0;
+    text-align: left;
+    flex: 1;
+}
+
+.event-pricing-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.event-price-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 10px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-val {
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.btn-event-buy {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.btn-event-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+    color: #fff;
+}
+
+/* Módulo Alianzas / Promotores */
+.promoter-alliance-box {
+    background: linear-gradient(135deg, #161616 0%, #0d0d0d 100%);
     border: 1px solid #282828;
     border-radius: 8px;
     padding: 25px 30px;
-    margin: 25px 0;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
 }
 
-.ticket-info-card h3 {
-    color: #fff;
+.alliance-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.alliance-icon {
+    font-size: 32px;
+}
+
+.alliance-header h3 {
+    margin: 0 0 5px 0;
     font-size: 1.3rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-left: 3px solid var(--accent-red);
-    padding-left: 10px;
+    color: #fff;
     text-transform: uppercase;
 }
 
-.btn-metal {
+.alliance-header p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #aaa;
+    text-align: left;
+}
+
+.alliance-perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.perk-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perk-item strong {
+    color: #fff;
+}
+
+.alliance-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-alliance-wa {
     background: linear-gradient(180deg, #d32f2f 0%, #8b0000 100%);
     color: #fff;
-    padding: 15px 40px;
-    font-size: 14px;
-    font-weight: 700;
-    border: 1px solid #ff4d4d;
+    padding: 12px 24px;
+    font-size: 12.5px;
+    font-weight: 800;
     border-radius: 4px;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    margin: 15px auto 0 auto;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
 }
 
-.btn-metal:hover {
+.btn-alliance-wa:hover {
     background: linear-gradient(180deg, #e53935 0%, #a00000 100%);
-    box-shadow: 0 0 15px rgba(211, 47, 47, 0.6);
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.7);
+    transform: translateY(-2px);
     color: #fff;
+}
+
+.btn-alliance-mail {
+    background: #161616;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 12px 24px;
+    font-size: 12.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-alliance-mail:hover {
+    background: #222;
+    color: #fff;
+    border-color: #555;
     transform: translateY(-2px);
 }
 
@@ -1997,23 +2980,37 @@ p {
         text-align: left;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+        .banner-img {
+        max-height: 320px;
     }
 
     .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
     }
 
-    .image-grid img {
-        height: 220px;
+    .grid-item-card img {
+        height: 200px;
+    }
+
+    .concerts-grid .grid-item-card img {
+        height: 260px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .btn-social-action {
-        width: 100%;
+        flex: 1 1 calc(50% - 12px);
         justify-content: center;
-        padding: 12px 16px;
+    }
+
+    .btn-box-office-link {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
     }
 
     .logo-tienda {
@@ -2041,19 +3038,33 @@ p {
         border-radius: 3px;
     }
 
-    .live-broadcast-banner {
+        .radio-rack-panel {
         padding: 20px 15px;
     }
 
-    .live-broadcast-banner h3 {
-        font-size: 1.3rem;
+    .rack-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
 
-    .btn-tune-in {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 20px;
-        font-size: 13px;
+    .rack-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .rack-volume-box {
+        justify-content: space-between;
+    }
+
+    .volume-slider {
+        flex: 1;
+        width: auto;
+    }
+
+    .rack-secondary-actions {
+        flex-direction: column;
     }
 
     .app-showcase {
@@ -2104,19 +3115,46 @@ p {
         max-width: 90%;
     }
 
-    .ticket-info-card {
-        padding: 18px 15px;
+        .tickets-hero-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
     }
 
-    .ticket-info-card h3 {
-        font-size: 1.15rem;
+    .tickets-hero-content p {
+        text-align: center;
     }
 
-    .btn-metal {
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-poster-container {
+        height: 200px;
+    }
+
+    .promoter-alliance-box {
+        padding: 20px 15px;
+    }
+
+    .alliance-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .alliance-header p {
+        text-align: center;
+    }
+
+    .alliance-cta-row {
+        flex-direction: column;
+    }
+
+    .btn-alliance-wa, .btn-alliance-mail {
         width: 100%;
         box-sizing: border-box;
-        padding: 14px 20px;
-        font-size: 13px;
+        justify-content: center;
     }
 }
 

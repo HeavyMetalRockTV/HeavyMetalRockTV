@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Heavy Metal Rock TV - Canal de YouTube</title>
-    <meta name="description" content="Canal oficial de YouTube de Heavy Metal Rock TV con entrevistas exclusivas, coberturas de conciertos, videoclips e informes de la escena.">
+    <title>Heavy Metal Rock TV - Canal Oficial de YouTube</title>
+    <meta name="description" content="Canal oficial de YouTube de Heavy Metal Rock TV con entrevistas exclusivas, coberturas de conciertos, videoclips e informes de la escena del metal.">
     <meta name="theme-color" content="#d32f2f">
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -40,9 +40,8 @@
     <meta property="og:url" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/youtube.html">
     <meta name="twitter:card" content="summary_large_image">
 
-    
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io; frame-src https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' http://heavymetalextremo.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me; font-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' http://heavymetalextremo.radio12345.com https://heavymetalextremo.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me; font-src 'self'; base-uri 'self'; form-action 'self';">
 </head>
 
 <body>
@@ -92,237 +91,381 @@
 
     <main>
         <section id="youtube-section">
+            <div class="section-badge-tag">PRODUCCIÓN AUDIOVISUAL // ARCHIVO HISTÓRICO</div>
             <h1>Canal Oficial de YouTube</h1>
 
+            <!-- Cabecera del Canal y Suscripción -->
             <div class="channel-header">
                 <div class="channel-header-text">
-                    <h3>Heavy Metal Rock TV</h3>
-                    <p>Entrevistas exclusivas, cobertura de festivales, videoclips e informes de la escena.</p>
+                    <h3>Heavy Metal Rock TV - Canal Oficial</h3>
+                    <p>Entrevistas exclusivas a bandas nacionales e internacionales, coberturas de festivales, estrenos de videoclips y especiales de la escena.</p>
                 </div>
                 <a class="btn-youtube" href="https://www.youtube.com/@HeavyMetalRockTv" target="_blank" rel="noopener noreferrer">
                     <span>▶ Suscribirse al Canal</span>
                 </a>
             </div>
 
-            <div class="video-grid">
+            <!-- Video Estelar / Spotlight -->
+            <div class="video-spotlight-box">
+                <div class="spotlight-badge">⭐ PROGRAMA ESTELAR RECOMENDADO</div>
+                <div class="spotlight-player-container">
+                    <iframe src="https://www.youtube.com/embed/M_11WImpZG8" title="Disinter: Aberrantes Ofrendas al Ukupacha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="spotlight-info">
+                    <h3>Disinter: Aberrantes Ofrendas al Ukupacha (Especial Lima Metal Fest)</h3>
+                    <p>Dio Gustavo presenta en exclusiva a la histórica agrupación peruana de Death Metal Disinter tras su demoledora actuación en el Lima Metal Fest. Entrevista con Leo Navarrete y el estreno del videoclip oficial.</p>
+                </div>
+            </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/M_11WImpZG8" title="Disinter: Aberrantes Ofrendas al Ukupacha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card-body">
-                        <h3>Disinter: Aberrantes Ofrendas al Ukupacha (Perú 2023)</h3>
-                        <p>Dio Gustavo presenta un especial de la banda peruana Disinter y su videoclip "Aberrantes Ofrendas al Ukupacha". Leo Navarrete, bajista y vocalista, saluda a la audiencia y presenta la obra tras su destacada actuación en Lima Metal Fest.</p>
+            <!-- Barra de Controles: Búsqueda y Categorías -->
+            <div class="video-controls-toolbar">
+                <div class="video-search-row">
+                    <div class="search-bar-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="videoSearchInput" placeholder="Buscar video por banda, festival o canción..." aria-label="Buscar videos">
+                        <button id="videoSearchClearBtn" class="search-clear-btn" type="button" aria-label="Limpiar búsqueda" style="display: none;">&times;</button>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Pl35v9U6Kig" title="Rotten Cannibal: Death Metal de Chile" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-filter-chips">
+                    <button class="video-filter-btn active" data-category="todos">Todos los Videos <span id="videosCount">(22)</span></button>
+                    <button class="video-filter-btn" data-category="entrevista">Entrevistas</button>
+                    <button class="video-filter-btn" data-category="festival">Festivales & En Vivo</button>
+                    <button class="video-filter-btn" data-category="videoclip">Videoclips</button>
+                    <button class="video-filter-btn" data-category="especial">Especiales & Homenajes</button>
+                </div>
+            </div>
+
+            <!-- Grilla de Videos con Facade Ultraligero -->
+            <div class="video-grid" id="videoGridContainer">
+
+                <!-- Video 1 -->
+                <div class="video-card" data-category="entrevista videoclip">
+                    <div class="video-facade" data-video-id="M_11WImpZG8" data-title="Disinter: Aberrantes Ofrendas al Ukupacha">
+                        <img src="https://img.youtube.com/vi/M_11WImpZG8/hqdefault.jpg" alt="Disinter" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Entrevista + Clip</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">DISINTER (PERÚ)</span>
+                        <h3>Disinter: Aberrantes Ofrendas al Ukupacha</h3>
+                        <p>Dio Gustavo presenta a la banda peruana Disinter tras su actuación en Lima Metal Fest. Leo Navarrete saluda a la audiencia y presenta su videoclip oficial.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=M_11WImpZG8" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card" data-category="entrevista especial">
+                    <div class="video-facade" data-video-id="Pl35v9U6Kig" data-title="Rotten Cannibal: Death Metal de Chile">
+                        <img src="https://img.youtube.com/vi/Pl35v9U6Kig/hqdefault.jpg" alt="Rotten Cannibal" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Especial Internacional</span>
+                    </div>
+                    <div class="video-card-body">
+                        <span class="video-band-tag">ROTTEN CANNIBAL (CHILE)</span>
                         <h3>Rotten Cannibal: Death Metal de Chile</h3>
-                        <p>Presentación especial de la banda chilena Rotten Cannibal. Sus integrantes comparten detalles de su disco "Ritual Blasfemia", un adelanto de su próximo DVD en vivo y su videoclip "Putre-Sangre Integro Cross".</p>
+                        <p>Presentación especial de la banda chilena Rotten Cannibal compartiendo detalles de su disco "Ritual Blasfemia" y adelantos de su DVD en vivo.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=Pl35v9U6Kig" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/PeKDt6v65rA" title="Flagelum: Gorehound Perspective" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 3 -->
+                <div class="video-card" data-category="videoclip especial">
+                    <div class="video-facade" data-video-id="PeKDt6v65rA" data-title="Flagelum: Gorehound Perspective">
+                        <img src="https://img.youtube.com/vi/PeKDt6v65rA/hqdefault.jpg" alt="Flagelum" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Videoclip</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">FLAGELUM (PERÚ)</span>
                         <h3>Flagelum: Gorehound Perspective (Part 1)</h3>
-                        <p>Dio Gustavo presenta a la banda peruana Flagelum destacando su video lírico oficial. César introduce el tema agradeciendo el apoyo continuo a la escena de Thrash y Death Metal nacional.</p>
+                        <p>Dio Gustavo presenta a la agrupación nacional Flagelum destacando su video lírico oficial y el agradecimiento al apoyo continuo a la escena de Thrash y Death.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=PeKDt6v65rA" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/laB9q84XpTs" title="Nathammer: Evil Nightmare 2023" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 4 -->
+                <div class="video-card" data-category="videoclip entrevista">
+                    <div class="video-facade" data-video-id="laB9q84XpTs" data-title="Nathammer: Evil Nightmare 2023">
+                        <img src="https://img.youtube.com/vi/laB9q84XpTs/hqdefault.jpg" alt="Nathammer" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Entrevista + Clip</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Nathammer: Evil Nightmare 2023</h3>
-                        <p>Primicia del vídeo lírico "Evil Nightmare" de la banda Nathammer. Recorrido por su trayectoria nacional e internacional con un saludo exclusivo de su vocalista Fátima.</p>
+                        <span class="video-band-tag">NATHAMMER (PERÚ)</span>
+                        <h3>Nathammer: Evil Nightmare</h3>
+                        <p>Primicia del vídeo lírico "Evil Nightmare" con un recorrido por la trayectoria nacional e internacional y saludo exclusivo de su vocalista Fátima.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=laB9q84XpTs" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/NIC1n5sstDI" title="Baquifest VI: Armagedon" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 5 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="NIC1n5sstDI" data-title="Baquifest VI: Armagedon">
+                        <img src="https://img.youtube.com/vi/NIC1n5sstDI/hqdefault.jpg" alt="Armagedon en Baquifest" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo + Charla</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">ARMAGEDON (PERÚ)</span>
                         <h3>Baquifest VI: Armagedon (Parte Final)</h3>
-                        <p>Presentación demoledora de la histórica banda Armagedon en Huacho, seguida de una entrevista exclusiva de Dio Gustavo a "El Lobo", vocalista de la banda, hablando del nuevo disco y su show con Rata Blanca.</p>
+                        <p>Presentación demoledora de la histórica banda Armagedon en Huacho, seguida de una entrevista exclusiva de Dio Gustavo a "El Lobo", vocalista de la banda.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=NIC1n5sstDI" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/SK3SBrEhBLQ" title="Baquifest VI: Contracara" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 6 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="SK3SBrEhBLQ" data-title="Baquifest VI: Contracara">
+                        <img src="https://img.youtube.com/vi/SK3SBrEhBLQ/hqdefault.jpg" alt="Contracara en Baquifest" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Baquifest VI: Contracara</h3>
-                        <p>Actuación en vivo de la banda Contracara llena de energía, complementada con una entrevista a Sara Monzón y Ricardo agradeciendo la cálida recepción del público huachano.</p>
+                        <span class="video-band-tag">CONTRACARA (PERÚ)</span>
+                        <h3>Baquifest VI: Contracara en Vivo</h3>
+                        <p>Actuación en vivo de la banda Contracara llena de poder, complementada con una entrevista a Sara Monzón y Ricardo agradeciendo la acogida huachana.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=SK3SBrEhBLQ" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/blpxmVgeQRw" title="Baquifest VI: Strógena" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 7 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="blpxmVgeQRw" data-title="Baquifest VI: Strógena">
+                        <img src="https://img.youtube.com/vi/blpxmVgeQRw/hqdefault.jpg" alt="Strógena" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">STRÓGENA (PERÚ)</span>
                         <h3>Baquifest VI: Strógena</h3>
-                        <p>Presentación y entrevista en el Baquifest VI a la agrupación Strógena, resaltando la fuerza femenina en la escena del Heavy Metal y compartiendo detalles de sus composiciones.</p>
+                        <p>Presentación y entrevista a la agrupación Strógena, resaltando la fuerza femenina en la escena del Heavy Metal y compartiendo sus composiciones.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=blpxmVgeQRw" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/b2FxbbG7FIQ" title="Baquifest VI: Jorge Hard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 8 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="b2FxbbG7FIQ" data-title="Baquifest VI: Jorge Hard">
+                        <img src="https://img.youtube.com/vi/b2FxbbG7FIQ/hqdefault.jpg" alt="Jorge Hard" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">JORGE HARD (PERÚ)</span>
                         <h3>Baquifest VI: Jorge Hard</h3>
-                        <p>Momentos destacados en el escenario y entrevista amical con el vocalista Jorge y Sergio, compartiendo anécdotas de barrio, temas de su disco y planes de futuras grabaciones.</p>
+                        <p>Momentos destacados en el escenario y entrevista amical con Jorge y Sergio compartiendo anécdotas de barrio y planes de futuras grabaciones.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=b2FxbbG7FIQ" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Ism2AjIBInw" title="Baquifest VI: Tránsito Pesado" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 9 -->
+                <div class="video-card" data-category="festival">
+                    <div class="video-facade" data-video-id="Ism2AjIBInw" data-title="Baquifest VI: Tránsito Pesado">
+                        <img src="https://img.youtube.com/vi/Ism2AjIBInw/hqdefault.jpg" alt="Tránsito Pesado" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">TRÁNSITO PESADO (PERÚ)</span>
                         <h3>Baquifest VI: Tránsito Pesado</h3>
-                        <p>Registro en vivo y en directo de la potente presentación de la banda Tránsito Pesado sacudiendo el escenario del Baquifest VI.</p>
+                        <p>Registro en directo de la potente presentación de la banda Tránsito Pesado sacudiendo el escenario del festival en el norte chico.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=Ism2AjIBInw" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/xMtSMsMSezU" title="Baquifest VI: Banda Orión" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 10 -->
+                <div class="video-card" data-category="festival">
+                    <div class="video-facade" data-video-id="xMtSMsMSezU" data-title="Baquifest VI: Banda Orión">
+                        <img src="https://img.youtube.com/vi/xMtSMsMSezU/hqdefault.jpg" alt="Banda Orión" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">ORIÓN (PERÚ)</span>
                         <h3>Baquifest VI: Banda Orión</h3>
-                        <p>Cobertura de la apertura oficial del evento con los organizadores Pepe Guillén y Ricardo Segura, seguida de la actuación en directo de la banda Orión.</p>
+                        <p>Apertura oficial del festival con los organizadores Pepe Guillén y Ricardo Segura, seguida de la actuación en directo de la banda Orión.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=xMtSMsMSezU" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/EFzuXYic_bg" title="Baquifest VI: Reel Oficial de Fotos" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 11 -->
+                <div class="video-card" data-category="festival especial">
+                    <div class="video-facade" data-video-id="EFzuXYic_bg" data-title="Baquifest VI: Reel Oficial de Fotos">
+                        <img src="https://img.youtube.com/vi/EFzuXYic_bg/hqdefault.jpg" alt="Reel Baquifest" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Galería</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">HMRTV ARCHIVO</span>
                         <h3>Baquifest VI: Reel Oficial de Fotos</h3>
-                        <p>Galería fotográfica y resumen visual de los mejores momentos, público y bandas del Baquifest VI en Huacho con el agradecimiento de Dio Gustavo.</p>
+                        <p>Resumen visual y galería fotográfica de los mejores momentos, público y bandas del Baquifest VI en Huacho con Dio Gustavo.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=EFzuXYic_bg" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/fnIWdE-DvcQ" title="Invitación Oficial Baquifest VI" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 12 -->
+                <div class="video-card" data-category="festival especial">
+                    <div class="video-facade" data-video-id="fnIWdE-DvcQ" data-title="Invitación Oficial Baquifest VI">
+                        <img src="https://img.youtube.com/vi/fnIWdE-DvcQ/hqdefault.jpg" alt="Invitación Baquifest" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Convocatoria</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">FESTIVALES</span>
                         <h3>Invitación Oficial Baquifest VI (Huacho)</h3>
-                        <p>Convocatoria oficial al festival con detalles de cartelera, bandas invitadas (Armagedón, Contracara, Strógena, Jorge Hard, Orión, Tránsito Pesado), horarios y entradas.</p>
+                        <p>Convocatoria oficial al festival con detalles de cartelera, bandas invitadas, horarios de ingreso y puntos de preventa autorizados.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=fnIWdE-DvcQ" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/KUbyndIYNYg" title="Kike Yompián: Oriental Remember II" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 13 -->
+                <div class="video-card" data-category="entrevista especial">
+                    <div class="video-facade" data-video-id="KUbyndIYNYg" data-title="Kike Yompián: Oriental Remember II">
+                        <img src="https://img.youtube.com/vi/KUbyndIYNYg/hqdefault.jpg" alt="Kike Yompián" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Entrevista</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Kike Yompián: Oriental Remember II (feat. Tavo Castillo)</h3>
-                        <p>Entrevista sobre el videoclip "Oriental Remember" con la colaboración del legendario Tavo Castillo (Frágil), explorando melodías orientales y adelantos de su disco fusión.</p>
+                        <span class="video-band-tag">KIKE YOMPIÁN & TAVO CASTILLO</span>
+                        <h3>Kike Yompián: Oriental Remember II</h3>
+                        <p>Entrevista a fondo sobre el videoclip "Oriental Remember" con la colaboración del legendario Tavo Castillo (Frágil), explorando melodías orientales y rock fusión.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=KUbyndIYNYg" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/UnRo9s0ImRI" title="Cartelera de Conciertos Enero 2023" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 14 -->
+                <div class="video-card" data-category="especial">
+                    <div class="video-facade" data-video-id="UnRo9s0ImRI" data-title="Cartelera de Conciertos">
+                        <img src="https://img.youtube.com/vi/UnRo9s0ImRI/hqdefault.jpg" alt="Cartelera Conciertos" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Noticias</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Cartelera de Conciertos Enero 2023</h3>
-                        <p>Informe especial sobre las fechas de conciertos en Lima y Huacho, incluyendo el show de M.A.S.A.C.R.E en Yield Rock junto a Omar Pizarro y dueto con el Loco Cervantes.</p>
+                        <span class="video-band-tag">INFORME DE PRENSA</span>
+                        <h3>Cartelera de Conciertos y Escena Under</h3>
+                        <p>Informe especial sobre las fechas de conciertos en Lima y Huacho, incluyendo el show de M.A.S.A.C.R.E en Yield Rock junto a Omar Pizarro.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=UnRo9s0ImRI" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/2WOMVTaz0DA" title="Mensaje Especial de Fin de Año - HMRTV" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 15 -->
+                <div class="video-card" data-category="especial">
+                    <div class="video-facade" data-video-id="2WOMVTaz0DA" data-title="Mensaje Especial HMRTV">
+                        <img src="https://img.youtube.com/vi/2WOMVTaz0DA/hqdefault.jpg" alt="Mensaje HMRTV" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Comunidad</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Mensaje Especial de Fin de Año - HMRTV</h3>
-                        <p>Dio Gustavo reflexiona junto a la comunidad metalera sobre los desafíos, la unión, homenajes a camaradas caídos y los nuevos proyectos que se avecinan para el canal.</p>
+                        <span class="video-band-tag">EDITORIAL</span>
+                        <h3>Mensaje Especial a la Comunidad Metalera</h3>
+                        <p>Dio Gustavo reflexiona junto a los seguidores sobre los desafíos, la unión subterránea, homenajes a camaradas y nuevos proyectos del medio.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=2WOMVTaz0DA" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/CRfhypbGBSc" title="Enbor Arnasa (País Vasco)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 16 -->
+                <div class="video-card" data-category="especial entrevista">
+                    <div class="video-facade" data-video-id="CRfhypbGBSc" data-title="Enbor Arnasa (País Vasco)">
+                        <img src="https://img.youtube.com/vi/CRfhypbGBSc/hqdefault.jpg" alt="Enbor Arnasa" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Internacional</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Enbor Arnasa (País Vasco)</h3>
-                        <p>Informe especial sobre el proyecto unipersonal "Enbor Arnasa" liderado por Iñaki Esparza desde el País Vasco, mostrando el proceso de grabación de su tercer álbum de estudio.</p>
+                        <span class="video-band-tag">ENBOR ARNASA (PAÍS VASCO)</span>
+                        <h3>Enbor Arnasa: Heavy Metal en Euskera</h3>
+                        <p>Informe especial sobre el proyecto liderado por Iñaki Esparza desde el País Vasco, mostrando el proceso de grabación de su álbum de estudio.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=CRfhypbGBSc" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/-PQGraseaP4" title="Baquishop (Hualmay - Huacho) - Parte Final" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 17 -->
+                <div class="video-card" data-category="festival">
+                    <div class="video-facade" data-video-id="-PQGraseaP4" data-title="Baquishop - Parte Final">
+                        <img src="https://img.youtube.com/vi/-PQGraseaP4/hqdefault.jpg" alt="Baquishop Final" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Baquishop (Hualmay - Huacho) - Parte Final</h3>
-                        <p>Cierre del evento con clips de bandas en vivo, entrevista a Mario Durán (seguridad del evento) y balance general de la jornada metalera.</p>
+                        <span class="video-band-tag">BAQUISHOP HUACHO</span>
+                        <h3>Baquishop (Hualmay): Cierre y Balance</h3>
+                        <p>Cierre del evento con clips de bandas en directo, entrevista a la organización de seguridad y balance general de la jornada rockera.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=-PQGraseaP4" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/qhxyJ6S4ecg" title="Baquishop - 3ra Parte" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 18 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="qhxyJ6S4ecg" data-title="Baquishop - Kike Yompián en Vivo">
+                        <img src="https://img.youtube.com/vi/qhxyJ6S4ecg/hqdefault.jpg" alt="Kike Yompián en Vivo" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Baquishop - 3ra Parte (Kike Yompián en Vivo)</h3>
-                        <p>Entrevista a Víctor Voz y la llegada de Kike Yompián tras su gira internacional, interpretando dos temas de corte clásico dedicados a la historia del monitor Huáscar.</p>
+                        <span class="video-band-tag">KIKE YOMPIÁN</span>
+                        <h3>Baquishop: Kike Yompián en Directo</h3>
+                        <p>Entrevista a Víctor Voz y la llegada de Kike Yompián interpretando dos temas de corte neoclásico dedicados a la historia patria del monitor Huáscar.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=qhxyJ6S4ecg" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/l0dWcJOgb5Y" title="Baquishop - 2da Parte" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 19 -->
+                <div class="video-card" data-category="festival entrevista">
+                    <div class="video-facade" data-video-id="l0dWcJOgb5Y" data-title="Baquishop - Banda Extremo">
+                        <img src="https://img.youtube.com/vi/l0dWcJOgb5Y/hqdefault.jpg" alt="Banda Extremo" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Baquishop - 2da Parte (Banda Extremo & Pepe Guillén)</h3>
-                        <p>Entrevista a la agrupación Extremo y conversación con el organizador Pepe Guillén sobre la expansión del festival en el norte chico peruano.</p>
+                        <span class="video-band-tag">EXTREMO (PERÚ)</span>
+                        <h3>Baquishop: Banda Extremo & Pepe Guillén</h3>
+                        <p>Entrevista a la banda Extremo y conversación con el organizador sobre la expansión del festival en las provincias del norte chico.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=l0dWcJOgb5Y" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/Jn_szok_dRY" title="Baquishop - 1ra Parte" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 20 -->
+                <div class="video-card" data-category="festival">
+                    <div class="video-facade" data-video-id="Jn_szok_dRY" data-title="Baquishop - Apertura Oficial">
+                        <img src="https://img.youtube.com/vi/Jn_szok_dRY/hqdefault.jpg" alt="Baquishop Apertura" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">En Vivo</span>
                     </div>
                     <div class="video-card-body">
-                        <h3>Baquishop - 1ra Parte (Apertura y Escena Norte Chico)</h3>
-                        <p>Inicio de la cobertura del Baquishop con la actuación de Extremo y entrevista a Ricardo Segura sobre los espacios culturales para bandas independientes.</p>
+                        <span class="video-band-tag">BAQUISHOP HUACHO</span>
+                        <h3>Baquishop: Apertura y Escena Norte Chico</h3>
+                        <p>Inicio de la cobertura del Baquishop con la actuación de Extremo y entrevista a Ricardo Segura sobre los espacios culturales de rock.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=Jn_szok_dRY" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/gsGwwkYo3Dc" title="Fallen Symmetry: Videoclip Aún en Pie" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 21 -->
+                <div class="video-card" data-category="videoclip">
+                    <div class="video-facade" data-video-id="gsGwwkYo3Dc" data-title="Fallen Symmetry: Aún en Pie">
+                        <img src="https://img.youtube.com/vi/gsGwwkYo3Dc/hqdefault.jpg" alt="Fallen Symmetry" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Videoclip</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">FALLEN SYMMETRY (PERÚ)</span>
                         <h3>Fallen Symmetry: Videoclip "Aún en Pie"</h3>
-                        <p>Especial dedicado a la banda nacional Fallen Symmetry y el estreno de su videoclip "Aún en Pie" con invitados especiales y detalles de su álbum "Rehenes".</p>
+                        <p>Especial dedicado a la destacada banda nacional Fallen Symmetry y el estreno de su videoclip "Aún en Pie" con detalles de su producción discográfica.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=gsGwwkYo3Dc" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
-                <div class="video-card">
-                    <div class="video-player-container">
-                        <iframe src="https://www.youtube.com/embed/oeaqyTGRMfQ" title="Homenaje Póstumo: Edwin Medina" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 22 -->
+                <div class="video-card" data-category="especial">
+                    <div class="video-facade" data-video-id="oeaqyTGRMfQ" data-title="Homenaje Póstumo Edwin Medina">
+                        <img src="https://img.youtube.com/vi/oeaqyTGRMfQ/hqdefault.jpg" alt="Edwin Medina" loading="lazy">
+                        <span class="facade-play-btn">▶</span>
+                        <span class="video-tag-pill">Homenaje</span>
                     </div>
                     <div class="video-card-body">
+                        <span class="video-band-tag">IN MEMORIAM</span>
                         <h3>Homenaje Póstumo: Edwin Medina (R.I.P.)</h3>
-                        <p>Programa tributo a la memoria del bajista de Sepulcro y manager de Hermandad Miserable, recordando su incalculable aporte a la escena subterránea nacional.</p>
+                        <p>Programa tributo a la memoria del bajista de Sepulcro y manager de Hermandad Miserable, recordando su incalculable aporte a la escena subterránea.</p>
+                        <a class="video-yt-link" href="https://www.youtube.com/watch?v=oeaqyTGRMfQ" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
                     </div>
                 </div>
 
@@ -330,6 +473,7 @@
         </section>
     </main>
 
-    <script async src="js/menu.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/youtube.js"></script>
 </body>
 </html>

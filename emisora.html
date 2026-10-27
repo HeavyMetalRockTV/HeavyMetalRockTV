@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Heavy Metal Rock TV - Emisora Online</title>
-    <meta name="description" content="Sintoniza la transmisión ininterrumpida de heavy, thrash, death y black metal en vivo 24/7 en HMR Radio.">
+    <meta name="description" content="Sintoniza la transmisión ininterrumpida de heavy, thrash, death y black metal en vivo 24/7 en HMR Radio con reproductor online oficial.">
     <meta name="theme-color" content="#d32f2f">
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,7 +23,7 @@
       "url": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/emisora.html",
       "logo": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/HMRTV.webp",
       "image": "https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp",
-      "description": "Emisora online 24/7 de Heavy Metal, Thrash, Death y Black Metal.",
+      "description": "Emisora online 24/7 de Heavy Metal, Thrash, Death y Black Metal con streaming en vivo.",
       "genre": ["Heavy Metal", "Rock", "Thrash Metal", "Death Metal"],
       "broadcastTimeRange": "24/7"
     }
@@ -31,8 +31,8 @@
 
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="HMR Radio | Emisora Metal Stream 24/7">
-    <meta property="og:description" content="Sintoniza la transmisión ininterrumpida de heavy, thrash, death y black metal en vivo.">
+    <meta property="og:title" content="HMR Radio | Emisora Metal Stream 24/7 en Vivo">
+    <meta property="og:description" content="Sintoniza la transmisión ininterrumpida de heavy, thrash, death y black metal las 24 horas del día.">
     <meta property="og:image" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io; frame-src https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' http://heavymetalextremo.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me; font-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://heavymetalextremo.radio12345.com http://heavymetalextremo.radio12345.com; media-src 'self' http://heavymetalextremo.radio12345.com https://heavymetalextremo.radio12345.com https://*.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me http://heavymetalextremo.radio12345.com https://heavymetalextremo.radio12345.com; font-src 'self'; base-uri 'self'; form-action 'self';">
 </head>
 
 <body>
@@ -91,51 +91,140 @@
     </nav>
 
     <main>
-        <section id="emisora">
+        <section id="emisora-section">
+            <div class="section-badge-tag">SEÑAL DE AUDIO OFICIAL // EN VIVO</div>
             <h1>Emisora Oficial - Heavy Metal Radio</h1>
 
-            <!-- Transmisión en directo -->
-            <div class="live-broadcast-banner">
-                <div class="on-air-badge">En Transmisión</div>
-                <h3>Heavy Metal Radio Online</h3>
-                <p>
-                    Sintoniza la señal oficial con el sonido más crudo, clásico y demoledor del metal nacional e internacional. Conexión ininterrumpida y especiales de colección.
-                </p>
-                <a class="btn-tune-in" href="http://heavymetalextremo.radio12345.com" target="_blank" rel="noopener noreferrer">
-                    <span>📻 Escuchar Emisora en Vivo</span>
-                </a>
+            <!-- The Metal Rack Player (Reproductor de Audio Principal) -->
+            <div class="radio-rack-panel">
+                <div class="rack-screw top-left"></div>
+                <div class="rack-screw top-right"></div>
+                <div class="rack-screw bottom-left"></div>
+                <div class="rack-screw bottom-right"></div>
+
+                <div class="rack-header">
+                    <div class="rack-brand">
+                        <span class="rack-brand-title">HMR DIGITAL AUDIO RACK</span>
+                        <span class="rack-model">SERIES-2026 // STEREO HIGH FIDELITY</span>
+                    </div>
+                    <div class="on-air-badge">
+                        <span class="on-air-dot"></span> EN TRANSMISIÓN 24/7
+                    </div>
+                </div>
+
+                <!-- Display Digital LED -->
+                <div class="rack-display">
+                    <div class="display-top-bar">
+                        <span class="display-freq">FRECUENCIA: STREAM 320 KBPS</span>
+                        <span class="display-mode">STEREO ULTRA-GAIN</span>
+                    </div>
+                    <div class="display-main" id="radioStatusDisplay">SEÑAL EN ESPERA - HAZ CLIC PARA REPRODUCIR</div>
+                    
+                    <!-- Visualizador Animado de Ondas / Ecualizador -->
+                    <div class="audio-visualizer" id="audioVisualizer" aria-hidden="true">
+                        <span class="v-bar bar-1"></span>
+                        <span class="v-bar bar-2"></span>
+                        <span class="v-bar bar-3"></span>
+                        <span class="v-bar bar-4"></span>
+                        <span class="v-bar bar-5"></span>
+                        <span class="v-bar bar-6"></span>
+                        <span class="v-bar bar-7"></span>
+                        <span class="v-bar bar-8"></span>
+                        <span class="v-bar bar-9"></span>
+                        <span class="v-bar bar-10"></span>
+                        <span class="v-bar bar-11"></span>
+                        <span class="v-bar bar-12"></span>
+                    </div>
+                </div>
+
+                <!-- Controles Principales del Reproductor -->
+                <div class="rack-controls-row">
+                    <button id="radioPlayBtn" class="btn-rack-play" type="button" aria-label="Reproducir señal de radio">
+                        <span id="radioPlayIcon" class="rack-play-icon">▶</span>
+                        <span id="radioPlayText" class="rack-play-text">SINTONIZAR EN DIRECTO</span>
+                    </button>
+
+                    <div class="rack-volume-box">
+                        <button id="muteBtn" class="btn-mute" type="button" title="Silenciar / Activar sonido" aria-label="Silenciar sonido">
+                            <span id="muteIcon">🔊</span>
+                        </button>
+                        <input id="volumeSlider" class="volume-slider" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Control de volumen">
+                    </div>
+                </div>
+
+                <!-- Acciones Rápidas (Pop-up y Pedidos) -->
+                <div class="rack-secondary-actions">
+                    <button id="radioPopupBtn" class="btn-rack-action" type="button" title="Abrir en ventana emergente para seguir navegando sin cortes">
+                        <span>🗗</span> Abrir Mini-Ventana Flotante
+                    </button>
+                    <button id="requestSongBtn" class="btn-rack-action btn-rack-wa" type="button" title="Enviar petición de canción o saludos a cabina">
+                        <span>💬</span> Pedir Canción por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Elemento Audio HTML5 -->
+                <audio id="radioAudio" preload="none"></audio>
             </div>
 
             <!-- Presentación de la emisora y app -->
             <div class="app-showcase">
-                <img class="zoomable-img" src="img/estetica/HMR_APP.webp" alt="Heavy Metal Radio App" loading="lazy">
+                <img class="zoomable-img" src="img/estetica/HMR_APP.webp" alt="Heavy Metal Radio App Oficial" loading="lazy">
                 <div class="app-showcase-text">
                     <h3>Sobre Nuestra Señal</h3>
                     <p>
-                        Heavy Metal Radio nace como el bastión auditivo de Heavy Metal Rock TV. Un espacio diseñado para dar visibilidad a bandas emergentes, emitir programas temáticos y revivir las producciones legendarias del rock pesado y metal underground.
+                        Heavy Metal Radio es el bastión sonoro de Heavy Metal Rock TV. Un espacio diseñado para amplificar a las bandas de la escena nacional peruana, emitir programas de culto y revivir las producciones legendarias del rock pesado y metal underground internacional sin censura.
                     </p>
-                    <p>
-                        Disponible para escuchar desde cualquier dispositivo móvil o navegador de escritorio con la máxima tasa de bits y fidelidad sonica.
-                    </p>
+                    <div class="radio-features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <div>
+                                <strong>Streaming 24/7</strong>
+                                <span>Sonido continuo sin interrupciones</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎙️</span>
+                            <div>
+                                <strong>Conducción Especializada</strong>
+                                <span>Programas con Dio Gustavo e invitados</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📱</span>
+                            <div>
+                                <strong>Multiplataforma</strong>
+                                <span>Compatible con PC, Mac, Android y iOS</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Parrilla de horarios organizada -->
             <div class="schedule-card">
-                <h3>🕒 Programación y Horarios de Emisión</h3>
-                <p style="margin-bottom: 15px;">Bloques diarios de transmisión en vivo (Hora local de Perú / UTC-5):</p>
+                <h3>🕒 Programación Semanal y Bloques de Emisión</h3>
+                <p style="margin-bottom: 20px;">Transmisiones en vivo de lunes a domingo (Hora local de Perú / UTC-5):</p>
                 <div class="schedule-grid">
                     <div class="schedule-slot">
+                        <span class="slot-badge">MAÑANA</span>
+                        <div class="slot-title">El Despertar del Metal</div>
                         <span class="days">Lunes a Viernes</span>
                         <div class="time">11:00 AM - 01:00 PM</div>
+                        <p class="slot-desc">Clásicos del Heavy Metal, Hard Rock y NWOBHM para empezar con energía.</p>
                     </div>
                     <div class="schedule-slot">
+                        <span class="slot-badge">TARDE</span>
+                        <div class="slot-title">La Franja Subterránea</div>
                         <span class="days">Lunes a Viernes</span>
                         <div class="time">04:30 PM - 06:00 PM</div>
+                        <p class="slot-desc">Bandas emergentes peruanas, estrenos de videoclips y entrevistas exclusivas.</p>
                     </div>
-                    <div class="schedule-slot">
+                    <div class="schedule-slot highlight-slot">
+                        <span class="slot-badge highlight">NOCHE // ESTELAR</span>
+                        <div class="slot-title">Santuario Extremo con Gustavo</div>
                         <span class="days">Lunes a Viernes</span>
                         <div class="time">09:00 PM - 10:30 PM</div>
+                        <p class="slot-desc">Dosis demoledora de Thrash, Death y Black Metal con pedidos en vivo al aire.</p>
                     </div>
                 </div>
             </div>
@@ -150,5 +239,6 @@
     </div>
 
     <script defer src="js/menu.js"></script>
+    <script defer src="js/emisora.js"></script>
 </body>
 </html>

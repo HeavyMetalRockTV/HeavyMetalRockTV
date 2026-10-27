@@ -922,11 +922,39 @@
       STATE.allProducts = data;
       STATE.filteredProducts = [...data];
 
+      // Lectura inteligente de parámetros en la URL (?search=Banda / ?category=polos / ?band=Banda)
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchParam = urlParams.get('search');
+      const catParam = urlParams.get('category');
+      const bandParam = urlParams.get('band');
+
+      if (searchParam && DOM.searchInput) {
+        DOM.searchInput.value = searchParam;
+        STATE.searchQuery = searchParam.trim().toLowerCase();
+        if (DOM.searchClearBtn) DOM.searchClearBtn.style.display = 'block';
+      }
+      if (catParam) {
+        STATE.activeCategory = catParam;
+        DOM.filterButtons.forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-category') === catParam);
+        });
+      }
+      if (bandParam) {
+        STATE.activeBand = bandParam;
+        DOM.bandChips.forEach(chip => {
+          chip.classList.toggle('active', chip.getAttribute('data-band') === bandParam);
+        });
+      }
+
       bindEvents();
       Cart.init();
       FilterEngine.updateCategoryBadges();
-      FilterEngine.updateCounter();
-      Renderer.renderBatch(true);
+      if (searchParam || catParam || bandParam) {
+        FilterEngine.apply();
+      } else {
+        FilterEngine.updateCounter();
+        Renderer.renderBatch(true);
+      }
     } catch (err) {
       console.error('[Store Core Failure]:', err);
       if (DOM.container) {

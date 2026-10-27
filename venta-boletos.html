@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Heavy Metal Rock TV - Venta y Difusión de Boletos</title>
-    <meta name="description" content="Plataforma oficial de difusión, prensa y preventa de entradas para conciertos y festivales de Metal en Perú.">
+    <title>Heavy Metal Rock TV - Taquilla Oficial y Venta de Boletos</title>
+    <meta name="description" content="Plataforma oficial de difusión, prensa y preventa de entradas para conciertos y festivales de Metal en Perú. Compra segura con envíos nacionales.">
     <meta name="theme-color" content="#d32f2f">
     <link rel="icon" href="img/estetica/HMR_recortada.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -33,8 +33,8 @@
 
     <!-- Metadatos de Redes Sociales / Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Venta de Boletos | Próximos Conciertos Heavy Metal Rock TV">
-    <meta property="og:description" content="Adquiere tus entradas y preventas oficiales para los conciertos y eventos más esperados de la escena.">
+    <meta property="og:title" content="Taquilla Oficial de Conciertos | Heavy Metal Rock TV">
+    <meta property="og:description" content="Adquiere tus entradas y preventas oficiales para los conciertos y festivales más demoledores del metal.">
     <meta property="og:image" content="https://heavymetalrocktv.github.io/HeavyMetalRockTV/img/estetica/STORE.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -42,7 +42,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io; frame-src https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' http://heavymetalextremo.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me; font-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://heavymetalrocktv.github.io; frame-src https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' http://heavymetalextremo.radio12345.com https://heavymetalextremo.radio12345.com; connect-src 'self' https://api.whatsapp.com https://wa.me; font-src 'self'; base-uri 'self'; form-action 'self';">
 </head>
 
 <body>
@@ -93,27 +93,277 @@
     </nav>
 
     <main>
-        <section id="boletos-section" style="text-align: center;">
-            <h2>Venta y Difusión de Boletos</h2>
-            
-            <img class="logo-quienes-somos" src="img/estetica/ROCKTV.webp" alt="Heavy Metal Rock TV Logo" loading="lazy">
+        <section id="boletos-section">
+            <div class="section-badge-tag">TAQUILLA Y DIFUSIÓN OFICIAL // CONCIERTOS</div>
+            <h1>Cartelera & Taquilla Oficial de Conciertos</h1>
 
-            <div class="ticket-info-card" style="text-align: left;">
-                <h3>Punto Oficial de Entradas y Alianzas</h3>
-                <p>
-                    Si eres productor, promotor de eventos o formas parte de una banda y buscas difundir y canalizar la preventa de entradas para conciertos, festivales y recitales de Metal, ponemos a disposición nuestra plataforma oficial, redes sociales y el canal de <strong>Heavy Metal Store</strong>.
-                </p>
-                <p>
-                    Contáctanos directamente para coordinar puntos de venta físicos, envíos de entradas a nivel nacional y cobertura de prensa para tu concierto.
-                </p>
+            <!-- Hero de Taquilla con Insignias de Confianza -->
+            <div class="tickets-hero-banner">
+                <div class="tickets-hero-content">
+                    <h3>Punto Autorizado de Entradas & Festivales</h3>
+                    <p>
+                        Consigue tus entradas oficiales para los conciertos, recitales y festivales más importantes de la escena de Rock y Metal en Perú. Canal de venta verificado con garantía de compra y entrega física o digital inmediata.
+                    </p>
+                    <div class="store-trust-pills">
+                        <span class="trust-pill">🛡️ Entradas 100% Oficiales</span>
+                        <span class="trust-pill">💳 Yape / Plin / Transferencias</span>
+                        <span class="trust-pill">🚚 Envíos a Nivel Nacional</span>
+                        <span class="trust-pill">⚡ Entrega Inmediata</span>
+                    </div>
+                </div>
+                <div class="tickets-hero-logo-box">
+                    <img class="logo-quienes-somos" src="img/estetica/ROCKTV.webp" alt="Heavy Metal Rock TV Logo">
+                </div>
             </div>
 
-            <div style="margin-top: 25px;">
-                <a class="btn-metal" href="mailto:gustavomasacre31@hotmail.com">CONTACTAR POR BOLETOS</a>
+            <!-- Barra de Filtros de Eventos -->
+            <div class="events-toolbar">
+                <div class="events-filter-buttons">
+                    <button class="event-filter-btn active" data-filter="todos">Todos los Eventos <span id="eventsCount" class="filter-count">(6)</span></button>
+                    <button class="event-filter-btn" data-filter="lima">Lima</button>
+                    <button class="event-filter-btn" data-filter="provincias">Huacho / Provincias</button>
+                    <button class="event-filter-btn" data-filter="festival">Festivales</button>
+                </div>
             </div>
+
+            <!-- Grilla de Conciertos y Boletos -->
+            <div class="events-grid">
+
+                <!-- Concierto 1: Iron Maiden -->
+                <div class="event-card" data-category="lima festival">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/ironmaidenconcierto.webp" alt="Iron Maiden en Concierto" loading="lazy">
+                        <span class="event-badge-status status-preventa">Fase Preventa</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">NOV</span>
+                                <span class="cal-day">27</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 LIMA // ESTADIO NACIONAL</span>
+                                <h3 class="event-title">Iron Maiden: The Future Past Tour</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            La doncella de hierro regresa al Perú con su gira monumental repasando los himnos de "Somewhere in Time" y "Senjutsu".
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Precio Oficial:</span>
+                                <span class="price-val">Desde S/ 160.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar/reservar%20entradas%20para:%20Iron%20Maiden%20en%20Lima" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concierto 2: Saratoga -->
+                <div class="event-card" data-category="lima">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/saratoga.webp" alt="Saratoga en Concierto" loading="lazy">
+                        <span class="event-badge-status status-ultimas">Últimas Entradas</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">DIC</span>
+                                <span class="cal-day">12</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 LIMA // CC FESTIVA</span>
+                                <h3 class="event-title">Saratoga: Gira XXX Aniversario</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            Niko del Hierro, Tete Novoa y compañía descargando toda la fuerza del Heavy Metal en español en una noche inolvidable.
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Precio General:</span>
+                                <span class="price-val">S/ 120.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar/reservar%20entradas%20para:%20Saratoga%20en%20CC%20Festiva" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concierto 3: Tierra Santa -->
+                <div class="event-card" data-category="lima">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/tierrasanta.webp" alt="Tierra Santa en Concierto" loading="lazy">
+                        <span class="event-badge-status status-preventa">Preventa Activa</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">ENE</span>
+                                <span class="cal-day">20</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 LIMA // TEATRO LEGUÍA</span>
+                                <h3 class="event-title">Tierra Santa: Destino Tour</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            La leyenda riojana del Heavy Metal épico regresa para corear "La Canción del Pirata", "Tierras de Leyenda" y su nueva discografía.
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Precio Preventa:</span>
+                                <span class="price-val">S/ 95.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar/reservar%20entradas%20para:%20Tierra%20Santa%20en%20Teatro%20Legu%C3%ADa" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concierto 4: Apocalyptica -->
+                <div class="event-card" data-category="lima">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/apocalyptica.webp" alt="Apocalyptica en Concierto" loading="lazy">
+                        <span class="event-badge-status status-disponible">Disponible</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">FEB</span>
+                                <span class="cal-day">15</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 LIMA // ANFITEATRO PARQUE DE LA EXPOSICIÓN</span>
+                                <h3 class="event-title">Apocalyptica: Plays Metallica Vol. 2</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            Los maestros finlandeses del violonchelo interpretando los clásicos inmortales del Thrash Metal con una puesta en escena orquestal única.
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Precio Zona A:</span>
+                                <span class="price-val">S/ 140.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar/reservar%20entradas%20para:%20Apocalyptica%20en%20Lima" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concierto 5: Death Metal Rules Vol. 3 -->
+                <div class="event-card" data-category="provincias festival">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/deathmetalrulesvol3.webp" alt="Death Metal Rules Vol. 3" loading="lazy">
+                        <span class="event-badge-status status-under">Underground Fest</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">NOV</span>
+                                <span class="cal-day">08</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 HUACHO // LOCAL TINTAYA</span>
+                                <h3 class="event-title">Death Metal Rules: Vol. III</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            Jornada extrema en el norte chico con lo más demoledor del Death & Thrash nacional: Disinter, Rotten Cannibal, Flagelum y bandas invitadas.
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Entrada Puerta:</span>
+                                <span class="price-val">S/ 35.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar%20entradas%20para:%20Death%20Metal%20Rules%20Vol%203%20en%20Huacho" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concierto 6: Ritual Infernal -->
+                <div class="event-card" data-category="lima festival">
+                    <div class="event-poster-container">
+                        <img class="zoomable-img" src="img/estetica/ritualinfernal.webp" alt="Ritual Infernal en Concierto" loading="lazy">
+                        <span class="event-badge-status status-preventa">Preventa</span>
+                    </div>
+                    <div class="event-card-body">
+                        <div class="event-date-row">
+                            <div class="event-calendar-badge">
+                                <span class="cal-month">DIC</span>
+                                <span class="cal-day">05</span>
+                            </div>
+                            <div class="event-venue-info">
+                                <span class="event-city">📍 LIMA // EL CALABOZO METAL BAR</span>
+                                <h3 class="event-title">Ritual Infernal Metal Fest</h3>
+                            </div>
+                        </div>
+                        <p class="event-description">
+                            Celebración de la escena subterránea nacional con Armagedón, Contracara, Tránsito Pesado y la cobertura exclusiva en video de HMRTV.
+                        </p>
+                        <div class="event-pricing-row">
+                            <div class="event-price-box">
+                                <span class="price-label">Precio Preventa:</span>
+                                <span class="price-val">S/ 40.00</span>
+                            </div>
+                            <a class="btn-event-buy" href="https://wa.me/51950324368?text=*HMRTV%20Boletos*%20-%20Hola%20Dio%20Gustavo,%20deseo%20comprar%20entradas%20para:%20Ritual%20Infernal%20Metal%20Fest" target="_blank" rel="noopener noreferrer">
+                                <span>🎫 Comprar por WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Módulo para Productores y Promotores de Eventos -->
+            <div class="promoter-alliance-box">
+                <div class="alliance-header">
+                    <span class="alliance-icon">🤝</span>
+                    <div>
+                        <h3>¿Organizas un Concierto, Festival o Recital?</h3>
+                        <p>Únete a la red oficial de difusión de Heavy Metal Rock TV y canaliza la venta de entradas con nosotros.</p>
+                    </div>
+                </div>
+                <div class="alliance-perks">
+                    <div class="perk-item">
+                        <span>📻</span> <strong>Pauta Radial 24/7</strong> en Heavy Metal Radio
+                    </div>
+                    <div class="perk-item">
+                        <span>📺</span> <strong>Cobertura en Video</strong> y entrevistas para YouTube
+                    </div>
+                    <div class="perk-item">
+                        <span>🛒</span> <strong>Punto de Venta Físico y Digital</strong> vía Heavy Metal Store
+                    </div>
+                </div>
+                <div class="alliance-cta-row">
+                    <a class="btn-alliance-wa" href="https://wa.me/51950324368?text=*HMRTV%20Prensa*%20-%20Hola%20Dio%20Gustavo,%20somos%20productores/banda%20y%20deseamos%20coordinar%20difusi%C3%B3n%20y%20venta%20de%20boletos." target="_blank" rel="noopener noreferrer">
+                        <span>💬 Contactar Alianzas por WhatsApp</span>
+                    </a>
+                    <a class="btn-alliance-mail" href="mailto:gustavomasacre31@hotmail.com">
+                        <span>✉️ Enviar Dossier por Correo</span>
+                    </a>
+                </div>
+            </div>
+
         </section>
     </main>
 
-    <script async src="js/menu.js"></script>
+    <!-- Ventana Modal de Ampliación (Lightbox) -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" alt="Afiche ampliado">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/boletos.js"></script>
 </body>
 </html>
